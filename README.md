@@ -1,11 +1,12 @@
 # UI templates
 
-This repository hosts the official templates ('Apps') definitions for CloudInovasi UI.
+This repository hosts the official templates (**'Apps'**) definitions for CloudInovasi UI.
 
 It also describes how to host your own Apps.
 
 ## Available apps:
 
+* Nginx (based on `nginx:latest`)
 * MySQL (based on `mysql:latest`)
 * WordPress (based on `wordpress:latest`)
 

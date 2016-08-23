@@ -1,5 +1,15 @@
 [
   {
+    "title": "Nginx",
+    "description": "High performance web server",
+    "logo": "http://www.gabrielmatteson.com/wp-content/uploads/2014/04/Nginx-Logo-02.png",
+    "image": "nginx:latest",
+    "ports": [
+      "80/tcp",
+      "443/tcp"
+    ]
+  },
+  {
     "title": "MySQL",
     "description": "The most popular open-source database",
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/640px-MySQL.svg.png",
