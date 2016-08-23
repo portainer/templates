@@ -13,7 +13,7 @@ It must consist of an array with every template definition consisting of one ele
 A template element must be a *JSON* object with the following mandatory fields:
 
 * title: Title of the template
-* comment: Description of the template
+* description: Description of the template
 * logo: URL for the template logo
 * image: the Docker image associated to the template
 
@@ -31,7 +31,7 @@ Each port will be automatically bound on the host by Docker when starting the co
 ```json
 {
   "title": "MySQL",
-  "comment": "The most popular open-source database",
+  "description": "The most popular open-source database",
   "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/640px-MySQL.svg.png",
   "image": "mysql:latest",
   "env": [
