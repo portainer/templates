@@ -9,6 +9,7 @@ It also describes how to host your own Apps.
 * Nginx (based on `nginx:latest`)
 * MySQL (based on `mysql:latest`)
 * WordPress (based on `wordpress:latest`)
+* Drupal (based on `drupal:latest`)
 
 ## Template definition format
 

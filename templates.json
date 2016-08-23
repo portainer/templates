@@ -40,5 +40,14 @@
     "ports": [
       "80/tcp"
     ]
+  },
+  {
+    "title": "Drupal",
+    "description": "Open-source content management framework",
+    "logo": "https://www.drupal.org/files/druplicon-small.png",
+    "image": "drupal:latest",
+    "ports": [
+      "80/tcp"
+    ]
   }
 ]
