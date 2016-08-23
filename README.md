@@ -19,18 +19,18 @@ It must consist of an array with every template definition consisting of one ele
 
 A template element must be a *JSON* object with the following mandatory fields:
 
-* title: Title of the template
-* description: Description of the template
-* logo: URL for the template logo
-* image: the Docker image associated to the template
+* `title`: Title of the template
+* `description`: Description of the template
+* `logo`: URL for the template logo
+* `image`: the Docker image associated to the template
 
 The following fields are optional:
 
-* env: An array describing the environment variables required by the template.
+* `env`: An array describing the environment variables required by the template.
 For each variable, an input will be created in the UI.
-* volumes: An array describing the associated volumes of the template.
+* `volumes`: An array describing the associated volumes of the template.
 For each volume, a Docker volume will be created and associated when starting the template.
-* ports: An array describing the ports exposed by template.
+* `ports`: An array describing the ports exposed by template.
 Each port will be automatically bound on the host by Docker when starting the container.
 
 **Example**:
