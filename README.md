@@ -1,6 +1,13 @@
 # UI templates
 
-This repository describes how to host your own Apps in CloudInovasi UI for Docker.
+This repository hosts the official templates ('Apps') definitions for CloudInovasi UI.
+
+It also describes how to host your own Apps.
+
+## Available apps:
+
+* MySQL (based on `mysql:latest`)
+* WordPress (based on `wordpress:latest`)
 
 ## Template definition format
 
