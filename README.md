@@ -31,6 +31,26 @@ The following fields are optional:
 
 * `env`: An array describing the environment variables required by the template.
 For each variable, an input will be created in the UI.
+
+*Format*:
+
+```json
+{
+  "name": "the name of the environment variable, as supported in the container image (mandatory)",
+  "label": "label for the input in the UI (mandatory)",
+  "default": "pre-defined value for the variable, will not generate an input in the UI (optional)"
+}
+```
+
+Example:
+
+```json
+{
+  "name": "MYSQL_ROOT_PASSWORD",
+  "label": "Root password"
+}
+```
+
 * `volumes`: An array describing the associated volumes of the template.
 For each volume, a Docker volume will be created and associated when starting the template.
 * `ports`: An array describing the ports exposed by template.
