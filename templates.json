@@ -30,7 +30,8 @@
     "env": [
       {
         "name": "WORDPRESS_DB_HOST",
-        "label": "MySQL database host"
+        "label": "MySQL database host",
+        "type": "container"
       },
       {
         "name": "WORDPRESS_DB_PASSWORD",
