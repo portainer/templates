@@ -38,7 +38,7 @@ For each variable, an input will be created in the UI.
 {
   "name": "the name of the environment variable, as supported in the container image (mandatory)",
   "label": "label for the input in the UI (mandatory)",
-  "default": "pre-defined value for the variable, will not generate an input in the UI (optional)"
+  "set": "pre-defined value for the variable, will not generate an input in the UI (optional)"
 }
 ```
 

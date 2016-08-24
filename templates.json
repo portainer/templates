@@ -71,7 +71,7 @@
       {
         "name": "WOWZA_ACCEPT_LICENSE",
         "label": "Agree to Wowza EULA",
-        "default": "yes"
+        "set": "yes"
       },
       {
         "name": "WOWZA_KEY",
