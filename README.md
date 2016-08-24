@@ -10,6 +10,7 @@ It also describes how to host your own Apps.
 * MySQL (based on `mysql:latest`)
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
+* Magento 2 (based on `alankent/gsd:latest`)
 
 ## Template definition format
 

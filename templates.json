@@ -49,5 +49,16 @@
     "ports": [
       "80/tcp"
     ]
+  },
+  {
+    "title": "Magento 2",
+    "description": "Open-source e-commerce platform",
+    "logo": "http://www.taxrates.com/wp-content/uploads/2015/11/magento-logo.png",
+    "image": "alankent/gsd:latest",
+    "ports": [
+      "80/tcp",
+      "3000/tcp",
+      "3001/tcp"
+    ]
   }
 ]
