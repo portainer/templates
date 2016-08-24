@@ -70,3 +70,9 @@ $ docker run -d -p "8080:80" cloudinovasi-ui-templates
 ```
 
 Now you can access your templates definitions at `http://docker-host:8080/templates.json`.
+
+You can also mount the `templates.json` file inside the container, so you can edit the file and see live changes:
+
+```shell
+$ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" cloudinovasi-ui-templates
+```
