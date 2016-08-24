@@ -60,5 +60,29 @@
       "3000/tcp",
       "3001/tcp"
     ]
+  },
+  {
+    "title": "Wowza",
+    "description": "Streaming media server",
+    "logo": "https://www.wowza.com/uploads/images/wse-logo-bug-168x168.png",
+    "image": "sameersbn/wowza:4.1.2-8",
+    "env": [
+      {
+        "name": "WOWZA_ACCEPT_LICENSE",
+        "label": "Agree to Wowza EULA",
+        "default": "yes"
+      },
+      {
+        "name": "WOWZA_KEY",
+        "label": "License key"
+      }
+    ],
+    "ports": [
+      "1935/tcp",
+      "8086/tcp",
+      "8087/tcp",
+      "8088/tcp"
+    ],
+    "volumes": ["/var/lib/wowza"]
   }
 ]
