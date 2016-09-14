@@ -12,6 +12,7 @@ It also describes how to host your own Apps.
 * HAProxy (based on `httpd:latest`)
 * MySQL (based on `mysql:latest`)
 * Mongo (based on `mongo:latest`)
+* Elasticsearch (based on `elasticsearch:latest`)
 * Redis (based on `redis:latest`)
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
