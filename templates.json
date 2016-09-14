@@ -116,6 +116,12 @@
     "volumes": ["/var/lib/wowza"]
   },
   {
+    "title": "Debian",
+    "description": "Open-source Linux distribution",
+    "logo": "https://www.debian.org/logos/openlogo-nd-100.png",
+    "image": "debian:latest"
+  },
+  {
     "title": "Ubuntu",
     "description": "Debian-based Linux operating system",
     "logo": "http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png",
