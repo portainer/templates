@@ -6,8 +6,10 @@ It also describes how to host your own Apps.
 
 ## Available apps:
 
+* Docker registry (based on `registry:latest`)
 * Nginx (based on `nginx:latest`)
 * MySQL (based on `mysql:latest`)
+* Mongo (based on `mongo:latest`)
 * Redis (based on `redis:latest`)
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
