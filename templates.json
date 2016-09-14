@@ -2,7 +2,7 @@
   {
     "title": "Registry",
     "description": "Docker image registry",
-    "logo": "https://camo.githubusercontent.com/1e11d429705bf6695b79d24966cb1267c00b7df6/68747470733a2f2f7777772e646f636b65722e636f6d2f73697465732f64656661756c742f66696c65732f6f79737465722d72656769737472792d332e706e67",
+    "logo": "https://hub.docker.com/public/images/official/registry.png",
     "image": "registry:latest",
     "ports": [
       "5000/tcp"
@@ -11,7 +11,7 @@
   {
     "title": "Nginx",
     "description": "High performance web server",
-    "logo": "http://www.gabrielmatteson.com/wp-content/uploads/2014/04/Nginx-Logo-02.png",
+    "logo": "https://hub.docker.com/public/images/official/nginx.png",
     "image": "nginx:latest",
     "ports": [
       "80/tcp",
@@ -21,7 +21,7 @@
   {
     "title": "Httpd",
     "description": "Open-source HTTP server",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASF-logo.svg/2000px-ASF-logo.svg.png",
+    "logo": "https://hub.docker.com/public/images/official/httpd.png",
     "image": "httpd:latest",
     "ports": [
       "80/tcp"
@@ -36,7 +36,7 @@
   {
     "title": "MySQL",
     "description": "The most popular open-source database",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/6/62/MySQL.svg/640px-MySQL.svg.png",
+    "logo": "https://hub.docker.com/public/images/official/mysql.png",
     "image": "mysql:latest",
     "env": [
       {
@@ -49,7 +49,7 @@
   {
     "title": "Mongo",
     "description": "Open-source document-oriented database",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/527px-MongoDB-Logo.svg.png",
+    "logo": "https://hub.docker.com/public/images/official/mongo.png",
     "image": "mongo:latest",
     "ports": [
       "27017/tcp"
@@ -59,7 +59,7 @@
   {
     "title": "Redis",
     "description": "open source in-memory data structure store",
-    "logo": "http://download.redis.io/logocontest/82.png",
+    "logo": "https://hub.docker.com/public/images/official/redis.png",
     "image": "redis:latest",
     "ports": [
       "6379/tcp"
@@ -69,7 +69,7 @@
   {
     "title": "WordPress",
     "description": "A free and open-source CMS",
-    "logo": "https://s.w.org/about/images/logos/wordpress-logo-simplified-rgb.png",
+    "logo": "https://hub.docker.com/public/images/official/wordpress.png",
     "image": "wordpress:latest",
     "env": [
       {
@@ -133,13 +133,13 @@
   {
     "title": "Debian",
     "description": "Open-source Linux distribution",
-    "logo": "https://www.debian.org/logos/openlogo-nd-100.png",
+    "logo": "https://hub.docker.com/public/images/official/debian.png",
     "image": "debian:latest"
   },
   {
     "title": "Ubuntu",
     "description": "Debian-based Linux operating system",
-    "logo": "http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png",
+    "logo": "https://hub.docker.com/public/images/official/ubuntu.png",
     "image": "ubuntu:latest"
   }
 ]
