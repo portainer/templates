@@ -114,5 +114,11 @@
       "8088/tcp"
     ],
     "volumes": ["/var/lib/wowza"]
+  },
+  {
+    "title": "Ubuntu",
+    "description": "Debian-based Linux operating system",
+    "logo": "http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png",
+    "image": "ubuntu:latest"
   }
 ]
