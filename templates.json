@@ -53,7 +53,7 @@
   {
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
-    "logo": "https://www.geeketfier.fr/archives/wp-content/uploads/elasticsearch-logo-icon-lg.png",
+    "logo": "https://camo.githubusercontent.com/970d309f5d85621a6c0b9e6ce0e82d2eca049c23/687474703a2f2f692e696d6775722e636f6d2f786c3178676a6d2e706e67",
     "image": "elasticsearch:latest",
     "ports": [
       "9200/tcp",
