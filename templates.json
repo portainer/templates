@@ -9,6 +9,16 @@
     ]
   },
   {
+    "title": "Nginx",
+    "description": "High performance web server",
+    "logo": "http://www.gabrielmatteson.com/wp-content/uploads/2014/04/Nginx-Logo-02.png",
+    "image": "nginx:latest",
+    "ports": [
+      "80/tcp",
+      "443/tcp"
+    ]
+  },
+  {
     "title": "Httpd",
     "description": "Open-source HTTP server",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASF-logo.svg/2000px-ASF-logo.svg.png",
@@ -18,14 +28,10 @@
     ]
   },
   {
-    "title": "Nginx",
-    "description": "High performance web server",
-    "logo": "http://www.gabrielmatteson.com/wp-content/uploads/2014/04/Nginx-Logo-02.png",
-    "image": "nginx:latest",
-    "ports": [
-      "80/tcp",
-      "443/tcp"
-    ]
+    "title": "HAProxy",
+    "description": "High Performance TCP/HTTP Load Balancer",
+    "logo": "https://hub.docker.com/public/images/official/haproxy.png",
+    "image": "haproxy:latest"
   },
   {
     "title": "MySQL",
