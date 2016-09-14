@@ -23,6 +23,16 @@
     "volumes": ["/var/lib/mysql"]
   },
   {
+    "title": "Mongo",
+    "description": "Open-source document-oriented database",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/4/45/MongoDB-Logo.svg/527px-MongoDB-Logo.svg.png",
+    "image": "mongo:latest",
+    "ports": [
+      "27017/tcp"
+    ],
+    "volumes": ["/data/db"]
+  },
+  {
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "logo": "https://s.w.org/about/images/logos/wordpress-logo-simplified-rgb.png",
