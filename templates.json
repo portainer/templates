@@ -69,13 +69,24 @@
   },
   {
     "title": "Redis",
-    "description": "open source in-memory data structure store",
+    "description": "Open-source in-memory data structure store",
     "logo": "https://hub.docker.com/public/images/official/redis.png",
     "image": "redis:latest",
     "ports": [
       "6379/tcp"
     ],
     "volumes": ["/data"]
+  },
+  {
+    "title": "Jenkins",
+    "description": "Open-source continuous integration tool",
+    "logo": "https://hub.docker.com/public/images/official/jenkins.png",
+    "image": "jenkins:latest",
+    "ports": [
+      "8080/tcp",
+      "50000/tcp"
+    ],
+    "volumes": ["/var/jenkins_home"]
   },
   {
     "title": "WordPress",
