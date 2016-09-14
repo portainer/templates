@@ -9,7 +9,6 @@ It also describes how to host your own Apps.
 * Docker registry (based on `registry:latest`)
 * Nginx (based on `nginx:latest`)
 * Httpd (based on `httpd:latest`)
-* HAProxy (based on `httpd:latest`)
 * MySQL (based on `mysql:latest`)
 * Mongo (based on `mongo:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
@@ -18,8 +17,6 @@ It also describes how to host your own Apps.
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
-* Debian (based on `debian:latest`)
-* Ubuntu (based on `ubuntu:latest`)
 
 ## Template definition format
 

@@ -28,12 +28,6 @@
     ]
   },
   {
-    "title": "HAProxy",
-    "description": "High Performance TCP/HTTP Load Balancer",
-    "logo": "https://hub.docker.com/public/images/official/haproxy.png",
-    "image": "haproxy:latest"
-  },
-  {
     "title": "MySQL",
     "description": "The most popular open-source database",
     "logo": "https://hub.docker.com/public/images/official/mysql.png",
@@ -151,17 +145,5 @@
       "8088/tcp"
     ],
     "volumes": ["/var/lib/wowza"]
-  },
-  {
-    "title": "Debian",
-    "description": "Open-source Linux distribution",
-    "logo": "https://hub.docker.com/public/images/official/debian.png",
-    "image": "debian:latest"
-  },
-  {
-    "title": "Ubuntu",
-    "description": "Debian-based Linux operating system",
-    "logo": "https://hub.docker.com/public/images/official/ubuntu.png",
-    "image": "ubuntu:latest"
   }
 ]
