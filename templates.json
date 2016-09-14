@@ -57,6 +57,17 @@
     "volumes": ["/data/db"]
   },
   {
+    "title": "Elasticsearch",
+    "description": "Open-source search and analytics engine",
+    "logo": "https://hub.docker.com/public/images/official/elasticsearch.png",
+    "image": "elasticsearch:latest",
+    "ports": [
+      "9200/tcp",
+      "9300/tcp"
+    ],
+    "volumes": ["/usr/share/elasticsearch/data"]
+  },
+  {
     "title": "Redis",
     "description": "open source in-memory data structure store",
     "logo": "https://hub.docker.com/public/images/official/redis.png",
