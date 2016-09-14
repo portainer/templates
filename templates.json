@@ -30,7 +30,7 @@
   {
     "title": "MySQL",
     "description": "The most popular open-source database",
-    "logo": "https://hub.docker.com/public/images/official/mysql.png",
+    "logo": "https://www.mysql.fr/common/logos/logo-mysql-170x115.png",
     "image": "mysql:latest",
     "env": [
       {
@@ -53,7 +53,7 @@
   {
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
-    "logo": "https://hub.docker.com/public/images/official/elasticsearch.png",
+    "logo": "https://www.geeketfier.fr/archives/wp-content/uploads/elasticsearch-logo-icon-lg.png",
     "image": "elasticsearch:latest",
     "ports": [
       "9200/tcp",
@@ -74,7 +74,7 @@
   {
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
-    "logo": "https://hub.docker.com/public/images/official/jenkins.png",
+    "logo": "https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png",
     "image": "jenkins:latest",
     "ports": [
       "8080/tcp",
