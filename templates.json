@@ -9,6 +9,15 @@
     ]
   },
   {
+    "title": "Httpd",
+    "description": "Open-source HTTP server",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/ASF-logo.svg/2000px-ASF-logo.svg.png",
+    "image": "httpd:latest",
+    "ports": [
+      "80/tcp"
+    ]
+  },
+  {
     "title": "Nginx",
     "description": "High performance web server",
     "logo": "http://www.gabrielmatteson.com/wp-content/uploads/2014/04/Nginx-Logo-02.png",

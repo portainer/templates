@@ -8,6 +8,7 @@ It also describes how to host your own Apps.
 
 * Docker registry (based on `registry:latest`)
 * Nginx (based on `nginx:latest`)
+* Httpd (based on `httpd:latest`)
 * MySQL (based on `mysql:latest`)
 * Mongo (based on `mongo:latest`)
 * Redis (based on `redis:latest`)
