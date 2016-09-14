@@ -14,6 +14,7 @@ It also describes how to host your own Apps.
 * Mongo (based on `mongo:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
 * Redis (based on `redis:latest`)
+* Jenkins (based on `jenkins:latest`)
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
