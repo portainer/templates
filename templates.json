@@ -42,6 +42,16 @@
     "volumes": ["/data/db"]
   },
   {
+    "title": "Redis",
+    "description": "open source in-memory data structure store",
+    "logo": "http://download.redis.io/logocontest/82.png",
+    "image": "redis:latest",
+    "ports": [
+      "6379/tcp"
+    ],
+    "volumes": ["/data"]
+  },
+  {
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "logo": "https://s.w.org/about/images/logos/wordpress-logo-simplified-rgb.png",

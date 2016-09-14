@@ -8,6 +8,7 @@ It also describes how to host your own Apps.
 
 * Nginx (based on `nginx:latest`)
 * MySQL (based on `mysql:latest`)
+* Redis (based on `redis:latest`)
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
