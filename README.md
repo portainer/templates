@@ -14,6 +14,7 @@ It also describes how to host your own Apps.
 * WordPress (based on `wordpress:latest`)
 * Drupal (based on `drupal:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
+* Debian (based on `debian:latest`)
 * Ubuntu (based on `ubuntu:latest`)
 
 ## Template definition format
