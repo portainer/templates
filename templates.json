@@ -224,7 +224,7 @@
   {
     "title": "Redmine",
     "description": "Open-source project management tool",
-    "logo": "https://hub.docker.com/public/images/official/redmine.png",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Redmine_logo.svg/2000px-Redmine_logo.svg.png",
     "image": "redmine:latest",
     "ports": [
       "3000/tcp"
