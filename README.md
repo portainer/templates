@@ -95,6 +95,7 @@ $ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/tem
 * Nginx (based on `nginx:latest`)
 * Httpd (based on `httpd:latest`)
 * MySQL (based on `mysql:latest`)
+* MariaDB (based on `mariadb:latest`)
 * PostgreSQL (based on `postgres:latest`)
 * Mongo (based on `mongo:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
