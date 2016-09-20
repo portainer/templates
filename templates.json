@@ -93,7 +93,7 @@
   {
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
-    "logo": "https://hub.docker.com/public/images/official/rabbitmq.png",
+    "logo": "https://www.rabbitmq.com/img/rabbitmq_logo_strap.png",
     "image": "rabbitmq:latest",
     "ports": [
       "5671/tcp",
