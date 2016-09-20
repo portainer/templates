@@ -97,6 +97,15 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
+    "title": "Solr",
+    "description": "Open-source enterprise search platform",
+    "logo": "https://hub.docker.com/public/images/official/solr.png",
+    "image": "solr:latest",
+    "ports": [
+      "8983/tcp"
+    ]
+  },
+  {
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
     "logo": "https://hub.docker.com/public/images/official/redis.png",
