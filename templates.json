@@ -38,6 +38,9 @@
         "label": "Root password"
       }
     ],
+    "ports": [
+      "3306/tcp"
+    ],
     "volumes": ["/var/lib/mysql"]
   },
   {
