@@ -4,20 +4,6 @@ This repository hosts the official templates (**'Apps'**) definitions for CloudI
 
 It also describes how to host your own Apps.
 
-## Available apps:
-
-* Docker registry (based on `registry:latest`)
-* Nginx (based on `nginx:latest`)
-* Httpd (based on `httpd:latest`)
-* MySQL (based on `mysql:latest`)
-* Mongo (based on `mongo:latest`)
-* Elasticsearch (based on `elasticsearch:latest`)
-* Redis (based on `redis:latest`)
-* Jenkins (based on `jenkins:latest`)
-* WordPress (based on `wordpress:latest`)
-* Drupal (based on `drupal:latest`)
-* Magento 2 (based on `alankent/gsd:latest`)
-
 ## Template definition format
 
 Template definitions are written in *JSON*.
@@ -102,3 +88,18 @@ You can also mount the `templates.json` file inside the container, so you can ed
 ```shell
 $ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" cloudinovasi-ui-templates
 ```
+
+## Available apps:
+
+* Docker registry (based on `registry:latest`)
+* Nginx (based on `nginx:latest`)
+* Httpd (based on `httpd:latest`)
+* MySQL (based on `mysql:latest`)
+* Mongo (based on `mongo:latest`)
+* Elasticsearch (based on `elasticsearch:latest`)
+* Redis (based on `redis:latest`)
+* Jenkins (based on `jenkins:latest`)
+* WordPress (based on `wordpress:latest`)
+* Joomla (based on `joomla:latest`)
+* Drupal (based on `drupal:latest`)
+* Magento 2 (based on `alankent/gsd:latest`)

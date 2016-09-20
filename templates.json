@@ -103,6 +103,26 @@
     ]
   },
   {
+    "title": "Joomla",
+    "description": "Another free and open-source CMS",
+    "logo": "https://hub.docker.com/public/images/official/joomla.png",
+    "image": "joomla:latest",
+    "env": [
+      {
+        "name": "JOOMLA_DB_HOST",
+        "label": "MySQL database host",
+        "type": "container"
+      },
+      {
+        "name": "JOOMLA_DB_PASSWORD",
+        "label": "Database password"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ]
+  },
+  {
     "title": "Drupal",
     "description": "Open-source content management framework",
     "logo": "https://www.drupal.org/files/druplicon-small.png",
