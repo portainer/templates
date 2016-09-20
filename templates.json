@@ -127,17 +127,6 @@
     "volumes": ["/var/lib/rabbitmq"]
   },
   {
-    "title": "Jenkins",
-    "description": "Open-source continuous integration tool",
-    "logo": "https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png",
-    "image": "jenkins:latest",
-    "ports": [
-      "8080/tcp",
-      "50000/tcp"
-    ],
-    "volumes": ["/var/jenkins_home"]
-  },
-  {
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "logo": "https://hub.docker.com/public/images/official/wordpress.png",
@@ -220,5 +209,26 @@
       "8088/tcp"
     ],
     "volumes": ["/var/lib/wowza"]
+  },
+  {
+    "title": "Jenkins",
+    "description": "Open-source continuous integration tool",
+    "logo": "https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png",
+    "image": "jenkins:latest",
+    "ports": [
+      "8080/tcp",
+      "50000/tcp"
+    ],
+    "volumes": ["/var/jenkins_home"]
+  },
+  {
+    "title": "Redmine",
+    "description": "Open-source project management tool",
+    "logo": "https://hub.docker.com/public/images/official/redmine.png",
+    "image": "redmine:latest",
+    "ports": [
+      "3000/tcp"
+    ],
+    "volumes": ["/usr/src/redmine/files"]
   }
 ]
