@@ -99,6 +99,7 @@ $ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/tem
 * Mongo (based on `mongo:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
 * Redis (based on `redis:latest`)
+* RabbitMQ (based on `rabbitmq:latest`)
 * Jenkins (based on `jenkins:latest`)
 * WordPress (based on `wordpress:latest`)
 * Joomla (based on `joomla:latest`)

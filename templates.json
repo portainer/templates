@@ -91,6 +91,17 @@
     "volumes": ["/data"]
   },
   {
+    "title": "RabbitMQ",
+    "description": "Highly reliable enterprise messaging system",
+    "logo": "https://hub.docker.com/public/images/official/rabbitmq.png",
+    "image": "rabbitmq:latest",
+    "ports": [
+      "5671/tcp",
+      "5672/tcp"
+    ],
+    "volumes": ["/var/lib/rabbitmq"]
+  },
+  {
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
     "logo": "https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png",
