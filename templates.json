@@ -2,7 +2,7 @@
   {
     "title": "Registry",
     "description": "Docker image registry",
-    "logo": "https://hub.docker.com/public/images/official/registry.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
     "image": "registry:latest",
     "ports": [
       "5000/tcp"
@@ -11,7 +11,7 @@
   {
     "title": "Nginx",
     "description": "High performance web server",
-    "logo": "https://hub.docker.com/public/images/official/nginx.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
     "image": "nginx:latest",
     "ports": [
       "80/tcp",
@@ -21,7 +21,7 @@
   {
     "title": "Httpd",
     "description": "Open-source HTTP server",
-    "logo": "https://hub.docker.com/public/images/official/httpd.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/httpd.png",
     "image": "httpd:latest",
     "ports": [
       "80/tcp"
@@ -30,7 +30,7 @@
   {
     "title": "MySQL",
     "description": "The most popular open-source database",
-    "logo": "https://www.mysql.fr/common/logos/logo-mysql-170x115.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
     "image": "mysql:latest",
     "env": [
       {
@@ -46,7 +46,7 @@
   {
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
-    "logo": "https://hub.docker.com/public/images/official/mariadb.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
     "image": "mariadb:latest",
     "env": [
       {
@@ -62,7 +62,7 @@
   {
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
-    "logo": "https://hub.docker.com/public/images/official/postgres.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/postgres.png",
     "image": "postgres:latest",
     "env": [
       {
@@ -78,7 +78,7 @@
   {
     "title": "Mongo",
     "description": "Open-source document-oriented database",
-    "logo": "https://hub.docker.com/public/images/official/mongo.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/mongo.png",
     "image": "mongo:latest",
     "ports": [
       "27017/tcp"
@@ -88,7 +88,7 @@
   {
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
-    "logo": "https://camo.githubusercontent.com/970d309f5d85621a6c0b9e6ce0e82d2eca049c23/687474703a2f2f692e696d6775722e636f6d2f786c3178676a6d2e706e67",
+    "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",
     "image": "elasticsearch:latest",
     "ports": [
       "9200/tcp",
@@ -99,7 +99,7 @@
   {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
-    "logo": "https://hub.docker.com/public/images/official/solr.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
     "image": "solr:latest",
     "ports": [
       "8983/tcp"
@@ -108,7 +108,7 @@
   {
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
-    "logo": "https://hub.docker.com/public/images/official/redis.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
     "image": "redis:latest",
     "ports": [
       "6379/tcp"
@@ -129,7 +129,7 @@
   {
     "title": "WordPress",
     "description": "A free and open-source CMS",
-    "logo": "https://hub.docker.com/public/images/official/wordpress.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
     "image": "wordpress:latest",
     "env": [
       {
@@ -149,7 +149,7 @@
   {
     "title": "Joomla",
     "description": "Another free and open-source CMS",
-    "logo": "https://hub.docker.com/public/images/official/joomla.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/joomla.png",
     "image": "joomla:latest",
     "env": [
       {
@@ -169,7 +169,7 @@
   {
     "title": "Drupal",
     "description": "Open-source content management framework",
-    "logo": "https://www.drupal.org/files/druplicon-small.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/drupal.png",
     "image": "drupal:latest",
     "ports": [
       "80/tcp"
@@ -178,7 +178,7 @@
   {
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
-    "logo": "http://www.taxrates.com/wp-content/uploads/2015/11/magento-logo.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/magento.png",
     "image": "alankent/gsd:latest",
     "ports": [
       "80/tcp",
@@ -189,7 +189,7 @@
   {
     "title": "Wowza",
     "description": "Streaming media server",
-    "logo": "https://www.wowza.com/uploads/images/wse-logo-bug-168x168.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/wowza.png",
     "image": "sameersbn/wowza:4.1.2-8",
     "env": [
       {
@@ -213,7 +213,7 @@
   {
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
-    "logo": "https://wiki.jenkins-ci.org/download/attachments/2916393/logo.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
     "image": "jenkins:latest",
     "ports": [
       "8080/tcp",
@@ -224,7 +224,7 @@
   {
     "title": "Redmine",
     "description": "Open-source project management tool",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Redmine_logo.svg/2000px-Redmine_logo.svg.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/redmine.png",
     "image": "redmine:latest",
     "ports": [
       "3000/tcp"
