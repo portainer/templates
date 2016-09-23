@@ -1,6 +1,6 @@
-# UI templates
+# App Templates
 
-This repository hosts the official templates (**'Apps'**) definitions for CloudInovasi UI.
+This repository hosts the official templates (**'Apps'**) definitions for portainer.
 
 It also describes how to host your own Apps.
 
@@ -74,11 +74,11 @@ You can build your own container that will use **nginx** to serve the templates 
 Clone the repository, edit the templates file, build and run the container:
 
 ```shell
-$ git clone https://github.com/cloud-inovasi/ui-templates.git
+$ git clone https://github.com/portainer/templates.git
 $ cd ui-templates
 # Edit the file templates.json
-$ docker build -t cloudinovasi-ui-templates .
-$ docker run -d -p "8080:80" cloudinovasi-ui-templates
+$ docker build -t portainer-templates .
+$ docker run -d -p "8080:80" portainer-templates
 ```
 
 Now you can access your templates definitions at `http://docker-host:8080/templates.json`.
@@ -86,7 +86,7 @@ Now you can access your templates definitions at `http://docker-host:8080/templa
 You can also mount the `templates.json` file inside the container, so you can edit the file and see live changes:
 
 ```shell
-$ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" cloudinovasi-ui-templates
+$ docker run -d -p "8080:80" -v "${PWD}/templates.json:/usr/share/nginx/html/templates.json" portainer-templates
 ```
 
 ## Available apps:
