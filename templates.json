@@ -118,7 +118,7 @@
   {
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
-    "logo": "https://www.rabbitmq.com/img/rabbitmq_logo_strap.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/rabbitmq.png",
     "image": "rabbitmq:latest",
     "ports": [
       "5671/tcp",
