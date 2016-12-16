@@ -178,7 +178,7 @@
   {
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
-    "logo": "https://cloudinovasi.id/assets/img/logos/plone.png",
+    "logo": "http://demo.portainer.io:8080/logos/plone.png",
     "image": "plone:latest",
     "ports": [
       "8080/tcp"
