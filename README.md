@@ -22,6 +22,7 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * WordPress (based on `wordpress:latest`)
 * Joomla (based on `joomla:latest`)
 * Drupal (based on `drupal:latest`)
+* Plone (based on `plone:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
 * Wowza (based on `sameersbn/wowza:4.1.2-8`)
 * Jenkins (based on `jenkins:latest`)
