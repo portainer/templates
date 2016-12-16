@@ -182,7 +182,7 @@
     "image": "plone:latest",
     "ports": [
       "8080/tcp"
-    ],
+    ]
   },
   {
     "title": "Magento 2",
