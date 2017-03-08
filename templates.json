@@ -244,26 +244,12 @@
     "title": "Lavagna",
     "description": "Open-source issue / project management tool",
     "logo": "http://digitalfondue.ch/images/logo_digitalfondue_normal.png",
-    "image": "digitalfondue/lavagna:stable",
+    "image": "digitalfondue/lavagna:portainer",
     "env": [
-        {
-          "name": "DB_DIALECT",
-          "label": "DB Dialect",
-          "set": "MYSQL"
-        },
-        {
-          "name": "SPRING_PROFILE",
-          "label": "Spring profile",
-          "set": "prod"
-        },
         {
           "name": "DB_HOST",
           "label": "MySQL database host",
           "type": "container"
-        },
-        {
-          "name": "DB_URL",
-          "label": "JDBC URL (e.g. jdbc:mysql://[container]/[database]?useSSL=false)"
         },
         {
           "name": "DB_USER",
