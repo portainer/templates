@@ -18,6 +18,7 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * CockroachDB (based on `cockroachdb/cockroach:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
 * Solr (based on `solr:latest`)
+* Minio (based on `minio/minio:latest`)
 * Redis (based on `redis:latest`)
 * RabbitMQ (based on `rabbitmq:latest`)
 * WordPress (based on `wordpress:latest`)
