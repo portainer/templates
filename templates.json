@@ -109,6 +109,17 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
+   "title": "Minio",
+   "description": "A distributed object storage server built for cloud applications and devops.",
+   "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
+   "image": "minio/minio:latest",
+   "ports": [
+     "9000/tcp"
+   ],
+   "volumes": ["/export", "/root/.minio"],
+   "command": "server /export"
+ },
+  {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
