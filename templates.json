@@ -86,6 +86,18 @@
     "volumes": ["/data/db"]
   },
   {
+    "title": "CockroachDB",
+    "description": "An open source, survivable, strongly consistent, scale-out SQL database.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
+    "image": "cockroachdb/cockroach:latest",
+    "ports": [
+      "26257/tcp",
+      "8080/tcp"
+    ],
+    "volumes": ["/cockroach/cockroach-data"],
+    "command": "start --insecure"
+  },
+  {
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
     "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",

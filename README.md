@@ -15,6 +15,7 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * MariaDB (based on `mariadb:latest`)
 * PostgreSQL (based on `postgres:latest`)
 * Mongo (based on `mongo:latest`)
+* CockroachDB (based on `cockroachdb/cockroach:latest`)
 * Elasticsearch (based on `elasticsearch:latest`)
 * Solr (based on `solr:latest`)
 * Redis (based on `redis:latest`)
