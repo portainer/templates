@@ -116,6 +116,16 @@
    "ports": [
      "9000/tcp"
    ],
+   "env": [
+     {
+       "name": "MINIO_ACCESS_KEY",
+       "label": "Minio access key"
+     },
+     {
+       "name": "MINIO_SECRET_KEY",
+       "label": "Minio secret key"
+     }
+   ],
    "volumes": ["/export", "/root/.minio"],
    "command": "server /export"
  },
