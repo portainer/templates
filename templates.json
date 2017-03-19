@@ -281,5 +281,29 @@
       "3000/tcp"
     ],
     "volumes": ["/usr/src/redmine/files"]
+  },
+  {
+    "title": "Lavagna",
+    "description": "Open-source issue / project management tool",
+    "logo": "http://digitalfondue.ch/images/logo_digitalfondue_normal.png",
+    "image": "digitalfondue/lavagna:portainer",
+    "env": [
+        {
+          "name": "DB_HOST",
+          "label": "MySQL database host",
+          "type": "container"
+        },
+        {
+          "name": "DB_USER",
+          "label": "Database user"
+        },
+        {
+          "name": "DB_PASS",
+          "label": "Database password"
+        }
+    ],
+    "ports": [
+        "8080/tcp"
+    ]
   }
 ]
