@@ -139,7 +139,8 @@
     "image": "solr:latest",
     "ports": [
       "8983/tcp"
-    ]
+    ],
+    "volumes": ["/opt/solr/mydata"],
   },
   {
     "title": "Redis",
