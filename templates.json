@@ -140,7 +140,7 @@
     "ports": [
       "8983/tcp"
     ],
-    "volumes": ["/opt/solr/mydata"],
+    "volumes": ["/opt/solr/mydata"]
   },
   {
     "title": "Redis",
