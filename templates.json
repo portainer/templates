@@ -6,7 +6,8 @@
     "image": "registry:latest",
     "ports": [
       "5000/tcp"
-    ]
+    ],
+    "volumes": ["/var/lib/registry"]
   },
   {
     "title": "Nginx",
@@ -16,7 +17,8 @@
     "ports": [
       "80/tcp",
       "443/tcp"
-    ]
+    ],
+    "volumes": ["/etc/nginx", "/var/www/html"]
   },
   {
     "title": "Httpd",
@@ -25,7 +27,8 @@
     "image": "httpd:latest",
     "ports": [
       "80/tcp"
-    ]
+    ],
+    "volumes": ["/usr/local/apache2/htdocs/"]
   },
   {
     "title": "MySQL",
@@ -177,7 +180,8 @@
     ],
     "ports": [
       "80/tcp"
-    ]
+    ],
+    "volumes": ["/var/www/html"]
   },
   {
     "title": "Joomla",
@@ -197,7 +201,8 @@
     ],
     "ports": [
       "80/tcp"
-    ]
+    ],
+    "volumes": ["/var/www/html"]
   },
   {
     "title": "Drupal",
@@ -206,7 +211,8 @@
     "image": "drupal:latest",
     "ports": [
       "80/tcp"
-    ]
+    ],
+    "volumes": ["/var/www/html"]
   },
   {
     "title": "Plone",
@@ -215,7 +221,8 @@
     "image": "plone:latest",
     "ports": [
       "8080/tcp"
-    ]
+    ],
+    "volumes": ["/data"]
   },
   {
     "title": "Magento 2",
@@ -226,7 +233,8 @@
       "80/tcp",
       "3000/tcp",
       "3001/tcp"
-    ]
+    ],
+    "volumes": ["/var/www/html/"]
   },
   {
     "title": "Wowza",
