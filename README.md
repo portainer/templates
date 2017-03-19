@@ -30,3 +30,4 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * Wowza (based on `sameersbn/wowza:4.1.2-8`)
 * Jenkins (based on `jenkins:latest`)
 * Redmine (based on `redmine:latest`)
+* Odoo (based on `odoo:latest`)
