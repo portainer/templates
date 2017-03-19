@@ -69,6 +69,10 @@
     "image": "postgres:latest",
     "env": [
       {
+        "name": "POSTGRES_USER",
+        "label": "Superuser"
+      },
+      {
         "name": "POSTGRES_PASSWORD",
         "label": "Superuser password"
       }
@@ -302,5 +306,30 @@
       "3000/tcp"
     ],
     "volumes": ["/usr/src/redmine/files"]
+  },
+  {
+    "title": "Odoo",
+    "description": "Open-source business apps",
+    "logo": "https://cloudinovasi.id/assets/img/logos/odoo.png",
+    "image": "odoo:latest",
+    "env": [
+      {
+        "name": "HOST",
+        "label": "PostgreSQL database host",
+        "type": "container"
+      },
+      {
+        "name": "USER",
+        "label": "Database user"
+      },
+      {
+        "name": "PASSWORD",
+        "label": "Database password"
+      }
+    ],
+    "ports": [
+      "8069/tcp"
+    ],
+    "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
   }
 ]
