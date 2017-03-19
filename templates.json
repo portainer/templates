@@ -281,5 +281,15 @@
       "3000/tcp"
     ],
     "volumes": ["/usr/src/redmine/files"]
+  },
+  {
+    "title": "NodeJS",
+    "description": "Node.js is a JavaScript-based platform for server-side and networking applications",
+    "logo": "https://cloudinovasi.id/assets/img/logos/nodejs.png",
+    "image": "node:latest",
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/usr/src/app"]
   }
 ]
