@@ -26,6 +26,7 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * Drupal (based on `drupal:latest`)
 * Plone (based on `plone:latest`)
 * Magento 2 (based on `alankent/gsd:latest`)
+* Mautic (based on `mautic/mautic:latest`)
 * Wowza (based on `sameersbn/wowza:4.1.2-8`)
 * Jenkins (based on `jenkins:latest`)
 * Redmine (based on `redmine:latest`)

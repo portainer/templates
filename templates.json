@@ -90,7 +90,7 @@
   },
   {
     "title": "CockroachDB",
-    "description": "An open source, survivable, strongly consistent, scale-out SQL database.",
+    "description": "An open source, survivable, strongly consistent, scale-out SQL database",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "image": "cockroachdb/cockroach:latest",
     "ports": [
@@ -113,7 +113,7 @@
   },
   {
    "title": "Minio",
-   "description": "A distributed object storage server built for cloud applications and devops.",
+   "description": "A distributed object storage server built for cloud applications and devops",
    "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
    "image": "minio/minio:latest",
    "ports": [
@@ -236,6 +236,27 @@
       "3001/tcp"
     ],
     "volumes": ["/var/www/html/"]
+  },
+  {
+    "title": "Mautic",
+    "description": "Open-source marketing automation platform",
+    "logo": "https://cloudinovasi.id/assets/img/logos/mautic.png",
+    "image": "mautic/mautic:latest",
+    "env": [
+      {
+        "name": "MAUTIC_DB_HOST",
+        "label": "MySQL database host",
+        "type": "container"
+      },
+      {
+        "name": "MAUTIC_DB_PASSWORD",
+        "label": "Database password"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/var/www/html"]
   },
   {
     "title": "Wowza",
