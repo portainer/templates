@@ -331,5 +331,20 @@
       "8069/tcp"
     ],
     "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
+  },
+  {
+    "title": "Netsil",
+    "description": "Site reliability platform",
+    "note": "This template requires a container with 8GB RAM and 4 CPUs. Note that first start might take up to 5 minutes before becoming available.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/netsil.png",
+    "image": "netsil/netsil:stable-1.2.1",
+    "ports": [
+      "80/tcp", "443/tcp", "2001/tcp", "2003/tcp", "2003/udp"
+    ],
+    "volumes": ["/etc/ceph", "/var/lib/ceph-data", "/opt/netsil/druid/realtime-segments",
+      "/var/tmp/druid/indexCache", "/usr/share/elasticsearch/data", "/opt/netsil/kafka/kafka-log-dir",
+      "/opt/netsil/license-manager/licenses", "/var/lib/mysql", "/var/lib/redis", "/opt/netsil/zookeeper/data"
+    ],
+    "command": "/root/startup.sh"
   }
 ]
