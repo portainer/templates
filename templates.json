@@ -331,5 +331,16 @@
       "8069/tcp"
     ],
     "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
+  },
+  {
+    "title": "Urbackup",
+    "description": "Open-source network backup",
+    "note": "This application web interface is exposed on the port 55414 inside the container.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/urbackup.png",
+    "image": "cfstras/urbackup",
+    "ports": [
+      "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
+    ],
+    "volumes": ["/var/urbackup"]
   }
 ]
