@@ -31,6 +31,16 @@
     "volumes": ["/usr/local/apache2/htdocs/"]
   },
   {
+    "title": "Caddy",
+    "description": "HTTP/2 web server with automatic HTTPS",
+    "logo": "https://cloudinovasi.id/assets/img/logos/caddy.png",
+    "image": "abiosoft/caddy:latest",
+    "ports": [
+      "2015/tcp"
+    ],
+    "volumes": ["/root/.caddy"]
+  },
+  {
     "title": "MySQL",
     "description": "The most popular open-source database",
     "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
