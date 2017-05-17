@@ -168,6 +168,16 @@
     "volumes": ["/var/lib/rabbitmq"]
   },
   {
+    "title": "Plesk",
+    "description": "WebOps platform and hosting control panel",
+    "note": "Default credentials: admin / changeme",
+    "logo": "https://cloudinovasi.id/assets/img/logos/plesk.png",
+    "image": "plesk/plesk:preview",
+    "ports": [
+      "8880/tcp"
+    ]
+  },
+  {
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
