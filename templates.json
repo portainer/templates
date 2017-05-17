@@ -116,26 +116,46 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
-   "title": "Minio",
-   "description": "A distributed object storage server built for cloud applications and devops",
-   "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
-   "image": "minio/minio:latest",
-   "ports": [
-     "9000/tcp"
-   ],
-   "env": [
-     {
-       "name": "MINIO_ACCESS_KEY",
-       "label": "Minio access key"
-     },
-     {
-       "name": "MINIO_SECRET_KEY",
-       "label": "Minio secret key"
-     }
-   ],
-   "volumes": ["/export", "/root/.minio"],
-   "command": "server /export"
- },
+    "title": "Minio",
+    "description": "A distributed object storage server built for cloud applications and devops",
+    "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
+    "image": "minio/minio:latest",
+    "ports": [
+      "9000/tcp"
+    ],
+    "env": [
+      {
+        "name": "MINIO_ACCESS_KEY",
+        "label": "Minio access key"
+      },
+      {
+        "name": "MINIO_SECRET_KEY",
+        "label": "Minio secret key"
+      }
+    ],
+    "volumes": ["/export", "/root/.minio"],
+    "command": "server /export"
+  },
+  {
+    "title": "Scality S3 Server",
+    "description": "Standalone AWS S3 protocol server that can be used for dev, testing and live deployments",
+    "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
+    "image": "scality/s3server",
+    "ports": [
+      "8000/tcp"
+    ],
+    "env": [
+      {
+        "name": "SCALITY_ACCESS_KEY",
+        "label": "Scality S3 access key"
+      },
+      {
+        "name": "SCALITY_SECRET_KEY",
+        "label": "Scality S3 secret key"
+      }
+    ],
+    "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
+  },
   {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
