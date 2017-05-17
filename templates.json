@@ -137,8 +137,8 @@
     "command": "server /export"
   },
   {
-    "title": "Scality S3 Server",
-    "description": "Standalone AWS S3 protocol server that can be used for dev, testing and live deployments",
+    "title": "Scality S3",
+    "description": "Standalone AWS S3 protocol server",
     "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
     "image": "scality/s3server",
     "ports": [
