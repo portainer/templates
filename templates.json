@@ -119,7 +119,7 @@
     "title": "SQL Server",
     "description": "Microsoft SQL Server on Linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft-mssql-linux.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
     "image": "microsoft/mssql-server-linux:latest",
     "ports": [
       "1433/tcp"
@@ -137,9 +137,30 @@
   },
   {
     "title": "SQL Server",
+    "description": "Microsoft SQL Server for Windows containers",
+    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
+    "image": "microsoft/mssql-server-windows:latest",
+    "ports": [
+      "1433/tcp"
+    ],
+    "env": [
+      {
+        "name": "ACCEPT_EULA",
+        "set": "Y"
+      },
+      {
+        "name": "sa_password",
+        "label": "System administrator password"
+      }
+    ],
+    "volumes": ["C:/temp/"]
+  },
+  {
+    "title": "SQL Server Express",
     "description": "Microsoft SQL Server Express for Windows containers",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
-    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft-mssql-express.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
     "image": "microsoft/mssql-server-windows-express:latest",
     "ports": [
       "1433/tcp"
@@ -150,7 +171,7 @@
         "set": "Y"
       },
       {
-        "name": "SA_PASSWORD",
+        "name": "sa_password",
         "label": "System administrator password"
       }
     ],
