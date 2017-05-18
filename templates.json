@@ -159,6 +159,7 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
+<<<<<<< HEAD
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": ["storage"],
@@ -203,6 +204,90 @@
     ],
     "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
   },
+=======
+    "title": "SQL Server",
+    "description": "Microsoft SQL Server on Linux",
+    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
+    "image": "microsoft/mssql-server-linux:latest",
+    "ports": [
+      "1433/tcp"
+    ],
+    "env": [
+      {
+        "name": "ACCEPT_EULA",
+        "set": "Y"
+      },
+      {
+        "name": "SA_PASSWORD",
+        "label": "System administrator password"
+      }
+    ]
+  },
+  {
+    "title": "SQL Server",
+    "description": "Microsoft SQL Server for Windows containers",
+    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
+    "image": "microsoft/mssql-server-windows:latest",
+    "ports": [
+      "1433/tcp"
+    ],
+    "env": [
+      {
+        "name": "ACCEPT_EULA",
+        "set": "Y"
+      },
+      {
+        "name": "sa_password",
+        "label": "System administrator password"
+      }
+    ],
+    "volumes": ["C:/temp/"]
+  },
+  {
+    "title": "SQL Server Express",
+    "description": "Microsoft SQL Server Express for Windows containers",
+    "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
+    "image": "microsoft/mssql-server-windows-express:latest",
+    "ports": [
+      "1433/tcp"
+    ],
+    "env": [
+      {
+        "name": "ACCEPT_EULA",
+        "set": "Y"
+      },
+      {
+        "name": "sa_password",
+        "label": "System administrator password"
+      }
+    ],
+    "volumes": ["C:/temp/"]
+  },
+  {
+   "title": "Minio",
+   "description": "A distributed object storage server built for cloud applications and devops",
+   "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
+   "image": "minio/minio:latest",
+   "ports": [
+     "9000/tcp"
+   ],
+   "env": [
+     {
+       "name": "MINIO_ACCESS_KEY",
+       "label": "Minio access key"
+     },
+     {
+       "name": "MINIO_SECRET_KEY",
+       "label": "Minio secret key"
+     }
+   ],
+   "volumes": ["/export", "/root/.minio"],
+   "command": "server /export"
+ },
+>>>>>>> templates-microsoft
   {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
