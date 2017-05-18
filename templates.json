@@ -36,7 +36,7 @@
     "logo": "https://cloudinovasi.id/assets/img/logos/caddy.png",
     "image": "abiosoft/caddy:latest",
     "ports": [
-      "2015/tcp"
+      "80/tcp", "443/tcp", "2015/tcp"
     ],
     "volumes": ["/root/.caddy"]
   },
