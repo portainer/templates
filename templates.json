@@ -221,7 +221,7 @@
       },
       {
         "name": "SA_PASSWORD",
-        "label": "System administrator password"
+        "label": "SA password"
       }
     ]
   },
@@ -243,7 +243,7 @@
       },
       {
         "name": "sa_password",
-        "label": "System administrator password"
+        "label": "SA password"
       }
     ],
     "volumes": ["C:/temp/"]
@@ -266,7 +266,7 @@
       },
       {
         "name": "sa_password",
-        "label": "System administrator password"
+        "label": "SA password"
       }
     ],
     "volumes": ["C:/temp/"]
