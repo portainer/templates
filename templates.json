@@ -272,27 +272,6 @@
     "volumes": ["C:/temp/"]
   },
   {
-    "title": "Minio",
-    "description": "A distributed object storage server built for cloud applications and devops",
-    "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
-    "image": "minio/minio:latest",
-    "ports": [
-      "9000/tcp"
-    ],
-    "env": [
-      {
-        "name": "MINIO_ACCESS_KEY",
-        "label": "Minio access key"
-      },
-      {
-        "name": "MINIO_SECRET_KEY",
-        "label": "Minio secret key"
-      }
-    ],
-    "volumes": ["/export", "/root/.minio"],
-    "command": "server /export"
-  },
-  {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
