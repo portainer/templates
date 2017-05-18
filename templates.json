@@ -94,7 +94,7 @@
   },
   {
     "title": "CockroachDB",
-    "description": "An open source, survivable, strongly consistent, scale-out SQL database",
+    "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "image": "cockroachdb/cockroach:latest",
     "ports": [
@@ -103,6 +103,17 @@
     ],
     "volumes": ["/cockroach/cockroach-data"],
     "command": "start --insecure"
+  },
+  {
+    "title": "CrateDB",
+    "description": "An open-source distributed SQL database",
+    "logo": "https://cloudinovasi.id/assets/img/logos/cratedb.png",
+    "image": "crate:latest",
+    "ports": [
+      "4200/tcp",
+      "4300/tcp"
+    ],
+    "volumes": ["/data"]
   },
   {
     "title": "Elasticsearch",
