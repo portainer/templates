@@ -204,7 +204,7 @@
     "logo": "https://cloudinovasi.id/assets/img/logos/plesk.png",
     "image": "plesk/plesk:preview",
     "ports": [
-      "8880/tcp"
+      "21/tcp", "80/tcp", "443/tcp", "8880/tcp", "8443/tcp", "8447/tcp"
     ]
   },
   {
