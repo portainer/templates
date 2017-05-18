@@ -2,6 +2,8 @@
   {
     "title": "Registry",
     "description": "Docker image registry",
+    "categories": ["docker"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
     "image": "registry:latest",
     "ports": [
@@ -12,6 +14,8 @@
   {
     "title": "Nginx",
     "description": "High performance web server",
+    "categories": ["webserver"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
     "image": "nginx:latest",
     "ports": [
@@ -23,6 +27,8 @@
   {
     "title": "Httpd",
     "description": "Open-source HTTP server",
+    "categories": ["webserver"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/httpd.png",
     "image": "httpd:latest",
     "ports": [
@@ -33,6 +39,8 @@
   {
     "title": "Caddy",
     "description": "HTTP/2 web server with automatic HTTPS",
+    "categories": ["webserver"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/caddy.png",
     "image": "abiosoft/caddy:latest",
     "ports": [
@@ -43,6 +51,8 @@
   {
     "title": "MySQL",
     "description": "The most popular open-source database",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
     "image": "mysql:latest",
     "env": [
@@ -59,6 +69,8 @@
   {
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
     "image": "mariadb:latest",
     "env": [
@@ -75,6 +87,8 @@
   {
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/postgres.png",
     "image": "postgres:latest",
     "env": [
@@ -95,6 +109,8 @@
   {
     "title": "Mongo",
     "description": "Open-source document-oriented database",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mongo.png",
     "image": "mongo:latest",
     "ports": [
@@ -105,6 +121,8 @@
   {
     "title": "CockroachDB",
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "image": "cockroachdb/cockroach:latest",
     "ports": [
@@ -117,6 +135,8 @@
   {
     "title": "CrateDB",
     "description": "An open-source distributed SQL database",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cratedb.png",
     "image": "crate:latest",
     "ports": [
@@ -128,6 +148,8 @@
   {
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",
     "image": "elasticsearch:latest",
     "ports": [
@@ -139,6 +161,8 @@
   {
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
+    "categories": ["storage"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
     "image": "minio/minio:latest",
     "ports": [
@@ -160,6 +184,8 @@
   {
     "title": "Scality S3",
     "description": "Standalone AWS S3 protocol server",
+    "categories": ["storage"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
     "image": "scality/s3server",
     "ports": [
@@ -180,6 +206,8 @@
   {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
+    "categories": ["search-engine"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
     "image": "solr:latest",
     "ports": [
@@ -190,6 +218,8 @@
   {
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
+    "categories": ["database"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
     "image": "redis:latest",
     "ports": [
@@ -200,6 +230,8 @@
   {
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
+    "categories": ["messaging"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/rabbitmq.png",
     "image": "rabbitmq:latest",
     "ports": [
@@ -211,6 +243,8 @@
   {
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
+    "categories": ["CMS"],
+    "platform": "linux",
     "note": "Default credentials: admin / changeme",
     "logo": "https://cloudinovasi.id/assets/img/logos/plesk.png",
     "image": "plesk/plesk:preview",
@@ -221,6 +255,8 @@
   {
     "title": "WordPress",
     "description": "A free and open-source CMS",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
     "image": "wordpress:latest",
     "env": [
@@ -242,6 +278,8 @@
   {
     "title": "Joomla",
     "description": "Another free and open-source CMS",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/joomla.png",
     "image": "joomla:latest",
     "env": [
@@ -263,6 +301,8 @@
   {
     "title": "Drupal",
     "description": "Open-source content management framework",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/drupal.png",
     "image": "drupal:latest",
     "ports": [
@@ -273,6 +313,8 @@
   {
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/plone.png",
     "image": "plone:latest",
     "ports": [
@@ -283,6 +325,8 @@
   {
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/magento.png",
     "image": "alankent/gsd:latest",
     "ports": [
@@ -295,6 +339,8 @@
   {
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
+    "categories": ["marketing"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mautic.png",
     "image": "mautic/mautic:latest",
     "env": [
@@ -316,6 +362,8 @@
   {
     "title": "Wowza",
     "description": "Streaming media server",
+    "categories": ["streaming"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wowza.png",
     "image": "sameersbn/wowza:4.1.2-8",
     "env": [
@@ -340,6 +388,8 @@
   {
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
+    "categories": ["continuous-integration"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
     "image": "jenkins:latest",
     "ports": [
@@ -351,6 +401,8 @@
   {
     "title": "Redmine",
     "description": "Open-source project management tool",
+    "categories": ["project-management"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redmine.png",
     "image": "redmine:latest",
     "ports": [
@@ -361,6 +413,8 @@
   {
     "title": "Odoo",
     "description": "Open-source business apps",
+    "categories": ["project-management"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/odoo.png",
     "image": "odoo:latest",
     "env": [
@@ -386,6 +440,8 @@
   {
     "title": "Urbackup",
     "description": "Open-source network backup",
+    "categories": ["backup"],
+    "platform": "linux",
     "note": "This application web interface is exposed on the port 55414 inside the container.",
     "logo": "https://cloudinovasi.id/assets/img/logos/urbackup.png",
     "image": "cfstras/urbackup",
@@ -397,6 +453,8 @@
   {
     "title": "CommandBox",
     "description": "ColdFusion (CFML) CLI",
+    "categories": ["development"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-commandbox.png",
     "image": "ortussolutions/commandbox:latest",
     "env": [
@@ -412,6 +470,8 @@
   {
     "title": "ContentBox",
     "description": "Open-source modular CMS",
+    "categories": ["CMS"],
+    "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-contentbox.png",
     "image": "ortussolutions/contentbox:latest",
     "env": [
