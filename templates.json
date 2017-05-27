@@ -560,5 +560,17 @@
       "8080/tcp", "8443/tcp"
     ],
     "volumes": ["/data/contentbox/db", "/app/includes/shared/media"]
+  },
+  {
+    "title": "Community Server",
+    "description": "Free open source office suite",
+    "categories": ["productivity"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/onlyoffice-communityserver.png",
+    "image": "onlyoffice/communityserver",
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["/var/log/onlyoffice", "/var/www/onlyoffice/Data", "/var/lib/mysql"]
   }
 ]
