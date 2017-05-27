@@ -564,12 +564,12 @@
   {
     "title": "Community Server",
     "description": "Free open source office suite",
-    "categories": ["productivity"],
+    "categories": ["productivity", "collaboration"],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/onlyoffice-communityserver.png",
     "image": "onlyoffice/communityserver",
     "ports": [
-      "80/tcp"
+      "80/tcp", "25/tcp", "465/tcp", "143/tcp", "993/tcp", "110/tcp", "995/tcp", "5222/tcp"
     ],
     "volumes": ["/var/log/onlyoffice", "/var/www/onlyoffice/Data", "/var/lib/mysql"]
   }
