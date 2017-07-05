@@ -560,5 +560,27 @@
       "8080/tcp", "8443/tcp"
     ],
     "volumes": ["/data/contentbox/db", "/app/includes/shared/media"]
+  },
+  {
+    "title": "etcd",
+    "description": "Tiny Etcd Container with TLS support and etcdctl",
+    "categories": ["service-discovery"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/coreos/etcd/master/logos/etcd-glyph-color.png",
+    "image": "elcolio/etcd:latest",
+    "env": [
+      {
+        "name": "CLIENT_URLS",
+        "label": "Client URLs"
+      },
+      {
+        "name": "PEER_URLS",
+        "label": "Peer URLs"
+      }
+    ],
+    "ports": [
+      "2379/tcp", "2380/tcp", "4001/tcp", "7001/tcp"
+    ],
+    "volumes": ["/data"]
   }
 ]
