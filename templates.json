@@ -12,6 +12,18 @@
     "volumes": ["/var/lib/registry"]
   },
   {
+    "title": "Artifactory",
+    "description": "Universal Artifact Repository",
+    "categories": ["Artifacts"],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/JFrogDev/artifactory-dcos/master/images/jfrog_med.png",
+    "image": "docker.bintray.io/jfrog/artifactory-pro:latest",
+    "ports": [
+      "8081/tcp"
+    ],
+    "volumes": ["/var/opt/jfrog/artifactory"]
+  },
+  {
     "title": "Nginx",
     "description": "High performance web server",
     "categories": ["webserver"],
