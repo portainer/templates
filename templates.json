@@ -272,6 +272,19 @@
     "volumes": ["C:/temp/"]
   },
   {
+    "title": "Portainer templates on IIS",
+    "description": "Portainer Templates on IIS / Nano Server",
+    "categories": ["development"],
+    "platform": "windows",
+    "note": "",
+    "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
+    "image": "microsoft/iis:nanoserver",
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": ["c:/inetpub/wwwroot/portainer-template/"]
+  },
+  {
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
