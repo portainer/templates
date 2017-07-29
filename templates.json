@@ -467,7 +467,7 @@
     "env": [
       {
         "name": "JENKINS_OPTS",
-        "label": "Set of options for jenkins"
+        "label": "Jenkins options"
       }
     ],
     "volumes": ["/var/jenkins_home"]
