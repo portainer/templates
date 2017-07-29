@@ -464,6 +464,12 @@
       "8080/tcp",
       "50000/tcp"
     ],
+    "env": [
+      {
+        "name": "JENKINS_OPTS",
+        "label": "Jenkins options"
+      }
+    ],
     "volumes": ["/var/jenkins_home"]
   },
   {
