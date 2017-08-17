@@ -459,7 +459,7 @@
     "categories": ["continuous-integration"],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
-    "image": "jenkins:latest",
+    "image": "jenkins/jenkins:lts",
     "ports": [
       "8080/tcp",
       "50000/tcp"
