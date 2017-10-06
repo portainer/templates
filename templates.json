@@ -210,7 +210,7 @@
     "platform": "linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
     "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
-    "image": "microsoft/mssql-server-linux:latest",
+    "image": "microsoft/mssql-server-linux:2017-GA",
     "ports": [
       "1433/tcp"
     ],
