@@ -159,6 +159,25 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
+    "title": "Gitlab CE",
+    "description": "Open-source end-to-end software development platform",
+    "note": "Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
+    "categories": ["development", "project-management"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/gitlab_ce.png",
+    "image": "gitlab/gitlab-ce:latest",
+    "ports": [
+      "80/tcp",
+      "443/tcp",
+      "22/tcp"
+    ],
+    "volumes": [
+      { "container": "/etc/gitlab" },
+      { "container": "/var/log/gitlab" },
+      { "container": "/var/opt/gitlab" }
+    ]
+  },
+  {
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": ["storage"],
