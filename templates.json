@@ -161,7 +161,7 @@
   {
     "title": "Gitlab CE",
     "description": "Open-source end-to-end software development platform",
-    "note": "Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
+    "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
     "categories": ["development", "project-management"],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/gitlab_ce.png",
