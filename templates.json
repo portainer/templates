@@ -337,7 +337,8 @@
     "image": "ghost:latest",
     "ports": [
       "2368/tcp"
-    ]
+    ],
+    "volumes": ["/var/lib/ghost/content"]
   },
   {
     "title": "Plesk",
