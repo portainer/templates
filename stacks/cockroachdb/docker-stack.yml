@@ -7,7 +7,7 @@ services:
     deploy:
       replicas: 1
     ports:
-      - "8080"
+      - 8080
 
   roachN:
     image: cockroachdb/cockroach:latest

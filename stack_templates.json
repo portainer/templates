@@ -20,7 +20,19 @@
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "repository": {
       "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/cockroachdb/docker-compose.yml"
+      "stackfile": "stacks/cockroachdb/docker-stack.yml"
+    }
+  },
+  {
+    "title": "Wordpress",
+    "description": "Wordpress setup with a MySQL database",
+    "note": "Deploys a Wordpress instance connected to a MySQL database.",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/wordpress/docker-stack.yml"
     }
   }
 ]
