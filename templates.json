@@ -1,5 +1,6 @@
 [
   {
+    "type": "container",
     "title": "Registry",
     "description": "Docker image registry",
     "categories": ["docker"],
@@ -12,6 +13,7 @@
     "volumes": ["/var/lib/registry"]
   },
   {
+    "type": "container",
     "title": "Nginx",
     "description": "High performance web server",
     "categories": ["webserver"],
@@ -25,6 +27,7 @@
     "volumes": ["/etc/nginx", "/var/www/html"]
   },
   {
+    "type": "container",
     "title": "Httpd",
     "description": "Open-source HTTP server",
     "categories": ["webserver"],
@@ -37,6 +40,7 @@
     "volumes": ["/usr/local/apache2/htdocs/"]
   },
   {
+    "type": "container",
     "title": "Caddy",
     "description": "HTTP/2 web server with automatic HTTPS",
     "categories": ["webserver"],
@@ -49,6 +53,7 @@
     "volumes": ["/root/.caddy"]
   },
   {
+    "type": "container",
     "title": "MySQL",
     "description": "The most popular open-source database",
     "categories": ["database"],
@@ -67,6 +72,7 @@
     "volumes": ["/var/lib/mysql"]
   },
   {
+    "type": "container",
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
     "categories": ["database"],
@@ -85,6 +91,7 @@
     "volumes": ["/var/lib/mysql"]
   },
   {
+    "type": "container",
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
     "categories": ["database"],
@@ -107,6 +114,7 @@
     "volumes": ["/var/lib/postgresql/data"]
   },
   {
+    "type": "container",
     "title": "Mongo",
     "description": "Open-source document-oriented database",
     "categories": ["database"],
@@ -119,6 +127,7 @@
     "volumes": ["/data/db"]
   },
   {
+    "type": "container",
     "title": "CockroachDB",
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "categories": ["database"],
@@ -133,6 +142,7 @@
     "command": "start --insecure"
   },
   {
+    "type": "container",
     "title": "CrateDB",
     "description": "An open-source distributed SQL database",
     "categories": ["database"],
@@ -146,6 +156,7 @@
     "volumes": ["/data"]
   },
   {
+    "type": "container",
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
     "categories": ["database"],
@@ -159,6 +170,7 @@
     "volumes": ["/usr/share/elasticsearch/data"]
   },
   {
+    "type": "container",
     "title": "Gitlab CE",
     "description": "Open-source end-to-end software development platform",
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
@@ -178,6 +190,7 @@
     ]
   },
   {
+    "type": "container",
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": ["storage"],
@@ -201,6 +214,7 @@
     "command": "server /export"
   },
   {
+    "type": "container",
     "title": "Scality S3",
     "description": "Standalone AWS S3 protocol server",
     "categories": ["storage"],
@@ -223,6 +237,7 @@
     "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
   },
   {
+    "type": "container",
     "title": "SQL Server",
     "description": "Microsoft SQL Server on Linux",
     "categories": ["database"],
@@ -245,6 +260,7 @@
     ]
   },
   {
+    "type": "container",
     "title": "SQL Server",
     "description": "Microsoft SQL Server for Windows containers",
     "categories": ["database"],
@@ -268,6 +284,7 @@
     "volumes": ["C:/temp/"]
   },
   {
+    "type": "container",
     "title": "SQL Server Express",
     "description": "Microsoft SQL Server Express for Windows containers",
     "categories": ["database"],
@@ -291,6 +308,7 @@
     "volumes": ["C:/temp/"]
   },
   {
+    "type": "container",
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
@@ -303,6 +321,7 @@
     "volumes": ["/opt/solr/mydata"]
   },
   {
+    "type": "container",
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
     "categories": ["database"],
@@ -315,6 +334,7 @@
     "volumes": ["/data"]
   },
   {
+    "type": "container",
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
     "categories": ["messaging"],
@@ -328,6 +348,7 @@
     "volumes": ["/var/lib/rabbitmq"]
   },
   {
+    "type": "container",
     "title": "Ghost",
     "description": "Free and open-source blogging platform",
     "categories": ["blog"],
@@ -341,6 +362,7 @@
     "volumes": ["/var/lib/ghost/content"]
   },
   {
+    "type": "container",
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
     "categories": ["CMS"],
@@ -353,6 +375,7 @@
     ]
   },
   {
+    "type": "container",
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "categories": ["CMS"],
@@ -376,6 +399,7 @@
     "volumes": ["/var/www/html"]
   },
   {
+    "type": "container",
     "title": "Joomla",
     "description": "Another free and open-source CMS",
     "categories": ["CMS"],
@@ -399,6 +423,7 @@
     "volumes": ["/var/www/html"]
   },
   {
+    "type": "container",
     "title": "Drupal",
     "description": "Open-source content management framework",
     "categories": ["CMS"],
@@ -411,6 +436,7 @@
     "volumes": ["/var/www/html"]
   },
   {
+    "type": "container",
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
     "categories": ["CMS"],
@@ -423,6 +449,7 @@
     "volumes": ["/data"]
   },
   {
+    "type": "container",
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
     "categories": ["CMS"],
@@ -437,6 +464,7 @@
     "volumes": ["/var/www/html/"]
   },
   {
+    "type": "container",
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
     "categories": ["marketing"],
@@ -460,6 +488,7 @@
     "volumes": ["/var/www/html"]
   },
   {
+    "type": "container",
     "title": "Wowza",
     "description": "Streaming media server",
     "categories": ["streaming"],
@@ -486,6 +515,7 @@
     "volumes": ["/var/lib/wowza"]
   },
   {
+    "type": "container",
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
     "categories": ["continuous-integration"],
@@ -505,6 +535,7 @@
     "volumes": ["/var/jenkins_home"]
   },
   {
+    "type": "container",
     "title": "Redmine",
     "description": "Open-source project management tool",
     "categories": ["project-management"],
@@ -517,6 +548,7 @@
     "volumes": ["/usr/src/redmine/files"]
   },
   {
+    "type": "container",
     "title": "Odoo",
     "description": "Open-source business apps",
     "categories": ["project-management"],
@@ -544,6 +576,7 @@
     "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
   },
   {
+    "type": "container",
     "title": "Urbackup",
     "description": "Open-source network backup",
     "categories": ["backup"],
@@ -557,6 +590,7 @@
     "volumes": ["/var/urbackup"]
   },
   {
+    "type": "container",
     "title": "CommandBox",
     "description": "ColdFusion (CFML) CLI",
     "categories": ["development"],
@@ -574,6 +608,7 @@
     ]
   },
   {
+    "type": "container",
     "title": "ContentBox",
     "description": "Open-source modular CMS",
     "categories": ["CMS"],
@@ -598,5 +633,51 @@
       "8080/tcp", "8443/tcp"
     ],
     "volumes": ["/data/contentbox/db", "/app/includes/shared/media"]
+  },
+  {
+    "type": "stack",
+    "title": "OpenFaaS",
+    "description": "A serverless framework",
+    "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
+    "categories": ["serverless"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "repository": {
+      "url": "https://github.com/openfaas/faas",
+      "stackfile": "docker-compose.yml"
+    }
+  },
+  {
+    "type": "stack",
+    "title": "CockroachDB",
+    "description": "CockroachDB cluster",
+    "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+    "categories": ["database"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/cockroachdb/docker-stack.yml"
+    }
+  },
+  {
+    "type": "stack",
+    "title": "Wordpress",
+    "description": "Wordpress setup with a MySQL database",
+    "note": "Deploys a Wordpress instance connected to a MySQL database.",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/wordpress/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "MYSQL_ROOT_PASSWORD",
+        "label": "Database root password",
+        "description": "Password used by the MySQL root user."
+      }
+    ]
   }
 ]

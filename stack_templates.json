@@ -1,5 +1,6 @@
 [
   {
+    "type": "stack",
     "title": "OpenFaaS",
     "description": "A serverless framework",
     "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
@@ -12,6 +13,7 @@
     }
   },
   {
+    "type": "stack",
     "title": "CockroachDB",
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
@@ -24,6 +26,7 @@
     }
   },
   {
+    "type": "stack",
     "title": "Wordpress",
     "description": "Wordpress setup with a MySQL database",
     "note": "Deploys a Wordpress instance connected to a MySQL database.",
