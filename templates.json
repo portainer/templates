@@ -641,7 +641,7 @@
     "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
     "repository": {
       "url": "https://github.com/openfaas/faas",
       "stackfile": "docker-compose.yml"
