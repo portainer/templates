@@ -24,7 +24,7 @@
       "80/tcp",
       "443/tcp"
     ],
-    "volumes": ["/etc/nginx", "/var/www/html"]
+    "volumes": ["/etc/nginx", "/usr/share/nginx/html"]
   },
   {
     "type": "container",
