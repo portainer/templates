@@ -262,12 +262,12 @@
   {
     "type": "container",
     "title": "SQL Server",
-    "description": "Microsoft SQL Server for Windows containers",
+    "description": "Microsoft SQL Server Developer for Windows containers",
     "categories": ["database"],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
     "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
-    "image": "microsoft/mssql-server-windows:latest",
+    "image": "microsoft/mssql-server-windows-developer:latest",
     "ports": [
       "1433/tcp"
     ],
