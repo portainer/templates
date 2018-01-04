@@ -309,7 +309,7 @@
   },
   {
     "type": "container",
-    "title": "IronFunction API",
+    "title": "IronFunctions API",
     "description": "Open-source serverless computing platform",
     "categories": ["serverless"],
     "platform": "linux",
