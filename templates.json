@@ -313,7 +313,7 @@
     "description": "Open-source serverless computing platform",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "image": "iron/functions:latest",
     "ports": [
       "8080/tcp"
@@ -327,7 +327,7 @@
     "description": "Open-source user interface for IronFunctions",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "image": "iron/functions-ui:latest",
     "ports": [
       "4000/tcp"
@@ -688,7 +688,7 @@
     "note": "Deploys the IronFunctions API and UI.",
     "categories": ["serverless"],
     "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
+    "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "repository": {
       "url": "https://github.com/deviantony/ironfunctions_stack",
       "stackfile": "docker-stack.yml"
