@@ -309,6 +309,20 @@
   },
   {
     "type": "container",
+    "title": "IronFunctions API",
+    "description": "Open-source serverless computing platform",
+    "categories": ["serverless"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "image": "iron/functions:latest",
+    "ports": [
+      "8080/tcp"
+    ],
+    "volumes": ["/app/data"],
+    "privileged": true
+  },
+  {
+    "type": "container",
     "title": "IronFunctions UI",
     "description": "Open-source user interface for IronFunctions",
     "categories": ["serverless"],
@@ -323,26 +337,6 @@
       {
         "name": "API_URL",
         "label": "API URL"
-      }
-    ],
-    "privileged": true
-  },
-  {
-    "type": "container",
-    "title": "IronFunctions API",
-    "description": "Open-source serverless computing platform",
-    "categories": ["serverless"],
-    "platform": "linux",
-    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
-    "image": "iron/functions:latest",
-    "ports": [
-      "8080/tcp"
-    ],
-    "volumes": ["/app/data"],
-    "env": [
-      {
-        "name": "DB",
-        "set": "bolt:///app/data/bolt.db"
       }
     ],
     "privileged": true
@@ -685,6 +679,19 @@
     "repository": {
       "url": "https://github.com/openfaas/faas",
       "stackfile": "docker-compose.yml"
+    }
+  },
+  {
+    "type": "stack",
+    "title": "IronFunctions",
+    "description": "Open-source serverless computing platform",
+    "note": "Deploys the IronFunctions API and UI.",
+    "categories": ["serverless"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/ironfunctions/docker-stack.yml"
     }
   },
   {

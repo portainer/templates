@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  api:
+    image: iron/functions
+    deploy:
+      replicas: 1
+    volumes:
+      - api_data:/app/data
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 8080
+
+  ui:
+    image: iron/functions-ui
+    deploy:
+      replicas: 1
+    environment:
+      API_URL: http://api:8080
+    ports:
+      - 4000
+
+volumes:
+    api_data:
