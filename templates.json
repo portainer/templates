@@ -309,6 +309,26 @@
   },
   {
     "type": "container",
+    "title": "IronFunction API",
+    "description": "Open-source serverless computing platform",
+    "categories": ["serverless"],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
+    "image": "iron/functions:latest",
+    "ports": [
+      "8080/tcp"
+    ],
+    "volumes": ["/app/data"],
+    "env": [
+      {
+        "name": "DB",
+        "set": "bolt:///app/data/bolt.db"
+      }
+    ],
+    "privileged": true
+  },
+  {
+    "type": "container",
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
