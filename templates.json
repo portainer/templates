@@ -690,8 +690,8 @@
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
-      "stackfile": "stacks/ironfunctions/docker-stack.yml"
+      "url": "https://github.com/deviantony/ironfunctions_stack",
+      "stackfile": "docker-stack.yml"
     }
   },
   {
