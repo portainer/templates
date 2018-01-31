@@ -906,7 +906,7 @@
     "note": "Deploys a NextCloud instance connected to a MySQL database.",
     "categories": [
       "storage",
-      "cloud replacement"
+      "cloud-replacement"
     ],
     "platform": "linux",
     "logo": "https://www.schaffrinna.com/wordpress/wp-content/uploads/2016/09/Nextcloud-Logo-1.png",
