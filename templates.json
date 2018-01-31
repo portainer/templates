@@ -809,7 +809,7 @@
       "cloud-replacement"
     ],
     "platform": "linux",
-    "logo": "https://www.schaffrinna.com/wordpress/wp-content/uploads/2016/09/Nextcloud-Logo-1.png",
+    "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
     "image": "wonderfall/nextcloud:latest",
     "env": [
       {
@@ -952,7 +952,7 @@
       "cloud-replacement"
     ],
     "platform": "linux",
-    "logo": "https://www.schaffrinna.com/wordpress/wp-content/uploads/2016/09/Nextcloud-Logo-1.png",
+    "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
     "repository": {
       "url": "https://github.com/benyanke/templates",
       "stackfile": "stacks/nextcloud/docker-stack.yml"
