@@ -911,7 +911,7 @@
     "platform": "linux",
     "logo": "https://www.schaffrinna.com/wordpress/wp-content/uploads/2016/09/Nextcloud-Logo-1.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/benyanke/templates",
       "stackfile": "stacks/nextcloud/docker-stack.yml"
     },
     "env": [
