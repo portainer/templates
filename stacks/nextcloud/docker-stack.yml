@@ -1,0 +1,34 @@
+version: '1'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - db_data:/var/lib/mysql
+     restart: always
+     environment:
+       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+       MYSQL_DATABASE: nextcloud
+
+   nextcloud:
+     image: wonderfall/nextcloud:latest
+     ports:
+       - 8888
+     volumes:
+       - nextcloud_data:/data
+       - nextcloud_apps:/apps2
+       - nextcloud_config:/config
+     restart: always
+     environment:
+       DB_TYPE: mysql
+       DB_HOST: db:3306
+       DB_NAME: nextcloud
+       DB_USER: root
+       DB_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+
+volumes:
+    db_data:
+    nextcloud_data:
+    nextcloud_apps:
+    nextcloud_config:
