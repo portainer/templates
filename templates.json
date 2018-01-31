@@ -814,6 +814,7 @@
     "env": [
       {
         "name": "DB_TYPE",
+        "label": "DB Type",
         "set": "mysql"
       },
       {
