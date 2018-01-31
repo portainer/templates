@@ -801,6 +801,49 @@
   },
   {
     "type": "container",
+    "title": "NextCloud",
+    "description": "Free and Open source file sync.",
+    "note": "Deploys a NextCloud instance connected to a MySQL database.",
+    "categories": [
+      "storage",
+      "cloud-replacement"
+    ],
+    "platform": "linux",
+    "logo": "https://www.schaffrinna.com/wordpress/wp-content/uploads/2016/09/Nextcloud-Logo-1.png",
+    "image": "wonderfall/nextcloud:latest",
+    "env": [
+      {
+        "name": "DB_TYPE",
+        "set": "mysql"
+      },
+      {
+        "name": "DB_HOST",
+        "set": "1.2.3.4"
+      },
+      {
+        "name": "DB_NAME",
+        "set": "nextcloud"
+      },
+      {
+        "name": "DB_USER",
+        "set": "nextcloud"
+      },
+      {
+        "name": "DB_PASSWORD",
+        "set": "fillmein"
+      }
+    ],
+    "ports": [
+      "8888/tcp"
+    ],
+    "volumes": [
+      "/data",
+      "/config",
+      "/apps2"
+    ]
+  },
+  {
+    "type": "container",
     "title": "ContentBox",
     "description": "Open-source modular CMS",
     "categories": [
