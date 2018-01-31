@@ -803,7 +803,7 @@
     "type": "container",
     "title": "NextCloud",
     "description": "Free and Open source file sync.",
-    "note": "Deploys a NextCloud instance connected to a MySQL database.",
+    "note": "Deploys a NextCloud instance. Requires a separate MySQL database.",
     "categories": [
       "storage",
       "cloud-replacement"
@@ -818,19 +818,19 @@
       },
       {
         "name": "DB_HOST",
-        "set": "1.2.3.4"
+        "label": "DB Hostname"
       },
       {
         "name": "DB_NAME",
-        "set": "nextcloud"
+        "label": "DB Name"
       },
       {
         "name": "DB_USER",
-        "set": "nextcloud"
+        "label": "DB Username"
       },
       {
         "name": "DB_PASSWORD",
-        "set": "fillmein"
+        "label": "DB Password"
       }
     ],
     "ports": [
