@@ -1046,6 +1046,35 @@
   },
   {
     "type": "container",
+    "title": "Codiad",
+    "description": "Full IDE in a browser",
+    "note": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.",
+    "categories": [
+      "IDE",
+      "webapp"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/codiad.png",
+    "image": "linuxserver/codiad:latest",
+    "env": [
+      {
+        "name": "PUID",
+        "set": "99"
+      },
+      {
+        "name": "PGID",
+        "set": "100"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": [
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
     "title": "Koel",
     "description": "A personal music streaming server that works",
     "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
