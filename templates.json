@@ -997,7 +997,7 @@
     "logo": "https://nodered.org/about/resources/media/node-red-icon.svg",
     "image": "nodered/node-red-docker:latest",
     "ports": [
-      "1880"
+      "1880/tcp"
     ],
     "volumes": [
       "/data"
