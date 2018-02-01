@@ -5,7 +5,7 @@
     "description": "Docker image registry",
     "categories": [
       "docker",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
@@ -78,7 +78,7 @@
     "description": "The most popular open-source database",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
@@ -102,7 +102,7 @@
     "description": "Performance beyond MySQL",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
@@ -126,7 +126,7 @@
     "description": "The most advanced open-source database",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/postgres.png",
@@ -154,7 +154,7 @@
     "description": "Open-source document-oriented database",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mongo.png",
@@ -172,7 +172,7 @@
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
@@ -192,7 +192,7 @@
     "description": "An open-source distributed SQL database",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cratedb.png",
@@ -211,7 +211,7 @@
     "description": "Open-source search and analytics engine",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",
@@ -260,7 +260,7 @@
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": [
       "storage",
-      "backend service",
+      "backend-service",
       "webapp"
     ],
     "platform": "linux",
@@ -291,7 +291,7 @@
     "description": "Standalone AWS S3 protocol server",
     "categories": [
       "storage",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
@@ -320,7 +320,7 @@
     "description": "Microsoft SQL Server on Linux",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -346,7 +346,7 @@
     "description": "Microsoft SQL Server Developer for Windows containers",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -375,7 +375,7 @@
     "description": "Microsoft SQL Server Express for Windows containers",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -404,7 +404,7 @@
     "description": "Open-source serverless computing platform",
     "categories": [
       "serverless",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -448,7 +448,7 @@
     "description": "Open-source enterprise search platform",
     "categories": [
       "search-engine",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
@@ -466,7 +466,7 @@
     "description": "Open-source in-memory data structure store",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
@@ -484,7 +484,7 @@
     "description": "Highly reliable enterprise messaging system",
     "categories": [
       "messaging",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/rabbitmq.png",
@@ -719,7 +719,7 @@
     "categories": [
       "continuous-integration",
       "webapp",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
@@ -797,7 +797,7 @@
     "categories": [
       "backup",
       "webapp",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "note": "This application web interface is exposed on the port 55414 inside the container.",
@@ -832,6 +832,26 @@
     "ports": [
       "8080/tcp",
       "8443/tcp"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Paperwork",
+    "description": "Opensource note-taking & archiving",
+    "note": "Paperwork aims to be an open-source, self-hosted alternative to services like Evernote (R), Microsoft OneNote (R) or Google Keep (R). Open the page and create an account to begin.",
+    "categories": [
+      "webapp",
+      "cloud-replacement"
+    ],
+    "platform": "linux",
+    "logo": "https://images.g2crowd.com/uploads/product/hd_favicon/1487566741/paperwork.png",
+    "image": "zuhkov/paperwork:latest",
+    "env": [],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": [
+      "/config"
     ]
   },
   {
@@ -996,14 +1016,13 @@
     "env": [
       {
         "name": "PHPLDAPADMIN_LDAP_HOSTS",
-        "label":"LDAP server"
+        "label": "LDAP server"
       }
     ],
     "ports": [
       "443/tcp"
     ],
-    "volumes": [
-    ]
+    "volumes": []
   },
   {
     "type": "container",
@@ -1011,7 +1030,7 @@
     "description": "Self-hosted home automation",
     "note": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.\n    ",
     "categories": [
-      "backend service",
+      "backend-service",
       "webapp",
       "home automation"
     ],
@@ -1138,7 +1157,7 @@
     "categories": [
       "serverless",
       "webapp",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
@@ -1154,7 +1173,7 @@
     "note": "Deploys the IronFunctions API and UI.",
     "categories": [
       "serverless",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -1170,7 +1189,7 @@
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
     "categories": [
       "database",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
@@ -1186,7 +1205,7 @@
     "note": "Deploys a Wordpress instance connected to a MySQL database.",
     "categories": [
       "CMS",
-      "backend service"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
