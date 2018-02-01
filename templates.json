@@ -946,6 +946,43 @@
     ]
   },
   {
+    "type": "container",
+    "title": "Emby",
+    "description": "Your personal media on any device.",
+    "categories": [
+      "streaming",
+      "webapp"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png",
+    "image": "emby/embyserver:latest",
+    "env": [
+      {
+        "name": "APP_UID",
+        "set": "99"
+      },
+      {
+        "name": "APP_GID",
+        "set": "100"
+      },
+      {
+        "name": "OPT_LDAP",
+        "set": "N"
+      },
+      {
+        "name": "OPT_DUO",
+        "set": "N"
+      }
+    ],
+    "ports": [
+      "8096/tcp"
+    ],
+    "volumes": [
+      "/mnt"
+      "/config",
+    ]
+  },
+  {
     "type": "stack",
     "title": "OpenFaaS",
     "description": "Serverless functions made simple",
