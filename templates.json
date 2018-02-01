@@ -231,8 +231,7 @@
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
     "categories": [
       "development",
-      "project-management",
-      "webapp"
+      "project-management"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/gitlab_ce.png",
@@ -260,8 +259,7 @@
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": [
       "storage",
-      "backend-service",
-      "webapp"
+      "backend-service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
@@ -422,8 +420,7 @@
     "title": "IronFunctions UI",
     "description": "Open-source user interface for IronFunctions",
     "categories": [
-      "serverless",
-      "webapp"
+      "serverless"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -502,8 +499,7 @@
     "title": "Ghost",
     "description": "Free and open-source blogging platform",
     "categories": [
-      "blog",
-      "webapp"
+      "blog"
     ],
     "note": "Access the blog management interface under <code>/ghost/</code>.",
     "platform": "linux",
@@ -521,8 +517,7 @@
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "note": "Default credentials: admin / changeme",
@@ -542,8 +537,7 @@
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
@@ -571,8 +565,7 @@
     "title": "Joomla",
     "description": "Another free and open-source CMS",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/joomla.png",
@@ -600,8 +593,7 @@
     "title": "Drupal",
     "description": "Open-source content management framework",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/drupal.png",
@@ -618,8 +610,7 @@
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/plone.png",
@@ -636,8 +627,7 @@
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/magento.png",
@@ -656,8 +646,7 @@
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
     "categories": [
-      "marketing",
-      "webapp"
+      "marketing"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mautic.png",
@@ -685,8 +674,7 @@
     "title": "Wowza",
     "description": "Streaming media server",
     "categories": [
-      "streaming",
-      "webapp"
+      "streaming"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wowza.png",
@@ -718,7 +706,6 @@
     "description": "Open-source continuous integration tool",
     "categories": [
       "continuous-integration",
-      "webapp",
       "backend-service"
     ],
     "platform": "linux",
@@ -743,8 +730,7 @@
     "title": "Redmine",
     "description": "Open-source project management tool",
     "categories": [
-      "project-management",
-      "webapp"
+      "project-management"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redmine.png",
@@ -761,8 +747,7 @@
     "title": "Odoo",
     "description": "Open-source business apps",
     "categories": [
-      "project-management",
-      "webapp"
+      "project-management"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/odoo.png",
@@ -796,7 +781,6 @@
     "description": "Open-source network backup",
     "categories": [
       "backup",
-      "webapp",
       "backend-service"
     ],
     "platform": "linux",
@@ -839,8 +823,7 @@
     "title": "Paperwork",
     "description": "Opensource note-taking & archiving",
     "note": "Paperwork aims to be an open-source, self-hosted alternative to services like Evernote (R), Microsoft OneNote (R) or Google Keep (R). Open the page and create an account to begin.",
-    "categories": [
-      "webapp",
+    "categories": [,
       "cloud-replacement"
     ],
     "platform": "linux",
@@ -860,8 +843,7 @@
     "description": "Theia browser IDE",
     "note": "Theia is an extensible platform to develop full-fledged multi-language Cloud & Desktop IDE-like products with state-of-the-art web technologies.",
     "categories": [
-      "IDE",
-      "webapp"
+      "IDE"
     ],
     "platform": "linux",
     "logo": "https://png.icons8.com/metro/1600/source-code.png",
@@ -881,8 +863,7 @@
     "note": "Deploys a NextCloud instance. Requires a separate MySQL database.",
     "categories": [
       "storage",
-      "cloud-replacement",
-      "webapp"
+      "cloud-replacement"
     ],
     "platform": "linux",
     "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
@@ -924,8 +905,7 @@
     "title": "ContentBox",
     "description": "Open-source modular CMS",
     "categories": [
-      "CMS",
-      "webapp"
+      "CMS"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-contentbox.png",
@@ -959,8 +939,7 @@
     "description": "A clientless browser-based remote access client, supporting VNC, RDP, and SSH",
     "note": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.",
     "categories": [
-      "remote access",
-      "webapp"
+      "remote access"
     ],
     "platform": "linux",
     "logo": "http://i.imgur.com/eflpez4.png",
@@ -991,8 +970,7 @@
     "title": "Emby",
     "description": "Your personal media on any device",
     "categories": [
-      "streaming",
-      "webapp"
+      "streaming"
     ],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png",
@@ -1049,7 +1027,6 @@
     "title": "phpLDAPadmin",
     "description": "A web based LDAP client",
     "categories": [
-      "webapp"
     ],
     "platform": "linux",
     "logo": "https://blog.intropedro.com/es/system/files/article/phpldapadmin.jpg",
@@ -1072,7 +1049,6 @@
     "note": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.\n    ",
     "categories": [
       "backend-service",
-      "webapp",
       "home automation"
     ],
     "platform": "linux",
@@ -1091,8 +1067,7 @@
     "description": "Full IDE in a browser",
     "note": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.",
     "categories": [
-      "IDE",
-      "webapp"
+      "IDE"
     ],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/codiad.png",
@@ -1119,8 +1094,7 @@
     "title": "Koel",
     "description": "A personal music streaming server that works",
     "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
-    "categories": [
-      "webapp",
+    "categories": [,
       "streaming"
     ],
     "env": [
@@ -1226,7 +1200,6 @@
     "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
     "categories": [
       "serverless",
-      "webapp",
       "backend-service"
     ],
     "platform": "linux",
@@ -1298,8 +1271,7 @@
     "note": "Deploys a NextCloud instance connected to a MySQL database.",
     "categories": [
       "storage",
-      "cloud-replacement",
-      "webapp"
+      "cloud-replacement"
     ],
     "platform": "linux",
     "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
