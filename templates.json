@@ -1003,6 +1003,48 @@
   },
   {
     "type": "container",
+    "title": "Koel",
+    "description": "A personal music streaming server that works.",
+    "categories": [
+      "webapp",
+      "streaming"
+    ],
+    "env": [
+      {
+        "name": "PHP_MEMORY_LIMIT",
+        "set": "2048"
+      },
+      {
+        "name": "FASTCGI_READ_TIMEOUT",
+        "set": "6000"
+      },
+      {
+        "name": "UMASK",
+        "set": "000"
+      },
+      {
+        "name": "PUID",
+        "set": "99"
+      },
+      {
+        "name": "PGID",
+        "set": "100"
+      }
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/koel-icon.png",
+    "image": "nodered/node-red-docker:latest",
+    "ports": [
+      "8050/tcp",
+      "8060/tcp"
+    ],
+    "volumes": [
+      "/media",
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
     "title": "Automatic MySQL Backup",
     "description": "Backs up your MySQL Databases nightly, automatically.",
     "categories": [
