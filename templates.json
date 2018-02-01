@@ -877,6 +877,38 @@
     ]
   },
   {
+    "type": "container",
+    "title": "Apache Guacamole",
+    "description": "A clientless browser-based remote access client, supporting VNC, RDP, and SSH.",
+    "categories": [
+      "remote access",
+      "web app"
+    ],
+    "platform": "linux",
+    "logo": "http://i.imgur.com/eflpez4.png",
+    "image": "jasonbean/guacamole:latest",
+    "env": [
+      {
+        "name": "OPT_MYSQL",
+        "set": "Y"
+      },
+      {
+        "name": "OPT_LDAP",
+        "set": "N"
+      },
+      {
+        "name": "OPT_DUO",
+        "set": "N"
+      }
+    ],
+    "ports": [
+      "8080/tcp"
+    ],
+    "volumes": [
+      "/config"
+    ]
+  },
+  {
     "type": "stack",
     "title": "OpenFaaS",
     "description": "Serverless functions made simple",
