@@ -856,6 +856,26 @@
   },
   {
     "type": "container",
+    "title": "Theia",
+    "description": "Theia browser IDE",
+    "note": "Theia is an extensible platform to develop full-fledged multi-language Cloud & Desktop IDE-like products with state-of-the-art web technologies.",
+    "categories": [
+      "IDE",
+      "webapp"
+    ],
+    "platform": "linux",
+    "logo": "https://png.icons8.com/metro/1600/source-code.png",
+    "image": "theiaide/theia:latest",
+    "env": [],
+    "ports": [
+      "3000/tcp"
+    ],
+    "volumes": [
+      "/home/project"
+    ]
+  },
+  {
+    "type": "container",
     "title": "NextCloud",
     "description": "Free and Open source file sync",
     "note": "Deploys a NextCloud instance. Requires a separate MySQL database.",
