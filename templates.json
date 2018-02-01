@@ -1093,7 +1093,7 @@
       },
       {
         "name": "TOKEN",
-        "label": "Pushbullet Token"
+        "label": "Pushbullet token (optional)"
       }
     ],
     "ports": [
