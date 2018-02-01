@@ -917,6 +917,7 @@
     "type": "container",
     "title": "Apache Guacamole",
     "description": "A clientless browser-based remote access client, supporting VNC, RDP, and SSH.",
+    "note": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.",
     "categories": [
       "remote access",
       "webapp"
@@ -986,6 +987,7 @@
     "type": "container",
     "title": "Node Red",
     "description": "Self-hosted home automation.",
+    "note": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.\n    ",
     "categories": [
       "backend service",
       "webapp",
@@ -1047,6 +1049,7 @@
     "type": "container",
     "title": "Automatic MySQL Backup",
     "description": "Backs up your MySQL Databases nightly, automatically.",
+    "note": "Set the hour and minute you would like backups to run. Also optionally specify a pushbullet token for notifications.",
     "categories": [
       "database",
       "backup"
