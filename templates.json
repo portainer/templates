@@ -1023,6 +1023,27 @@
       "/mnt"
     ]
   },
+
+  {
+    "type": "container",
+    "title": "SonarQube",
+    "description": "Open source platform for continuous inspection of code quality.",
+    "note": "Default login: admin/admin.",
+    "categories": [
+      "continuous-integration"
+    ],
+    "platform": "linux",
+    "logo": "https://docs.sonarqube.org/download/attachments/9505096/SONAR?version=1&modificationDate=1510130117000&api=v2",
+    "image": "sonarqube:latest",
+    "env": [
+    ],
+    "ports": [
+      "9000/tcp",
+      "9092/tcp"
+    ],
+    "volumes": [
+    ]
+  },
   {
     "type": "container",
     "title": "phpLDAPadmin",
