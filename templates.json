@@ -1179,7 +1179,7 @@
   {
     "type": "stack",
     "title": "NextCloud",
-    "description": "Free and Open source file sync.",
+    "description": "Free and open source file sync.",
     "note": "Deploys a NextCloud instance connected to a MySQL database.",
     "categories": [
       "storage",
