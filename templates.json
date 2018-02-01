@@ -1007,6 +1007,7 @@
     "type": "container",
     "title": "Koel",
     "description": "A personal music streaming server that works.",
+    "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
     "categories": [
       "webapp",
       "streaming"
@@ -1035,7 +1036,7 @@
     ],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/koel-icon.png",
-    "image": "nodered/node-red-docker:latest",
+    "image": "binhex/arch-koel:latest",
     "ports": [
       "8050/tcp",
       "8060/tcp"
