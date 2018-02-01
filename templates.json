@@ -4,7 +4,8 @@
     "title": "Registry",
     "description": "Docker image registry",
     "categories": [
-      "docker"
+      "docker",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
@@ -76,7 +77,8 @@
     "title": "MySQL",
     "description": "The most popular open-source database",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
@@ -99,7 +101,8 @@
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
@@ -122,7 +125,8 @@
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/postgres.png",
@@ -149,7 +153,8 @@
     "title": "Mongo",
     "description": "Open-source document-oriented database",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mongo.png",
@@ -166,7 +171,8 @@
     "title": "CockroachDB",
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
@@ -185,7 +191,8 @@
     "title": "CrateDB",
     "description": "An open-source distributed SQL database",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cratedb.png",
@@ -203,7 +210,8 @@
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",
@@ -223,7 +231,8 @@
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
     "categories": [
       "development",
-      "project-management"
+      "project-management",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/gitlab_ce.png",
@@ -250,7 +259,9 @@
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": [
-      "storage"
+      "storage",
+      "backend service",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
@@ -279,7 +290,8 @@
     "title": "Scality S3",
     "description": "Standalone AWS S3 protocol server",
     "categories": [
-      "storage"
+      "storage",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
@@ -307,7 +319,8 @@
     "title": "SQL Server",
     "description": "Microsoft SQL Server on Linux",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -332,7 +345,8 @@
     "title": "SQL Server",
     "description": "Microsoft SQL Server Developer for Windows containers",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -360,7 +374,8 @@
     "title": "SQL Server Express",
     "description": "Microsoft SQL Server Express for Windows containers",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -388,7 +403,8 @@
     "title": "IronFunctions API",
     "description": "Open-source serverless computing platform",
     "categories": [
-      "serverless"
+      "serverless",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -406,7 +422,8 @@
     "title": "IronFunctions UI",
     "description": "Open-source user interface for IronFunctions",
     "categories": [
-      "serverless"
+      "serverless",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -430,7 +447,8 @@
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": [
-      "search-engine"
+      "search-engine",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
@@ -447,7 +465,8 @@
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
@@ -464,7 +483,8 @@
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
     "categories": [
-      "messaging"
+      "messaging",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/rabbitmq.png",
@@ -482,7 +502,8 @@
     "title": "Ghost",
     "description": "Free and open-source blogging platform",
     "categories": [
-      "blog"
+      "blog",
+      "webapp"
     ],
     "note": "Access the blog management interface under <code>/ghost/</code>.",
     "platform": "linux",
@@ -500,7 +521,8 @@
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "note": "Default credentials: admin / changeme",
@@ -520,7 +542,8 @@
     "title": "WordPress",
     "description": "A free and open-source CMS",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
@@ -548,7 +571,8 @@
     "title": "Joomla",
     "description": "Another free and open-source CMS",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/joomla.png",
@@ -576,7 +600,8 @@
     "title": "Drupal",
     "description": "Open-source content management framework",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/drupal.png",
@@ -593,7 +618,8 @@
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/plone.png",
@@ -610,7 +636,8 @@
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/magento.png",
@@ -629,7 +656,8 @@
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
     "categories": [
-      "marketing"
+      "marketing",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mautic.png",
@@ -657,7 +685,8 @@
     "title": "Wowza",
     "description": "Streaming media server",
     "categories": [
-      "streaming"
+      "streaming",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wowza.png",
@@ -688,7 +717,9 @@
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
     "categories": [
-      "continuous-integration"
+      "continuous-integration",
+      "webapp",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
@@ -712,7 +743,8 @@
     "title": "Redmine",
     "description": "Open-source project management tool",
     "categories": [
-      "project-management"
+      "project-management",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redmine.png",
@@ -729,7 +761,8 @@
     "title": "Odoo",
     "description": "Open-source business apps",
     "categories": [
-      "project-management"
+      "project-management",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/odoo.png",
@@ -762,7 +795,9 @@
     "title": "Urbackup",
     "description": "Open-source network backup",
     "categories": [
-      "backup"
+      "backup",
+      "webapp",
+      "backend service"
     ],
     "platform": "linux",
     "note": "This application web interface is exposed on the port 55414 inside the container.",
@@ -806,7 +841,8 @@
     "note": "Deploys a NextCloud instance. Requires a separate MySQL database.",
     "categories": [
       "storage",
-      "cloud-replacement"
+      "cloud-replacement",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
@@ -848,7 +884,8 @@
     "title": "ContentBox",
     "description": "Open-source modular CMS",
     "categories": [
-      "CMS"
+      "CMS",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-contentbox.png",
@@ -882,7 +919,7 @@
     "description": "A clientless browser-based remote access client, supporting VNC, RDP, and SSH.",
     "categories": [
       "remote access",
-      "web app"
+      "webapp"
     ],
     "platform": "linux",
     "logo": "http://i.imgur.com/eflpez4.png",
@@ -914,7 +951,9 @@
     "description": "Serverless functions made simple",
     "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
     "categories": [
-      "serverless"
+      "serverless",
+      "webapp",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
@@ -929,7 +968,8 @@
     "description": "Open-source serverless computing platform",
     "note": "Deploys the IronFunctions API and UI.",
     "categories": [
-      "serverless"
+      "serverless",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
@@ -944,7 +984,8 @@
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
     "categories": [
-      "database"
+      "database",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
@@ -959,7 +1000,8 @@
     "description": "Wordpress setup with a MySQL database",
     "note": "Deploys a Wordpress instance connected to a MySQL database.",
     "categories": [
-      "CMS"
+      "CMS",
+      "backend service"
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
@@ -982,7 +1024,8 @@
     "note": "Deploys a NextCloud instance connected to a MySQL database.",
     "categories": [
       "storage",
-      "cloud-replacement"
+      "cloud-replacement",
+      "webapp"
     ],
     "platform": "linux",
     "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
