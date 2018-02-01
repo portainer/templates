@@ -982,6 +982,68 @@
       "/config",
     ]
   },
+
+  {
+    "type": "container",
+    "title": "Automatic MySQL Backup",
+    "description": "Backs up your MySQL Databases nightly, automatically.",
+    "categories": [
+      "database",
+      "utilities"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png",
+    "image": "soana/backupsql:latest",
+    "env": [
+      {
+        "name": "BackupCopies",
+        "label": "Number of backup copies to keep"
+      },
+      {
+        "name": "MySQLIP",
+        "label": "MySQL hostname"
+      },
+      {
+        "name": "SQL_userid",
+        "label": "MySQL username"
+      },
+      {
+        "name": "SQL_pwd",
+        "label": "MySQL password"
+      },
+      {
+        "name": "bkpDayOfWeek",
+        "set": "*"
+      },
+      {
+        "name": "bkpMonth",
+        "set": "*"
+      },
+      {
+        "name": "bkpDayOfMonth",
+        "set": "*"
+      },
+      {
+        "name": "bkpHour",
+        "label": "Backup hour (0-23)"
+      },
+      {
+        "name": "bkpMinute",
+        "label": "Backup minute (0-59)"
+      },
+      {
+        "name": "TOKEN",
+        "label": "Pushbullet Token"
+      }
+    ],
+    "ports": [
+      "8096/tcp"
+    ],
+    "volumes": [
+      "/backup"
+      "/config",
+    ]
+  },
   {
     "type": "stack",
     "title": "OpenFaaS",
