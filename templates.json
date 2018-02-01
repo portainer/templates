@@ -1049,7 +1049,7 @@
     "description": "Backs up your MySQL Databases nightly, automatically.",
     "categories": [
       "database",
-      "utilities"
+      "backup"
     ],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png",
