@@ -1040,6 +1040,48 @@
   },
   {
     "type": "container",
+    "title": "phpMyAdmin",
+    "description": "A web interface for MySQL and MariaDB.",
+    "note": "Only use one field for DB host(s), leave the other blank.",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "http://www.livehacking.com/web/wp-content/uploads/2011/07/phpmyadmin.png",
+    "image": "phpmyadmin/phpmyadmin:latest",
+    "env": [
+      {
+        "name": "PMA_HOST",
+        "label": "DB Host (single)"
+      },
+      {
+        "name": "PMA_HOSTS",
+        "label": "DB Hosts (comma separated list)"
+      },
+      {
+        "name": "PMA_PORT",
+        "label": "DB Port"
+      },
+      {
+        "name": "PMA_USER",
+        "label": "DB User"
+      },
+      {
+        "name": "PMA_PASSWORD",
+        "label": "DB Password"
+      },
+      {
+        "name": "PMA_ARBITRARY",
+        "label": "Allow arbitrary servers to be specified by the user (1=true, 0=false)"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": []
+  },
+  {
+    "type": "container",
     "title": "Node Red",
     "description": "Self-hosted home automation",
     "note": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.\n    ",
