@@ -823,7 +823,7 @@
     "title": "Paperwork",
     "description": "Opensource note-taking & archiving",
     "note": "Paperwork aims to be an open-source, self-hosted alternative to services like Evernote (R), Microsoft OneNote (R) or Google Keep (R). Open the page and create an account to begin.",
-    "categories": [,
+    "categories": [
       "cloud-replacement"
     ],
     "platform": "linux",
@@ -1094,7 +1094,7 @@
     "title": "Koel",
     "description": "A personal music streaming server that works",
     "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
-    "categories": [,
+    "categories": [
       "streaming"
     ],
     "env": [
