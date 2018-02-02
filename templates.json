@@ -1001,7 +1001,6 @@
       "/mnt"
     ]
   },
-
   {
     "type": "container",
     "title": "SonarQube",
@@ -1013,21 +1012,18 @@
     "platform": "linux",
     "logo": "https://docs.sonarqube.org/download/attachments/9505096/SONAR?version=1&modificationDate=1510130117000&api=v2",
     "image": "sonarqube:latest",
-    "env": [
-    ],
+    "env": [],
     "ports": [
       "9000/tcp",
       "9092/tcp"
     ],
-    "volumes": [
-    ]
+    "volumes": []
   },
   {
     "type": "container",
     "title": "phpLDAPadmin",
     "description": "A web based LDAP client",
-    "categories": [
-    ],
+    "categories": [],
     "platform": "linux",
     "logo": "https://blog.intropedro.com/es/system/files/article/phpldapadmin.jpg",
     "image": "osixia/phpldapadmin:0.7.1",
@@ -1099,7 +1095,7 @@
     ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
-    "image": "	rediscommander/redis-commander:latest",
+    "image": "\trediscommander/redis-commander:latest",
     "env": [
       {
         "name": "REDIS_HOSTS",
@@ -1109,8 +1105,7 @@
     "ports": [
       "8081/tcp"
     ],
-    "volumes": [
-    ]
+    "volumes": []
   },
   {
     "type": "container",
