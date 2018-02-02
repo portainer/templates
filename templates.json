@@ -1091,6 +1091,29 @@
   },
   {
     "type": "container",
+    "title": "Redis Commander",
+    "description": "Redis management tool written in node.js",
+    "note": "Hosts can be optionally specified with a comma separated string by setting the REDIS_HOSTS environment variable. After running the container, redis-commander will be available at localhost:8081. ",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
+    "image": "	rediscommander/redis-commander:latest",
+    "env": [
+      {
+        "name": "REDIS_HOSTS",
+        "label": "Redis Host(s)"
+      }
+    ],
+    "ports": [
+      "8081/tcp"
+    ],
+    "volumes": [
+    ]
+  },
+  {
+    "type": "container",
     "title": "Koel",
     "description": "A personal music streaming server that works",
     "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
