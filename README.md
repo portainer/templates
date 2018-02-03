@@ -31,3 +31,4 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * Jenkins (based on `jenkins:latest`)
 * Redmine (based on `redmine:latest`)
 * Odoo (based on `odoo:latest`)
+* NextCloud (based on `wunderfall/nextcloud:latest`)

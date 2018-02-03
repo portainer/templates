@@ -3,20 +3,27 @@
     "type": "container",
     "title": "Registry",
     "description": "Docker image registry",
-    "categories": ["docker"],
+    "categories": [
+      "docker",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/registry.png",
     "image": "registry:latest",
     "ports": [
       "5000/tcp"
     ],
-    "volumes": ["/var/lib/registry"]
+    "volumes": [
+      "/var/lib/registry"
+    ]
   },
   {
     "type": "container",
     "title": "Nginx",
     "description": "High performance web server",
-    "categories": ["webserver"],
+    "categories": [
+      "webserver"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/nginx.png",
     "image": "nginx:latest",
@@ -24,39 +31,55 @@
       "80/tcp",
       "443/tcp"
     ],
-    "volumes": ["/etc/nginx", "/usr/share/nginx/html"]
+    "volumes": [
+      "/etc/nginx",
+      "/usr/share/nginx/html"
+    ]
   },
   {
     "type": "container",
     "title": "Httpd",
     "description": "Open-source HTTP server",
-    "categories": ["webserver"],
+    "categories": [
+      "webserver"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/httpd.png",
     "image": "httpd:latest",
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/usr/local/apache2/htdocs/"]
+    "volumes": [
+      "/usr/local/apache2/htdocs/"
+    ]
   },
   {
     "type": "container",
     "title": "Caddy",
     "description": "HTTP/2 web server with automatic HTTPS",
-    "categories": ["webserver"],
+    "categories": [
+      "webserver"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/caddy.png",
     "image": "abiosoft/caddy:latest",
     "ports": [
-      "80/tcp", "443/tcp", "2015/tcp"
+      "80/tcp",
+      "443/tcp",
+      "2015/tcp"
     ],
-    "volumes": ["/root/.caddy"]
+    "volumes": [
+      "/root/.caddy"
+    ]
   },
   {
     "type": "container",
     "title": "MySQL",
     "description": "The most popular open-source database",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mysql.png",
     "image": "mysql:latest",
@@ -69,13 +92,18 @@
     "ports": [
       "3306/tcp"
     ],
-    "volumes": ["/var/lib/mysql"]
+    "volumes": [
+      "/var/lib/mysql"
+    ]
   },
   {
     "type": "container",
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mariadb.png",
     "image": "mariadb:latest",
@@ -88,13 +116,18 @@
     "ports": [
       "3306/tcp"
     ],
-    "volumes": ["/var/lib/mysql"]
+    "volumes": [
+      "/var/lib/mysql"
+    ]
   },
   {
     "type": "container",
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/postgres.png",
     "image": "postgres:latest",
@@ -111,26 +144,36 @@
     "ports": [
       "5432/tcp"
     ],
-    "volumes": ["/var/lib/postgresql/data"]
+    "volumes": [
+      "/var/lib/postgresql/data"
+    ]
   },
   {
     "type": "container",
     "title": "Mongo",
     "description": "Open-source document-oriented database",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mongo.png",
     "image": "mongo:latest",
     "ports": [
       "27017/tcp"
     ],
-    "volumes": ["/data/db"]
+    "volumes": [
+      "/data/db"
+    ]
   },
   {
     "type": "container",
     "title": "CockroachDB",
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "image": "cockroachdb/cockroach:latest",
@@ -138,14 +181,19 @@
       "26257/tcp",
       "8080/tcp"
     ],
-    "volumes": ["/cockroach/cockroach-data"],
+    "volumes": [
+      "/cockroach/cockroach-data"
+    ],
     "command": "start --insecure"
   },
   {
     "type": "container",
     "title": "CrateDB",
     "description": "An open-source distributed SQL database",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cratedb.png",
     "image": "crate:latest",
@@ -153,13 +201,18 @@
       "4200/tcp",
       "4300/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [
+      "/data"
+    ]
   },
   {
     "type": "container",
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/elasticsearch.png",
     "image": "elasticsearch:latest",
@@ -167,14 +220,19 @@
       "9200/tcp",
       "9300/tcp"
     ],
-    "volumes": ["/usr/share/elasticsearch/data"]
+    "volumes": [
+      "/usr/share/elasticsearch/data"
+    ]
   },
   {
     "type": "container",
     "title": "Gitlab CE",
     "description": "Open-source end-to-end software development platform",
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
-    "categories": ["development", "project-management"],
+    "categories": [
+      "development",
+      "project-management"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/gitlab_ce.png",
     "image": "gitlab/gitlab-ce:latest",
@@ -184,16 +242,25 @@
       "22/tcp"
     ],
     "volumes": [
-      { "container": "/etc/gitlab" },
-      { "container": "/var/log/gitlab" },
-      { "container": "/var/opt/gitlab" }
+      {
+        "container": "/etc/gitlab"
+      },
+      {
+        "container": "/var/log/gitlab"
+      },
+      {
+        "container": "/var/opt/gitlab"
+      }
     ]
   },
   {
     "type": "container",
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
-    "categories": ["storage"],
+    "categories": [
+      "storage",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/minio.png",
     "image": "minio/minio:latest",
@@ -210,14 +277,20 @@
         "label": "Minio secret key"
       }
     ],
-    "volumes": ["/export", "/root/.minio"],
+    "volumes": [
+      "/export",
+      "/root/.minio"
+    ],
     "command": "server /export"
   },
   {
     "type": "container",
     "title": "Scality S3",
     "description": "Standalone AWS S3 protocol server",
-    "categories": ["storage"],
+    "categories": [
+      "storage",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/scality-s3.png",
     "image": "scality/s3server",
@@ -234,13 +307,19 @@
         "label": "Scality S3 secret key"
       }
     ],
-    "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
+    "volumes": [
+      "/usr/src/app/localData",
+      "/usr/src/app/localMetadata"
+    ]
   },
   {
     "type": "container",
     "title": "SQL Server",
     "description": "Microsoft SQL Server on Linux",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
     "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
@@ -263,7 +342,10 @@
     "type": "container",
     "title": "SQL Server",
     "description": "Microsoft SQL Server Developer for Windows containers",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
     "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
@@ -281,13 +363,18 @@
         "label": "SA password"
       }
     ],
-    "volumes": ["C:/temp/"]
+    "volumes": [
+      "C:/temp/"
+    ]
   },
   {
     "type": "container",
     "title": "SQL Server Express",
     "description": "Microsoft SQL Server Express for Windows containers",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "windows",
     "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
     "logo": "https://cloudinovasi.id/assets/img/logos/microsoft.png",
@@ -305,34 +392,45 @@
         "label": "SA password"
       }
     ],
-    "volumes": ["C:/temp/"]
+    "volumes": [
+      "C:/temp/"
+    ]
   },
   {
     "type": "container",
     "title": "IronFunctions API",
     "description": "Open-source serverless computing platform",
-    "categories": ["serverless"],
+    "categories": [
+      "serverless",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "image": "iron/functions:latest",
     "ports": [
       "8080/tcp"
     ],
-    "volumes": ["/app/data"],
+    "volumes": [
+      "/app/data"
+    ],
     "privileged": true
   },
   {
     "type": "container",
     "title": "IronFunctions UI",
     "description": "Open-source user interface for IronFunctions",
-    "categories": ["serverless"],
+    "categories": [
+      "serverless"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "image": "iron/functions-ui:latest",
     "ports": [
       "4000/tcp"
     ],
-    "volumes": ["/app/data"],
+    "volumes": [
+      "/app/data"
+    ],
     "env": [
       {
         "name": "API_URL",
@@ -345,33 +443,46 @@
     "type": "container",
     "title": "Solr",
     "description": "Open-source enterprise search platform",
-    "categories": ["search-engine"],
+    "categories": [
+      "search-engine",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/solr.png",
     "image": "solr:latest",
     "ports": [
       "8983/tcp"
     ],
-    "volumes": ["/opt/solr/mydata"]
+    "volumes": [
+      "/opt/solr/mydata"
+    ]
   },
   {
     "type": "container",
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
     "image": "redis:latest",
     "ports": [
       "6379/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [
+      "/data"
+    ]
   },
   {
     "type": "container",
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
-    "categories": ["messaging"],
+    "categories": [
+      "messaging",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/rabbitmq.png",
     "image": "rabbitmq:latest",
@@ -379,13 +490,17 @@
       "5671/tcp",
       "5672/tcp"
     ],
-    "volumes": ["/var/lib/rabbitmq"]
+    "volumes": [
+      "/var/lib/rabbitmq"
+    ]
   },
   {
     "type": "container",
     "title": "Ghost",
     "description": "Free and open-source blogging platform",
-    "categories": ["blog"],
+    "categories": [
+      "blog"
+    ],
     "note": "Access the blog management interface under <code>/ghost/</code>.",
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ghost.png",
@@ -393,26 +508,37 @@
     "ports": [
       "2368/tcp"
     ],
-    "volumes": ["/var/lib/ghost/content"]
+    "volumes": [
+      "/var/lib/ghost/content"
+    ]
   },
   {
     "type": "container",
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "note": "Default credentials: admin / changeme",
     "logo": "https://cloudinovasi.id/assets/img/logos/plesk.png",
     "image": "plesk/plesk:preview",
     "ports": [
-      "21/tcp", "80/tcp", "443/tcp", "8880/tcp", "8443/tcp", "8447/tcp"
+      "21/tcp",
+      "80/tcp",
+      "443/tcp",
+      "8880/tcp",
+      "8443/tcp",
+      "8447/tcp"
     ]
   },
   {
     "type": "container",
     "title": "WordPress",
     "description": "A free and open-source CMS",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
     "image": "wordpress:latest",
@@ -430,13 +556,17 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [
+      "/var/www/html"
+    ]
   },
   {
     "type": "container",
     "title": "Joomla",
     "description": "Another free and open-source CMS",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/joomla.png",
     "image": "joomla:latest",
@@ -454,39 +584,51 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [
+      "/var/www/html"
+    ]
   },
   {
     "type": "container",
     "title": "Drupal",
     "description": "Open-source content management framework",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/drupal.png",
     "image": "drupal:latest",
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [
+      "/var/www/html"
+    ]
   },
   {
     "type": "container",
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/plone.png",
     "image": "plone:latest",
     "ports": [
       "8080/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [
+      "/data"
+    ]
   },
   {
     "type": "container",
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/magento.png",
     "image": "alankent/gsd:latest",
@@ -495,13 +637,17 @@
       "3000/tcp",
       "3001/tcp"
     ],
-    "volumes": ["/var/www/html/"]
+    "volumes": [
+      "/var/www/html/"
+    ]
   },
   {
     "type": "container",
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
-    "categories": ["marketing"],
+    "categories": [
+      "marketing"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/mautic.png",
     "image": "mautic/mautic:latest",
@@ -519,13 +665,17 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [
+      "/var/www/html"
+    ]
   },
   {
     "type": "container",
     "title": "Wowza",
     "description": "Streaming media server",
-    "categories": ["streaming"],
+    "categories": [
+      "streaming"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wowza.png",
     "image": "sameersbn/wowza:4.1.2-8",
@@ -546,13 +696,18 @@
       "8087/tcp",
       "8088/tcp"
     ],
-    "volumes": ["/var/lib/wowza"]
+    "volumes": [
+      "/var/lib/wowza"
+    ]
   },
   {
     "type": "container",
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
-    "categories": ["continuous-integration"],
+    "categories": [
+      "continuous-integration",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/jenkins.png",
     "image": "jenkins/jenkins:lts",
@@ -566,26 +721,34 @@
         "label": "Jenkins options"
       }
     ],
-    "volumes": ["/var/jenkins_home"]
+    "volumes": [
+      "/var/jenkins_home"
+    ]
   },
   {
     "type": "container",
     "title": "Redmine",
     "description": "Open-source project management tool",
-    "categories": ["project-management"],
+    "categories": [
+      "project-management"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/redmine.png",
     "image": "redmine:latest",
     "ports": [
       "3000/tcp"
     ],
-    "volumes": ["/usr/src/redmine/files"]
+    "volumes": [
+      "/usr/src/redmine/files"
+    ]
   },
   {
     "type": "container",
     "title": "Odoo",
     "description": "Open-source business apps",
-    "categories": ["project-management"],
+    "categories": [
+      "project-management"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/odoo.png",
     "image": "odoo:latest",
@@ -607,27 +770,40 @@
     "ports": [
       "8069/tcp"
     ],
-    "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
+    "volumes": [
+      "/var/lib/odoo",
+      "/mnt/extra-addons"
+    ]
   },
   {
     "type": "container",
     "title": "Urbackup",
     "description": "Open-source network backup",
-    "categories": ["backup"],
+    "categories": [
+      "backup",
+      "backend-service"
+    ],
     "platform": "linux",
     "note": "This application web interface is exposed on the port 55414 inside the container.",
     "logo": "https://cloudinovasi.id/assets/img/logos/urbackup.png",
     "image": "cfstras/urbackup",
     "ports": [
-      "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
+      "55413/tcp",
+      "55414/tcp",
+      "55415/tcp",
+      "35622/tcp"
     ],
-    "volumes": ["/var/urbackup"]
+    "volumes": [
+      "/var/urbackup"
+    ]
   },
   {
     "type": "container",
     "title": "CommandBox",
     "description": "ColdFusion (CFML) CLI",
-    "categories": ["development"],
+    "categories": [
+      "development"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-commandbox.png",
     "image": "ortussolutions/commandbox:latest",
@@ -638,14 +814,99 @@
       }
     ],
     "ports": [
-      "8080/tcp", "8443/tcp"
+      "8080/tcp",
+      "8443/tcp"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Paperwork",
+    "description": "Opensource note-taking & archiving",
+    "note": "Paperwork aims to be an open-source, self-hosted alternative to services like Evernote (R), Microsoft OneNote (R) or Google Keep (R). Open the page and create an account to begin.",
+    "categories": [
+      "cloud-replacement"
+    ],
+    "platform": "linux",
+    "logo": "https://images.g2crowd.com/uploads/product/hd_favicon/1487566741/paperwork.png",
+    "image": "zuhkov/paperwork:latest",
+    "env": [],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": [
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Theia",
+    "description": "Theia browser IDE",
+    "note": "Theia is an extensible platform to develop full-fledged multi-language Cloud & Desktop IDE-like products with state-of-the-art web technologies.",
+    "categories": [
+      "IDE"
+    ],
+    "platform": "linux",
+    "logo": "https://png.icons8.com/metro/1600/source-code.png",
+    "image": "theiaide/theia:latest",
+    "env": [],
+    "ports": [
+      "3000/tcp"
+    ],
+    "volumes": [
+      "/home/project"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "NextCloud",
+    "description": "Free and Open source file sync",
+    "note": "Deploys a NextCloud instance. Requires a separate MySQL database.",
+    "categories": [
+      "storage",
+      "cloud-replacement"
+    ],
+    "platform": "linux",
+    "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
+    "image": "wonderfall/nextcloud:latest",
+    "env": [
+      {
+        "name": "DB_TYPE",
+        "label": "DB Type",
+        "set": "mysql"
+      },
+      {
+        "name": "DB_HOST",
+        "label": "DB Hostname"
+      },
+      {
+        "name": "DB_NAME",
+        "label": "DB Name"
+      },
+      {
+        "name": "DB_USER",
+        "label": "DB Username"
+      },
+      {
+        "name": "DB_PASSWORD",
+        "label": "DB Password"
+      }
+    ],
+    "ports": [
+      "8888/tcp"
+    ],
+    "volumes": [
+      "/data",
+      "/config",
+      "/apps2"
     ]
   },
   {
     "type": "container",
     "title": "ContentBox",
     "description": "Open-source modular CMS",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ortussolutions-contentbox.png",
     "image": "ortussolutions/contentbox:latest",
@@ -664,16 +925,343 @@
       }
     ],
     "ports": [
-      "8080/tcp", "8443/tcp"
+      "8080/tcp",
+      "8443/tcp"
     ],
-    "volumes": ["/data/contentbox/db", "/app/includes/shared/media"]
+    "volumes": [
+      "/data/contentbox/db",
+      "/app/includes/shared/media"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Apache Guacamole",
+    "description": "A clientless browser-based remote access client, supporting VNC, RDP, and SSH",
+    "note": "Apache Guacamole is a clientless remote desktop gateway. It supports standard protocols like VNC, RDP, and SSH. Thanks to HTML5, once Guacamole is installed on a server, all you need to access your desktops is a web browser.",
+    "categories": [
+      "remote access"
+    ],
+    "platform": "linux",
+    "logo": "http://i.imgur.com/eflpez4.png",
+    "image": "jasonbean/guacamole:latest",
+    "env": [
+      {
+        "name": "OPT_MYSQL",
+        "set": "Y"
+      },
+      {
+        "name": "OPT_LDAP",
+        "set": "N"
+      },
+      {
+        "name": "OPT_DUO",
+        "set": "N"
+      }
+    ],
+    "ports": [
+      "8080/tcp"
+    ],
+    "volumes": [
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Emby",
+    "description": "Your personal media on any device",
+    "categories": [
+      "streaming"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/MediaBrowser/Emby.Resources/master/images/Logos/logoicon.png",
+    "image": "emby/embyserver:latest",
+    "env": [
+      {
+        "name": "APP_UID",
+        "set": "99"
+      },
+      {
+        "name": "APP_GID",
+        "set": "100"
+      },
+      {
+        "name": "OPT_LDAP",
+        "set": "N"
+      },
+      {
+        "name": "OPT_DUO",
+        "set": "N"
+      }
+    ],
+    "ports": [
+      "8096/tcp"
+    ],
+    "volumes": [
+      "/config",
+      "/mnt"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "SonarQube",
+    "description": "Open source platform for continuous inspection of code quality.",
+    "note": "Default login: admin/admin.",
+    "categories": [
+      "continuous-integration"
+    ],
+    "platform": "linux",
+    "logo": "https://docs.sonarqube.org/download/attachments/9505096/SONAR?version=1&modificationDate=1510130117000&api=v2",
+    "image": "sonarqube:latest",
+    "env": [],
+    "ports": [
+      "9000/tcp",
+      "9092/tcp"
+    ],
+    "volumes": []
+  },
+  {
+    "type": "container",
+    "title": "phpLDAPadmin",
+    "description": "A web based LDAP client",
+    "categories": [],
+    "platform": "linux",
+    "logo": "https://blog.intropedro.com/es/system/files/article/phpldapadmin.jpg",
+    "image": "osixia/phpldapadmin:0.7.1",
+    "env": [
+      {
+        "name": "PHPLDAPADMIN_LDAP_HOSTS",
+        "label": "LDAP server"
+      }
+    ],
+    "ports": [
+      "443/tcp"
+    ],
+    "volumes": []
+  },
+  {
+    "type": "container",
+    "title": "phpMyAdmin",
+    "description": "A web interface for MySQL and MariaDB.",
+    "note": "Only use one field for DB host(s), leave the other blank.",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "http://www.livehacking.com/web/wp-content/uploads/2011/07/phpmyadmin.png",
+    "image": "phpmyadmin/phpmyadmin:latest",
+    "env": [
+      {
+        "name": "PMA_HOST",
+        "label": "DB Host (single)"
+      },
+      {
+        "name": "PMA_HOSTS",
+        "label": "DB Hosts (comma separated list)"
+      },
+      {
+        "name": "PMA_PORT",
+        "label": "DB Port"
+      },
+      {
+        "name": "PMA_USER",
+        "label": "DB User"
+      },
+      {
+        "name": "PMA_PASSWORD",
+        "label": "DB Password"
+      },
+      {
+        "name": "PMA_ARBITRARY",
+        "label": "Allow arbitrary servers to be specified by the user (1=true, 0=false)"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": []
+  },
+  {
+    "type": "container",
+    "title": "Node Red",
+    "description": "Self-hosted home automation",
+    "note": "Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways. It provides a browser-based editor that makes it easy to wire together flows using the wide range of nodes in the palette that can be deployed to its runtime in a single-click.\n    ",
+    "categories": [
+      "backend-service",
+      "home automation"
+    ],
+    "platform": "linux",
+    "logo": "https://nodered.org/about/resources/media/node-red-icon.svg",
+    "image": "nodered/node-red-docker:latest",
+    "ports": [
+      "1880/tcp"
+    ],
+    "volumes": [
+      "/data"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Codiad",
+    "description": "Full IDE in a browser",
+    "note": "Codiad is a web-based IDE framework with a small footprint and minimal requirements.",
+    "categories": [
+      "IDE"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/codiad.png",
+    "image": "linuxserver/codiad:latest",
+    "env": [
+      {
+        "name": "PUID",
+        "set": "99"
+      },
+      {
+        "name": "PGID",
+        "set": "100"
+      }
+    ],
+    "ports": [
+      "80/tcp"
+    ],
+    "volumes": [
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Redis Commander",
+    "description": "Redis management tool written in node.js",
+    "note": "Hosts can be optionally specified with a comma separated string by setting the REDIS_HOSTS environment variable. After running the container, redis-commander will be available at localhost:8081. ",
+    "categories": [
+      "database"
+    ],
+    "platform": "linux",
+    "logo": "https://cloudinovasi.id/assets/img/logos/redis.png",
+    "image": "\trediscommander/redis-commander:latest",
+    "env": [
+      {
+        "name": "REDIS_HOSTS",
+        "label": "Redis Host(s)"
+      }
+    ],
+    "ports": [
+      "8081/tcp"
+    ],
+    "volumes": []
+  },
+  {
+    "type": "container",
+    "title": "Koel",
+    "description": "A personal music streaming server that works",
+    "note": "A personal music streaming server that works. Default login: admin@example.com/admin. Change after logging in by clicking 'users' in the sidebar.",
+    "categories": [
+      "streaming"
+    ],
+    "env": [
+      {
+        "name": "PHP_MEMORY_LIMIT",
+        "set": "2048"
+      },
+      {
+        "name": "FASTCGI_READ_TIMEOUT",
+        "set": "6000"
+      },
+      {
+        "name": "UMASK",
+        "set": "000"
+      },
+      {
+        "name": "PUID",
+        "set": "99"
+      },
+      {
+        "name": "PGID",
+        "set": "100"
+      }
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/binhex/docker-templates/master/binhex/images/koel-icon.png",
+    "image": "binhex/arch-koel:latest",
+    "ports": [
+      "8050/tcp",
+      "8060/tcp"
+    ],
+    "volumes": [
+      "/media",
+      "/config"
+    ]
+  },
+  {
+    "type": "container",
+    "title": "Automatic MySQL Backup",
+    "description": "Backs up your MySQL Databases nightly",
+    "note": "Set the hour and minute you would like backups to run. Also optionally specify a pushbullet token for notifications.",
+    "categories": [
+      "database",
+      "backup"
+    ],
+    "platform": "linux",
+    "logo": "https://raw.githubusercontent.com/soana/backupsql/master/BackupSQL-icon.png",
+    "image": "soana/backupsql:latest",
+    "env": [
+      {
+        "name": "BackupCopies",
+        "label": "Number of backup copies to keep"
+      },
+      {
+        "name": "MySQLIP",
+        "label": "MySQL hostname"
+      },
+      {
+        "name": "SQL_userid",
+        "label": "MySQL username"
+      },
+      {
+        "name": "SQL_pwd",
+        "label": "MySQL password"
+      },
+      {
+        "name": "bkpDayOfWeek",
+        "set": "*"
+      },
+      {
+        "name": "bkpMonth",
+        "set": "*"
+      },
+      {
+        "name": "bkpDayOfMonth",
+        "set": "*"
+      },
+      {
+        "name": "bkpHour",
+        "label": "Backup hour (0-23)"
+      },
+      {
+        "name": "bkpMinute",
+        "label": "Backup minute (0-59)"
+      },
+      {
+        "name": "TOKEN",
+        "label": "Pushbullet token (optional)"
+      }
+    ],
+    "ports": [
+      "8096/tcp"
+    ],
+    "volumes": [
+      "/config",
+      "/backup"
+    ]
   },
   {
     "type": "stack",
     "title": "OpenFaaS",
     "description": "Serverless functions made simple",
     "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
-    "categories": ["serverless"],
+    "categories": [
+      "serverless",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
     "repository": {
@@ -686,7 +1274,10 @@
     "title": "IronFunctions",
     "description": "Open-source serverless computing platform",
     "note": "Deploys the IronFunctions API and UI.",
-    "categories": ["serverless"],
+    "categories": [
+      "serverless",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/ironfunctions.png",
     "repository": {
@@ -699,7 +1290,10 @@
     "title": "CockroachDB",
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
-    "categories": ["database"],
+    "categories": [
+      "database",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/cockroachdb.png",
     "repository": {
@@ -712,7 +1306,10 @@
     "title": "Wordpress",
     "description": "Wordpress setup with a MySQL database",
     "note": "Deploys a Wordpress instance connected to a MySQL database.",
-    "categories": ["CMS"],
+    "categories": [
+      "CMS",
+      "backend-service"
+    ],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/wordpress.png",
     "repository": {
@@ -724,6 +1321,29 @@
         "name": "MYSQL_ROOT_PASSWORD",
         "label": "Database root password",
         "description": "Password used by the MySQL root user."
+      }
+    ]
+  },
+  {
+    "type": "stack",
+    "title": "NextCloud",
+    "description": "Free and open source file sync",
+    "note": "Deploys a NextCloud instance connected to a MySQL database.",
+    "categories": [
+      "storage",
+      "cloud-replacement"
+    ],
+    "platform": "linux",
+    "logo": "https://misc.benyanke.com/files/img/logos/nextcloud.png",
+    "repository": {
+      "url": "https://github.com/benyanke/templates",
+      "stackfile": "stacks/nextcloud/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "MYSQL_DATABASE_PASSWORD",
+        "label": "Database root password",
+        "description": "Password used by the MySQL root user, as well as NextCloud."
       }
     ]
   }
