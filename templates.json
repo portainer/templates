@@ -671,8 +671,9 @@
   {
     "type": "stack",
     "title": "OpenFaaS",
+    "name": "func",
     "description": "Serverless functions made simple",
-    "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080.",
+    "note": "Deploys the API gateway and sample functions. You can access the UI on port 8080. <b>Warning</b>: the name of the stack must be 'func'.",
     "categories": ["serverless"],
     "platform": "linux",
     "logo": "https://cloudinovasi.id/assets/img/logos/openfaas.png",
