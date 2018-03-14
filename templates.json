@@ -499,6 +499,33 @@
   },
   {
     "type": "container",
+    "title": "Sematext Docker Agent",
+    "description": "Collect logs, metrics and docker events",
+    "categories": ["Log Management", "Monitoring"],
+    "platform": "linux",
+    "logo": "https://sematext.com/wp-content/uploads/2016/08/octi.png",
+    "image": "sematext/sematext-agent-docker:latest",
+    "name": "sematext-agent",
+    "privileged": true,
+    "env": [
+      {
+        "name": "LOGSENE_TOKEN",
+        "label": "Logs token"
+      },
+      {
+        "name": "SPM_TOKEN",
+        "label": "SPM monitoring token"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/var/run/docker.sock",
+        "bind": "/var/run/docker.sock"
+      }
+    ]
+  },
+  {
+    "type": "container",
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
     "categories": ["marketing"],
@@ -739,32 +766,6 @@
       "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
     },
-    "env": [
-      {
-        "name": "LOGSENE_TOKEN",
-        "label": "Logs token"
-      },
-      {
-        "name": "SPM_TOKEN",
-        "label": "SPM monitoring token"
-      }
-    ],
-    "volumes": [
-      {
-        "container": "/var/run/docker.sock",
-        "bind": "/var/run/docker.sock"
-      }
-    ]
-  },
-  {
-    "title": "Sematext Docker Agent",
-    "type": "container",
-    "description": "Collect logs, metrics and docker events",
-    "logo": "https://sematext.com/wp-content/uploads/2016/08/octi.png",
-    "image": "sematext/sematext-agent-docker:latest",
-    "name": "sematext-agent",
-    "platform": "linux",
-    "privileged": true,
     "env": [
       {
         "name": "LOGSENE_TOKEN",
