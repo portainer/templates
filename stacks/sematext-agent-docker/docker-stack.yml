@@ -1,4 +1,4 @@
-version: '3'
+version: '3.2'
 services:
   sematext-agent-docker:
     image: sematext/sematext-agent-docker
@@ -7,8 +7,6 @@ services:
     environment:
       - LOGSENE_TOKEN=$LOGSENE_TOKEN  
       - SPM_TOKEN=$SPM_TOKEN
-    cap_add:
-      - SYS_ADMIN
     restart: always
     volumes:
       - type: bind
