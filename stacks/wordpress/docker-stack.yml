@@ -5,7 +5,9 @@ services:
      image: mysql:5.7
      volumes:
        - db_data:/var/lib/mysql
-     restart: always
+     deploy:
+       restart_policy:
+         condition: any
      environment:
        MYSQL_ROOT_PASSWORD: ${MYSQL_DATABASE_PASSWORD}
        MYSQL_DATABASE: wordpress
@@ -16,7 +18,9 @@ services:
      image: wordpress:latest
      ports:
        - 80
-     restart: always
+     deploy:
+       restart_policy:
+         condition: any
      environment:
        WORDPRESS_DB_HOST: db:3306
        WORDPRESS_DB_USER: wordpress
