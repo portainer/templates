@@ -2,7 +2,7 @@ version: '3.2'
 
 services:
   agent:
-    image: portainer/agent
+    image: portainer/agent:develop
     environment:
       AGENT_CLUSTER_ADDR: tasks.agent
       AGENT_PORT: 9002
