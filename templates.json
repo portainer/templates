@@ -503,7 +503,7 @@
     "description": "Collect logs, metrics and docker events",
     "categories": ["Log Management", "Monitoring"],
     "platform": "linux",
-    "logo": "https://portainer.io/images/logos/sematext.png",
+    "logo": "https://portainer.io/images/logos/sematext_agent.png",
     "image": "sematext/sematext-agent-docker:latest",
     "name": "sematext-agent",
     "privileged": true,
@@ -773,7 +773,7 @@
     "type": "stack",
     "categories": ["Log Management", "Monitoring"],
     "description": "Collect logs, metrics and docker events",
-    "logo": "https://portainer.io/images/logos/sematext.png",
+    "logo": "https://portainer.io/images/logos/sematext_agent.png",
     "platform": "linux",
     "repository": {
       "url": "https://github.com/portainer/templates",
