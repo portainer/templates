@@ -704,8 +704,21 @@
     "platform": "linux",
     "logo": "https://portainer.io/images/logos/portainer.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/portainer-agent/docker-stack.yml"
+    }
+  },
+  {
+    "type": "stack",
+    "title": "Portainer Agent (develop)",
+    "description": "Manage all the resources in your Swarm cluster",
+    "note": "The agent will be deployed globally inside your cluster and available on port 9002.",
+    "categories": ["portainer"],
+    "platform": "linux",
+    "logo": "https://portainer.io/images/logos/portainer.png",
+    "repository": {
+      "url": "https://github.com/deviantony/templates",
+      "stackfile": "stacks/portainer-agent-dev/docker-stack.yml"
     }
   },
   {
@@ -731,7 +744,7 @@
     "platform": "linux",
     "logo": "https://portainer.io/images/logos/ironfunctions.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/ironfunctions/docker-stack.yml"
     }
   },
@@ -744,7 +757,7 @@
     "platform": "linux",
     "logo": "https://portainer.io/images/logos/cockroachdb.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/cockroachdb/docker-stack.yml"
     }
   },
@@ -757,7 +770,7 @@
     "platform": "linux",
     "logo": "https://portainer.io/images/logos/wordpress.png",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/wordpress/docker-stack.yml"
     },
     "env": [
@@ -776,7 +789,7 @@
     "logo": "https://portainer.io/images/logos/sematext_agent.png",
     "platform": "linux",
     "repository": {
-      "url": "https://github.com/portainer/templates",
+      "url": "https://github.com/deviantony/templates",
       "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
     },
     "env": [
