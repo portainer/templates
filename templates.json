@@ -210,8 +210,8 @@
         "label": "Minio secret key"
       }
     ],
-    "volumes": ["/export", "/root/.minio"],
-    "command": "server /export"
+    "volumes": ["/data", "/root/.minio"],
+    "command": "server /data"
   },
   {
     "type": "container",
