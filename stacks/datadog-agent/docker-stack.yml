@@ -1,0 +1,15 @@
+version: '3'
+services:
+  datadog-agent:
+    image: datadog/agent:latest
+    deploy:
+      mode: global
+      restart_policy:
+        condition: any
+    environment:
+      - DD_API_KEY=$API_KEY
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /proc/:/host/proc/:ro
+      - /sys/fs/cgroup/:/host/sys/fs/cgroup:ro
