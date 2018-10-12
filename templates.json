@@ -834,5 +834,20 @@
         "bind": "/var/run/docker.sock"
       }
     ]
-  }
+  },
+  {
+    "type": "container",
+    "title": "Adminer",
+    "description": "Database management in a single PHP file",
+    "categories": ["database"],
+    "platform": "linux",
+    "repository": {
+      "url": "https://github.com/vrana/adminer"
+    },
+    "logo": "https://www.adminer.org/static/images/logo.png",
+    "image": "adminer:latest",
+    "ports": [
+      "8080/tcp"
+    ]
+  },
 ]
