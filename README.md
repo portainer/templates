@@ -32,4 +32,4 @@ Documentation is available [ReadTheDocs](http://portainer.readthedocs.io/en/late
 * Redmine (based on `redmine:latest`)
 * Odoo (based on `odoo:latest`)
 * Sematext Docker Agent (based on `sematext/sematext-agent-docker:latest`)
-* Adminer (baesd on `adminer:latest`)
+* Adminer (based on `adminer:latest`)
