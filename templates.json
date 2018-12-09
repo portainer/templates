@@ -351,7 +351,7 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "default": "Y"
       },
       {
         "name": "SA_PASSWORD",
@@ -376,7 +376,7 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "default": "Y"
       },
       {
         "name": "sa_password",
@@ -406,7 +406,7 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "default": "Y"
       },
       {
         "name": "sa_password",
@@ -756,7 +756,7 @@
       {
         "name": "WOWZA_ACCEPT_LICENSE",
         "label": "Agree to Wowza EULA",
-        "set": "yes"
+        "default": "yes"
       },
       {
         "name": "WOWZA_KEY",
@@ -918,7 +918,7 @@
     "env": [
       {
         "name": "CFENGINE",
-        "set": "lucee@4.5"
+        "default": "lucee@4.5"
       }
     ],
     "ports": [
@@ -939,15 +939,15 @@
     "env": [
       {
         "name": "express",
-        "set": "true"
+        "default": "true"
       },
       {
         "name": "install",
-        "set": "true"
+        "default": "true"
       },
       {
         "name": "CFENGINE",
-        "set": "lucee@4.5"
+        "default": "lucee@4.5"
       }
     ],
     "ports": [
