@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  templates:
+    container_name: portainer-templates
+    image: nginx:stable-alpine
+    ports:
+      - 8080:80/tcp
+    volumes:
+      - ./:/usr/share/nginx/html:ro
+
+
+  app:
+    command: [ "--templates", "http://portainer-templates/templates.json" ]
+    container_name: portainer-app
+    depends_on:
+      - templates
+    image: portainer/portainer:latest
+    ports:
+      - 9000:9000/tcp
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/portainer:/data

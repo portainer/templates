@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  oms:
+    image: microsoft/oms
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      WSID: ${AZURE_WORKSPACE_ID}
+      KEY: ${AZURE_PRIMARY_KEY}
+    deploy:
+      mode: global
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "25225:25225"
+      - "25224:25224/udp"

@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  sematext-agent-docker:
+    image: sematext/sematext-agent-docker
+    deploy:
+      mode: global
+      restart_policy:
+        condition: any
+    environment:
+      - LOGSENE_TOKEN=$LOGSENE_TOKEN
+      - SPM_TOKEN=$SPM_TOKEN
+    restart: always
+    volumes:
+      - type: bind
+        source: /var/run/docker.sock
+        target: /var/run/docker.sock
