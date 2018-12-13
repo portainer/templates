@@ -834,5 +834,33 @@
         "bind": "/var/run/docker.sock"
       }
     ]
+  },
+  {
+    "type": "container",
+    "title": "Flectra",
+    "description": "The Open Source ERP and CRM system for your business.",
+    "categories": ["project-management"],
+    "platform": "linux",
+    "logo": "https://flectrahq.com/flectra_website/static/src/img/icons/Icon-60.png",
+    "image": "flectrahq/flectra:latest",
+    "env": [
+      {
+        "name": "HOST",
+        "label": "PostgreSQL database host",
+        "type": "container"
+      },
+      {
+        "name": "USER",
+        "label": "Database user"
+      },
+      {
+        "name": "PASSWORD",
+        "label": "Database password"
+      }
+    ],
+    "ports": [
+      "7073/tcp"
+    ],
+    "volumes": ["/var/lib/flectra", "/mnt/extra-addons"]
   }
 ]
