@@ -268,7 +268,8 @@
         "name": "SA_PASSWORD",
         "label": "SA password"
       }
-    ]
+    ],
+    "volumes": [{"container": "/var/opt/mssql/data"}, {"container": "/var/opt/mssql/log"}]
   },
   {
     "type": 1,
