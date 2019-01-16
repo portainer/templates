@@ -251,7 +251,18 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "SA_PASSWORD",
@@ -274,7 +285,18 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "sa_password",
@@ -298,7 +320,18 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "sa_password",
