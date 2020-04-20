@@ -874,5 +874,43 @@
         "label": "Datadog API key"
       }
     ]
+  },
+  {
+    "title": "neo4j",
+    "type": 1,
+    "categories": ["database"],
+    "description": "neo4j is a highly scalable, robust native graph database.",
+    "logo": "https://go.neo4j.com/rs/710-RRC-335/images/neo4j_logo_globe.png",
+    "platform": "linux",
+    "image": "neo4j:latest",
+    "name": "neo4j",
+    "env": [
+      {
+        "name": "NEO4J_AUTH",
+        "default": "neo4j/test",
+        "preset": true
+      }
+    ],
+    "note": "After initialization open the neo4j \u003ca href=\"http://localhost:7474/browser/\" target=\"_blank\"\u003ebrowser\u003c/a\u003e.\n\u003cbr\u003e\nDefault username is \u003cb\u003eneo4j\u003c/b\u003e, default password is \u003cb\u003etest\u003cb\u003e\u003cbr\u003eFor more check the \u003ca href=\"https://neo4j.com/developer/docker-run-neo4j/\" target=\"_blank\"\u003eofficial documentation\u003c/a\u003e.",
+    "volumes": [ {
+        "container": "/data",
+        "bind": "/data/neo4j/data"
+      },
+      {
+        "container": "/logs",
+        "bind": "/data/neo4j/logs"
+      },
+      {
+        "container": "/var/lib/neo4j/import",
+        "bind": "/data/neo4j/import"
+      },
+      {
+        "container": "/plugins",
+        "bind": "/data/neo4j/plugins"
+      }
+    ],
+    "ports": [
+      "7474:7474/tcp", "7687:7687/tcp"
+    ]
   }
 ]
