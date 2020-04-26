@@ -881,6 +881,38 @@
 			]
 		},
 		{
+			"type": 1,
+			"title": "YoutubeDL-Material",
+			"description": "Open-source and self-hosted YouTube downloader based on Material Design",
+			"categories": [
+				"downloading"
+			],
+			"platform": "linux",
+			"logo": "https://i.imgur.com/IKOlr0N.png",
+			"image": "tzahi12345/youtubedl-material:latest",
+			"env": [{
+				"name": "ALLOW_CONFIG_MUTATIONS",
+				"set": "true"
+			}],
+			"ports": [
+				"8998/tcp",
+				"17442/tcp"
+			],
+			"volumes": [{
+					"container": "/app/appdata"
+				},
+				{
+					"container": "/app/audio"
+				},
+				{
+					"container": "/app/video"
+				},
+				{
+					"container": "/app/subscriptions"
+				}
+			]
+		},
+		{
 			"type": 2,
 			"title": "Portainer Agent",
 			"description": "Manage all the resources in your Swarm cluster",
