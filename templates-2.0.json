@@ -824,7 +824,7 @@
 					"container": "/srv"
 				}
 			],
-			"command": "--port 80 --database /data/database.db --scope /srv"
+			"command": "--port 80 --database /data/database.db --root /srv"
 		},
 		{
 			"type": 1,
