@@ -401,7 +401,7 @@
     "description": "WebOps platform and hosting control panel",
     "categories": ["CMS"],
     "platform": "linux",
-    "note": "Default credentials: admin / changeme",
+    "note": "Default credentials: admin / changeme1Q**",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plesk.png",
     "image": "plesk/plesk:latest",
     "ports": [
