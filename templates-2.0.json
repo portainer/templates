@@ -497,7 +497,8 @@
 			"title": "Plesk",
 			"description": "WebOps platform and hosting control panel",
 			"categories": [
-				"CMS"
+				"hosting",
+				"development"
 			],
 			"platform": "linux",
 			"note": "Default credentials: admin / changeme1Q**",
