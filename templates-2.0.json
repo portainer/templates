@@ -5,6 +5,7 @@
 			"type": 1,
 			"title": "ADSimDetector IOC",
 			"description": "ADSimDetector IOC Configurable template",
+            "interactive": true,
 			"categories": [
 				"epics",
                 "areaDetector",
