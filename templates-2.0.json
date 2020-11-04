@@ -1,6 +1,89 @@
 {
 	"version": "2",
-	"templates": [{
+	"templates": [
+        {
+			"type": 1,
+			"title": "ADSimDetector IOC",
+			"description": "ADSimDetector IOC Configurable template",
+			"categories": [
+				"epics",
+                "areaDetector",
+                "ioc-template"
+			],
+			"platform": "linux",
+			"logo": "https://epics.anl.gov/icons/logo_659x595_W.png",
+			"image": "ioc-template/adsimdetector:latest",
+			"env": [{
+				"name": "PREFIX",
+				"label": "IOC Prefix"
+			},
+			{
+				"name": "ENGINEER",
+				"label": "Deploying Engineer"
+			},
+    		{
+				"name": "LOCATION",
+				"label": "location"
+			},
+		    {
+				"name": "EPICS_CA_AUTO_ADDR_LIST",
+				"label": "Use CA Auto Address List (YES/NO)"
+			},
+		    {
+				"name": "EPICS_CA_ADDR_LIST",
+				"label": "EPICS CA Subnet"
+			},
+		    {
+				"name": "EPICS_CA_MAX_ARRAY_BYTES",
+				"label": "EPICS Max Array Bytes"
+			},
+		    {
+				"name": "IOCNAME",
+				"label": "IOC Name"
+			},
+		    {
+				"name": "IOC",
+				"label": "IOC Class"
+			},
+		    {
+				"name": "HOSTNAME",
+				"label": "Hostname"
+			},
+			{
+				"name": "PORT",
+				"label": "Asyn Port"
+			},
+		    {
+				"name": "QSIZE",
+				"label": "Queue Size"
+			},
+		    {
+				"name": "NCHANS",
+				"label": "# of Channels"
+			},
+		    {
+				"name": "HIST_SIZE",
+				"label": "Histogram Size"
+			},
+		    {
+				"name": "XSIZE",
+				"label": "X Resolution"
+			},
+		    {
+				"name": "YSIZE",
+				"label": "Y Resolution"
+			},
+		    {
+				"name": "CBUFFS",
+				"label": "Channel Buffers"
+			},
+		    {
+				"name": "MAX_THREADS",
+				"label": "Maximum Allocated Threads"
+			}
+			]
+		},
+        {
 			"type": 1,
 			"title": "ADUVC IOC",
 			"description": "ADUVC example",
