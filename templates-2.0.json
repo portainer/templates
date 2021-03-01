@@ -206,7 +206,7 @@
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
-			"image": "elasticsearch:latest",
+			"image": "elasticsearch:7.10.1",
 			"ports": [
 				"9200/tcp",
 				"9300/tcp"
