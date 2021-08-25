@@ -254,15 +254,16 @@
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
 			"image": "minio/minio:latest",
 			"ports": [
-				"9000/tcp"
+				"9000/tcp",
+				"9001/tcp"
 			],
 			"env": [{
-					"name": "MINIO_ACCESS_KEY",
-					"label": "Minio access key"
+					"name": "MINIO_ROOT_USER",
+					"label": "Minio root user"
 				},
 				{
-					"name": "MINIO_SECRET_KEY",
-					"label": "Minio secret key"
+					"name": "MINIO_ROOT_PASSWORD",
+					"label": "Minio root password"
 				}
 			],
 			"volumes": [{
@@ -272,7 +273,7 @@
 					"container": "/root/.minio"
 				}
 			],
-			"command": "server /data"
+			"command": "server --console-address ':9001' /data"
 		},
 		{
 			"type": 1,
