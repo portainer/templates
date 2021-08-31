@@ -65,15 +65,20 @@
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-			"image": "abiosoft/caddy:latest",
+			"image": "caddy:latest",
 			"ports": [
 				"80/tcp",
 				"443/tcp",
-				"2015/tcp"
+				"2019/tcp"
 			],
-			"volumes": [{
-				"container": "/root/.caddy"
-			}]
+			"volumes": [
+				{
+					"container": "/config"
+				},
+				{
+					"container": "/data"
+				}
+			]
 		},
 		{
 			"type": 1,
