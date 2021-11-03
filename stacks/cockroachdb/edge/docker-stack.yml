@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  roach1:
+    image: cockroachdb/cockroach:latest
+    command: "start --insecure"
+    deploy:
+      replicas: 1
+    ports:
+      - 8080
+
+  roachN:
+    image: cockroachdb/cockroach:latest
+    command: "start --insecure --join=roach1,roachN"
+    deploy:
+      mode: global

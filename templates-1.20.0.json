@@ -1,6 +1,6 @@
 [
   {
-    "type": "container",
+    "type": 1,
     "title": "Registry",
     "description": "Docker image registry",
     "categories": ["docker"],
@@ -10,10 +10,10 @@
     "ports": [
       "5000/tcp"
     ],
-    "volumes": ["/var/lib/registry"]
+    "volumes": [{ "container": "/var/lib/registry"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Nginx",
     "description": "High performance web server",
     "categories": ["webserver"],
@@ -24,10 +24,10 @@
       "80/tcp",
       "443/tcp"
     ],
-    "volumes": ["/etc/nginx", "/usr/share/nginx/html"]
+    "volumes": [{"container": "/etc/nginx"}, {"container": "/usr/share/nginx/html"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Httpd",
     "description": "Open-source HTTP server",
     "categories": ["webserver"],
@@ -37,10 +37,10 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/usr/local/apache2/htdocs/"]
+    "volumes": [{"container": "/usr/local/apache2/htdocs/"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Caddy",
     "description": "HTTP/2 web server with automatic HTTPS",
     "categories": ["webserver"],
@@ -50,10 +50,10 @@
     "ports": [
       "80/tcp", "443/tcp", "2015/tcp"
     ],
-    "volumes": ["/root/.caddy"]
+    "volumes": [{"container": "/root/.caddy"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "MySQL",
     "description": "The most popular open-source database",
     "categories": ["database"],
@@ -69,10 +69,10 @@
     "ports": [
       "3306/tcp"
     ],
-    "volumes": ["/var/lib/mysql"]
+    "volumes": [{"container": "/var/lib/mysql"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "MariaDB",
     "description": "Performance beyond MySQL",
     "categories": ["database"],
@@ -88,10 +88,10 @@
     "ports": [
       "3306/tcp"
     ],
-    "volumes": ["/var/lib/mysql"]
+    "volumes": [{"container": "/var/lib/mysql"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "PostgreSQL",
     "description": "The most advanced open-source database",
     "categories": ["database"],
@@ -111,10 +111,10 @@
     "ports": [
       "5432/tcp"
     ],
-    "volumes": ["/var/lib/postgresql/data"]
+    "volumes": [{"container": "/var/lib/postgresql/data"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Mongo",
     "description": "Open-source document-oriented database",
     "categories": ["database"],
@@ -124,10 +124,10 @@
     "ports": [
       "27017/tcp"
     ],
-    "volumes": ["/data/db"]
+    "volumes": [{"container": "/data/db"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "CockroachDB",
     "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
     "categories": ["database"],
@@ -138,11 +138,11 @@
       "26257/tcp",
       "8080/tcp"
     ],
-    "volumes": ["/cockroach/cockroach-data"],
+    "volumes": [{"container": "/cockroach/cockroach-data"}],
     "command": "start --insecure"
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "CrateDB",
     "description": "An open-source distributed SQL database",
     "categories": ["database"],
@@ -153,10 +153,10 @@
       "4200/tcp",
       "4300/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [{"container": "/data"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Elasticsearch",
     "description": "Open-source search and analytics engine",
     "categories": ["database"],
@@ -167,10 +167,10 @@
       "9200/tcp",
       "9300/tcp"
     ],
-    "volumes": ["/usr/share/elasticsearch/data"]
+    "volumes": [{"container": "/usr/share/elasticsearch/data"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Gitlab CE",
     "description": "Open-source end-to-end software development platform",
     "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
@@ -190,7 +190,7 @@
     ]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Minio",
     "description": "A distributed object storage server built for cloud applications and devops",
     "categories": ["storage"],
@@ -210,11 +210,11 @@
         "label": "Minio secret key"
       }
     ],
-    "volumes": ["/data", "/root/.minio"],
+    "volumes": [{"container": "/data"}, {"container": "/root/.minio"}],
     "command": "server /data"
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Scality S3",
     "description": "Standalone AWS S3 protocol server",
     "categories": ["storage"],
@@ -234,10 +234,10 @@
         "label": "Scality S3 secret key"
       }
     ],
-    "volumes": ["/usr/src/app/localData", "/usr/src/app/localMetadata"]
+    "volumes": [{"container": "/usr/src/app/localData"}, {"container": "/usr/src/app/localMetadata"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "SQL Server",
     "description": "Microsoft SQL Server on Linux",
     "categories": ["database"],
@@ -260,7 +260,7 @@
     ]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "SQL Server",
     "description": "Microsoft SQL Server Developer for Windows containers",
     "categories": ["database"],
@@ -281,10 +281,10 @@
         "label": "SA password"
       }
     ],
-    "volumes": ["C:/temp/"]
+    "volumes": [{"container": "C:/temp/"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "SQL Server Express",
     "description": "Microsoft SQL Server Express for Windows containers",
     "categories": ["database"],
@@ -305,10 +305,10 @@
         "label": "SA password"
       }
     ],
-    "volumes": ["C:/temp/"]
+    "volumes": [{"container": "C:/temp/"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "IronFunctions API",
     "description": "Open-source serverless computing platform",
     "categories": ["serverless"],
@@ -318,11 +318,11 @@
     "ports": [
       "8080/tcp"
     ],
-    "volumes": ["/app/data"],
+    "volumes": [{"container": "/app/data"}],
     "privileged": true
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "IronFunctions UI",
     "description": "Open-source user interface for IronFunctions",
     "categories": ["serverless"],
@@ -332,7 +332,7 @@
     "ports": [
       "4000/tcp"
     ],
-    "volumes": ["/app/data"],
+    "volumes": [{"container": "/app/data"}],
     "env": [
       {
         "name": "API_URL",
@@ -342,7 +342,7 @@
     "privileged": true
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Solr",
     "description": "Open-source enterprise search platform",
     "categories": ["search-engine"],
@@ -352,10 +352,10 @@
     "ports": [
       "8983/tcp"
     ],
-    "volumes": ["/opt/solr/mydata"]
+    "volumes": [{"container": "/opt/solr/mydata"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Redis",
     "description": "Open-source in-memory data structure store",
     "categories": ["database"],
@@ -365,10 +365,10 @@
     "ports": [
       "6379/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [{"container": "/data"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "RabbitMQ",
     "description": "Highly reliable enterprise messaging system",
     "categories": ["messaging"],
@@ -379,10 +379,10 @@
       "5671/tcp",
       "5672/tcp"
     ],
-    "volumes": ["/var/lib/rabbitmq"]
+    "volumes": [{"container": "/var/lib/rabbitmq"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Ghost",
     "description": "Free and open-source blogging platform",
     "categories": ["blog"],
@@ -393,47 +393,23 @@
     "ports": [
       "2368/tcp"
     ],
-    "volumes": ["/var/lib/ghost/content"]
+    "volumes": [{"container": "/var/lib/ghost/content"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Plesk",
     "description": "WebOps platform and hosting control panel",
     "categories": ["CMS"],
     "platform": "linux",
     "note": "Default credentials: admin / changeme",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plesk.png",
-    "image": "plesk/plesk:preview",
+    "image": "plesk/plesk:latest",
     "ports": [
       "21/tcp", "80/tcp", "443/tcp", "8880/tcp", "8443/tcp", "8447/tcp"
     ]
   },
   {
-    "type": "container",
-    "title": "WordPress",
-    "description": "A free and open-source CMS",
-    "categories": ["CMS"],
-    "platform": "linux",
-    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
-    "image": "wordpress:latest",
-    "env": [
-      {
-        "name": "WORDPRESS_DB_HOST",
-        "label": "MySQL database host",
-        "type": "container"
-      },
-      {
-        "name": "WORDPRESS_DB_PASSWORD",
-        "label": "Database password"
-      }
-    ],
-    "ports": [
-      "80/tcp"
-    ],
-    "volumes": ["/var/www/html"]
-  },
-  {
-    "type": "container",
+    "type": 1,
     "title": "Joomla",
     "description": "Another free and open-source CMS",
     "categories": ["CMS"],
@@ -454,10 +430,10 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [{"container": "/var/www/html"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Drupal",
     "description": "Open-source content management framework",
     "categories": ["CMS"],
@@ -467,10 +443,10 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [{"container": "/var/www/html"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Plone",
     "description": "A free and open-source CMS built on top of Zope",
     "categories": ["CMS"],
@@ -480,10 +456,10 @@
     "ports": [
       "8080/tcp"
     ],
-    "volumes": ["/data"]
+    "volumes": [{"container": "/data"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Magento 2",
     "description": "Open-source e-commerce platform",
     "categories": ["CMS"],
@@ -495,10 +471,10 @@
       "3000/tcp",
       "3001/tcp"
     ],
-    "volumes": ["/var/www/html/"]
+    "volumes": [{"container": "/var/www/html/"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Sematext Docker Agent",
     "description": "Collect logs, metrics and docker events",
     "categories": ["Log Management", "Monitoring"],
@@ -525,7 +501,39 @@
     ]
   },
   {
-    "type": "container",
+    "type": 1,
+    "title": "Datadog agent",
+    "description": "Collect events and metrics",
+    "categories": ["Monitoring"],
+    "platform": "linux",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
+    "image": "datadog/agent:latest",
+    "env": [
+      {
+        "name": "DD_API_KEY",
+        "label": "Datadog API key"
+      }
+    ],
+    "volumes": [
+      {
+        "container": "/var/run/docker.sock",
+        "bind": "/var/run/docker.sock",
+        "readonly": true
+      },
+      {
+        "container": "/host/sys/fs/cgroup",
+        "bind": "/sys/fs/cgroup",
+        "readonly": true
+      },
+      {
+        "container": "/host/proc",
+        "bind": "/proc",
+        "readonly": true
+      }
+    ]
+  },
+  {
+    "type": 1,
     "title": "Mautic",
     "description": "Open-source marketing automation platform",
     "categories": ["marketing"],
@@ -546,10 +554,10 @@
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/var/www/html"]
+    "volumes": [{"container": "/var/www/html"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Wowza",
     "description": "Streaming media server",
     "categories": ["streaming"],
@@ -573,10 +581,10 @@
       "8087/tcp",
       "8088/tcp"
     ],
-    "volumes": ["/var/lib/wowza"]
+    "volumes": [{"container": "/var/lib/wowza"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Jenkins",
     "description": "Open-source continuous integration tool",
     "categories": ["continuous-integration"],
@@ -593,10 +601,10 @@
         "label": "Jenkins options"
       }
     ],
-    "volumes": ["/var/jenkins_home"]
+    "volumes": [{"container": "/var/jenkins_home"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Redmine",
     "description": "Open-source project management tool",
     "categories": ["project-management"],
@@ -606,10 +614,10 @@
     "ports": [
       "3000/tcp"
     ],
-    "volumes": ["/usr/src/redmine/files"]
+    "volumes": [{"container": "/usr/src/redmine/files"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Odoo",
     "description": "Open-source business apps",
     "categories": ["project-management"],
@@ -634,10 +642,10 @@
     "ports": [
       "8069/tcp"
     ],
-    "volumes": ["/var/lib/odoo", "/mnt/extra-addons"]
+    "volumes": [{"container": "/var/lib/odoo"}, {"container": "/mnt/extra-addons"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "Urbackup",
     "description": "Open-source network backup",
     "categories": ["backup"],
@@ -648,25 +656,25 @@
     "ports": [
       "55413/tcp", "55414/tcp", "55415/tcp", "35622/tcp"
     ],
-    "volumes": ["/var/urbackup"]
+    "volumes": [{"container": "/var/urbackup"}]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "File browser",
     "description": "A web file manager",
     "note": "Default credentials: admin/admin",
     "categories": ["filesystem", "storage"],
     "platform": "linux",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
-    "image": "hacdias/filemanager:latest",
+    "image": "filebrowser/filebrowser:latest",
     "ports": [
       "80/tcp"
     ],
-    "volumes": ["/data", "/srv"],
+    "volumes": [{"container": "/data"}, {"container": "/srv"}],
     "command": "--port 80 --database /data/database.db --scope /srv"
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "CommandBox",
     "description": "ColdFusion (CFML) CLI",
     "categories": ["development"],
@@ -684,7 +692,7 @@
     ]
   },
   {
-    "type": "container",
+    "type": 1,
     "title": "ContentBox",
     "description": "Open-source modular CMS",
     "categories": ["CMS"],
@@ -708,10 +716,10 @@
     "ports": [
       "8080/tcp", "8443/tcp"
     ],
-    "volumes": ["/data/contentbox/db", "/app/includes/shared/media"]
+    "volumes": [{"container": "/data/contentbox/db"}, {"container": "/app/includes/shared/media"}]
   },
   {
-    "type": "stack",
+    "type": 2,
     "title": "Portainer Agent",
     "description": "Manage all the resources in your Swarm cluster",
     "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
@@ -719,25 +727,12 @@
     "platform": "linux",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
     "repository": {
-      "url": "https://github.com/deviantony/templates",
+      "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/portainer-agent/docker-stack.yml"
     }
   },
   {
-    "type": "stack",
-    "title": "Portainer Agent (develop)",
-    "description": "Manage all the resources in your Swarm cluster",
-    "note": "The agent will be deployed globally inside your cluster and available on port 9002.",
-    "categories": ["portainer"],
-    "platform": "linux",
-    "logo": "https://portainer.io/images/logos/portainer.png",
-    "repository": {
-      "url": "https://github.com/deviantony/templates",
-      "stackfile": "stacks/portainer-agent-dev/docker-stack.yml"
-    }
-  },
-  {
-    "type": "stack",
+    "type": 2,
     "title": "OpenFaaS",
     "name": "func",
     "description": "Serverless functions made simple",
@@ -751,7 +746,7 @@
     }
   },
   {
-    "type": "stack",
+    "type": 2,
     "title": "IronFunctions",
     "description": "Open-source serverless computing platform",
     "note": "Deploys the IronFunctions API and UI.",
@@ -759,12 +754,12 @@
     "platform": "linux",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
     "repository": {
-      "url": "https://github.com/deviantony/templates",
+      "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/ironfunctions/docker-stack.yml"
     }
   },
   {
-    "type": "stack",
+    "type": 2,
     "title": "CockroachDB",
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
@@ -772,12 +767,12 @@
     "platform": "linux",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
     "repository": {
-      "url": "https://github.com/deviantony/templates",
+      "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/cockroachdb/docker-stack.yml"
     }
   },
   {
-    "type": "stack",
+    "type": 2,
     "title": "Wordpress",
     "description": "Wordpress setup with a MySQL database",
     "note": "Deploys a Wordpress instance connected to a MySQL database.",
@@ -785,19 +780,39 @@
     "platform": "linux",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
     "repository": {
-      "url": "https://github.com/deviantony/templates",
+      "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/wordpress/docker-stack.yml"
     },
     "env": [
       {
-        "name": "MYSQL_ROOT_PASSWORD",
+        "name": "MYSQL_DATABASE_PASSWORD",
         "label": "Database root password",
         "description": "Password used by the MySQL root user."
       }
     ]
   },
   {
-    "type": "stack",
+    "type": 3,
+    "title": "Wordpress",
+    "description": "Wordpress setup with a MySQL database",
+    "note": "Deploys a Wordpress instance connected to a MySQL database.",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wordpress.png",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/wordpress/docker-compose.yml"
+    },
+    "env": [
+      {
+        "name": "MYSQL_DATABASE_PASSWORD",
+        "label": "Database root password",
+        "description": "Password used by the MySQL root user."
+      }
+    ]
+  },
+  {
+    "type": 2,
     "title": "Microsoft OMS Agent",
     "description": "Microsoft Operations Management Suite Linux agent.",
     "categories": ["OPS"],
@@ -822,13 +837,13 @@
   },
   {
     "title": "Sematext Docker Agent",
-    "type": "stack",
+    "type": 2,
     "categories": ["Log Management", "Monitoring"],
     "description": "Collect logs, metrics and docker events",
     "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
     "platform": "linux",
     "repository": {
-      "url": "https://github.com/deviantony/templates",
+      "url": "https://github.com/portainer/templates",
       "stackfile": "stacks/sematext-agent-docker/docker-stack.yml"
     },
     "env": [
@@ -840,12 +855,38 @@
         "name": "SPM_TOKEN",
         "label": "SPM monitoring token"
       }
-    ],
-    "volumes": [
+    ]
+  },
+  {
+    "title": "Datadog agent",
+    "type": 2,
+    "categories": ["Monitoring"],
+    "description": "Collect events and metrics",
+    "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
+    "platform": "linux",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/datadog-agent/docker-stack.yml"
+    },
+    "env": [
       {
-        "container": "/var/run/docker.sock",
-        "bind": "/var/run/docker.sock"
+        "name": "API_KEY",
+        "label": "Datadog API key"
       }
     ]
+  },
+  {
+    "type": 4,
+    "title": "Wordpress",
+    "description": "Wordpress setup with a MySQL database",
+    "note": "Deploys a Wordpress instance connected to a MySQL database.",
+    "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/wordpress/edge/docker-stack.yml"
+  },
+  {
+    "type": 4,
+    "title": "CockroachDB",
+    "description": "CockroachDB cluster",
+    "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+    "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
   }
 ]
