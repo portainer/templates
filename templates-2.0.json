@@ -257,12 +257,12 @@
 				"9000/tcp"
 			],
 			"env": [{
-					"name": "MINIO_ACCESS_KEY",
-					"label": "Minio access key"
+					"name": "MINIO_ROOT_USER",
+					"label": "Root user"
 				},
 				{
-					"name": "MINIO_SECRET_KEY",
-					"label": "Minio secret key"
+					"name": "MINIO_ROOT_PASSWORD",
+					"label": "Root password"
 				}
 			],
 			"volumes": [{
