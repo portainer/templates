@@ -252,9 +252,10 @@
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
-			"image": "minio/minio:latest",
+			"image": "quay.io/minio/minio:latest",
 			"ports": [
-				"9000/tcp"
+				"9000/tcp",
+				"9001/tcp"
 			],
 			"env": [{
 					"name": "MINIO_ROOT_USER",
@@ -272,7 +273,7 @@
 					"container": "/root/.minio"
 				}
 			],
-			"command": "server /data"
+			"command": "server /data --console-address ':9001'"
 		},
 		{
 			"type": 1,
