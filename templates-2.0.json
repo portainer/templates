@@ -91,7 +91,8 @@
 				},
 				{
 					"name": "MYSQL_ROOT_HOST",
-					"set": "%"
+					"default": "%",
+					"preset": true
 				}
 			],
 			"ports": [
