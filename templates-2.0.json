@@ -88,7 +88,12 @@
 			"env": [{
 				"name": "MYSQL_ROOT_PASSWORD",
 				"label": "Root password"
-			}],
+				},
+				{
+					"name": "MYSQL_ROOT_HOST",
+					"set": "%"
+				}
+			],
 			"ports": [
 				"3306/tcp"
 			],
