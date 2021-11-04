@@ -482,6 +482,7 @@
 			"type": 1,
 			"title": "Plone",
 			"description": "A free and open-source CMS built on top of Zope",
+			"note": "Default user and password are admin/admin",
 			"categories": [
 				"CMS"
 			],
