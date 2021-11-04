@@ -627,6 +627,7 @@
 			"type": 1,
 			"title": "Redmine",
 			"description": "Open-source project management tool",
+			"note": "Default user and password are admin/admin",
 			"categories": [
 				"project-management"
 			],
@@ -638,62 +639,6 @@
 			],
 			"volumes": [{
 				"container": "/usr/src/redmine/files"
-			}]
-		},
-		{
-			"type": 1,
-			"title": "Odoo",
-			"description": "Open-source business apps",
-			"categories": [
-				"project-management"
-			],
-			"platform": "linux",
-			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/odoo.png",
-			"image": "odoo:latest",
-			"env": [{
-					"name": "HOST",
-					"label": "PostgreSQL database host",
-					"type": "container"
-				},
-				{
-					"name": "USER",
-					"label": "Database user"
-				},
-				{
-					"name": "PASSWORD",
-					"label": "Database password"
-				}
-			],
-			"ports": [
-				"8069/tcp"
-			],
-			"volumes": [{
-					"container": "/var/lib/odoo"
-				},
-				{
-					"container": "/mnt/extra-addons"
-				}
-			]
-		},
-		{
-			"type": 1,
-			"title": "Urbackup",
-			"description": "Open-source network backup",
-			"categories": [
-				"backup"
-			],
-			"platform": "linux",
-			"note": "This application web interface is exposed on the port 55414 inside the container.",
-			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/urbackup.png",
-			"image": "cfstras/urbackup",
-			"ports": [
-				"55413/tcp",
-				"55414/tcp",
-				"55415/tcp",
-				"35622/tcp"
-			],
-			"volumes": [{
-				"container": "/var/urbackup"
 			}]
 		},
 		{
