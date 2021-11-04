@@ -614,15 +614,11 @@
 			],
 			"platform": "linux",
 			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
-			"image": "jenkins/jenkins:lts",
+			"image": "jenkins/jenkins:lts-jdk11",
 			"ports": [
 				"8080/tcp",
 				"50000/tcp"
 			],
-			"env": [{
-				"name": "JENKINS_OPTS",
-				"label": "Jenkins options"
-			}],
 			"volumes": [{
 				"container": "/var/jenkins_home"
 			}]
