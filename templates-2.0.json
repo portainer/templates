@@ -308,7 +308,8 @@
 			],
 			"env": [{
 					"name": "ACCEPT_EULA",
-					"set": "Y"
+					"default": "Y",
+					"preset": true
 				},
 				{
 					"name": "SA_PASSWORD",
@@ -332,7 +333,8 @@
 			],
 			"env": [{
 					"name": "ACCEPT_EULA",
-					"set": "Y"
+					"default": "Y",
+					"preset": true
 				},
 				{
 					"name": "sa_password",
@@ -359,7 +361,8 @@
 			],
 			"env": [{
 					"name": "ACCEPT_EULA",
-					"set": "Y"
+					"default": "Y",
+					"preset": true
 				},
 				{
 					"name": "sa_password",
@@ -678,7 +681,8 @@
 			"image": "ortussolutions/commandbox:latest",
 			"env": [{
 				"name": "CFENGINE",
-				"set": "lucee@4.5"
+				"default": "lucee@4.5",
+				"preset": true
 			}],
 			"ports": [
 				"8080/tcp",
@@ -697,15 +701,19 @@
 			"image": "ortussolutions/contentbox:latest",
 			"env": [{
 					"name": "express",
-					"set": "true"
+					"default": "true",
+					"preset": true
+
 				},
 				{
 					"name": "install",
-					"set": "true"
+					"default": "true",
+					"preset": true
 				},
 				{
 					"name": "CFENGINE",
-					"set": "lucee@4.5"
+					"default": "lucee@4.5",
+					"preset": true
 				}
 			],
 			"ports": [
