@@ -91,21 +91,19 @@
 		{
 			"type":1,
 			"title":"Caddy",
-			"description":"HTTP/2 web server with automatic HTTPS",
+			"description":"Open-source web server with automatic HTTPS written in Go",
 			"categories":[
 				"webserver"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
-			"image":"abiosoft/caddy:latest",
+			"image":"caddy:latest",
 			"ports":[
-				"80/tcp",
-				"443/tcp",
-				"2015/tcp"
+				"80/tcp"
 			],
 			"volumes":[
 				{
-					"container":"/root/.caddy"
+					"container":"/data"
 				}
 			]
 		},
