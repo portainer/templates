@@ -1,0 +1,145 @@
+# version: '3.3'
+services: 
+  rps:
+    image: ${RPS_IMAGE}
+    networks:
+      - openamtnetwork
+    build:
+      context: ./rps
+      dockerfile: ./Dockerfile
+    env_file:
+      - .env
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "node", "dist/Healthcheck.js"]
+    environment: 
+      RPS_MPS_SERVER: http://mps:3000
+      RPS_SECRETS_PATH: ${SECRETS_PATH}
+      RPS_VAULT_TOKEN: ${VAULT_TOKEN}
+      RPS_VAULT_ADDRESS: ${VAULT_ADDRESS}
+      RPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/rpsdb?sslmode=no-verify
+  mps:
+    image: ${MPS_IMAGE}
+    networks:
+      - openamtnetwork
+    build:
+      context: ./mps
+      dockerfile: ./Dockerfile
+    restart: always
+    ports:
+      - "${MPSPORT}:4433"
+    env_file:
+      - .env
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "node", "dist/Healthcheck.js"]
+    environment: 
+      MPS_INSTANCE_NAME: '{{.Task.Name}}'
+      MPS_SECRETS_PATH: ${SECRETS_PATH}
+      MPS_VAULT_TOKEN: ${VAULT_TOKEN}
+      MPS_VAULT_ADDRESS: ${VAULT_ADDRESS}
+      MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=no-verify
+    volumes:
+      - private-volume:/mps-microservice/private
+  mpsrouter:
+    image: mpsrouter:latest
+    environment:
+      MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=disable
+      PORT: ${PORT}
+      MPS_PORT: ${MPSWEBPORT}
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "/app","--health"]
+    build:
+      context: ./mps-router
+      dockerfile: ./Dockerfile
+    networks:
+      - openamtnetwork
+  db:
+    image: sslpostgres
+    build:
+      context: ./pg
+      dockerfile: ./Dockerfile
+    command: -c ssl=on -c ssl_cert_file=/var/lib/postgresql/server.crt -c ssl_key_file=/var/lib/postgresql/server.key
+    networks:
+      - openamtnetwork
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rpsdb"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    environment:
+      POSTGRES_DB: rpsdb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes: 
+      - ./data:/docker-entrypoint-initdb.d
+  vault:
+    image: "vault"
+    networks:
+      - openamtnetwork
+    ports: 
+      - "8200:8200"
+    environment: 
+      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_TOKEN}
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    cap_add: 
+      - IPC_LOCK
+  kong:
+    image: kong:2.3
+    healthcheck:
+      test:
+        - CMD
+        - nc
+        - -z
+        - localhost
+        - "8443"
+      retries: 10
+    command:
+      - "kong"
+      - "start"
+      - "--vv"
+    environment:
+      - KONG_DATABASE=off
+      - KONG_CASSANDRA_CONTACT_POINTS=kong-database
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001
+      - KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
+      - KONG_NGINX_DAEMON=off
+      - KONG_DECLARATIVE_CONFIG=/home/kong/kong.yml
+      - KONG_PROXY_ERROR_LOG=/dev/stderr
+      - KONG_PROXY_ACCESS_LOG=/dev/stdout
+      - KONG_ADMIN_ACCESS_LOG=/dev/stdout
+      - KONG_ADMIN_ERROR_LOG=/dev/stderr
+      - KONG_DNS_ORDER=LAST,A,CNAME
+      - KONG_UPSTREAM_KEEPALIVE_POOL_SIZE=0
+    networks:
+      - openamtnetwork
+    volumes:
+      - ./kong.yaml:/home/kong/kong.yml
+    ports:
+      - "443:8443"
+      - "8001:8001"
+    restart: always
+  mosquitto:
+    image: eclipse-mosquitto
+    ports:
+      - "8883:8883"
+    volumes: 
+      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
+    networks:
+      - openamtnetwork
+volumes:
+    app-volume:
+    private-volume:
+networks: 
+  openamtnetwork:
+    driver: "bridge"
