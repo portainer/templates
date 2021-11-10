@@ -907,6 +907,20 @@
 			]
 		},
 		{
+			"type":3,
+			"title":"OpenAMT",
+			"description":"OpenAMT Cloud Toolkit",
+			"categories":[
+				"Cloud"
+			],
+			"platform":"linux",
+			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+			"repository":{
+				"url":"https://github.com/deviantony/templates",
+				"stackfile":"stacks/openamt/docker-compose.yml"
+			}
+		},
+		{
 			"type":2,
 			"title":"Microsoft OMS Agent",
 			"description":"Microsoft Operations Management Suite Linux agent.",
