@@ -42,7 +42,7 @@ services:
       MPS_WEB_ADMIN_USER: ${MPS_USER}
       MPS_WEB_ADMIN_PASSWORD: ${MPS_PASSWORD}
       MPS_HTTPS: "true"
-      MPS_TLS_OFFLOAD: false
+      MPS_TLS_OFFLOAD: "false"
       MPS_LOG_LEVEL: info
       MPS_JWT_EXPIRATION: 1440
       MPS_JWT_SECRET:
