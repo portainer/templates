@@ -10,7 +10,7 @@ services:
       retries: 3 
       test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
-      RPS_WEBSOCKETTLS: true
+      RPS_WEBSOCKETTLS: "true"
       RPSWEBPORT: 8081
       RPSWEBSOCKETPORT: 8080
       RPS_LOG_LEVEL: info
@@ -34,14 +34,14 @@ services:
       retries: 3 
       test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
-      MPS_GENERATE_CERTS: true
+      MPS_GENERATE_CERTS: "true"
       MPS_COMMON_NAME: ${MPS_COMMON_NAME}
       MPSPORT: 4433
       MPSWEBPORT: 3000
-      MPS_DEBUG: true
+      MPS_DEBUG: "true"
       MPS_WEB_ADMIN_USER: ${MPS_USER}
       MPS_WEB_ADMIN_PASSWORD: ${MPS_PASSWORD}
-      MPS_HTTPS: true
+      MPS_HTTPS: "true"
       MPS_TLS_OFFLOAD: false
       MPS_LOG_LEVEL: info
       MPS_JWT_EXPIRATION: 1440
