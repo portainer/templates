@@ -18,7 +18,7 @@ services:
       RPS_MQTT_ADDRESS:       
       RPS_MPS_SERVER: http://mps:3000
       RPS_SECRETS_PATH: secret/data/
-      RPS_VAULT_TOKEN: ${VAULT_TOKEN}
+      RPS_VAULT_TOKEN: ${MPS_SECRET}
       RPS_VAULT_ADDRESS: http://vault:8200
       RPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/rpsdb?sslmode=no-verify
   mps:
@@ -45,12 +45,12 @@ services:
       MPS_TLS_OFFLOAD: "false"
       MPS_LOG_LEVEL: info
       MPS_JWT_EXPIRATION: 1440
-      MPS_JWT_SECRET:
+      MPS_JWT_SECRET: ${MPS_SECRET}
       MPS_JWT_ISSUER: 9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc
       MPS_MQTT_ADDRESS:       
       MPS_INSTANCE_NAME: '{{.Task.Name}}'
       MPS_SECRETS_PATH: secret/data/
-      MPS_VAULT_TOKEN: ${VAULT_TOKEN}
+      MPS_VAULT_TOKEN: ${MPS_SECRET}
       MPS_VAULT_ADDRESS: http://vault:8200
       MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=no-verify
     volumes:
@@ -94,7 +94,7 @@ services:
     ports: 
       - "8200:8200"
     environment: 
-      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_TOKEN}
+      VAULT_DEV_ROOT_TOKEN_ID: ${MPS_SECRET}
       VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
     cap_add: 
       - IPC_LOCK
@@ -137,8 +137,6 @@ services:
     image: eclipse-mosquitto
     ports:
       - "8883:8883"
-    volumes: 
-      - ./mosquitto.conf:/mosquitto/config/mosquitto.conf
     networks:
       - openamtnetwork
 volumes:

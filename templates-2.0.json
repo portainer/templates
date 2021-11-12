@@ -942,9 +942,9 @@
 					"description":"Used to connect to the MPS API."
 				},
 				{
-					"name":"VAULT_TOKEN",
-					"label":"Vault token",
-					"description":"Strong token used to log into Vault."
+					"name":"MPS_SECRET",
+					"label":"Secret",
+					"description":"Strong token used to log into Vault and MPS JWT."
 				}
 			]
 		},
