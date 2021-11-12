@@ -1,71 +1,75 @@
 # version: '3.3'
 services: 
   rps:
-    image: ${RPS_IMAGE}
+    image: deviantony/intelopenamt-rps:latest
     networks:
       - openamtnetwork
-    build:
-      context: ./rps
-      dockerfile: ./Dockerfile
-    env_file:
-      - .env
     healthcheck:
       interval: 12s 
       timeout: 12s
       retries: 3 
       test: ["CMD", "node", "dist/Healthcheck.js"]
-    environment: 
+    environment:
+      RPS_WEBSOCKETTLS: true
+      RPSWEBPORT: 8081
+      RPSWEBSOCKETPORT: 8080
+      RPS_LOG_LEVEL: info
+      RPS_DELAY_TIMER: 12
+      RPS_MQTT_ADDRESS:       
       RPS_MPS_SERVER: http://mps:3000
-      RPS_SECRETS_PATH: ${SECRETS_PATH}
+      RPS_SECRETS_PATH: secret/data/
       RPS_VAULT_TOKEN: ${VAULT_TOKEN}
-      RPS_VAULT_ADDRESS: ${VAULT_ADDRESS}
+      RPS_VAULT_ADDRESS: http://vault:8200
       RPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/rpsdb?sslmode=no-verify
   mps:
-    image: ${MPS_IMAGE}
+    image: deviantony/intelopenamt-mps:latest
     networks:
       - openamtnetwork
-    build:
-      context: ./mps
-      dockerfile: ./Dockerfile
     restart: always
     ports:
-      - "${MPSPORT}:4433"
-    env_file:
-      - .env
+      - "4433:4433"
     healthcheck:
       interval: 12s 
       timeout: 12s
       retries: 3 
       test: ["CMD", "node", "dist/Healthcheck.js"]
-    environment: 
+    environment:
+      MPS_GENERATE_CERTS: true
+      MPS_COMMON_NAME: ${MPS_COMMON_NAME}
+      MPSPORT: 4433
+      MPSWEBPORT: 3000
+      MPS_DEBUG: true
+      MPS_WEB_ADMIN_USER: ${MPS_USER}
+      MPS_WEB_ADMIN_PASSWORD: ${MPS_PASSWORD}
+      MPS_HTTPS: true
+      MPS_TLS_OFFLOAD: false
+      MPS_LOG_LEVEL: info
+      MPS_JWT_EXPIRATION: 1440
+      MPS_JWT_SECRET:
+      MPS_JWT_ISSUER: 9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc
+      MPS_MQTT_ADDRESS:       
       MPS_INSTANCE_NAME: '{{.Task.Name}}'
-      MPS_SECRETS_PATH: ${SECRETS_PATH}
+      MPS_SECRETS_PATH: secret/data/
       MPS_VAULT_TOKEN: ${VAULT_TOKEN}
-      MPS_VAULT_ADDRESS: ${VAULT_ADDRESS}
+      MPS_VAULT_ADDRESS: http://vault:8200
       MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=no-verify
     volumes:
       - private-volume:/mps-microservice/private
   mpsrouter:
-    image: mpsrouter:latest
+    image: deviantony/intelopenamt-mpsrouter:latest
     environment:
       MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=disable
-      PORT: ${PORT}
-      MPS_PORT: ${MPSWEBPORT}
+      PORT: 8003
+      MPS_PORT: 3000
     healthcheck:
       interval: 12s 
       timeout: 12s
       retries: 3 
       test: ["CMD", "/app","--health"]
-    build:
-      context: ./mps-router
-      dockerfile: ./Dockerfile
     networks:
       - openamtnetwork
   db:
-    image: sslpostgres
-    build:
-      context: ./pg
-      dockerfile: ./Dockerfile
+    image: deviantony/intelopenamt-sslpostgres:latest
     command: -c ssl=on -c ssl_cert_file=/var/lib/postgresql/server.crt -c ssl_key_file=/var/lib/postgresql/server.key
     networks:
       - openamtnetwork
@@ -84,7 +88,7 @@ services:
     volumes: 
       - ./data:/docker-entrypoint-initdb.d
   vault:
-    image: "vault"
+    image: vault:latest
     networks:
       - openamtnetwork
     ports: 
