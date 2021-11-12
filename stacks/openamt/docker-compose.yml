@@ -1,0 +1,147 @@
+# version: '3.3'
+services: 
+  rps:
+    image: deviantony/intelopenamt-rps:latest
+    networks:
+      - openamtnetwork
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "node", "dist/Healthcheck.js"]
+    environment:
+      RPS_WEBSOCKETTLS: "true"
+      RPSWEBPORT: 8081
+      RPSWEBSOCKETPORT: 8080
+      RPS_LOG_LEVEL: info
+      RPS_DELAY_TIMER: 12
+      RPS_MQTT_ADDRESS:       
+      RPS_MPS_SERVER: http://mps:3000
+      RPS_SECRETS_PATH: secret/data/
+      RPS_VAULT_TOKEN: ${MPS_SECRET}
+      RPS_VAULT_ADDRESS: http://vault:8200
+      RPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/rpsdb?sslmode=no-verify
+  mps:
+    image: deviantony/intelopenamt-mps:latest
+    networks:
+      - openamtnetwork
+    restart: always
+    ports:
+      - "4433:4433"
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "node", "dist/Healthcheck.js"]
+    environment:
+      MPS_GENERATE_CERTS: "true"
+      MPS_COMMON_NAME: ${MPS_COMMON_NAME}
+      MPSPORT: 4433
+      MPSWEBPORT: 3000
+      MPS_DEBUG: "true"
+      MPS_WEB_ADMIN_USER: ${MPS_USER}
+      MPS_WEB_ADMIN_PASSWORD: ${MPS_PASSWORD}
+      MPS_HTTPS: "true"
+      MPS_TLS_OFFLOAD: "false"
+      MPS_LOG_LEVEL: info
+      MPS_JWT_EXPIRATION: 1440
+      MPS_JWT_SECRET: ${MPS_SECRET}
+      MPS_JWT_ISSUER: 9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc
+      MPS_MQTT_ADDRESS:       
+      MPS_INSTANCE_NAME: '{{.Task.Name}}'
+      MPS_SECRETS_PATH: secret/data/
+      MPS_VAULT_TOKEN: ${MPS_SECRET}
+      MPS_VAULT_ADDRESS: http://vault:8200
+      MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=no-verify
+    volumes:
+      - private-volume:/mps-microservice/private
+  mpsrouter:
+    image: deviantony/intelopenamt-mpsrouter:latest
+    environment:
+      MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=disable
+      PORT: 8003
+      MPS_PORT: 3000
+    healthcheck:
+      interval: 12s 
+      timeout: 12s
+      retries: 3 
+      test: ["CMD", "/app","--health"]
+    networks:
+      - openamtnetwork
+  db:
+    image: deviantony/intelopenamt-sslpostgres:latest
+    command: -c ssl=on -c ssl_cert_file=/var/lib/postgresql/server.crt -c ssl_key_file=/var/lib/postgresql/server.key
+    networks:
+      - openamtnetwork
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rpsdb"]
+      interval: 2s
+      timeout: 3s
+      retries: 30
+    environment:
+      POSTGRES_DB: rpsdb
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes: 
+      - ./data:/docker-entrypoint-initdb.d
+  vault:
+    image: vault:latest
+    networks:
+      - openamtnetwork
+    ports: 
+      - "8200:8200"
+    environment: 
+      VAULT_DEV_ROOT_TOKEN_ID: ${MPS_SECRET}
+      VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
+    cap_add: 
+      - IPC_LOCK
+  kong:
+    image: kong:2.3
+    healthcheck:
+      test:
+        - CMD
+        - nc
+        - -z
+        - localhost
+        - "8443"
+      retries: 10
+    command:
+      - "kong"
+      - "start"
+      - "--vv"
+    environment:
+      - KONG_DATABASE=off
+      - KONG_CASSANDRA_CONTACT_POINTS=kong-database
+      - KONG_ADMIN_LISTEN=0.0.0.0:8001
+      - KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
+      - KONG_NGINX_DAEMON=off
+      - KONG_DECLARATIVE_CONFIG=/home/kong/kong.yml
+      - KONG_PROXY_ERROR_LOG=/dev/stderr
+      - KONG_PROXY_ACCESS_LOG=/dev/stdout
+      - KONG_ADMIN_ACCESS_LOG=/dev/stdout
+      - KONG_ADMIN_ERROR_LOG=/dev/stderr
+      - KONG_DNS_ORDER=LAST,A,CNAME
+      - KONG_UPSTREAM_KEEPALIVE_POOL_SIZE=0
+    networks:
+      - openamtnetwork
+    volumes:
+      - ./kong.yaml:/home/kong/kong.yml
+    ports:
+      - "443:8443"
+      - "8001:8001"
+    restart: always
+  mosquitto:
+    image: eclipse-mosquitto
+    ports:
+      - "8883:8883"
+    networks:
+      - openamtnetwork
+volumes:
+    app-volume:
+    private-volume:
+networks: 
+  openamtnetwork:
+    driver: "bridge"

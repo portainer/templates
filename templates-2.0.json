@@ -907,6 +907,48 @@
 			]
 		},
 		{
+			"type":3,
+			"title":"OpenAMT",
+			"description":"OpenAMT Cloud Toolkit",
+			"categories":[
+				"Cloud"
+			],
+			"platform":"linux",
+			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+			"repository":{
+				"url":"https://github.com/deviantony/templates",
+				"stackfile":"stacks/openamt/docker-compose.yml"
+			},
+			"env":[
+				{
+					"name":"POSTGRES_USER",
+					"label":"Database user"
+				},
+				{
+					"name":"POSTGRES_PASSWORD",
+					"label":"Database password"
+				},
+				{
+					"name":"MPS_USER",
+					"label":"MPS user"
+				},
+				{
+					"name":"MPS_PASSWORD",
+					"label":"MPS password"
+				},
+				{
+					"name":"MPS_COMMON_NAME",
+					"label":"MPS URL",
+					"description":"Used to connect to the MPS API."
+				},
+				{
+					"name":"MPS_SECRET",
+					"label":"Secret",
+					"description":"Strong token used to log into Vault and MPS JWT."
+				}
+			]
+		},
+		{
 			"type":2,
 			"title":"Microsoft OMS Agent",
 			"description":"Microsoft Operations Management Suite Linux agent.",
