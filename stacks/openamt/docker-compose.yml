@@ -1,13 +1,13 @@
 # version: '3.3'
-services: 
+services:
   rps:
     image: deviantony/intelopenamt-rps:latest
     networks:
       - openamtnetwork
     healthcheck:
-      interval: 12s 
+      interval: 12s
       timeout: 12s
-      retries: 3 
+      retries: 3
       test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
       RPS_WEBSOCKETTLS: "true"
@@ -15,7 +15,7 @@ services:
       RPSWEBSOCKETPORT: 8080
       RPS_LOG_LEVEL: info
       RPS_DELAY_TIMER: 12
-      RPS_MQTT_ADDRESS:       
+      RPS_MQTT_ADDRESS:
       RPS_MPS_SERVER: http://mps:3000
       RPS_SECRETS_PATH: secret/data/
       RPS_VAULT_TOKEN: ${MPS_SECRET}
@@ -29,9 +29,9 @@ services:
     ports:
       - "4433:4433"
     healthcheck:
-      interval: 12s 
+      interval: 12s
       timeout: 12s
-      retries: 3 
+      retries: 3
       test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
       MPS_GENERATE_CERTS: "true"
@@ -47,7 +47,7 @@ services:
       MPS_JWT_EXPIRATION: 1440
       MPS_JWT_SECRET: ${MPS_SECRET}
       MPS_JWT_ISSUER: 9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc
-      MPS_MQTT_ADDRESS:       
+      MPS_MQTT_ADDRESS:
       MPS_INSTANCE_NAME: '{{.Task.Name}}'
       MPS_SECRETS_PATH: secret/data/
       MPS_VAULT_TOKEN: ${MPS_SECRET}
@@ -62,9 +62,9 @@ services:
       PORT: 8003
       MPS_PORT: 3000
     healthcheck:
-      interval: 12s 
+      interval: 12s
       timeout: 12s
-      retries: 3 
+      retries: 3
       test: ["CMD", "/app","--health"]
     networks:
       - openamtnetwork
@@ -85,21 +85,21 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     ports:
       - "5432:5432"
-    volumes: 
+    volumes:
       - ./data:/docker-entrypoint-initdb.d
   vault:
     image: vault:latest
     networks:
       - openamtnetwork
-    ports: 
+    ports:
       - "8200:8200"
-    environment: 
-      VAULT_DEV_ROOT_TOKEN_ID: ${MPS_SECRET}
+    environment:
+      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_SECRET}
       VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
-    cap_add: 
+    cap_add:
       - IPC_LOCK
   kong:
-    image: kong:2.3
+    image: kong:2.6
     healthcheck:
       test:
         - CMD
@@ -118,7 +118,7 @@ services:
       - KONG_ADMIN_LISTEN=0.0.0.0:8001
       - KONG_ADMIN_LISTEN_SSL=0.0.0.0:8444
       - KONG_NGINX_DAEMON=off
-      - KONG_DECLARATIVE_CONFIG=/home/kong/kong.yml
+      - KONG_DECLARATIVE_CONFIG_STRING={"_format_version":"2.1","_transform":true,"services":[{"name":"mps-rest","host":"mpsrouter","port":8003,"tags":["mps"],"routes":[{"name":"mps-login-route","strip_path":true,"paths":["/mps/login"]},{"name":"mps-relay-route","strip_path":true,"paths":["/mps/ws"]},{"name":"mps-route","strip_path":true,"paths":["/mps"]}]},{"name":"rps-rest","host":"rps","port":8081,"tags":["rps"],"routes":[{"name":"rps-route","strip_path":true,"paths":["/rps"]}]},{"name":"rps-ws","host":"rps","port":8080,"tags":["rps"],"routes":[{"name":"rps-activate-route","strip_path":true,"paths":["/activate"]}]},{"name":"vault-api","host":"vault","port":8200,"tags":["vault"],"routes":[{"name":"vault-route","strip_path":true,"paths":["/vault"]}]},{"name":"web","host":"webui","port":80,"tags":["web"],"routes":[{"name":"web-route","paths":["/"]}]}],"plugins":[{"name":"cors"},{"name":"jwt","route":"rps-route","config":{"claims_to_verify":["exp"]}},{"name":"jwt","route":"mps-route","config":{"claims_to_verify":["exp"]}}],"consumers":[{"username":"admin"}],"jwt_secrets":[{"consumer":"admin","key":"9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc","secret":${MPS_SECRET}}]}
       - KONG_PROXY_ERROR_LOG=/dev/stderr
       - KONG_PROXY_ACCESS_LOG=/dev/stdout
       - KONG_ADMIN_ACCESS_LOG=/dev/stdout
@@ -127,8 +127,6 @@ services:
       - KONG_UPSTREAM_KEEPALIVE_POOL_SIZE=0
     networks:
       - openamtnetwork
-    volumes:
-      - ./kong.yaml:/home/kong/kong.yml
     ports:
       - "443:8443"
       - "8001:8001"
@@ -140,8 +138,8 @@ services:
     networks:
       - openamtnetwork
 volumes:
-    app-volume:
-    private-volume:
-networks: 
+  app-volume:
+  private-volume:
+networks:
   openamtnetwork:
     driver: "bridge"
