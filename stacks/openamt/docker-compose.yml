@@ -8,7 +8,7 @@ services:
       interval: 12s
       timeout: 12s
       retries: 3
-      test: [ "CMD", "node", "dist/Healthcheck.js" ]
+      test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
       RPS_WEBSOCKETTLS: "true"
       RPSWEBPORT: 8081
@@ -32,7 +32,7 @@ services:
       interval: 12s
       timeout: 12s
       retries: 3
-      test: [ "CMD", "node", "dist/Healthcheck.js" ]
+      test: ["CMD", "node", "dist/Healthcheck.js"]
     environment:
       MPS_GENERATE_CERTS: "true"
       MPS_COMMON_NAME: ${MPS_COMMON_NAME}
@@ -65,7 +65,7 @@ services:
       interval: 12s
       timeout: 12s
       retries: 3
-      test: [ "CMD", "/app","--health" ]
+      test: ["CMD", "/app","--health"]
     networks:
       - openamtnetwork
   db:
@@ -75,7 +75,7 @@ services:
       - openamtnetwork
     restart: always
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U rpsdb" ]
+      test: ["CMD-SHELL", "pg_isready -U rpsdb"]
       interval: 2s
       timeout: 3s
       retries: 30
