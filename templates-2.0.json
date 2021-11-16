@@ -916,7 +916,7 @@
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
 			"repository":{
-				"url":"https://github.com/deviantony/templates",
+				"url":"https://github.com/portainer/templates",
 				"stackfile":"stacks/openamt/docker-compose.yml"
 			},
 			"env":[
@@ -943,8 +943,13 @@
 				},
 				{
 					"name":"MPS_SECRET",
-					"label":"Secret",
-					"description":"Strong token used to log into Vault and MPS JWT."
+					"label":"MPS Secret",
+					"description":"Strong secret key used to log into MPS JWT."
+				},
+				{
+					"name":"VAULT_SECRET",
+					"label": "Vault secret",
+					"description":"Secret token used to log into Vault (don't include '.' character)."
 				}
 			]
 		},
