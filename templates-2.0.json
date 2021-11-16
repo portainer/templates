@@ -916,7 +916,7 @@
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
 			"repository":{
-				"url":"https://github.com/deviantony/templates",
+				"url":"https://github.com/cheloRydel/templates",
 				"stackfile":"stacks/openamt/docker-compose.yml"
 			},
 			"env":[
