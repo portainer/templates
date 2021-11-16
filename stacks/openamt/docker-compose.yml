@@ -94,7 +94,7 @@ services:
     ports:
       - "8200:8200"
     environment:
-      VAULT_DEV_ROOT_TOKEN_ID: ${VAULT_SECRET}
+      VAULT_DEV_ROOT_TOKEN_ID: mysecrettoken
       VAULT_DEV_LISTEN_ADDRESS: 0.0.0.0:8200
     cap_add:
       - IPC_LOCK
