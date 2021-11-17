@@ -910,14 +910,14 @@
 			"type":3,
 			"title":"OpenAMT",
 			"description":"OpenAMT Cloud Toolkit",
-			"note":"MPS Secret needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
+			"note":"MPS password needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
 			"categories":[
 				"Cloud"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
 			"repository":{
-				"url":"https://github.com/deviantony/templates",
+				"url":"https://github.com/portainer/templates",
 				"stackfile":"stacks/openamt/docker-compose.yml"
 			},
 			"env":[
