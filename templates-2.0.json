@@ -910,6 +910,7 @@
 			"type":3,
 			"title":"OpenAMT",
 			"description":"OpenAMT Cloud Toolkit",
+			"note":"MPS Secret needs to be 8-32 characters including one uppercase, one lowercase letters, one base-10 digit and one special character.",
 			"categories":[
 				"Cloud"
 			],
@@ -944,7 +945,7 @@
 				{
 					"name":"MPS_SECRET",
 					"label":"MPS Secret",
-					"description":"Strong secret key used to log into MPS JWT."
+					"description":"Strong secret key used to log into MPS."
 				},
 				{
 					"name":"VAULT_SECRET",
