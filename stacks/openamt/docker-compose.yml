@@ -1,5 +1,13 @@
 # version: '3.3'
 services:
+  webui:
+    image: deviantony/intelopenamt-webui:latest  
+    networks:
+      - openamtnetwork
+    environment:
+      RPS_SERVER: https://${MPS_COMMON_NAME}/rps
+      MPS_SERVER: https://${MPS_COMMON_NAME}/mps
+      VAULT_SERVER: https://${MPS_COMMON_NAME}/vault
   rps:
     image: deviantony/intelopenamt-rps:latest
     networks:
