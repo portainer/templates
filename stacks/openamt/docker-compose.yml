@@ -21,7 +21,7 @@ services:
       RPS_WEBSOCKETTLS: "true"
       RPSWEBPORT: 8081
       RPSWEBSOCKETPORT: 8080
-      RPS_LOG_LEVEL: info
+      RPS_LOG_LEVEL: silly
       RPS_DELAY_TIMER: 12
       RPS_MQTT_ADDRESS:
       RPS_MPS_SERVER: http://mps:3000
@@ -51,7 +51,7 @@ services:
       MPS_WEB_ADMIN_PASSWORD: ${MPS_PASSWORD}
       MPS_HTTPS: "true"
       MPS_TLS_OFFLOAD: "false"
-      MPS_LOG_LEVEL: info
+      MPS_LOG_LEVEL: silly
       MPS_JWT_EXPIRATION: 1440
       MPS_JWT_SECRET: ${MPS_SECRET}
       MPS_JWT_ISSUER: 9EmRJTbIiIb4bIeSsmgcWIjrR6HyETqc
