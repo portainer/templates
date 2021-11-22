@@ -21,7 +21,7 @@ services:
       RPS_WEBSOCKETTLS: "true"
       RPSWEBPORT: 8081
       RPSWEBSOCKETPORT: 8080
-      RPS_LOG_LEVEL: Silly
+      RPS_LOG_LEVEL: silly
       RPS_DELAY_TIMER: 12
       RPS_MQTT_ADDRESS:
       RPS_MPS_SERVER: http://mps:3000
