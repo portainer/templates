@@ -17,9 +17,11 @@
 			"volumes":[
 				{
 					"container":"/var/run/docker.sock"
+					"bind":"/var/run/docker.sock"
 				},
 				{
 					"container":"/var/lib/docker/volumes"
+					"bind":"/var/lib/docker/volumes"
 				},
 			]
 		},
