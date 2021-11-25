@@ -2,6 +2,25 @@
 	"version": "2",
 	"templates": [{
 			"type": 1,
+			"title": "Watchtower",
+			"description": "A container-based solution for automating Docker container base image updates",
+			"categories": [
+				"docker"
+			],
+			"platform": "linux",
+			"logo": "https://containrrr.dev/watchtower/images/logo-450px.png",
+			"image": "containrrr/watchtower",
+			"ports": [
+				"9001/tcp"
+			],
+			"volumes": [{
+					"container": "/var/run/docker.sock",
+					"bind": "/var/run/docker.sock"
+				}
+			]
+		},
+		{
+			"type": 1,
 			"title": "Portainer Agent",
 			"description": "Portainer Agent",
 			"categories": [
