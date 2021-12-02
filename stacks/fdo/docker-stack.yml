@@ -22,8 +22,7 @@ services:
       log4j_configuration_file: log4j2.xml
     volumes:
       - rv-target:/home/fdo/target
-    networks:
-      - fdonetwork
+    network_mode: host
 
   pri-fdo-owner:
     image: andresportainer/pri-fdo-owner:latest
@@ -65,13 +64,42 @@ services:
       log4j_configuration_file: log4j2.xml
     volumes:
       - owner-target:/home/fdo/target
-    networks:
-      - fdonetwork
+    network_mode: host
+
+  pri-fdo-manufacturer:
+    image: andresportainer/pri-fdo-manufacturer:latest
+    expose:
+      - "8039"
+    ports:
+      - "8039:8039"
+    environment:
+      manufacturer_keystore_password: RabSIZz43lympm8z
+      manufacturer_api_password: 05EV9CbHbAQANc1t
+      manufacturer_ssl_keystore-password: Sw2cqdcc1IM
+      manufacturer_di_port: 8039
+      manufacturer_database_connection_url: jdbc:h2:tcp://localhost:8049/./target/data/mfg
+      manufacturer_database_username: sa
+      manufacturer_database_password: ""
+      manufacturer_database_port: 8049
+      catalina_home: ./target/tomcat
+      manufacturer_api_user: apiUser
+      manufacturer_session_check_interval: 60
+      ondie_cache: file:///home/fdo/ondie_cache/
+      ondie_autoupdate: "false"
+      ondie_zip_artifact: https://tsci.intel.com/content/csme.zip
+      ondie_check_revocations: "false"
+      manufacturer_protocol_scheme: https
+      manufacturer_https_port: 8038
+      manufacturer_keystore: manufacturer_keystore.p12
+      manufacturer_ssl_keystore: certs/ssl.p12
+      owner_pub_key_path: owner_pub_keys.pem
+      reseller_pub_key_path: reseller_pub_keys.pem
+      log4j_configuration_file: log4j2.xml
+    volumes:
+      - manufacturer-target:/home/fdo/target
+    network_mode: host
 
 volumes:
   rv-target:
   owner-target:
-
-networks:
-  fdonetwork:
-    driver: bridge
+  manufacturer-target:
