@@ -4597,28 +4597,6 @@
 		},
 		{
 			"categories": [
-				"Other",
-				"Tools",
-				"Maintenance"
-			],
-			"description": "With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.",
-			"image": "containrrr/watchtower:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/watchtower.png",
-			"name": "watchtower",
-			"note": "It is recommended to manually update your containers but we're including this for those of you that don't care",
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"title": "Watchtower",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/var/run/docker.sock",
-					"container": "/var/run/docker.sock"
-				}
-			]
-		},
-		{
-			"categories": [
 				"Downloaders"
 			],
 			"description": "WebGrab+Plus is a multi-site incremental xmltv epg grabber. It collects tv-program guide data from selected tvguide sites for your favourite channels.[br]\r\n\t\tOptional postprocessors to add IMDb data or to customize your xmltv listing.[br]\r\n\t\thttp://www.webgrabplus.com/[br]\r\n\t\t[b][span style='color: #E80000;']Directions:[/span][/b][br]\r\n\t\t[b]/config[/b] : This is where WebGrab+Plus will store it's configuration.[br][br]\r\n\t\t[b]/data[/b] : This is where tv_grab_wg script in the Tvheadend container looks for the guide.xml file.[br][br]",
