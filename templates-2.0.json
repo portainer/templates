@@ -6,7 +6,7 @@
 			"title":"Registry",
 			"description":"Docker image registry",
 			"categories":[
-				"docker"
+				"Docker"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
@@ -25,7 +25,7 @@
 			"title":"Ubuntu",
 			"description":"Debian-based Linux operating system",
 			"categories":[
-				"operating-system"
+				"Operating System"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ubuntu.png",
@@ -38,7 +38,7 @@
 			"title":"NodeJS",
 			"description":"JavaScript-based platform for server-side and networking applications",
 			"categories":[
-				"development"
+				"Development"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
@@ -51,7 +51,7 @@
 			"title":"Nginx",
 			"description":"High performance web server",
 			"categories":[
-				"webserver"
+				"Webserver"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
@@ -112,7 +112,7 @@
 			"title":"MySQL",
 			"description":"The most popular open-source database",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mysql.png",
@@ -142,7 +142,7 @@
 			"title":"MariaDB",
 			"description":"Performance beyond MySQL",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
@@ -167,7 +167,7 @@
 			"title":"PostgreSQL",
 			"description":"The most advanced open-source database",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
@@ -196,7 +196,7 @@
 			"title":"Mongo",
 			"description":"Open-source document-oriented database",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
@@ -215,7 +215,7 @@
 			"title":"CrateDB",
 			"description":"An open-source distributed SQL database",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cratedb.png",
@@ -235,7 +235,7 @@
 			"title":"Elasticsearch",
 			"description":"Open-source search and analytics engine",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
@@ -256,7 +256,7 @@
 			"description":"Open-source end-to-end software development platform",
 			"note":"Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
 			"categories":[
-				"development",
+				"Development",
 				"project-management"
 			],
 			"platform":"linux",
@@ -284,7 +284,7 @@
 			"title":"Minio",
 			"description":"A distributed object storage server built for cloud applications and devops",
 			"categories":[
-				"storage"
+				"Storage"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/minio.png",
@@ -350,7 +350,7 @@
 			"title":"SQL Server",
 			"description":"Microsoft SQL Server on Linux",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"note":"Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -376,7 +376,7 @@
 			"title":"SQL Server",
 			"description":"Microsoft SQL Server Developer for Windows containers",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"windows",
 			"note":"Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -407,7 +407,7 @@
 			"title":"SQL Server Express",
 			"description":"Microsoft SQL Server Express for Windows containers",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"windows",
 			"note":"Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
@@ -438,7 +438,7 @@
 			"title":"Solr",
 			"description":"Open-source enterprise search platform",
 			"categories":[
-				"search-engine"
+				"Search Engine"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
@@ -457,7 +457,7 @@
 			"title":"Redis",
 			"description":"Open-source in-memory data structure store",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
@@ -476,7 +476,7 @@
 			"title":"RabbitMQ",
 			"description":"Highly reliable enterprise messaging system",
 			"categories":[
-				"messaging"
+				"Messaging"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/rabbitmq.png",
@@ -496,7 +496,7 @@
 			"title":"Ghost",
 			"description":"Free and open-source blogging platform",
 			"categories":[
-				"blog"
+				"Blog"
 			],
 			"note":"Access the blog management interface under <code>/ghost/</code>.",
 			"platform":"linux",
@@ -649,7 +649,7 @@
 			"title":"Mautic",
 			"description":"Open-source marketing automation platform",
 			"categories":[
-				"marketing"
+				"Marketing"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
@@ -679,7 +679,7 @@
 			"title":"Jenkins",
 			"description":"Open-source continuous integration tool",
 			"categories":[
-				"continuous-integration"
+				"Continuous Integration"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/jenkins.png",
@@ -700,7 +700,7 @@
 			"description":"Open-source project management tool",
 			"note":"Default user and password are admin/admin",
 			"categories":[
-				"project-management"
+				"Project Management"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
@@ -720,7 +720,7 @@
 			"description":"A web file manager",
 			"note":"Default credentials: admin/admin",
 			"categories":[
-				"filesystem",
+				"Filesystem",
 				"storage"
 			],
 			"platform":"linux",
@@ -744,7 +744,7 @@
 			"title":"CommandBox",
 			"description":"ColdFusion (CFML) CLI",
 			"categories":[
-				"development"
+				"Development"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
@@ -853,7 +853,7 @@
 			"description":"CockroachDB cluster",
 			"note":"Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
 			"categories":[
-				"database"
+				"Database"
 			],
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
@@ -3047,7 +3047,7 @@
 		},
 		{
 			"categories": [
-				"HomeAutomation",
+				"Home Automation",
 				"Management"
 			],
 			"description": "Domoticz is a Home Automation System that lets you monitor and configure various devices like: Lights, Switches, various sensors/meters like Temperature, Rain, Wind, UV, Electra, Gas, Water and much more. Notifications/Alerts can be sent to any mobile device",
