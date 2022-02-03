@@ -1049,6 +1049,16 @@
 				"url":"https://github.com/portainer/templates",
 				"stackfile":"stacks/fdo/docker-stack.yml"
 			}
+			"env":[
+				{
+					"name": "owner_api_user",
+					"label": "API Username"
+				},
+				{
+					"name": "owner_api_password",
+					"label": "API Password"
+				}
+			]
 		}
 	]
 }
