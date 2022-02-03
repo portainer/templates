@@ -2,7 +2,7 @@ version: "3.2"
 
 services:
   pri-fdo-rv:
-    image: andresportainer/pri-fdo-rv:latest
+    image: portainer/pri-fidoiot:rv-master
     expose:
       - "8040"
     ports:
@@ -25,7 +25,7 @@ services:
     network_mode: host
 
   pri-fdo-owner:
-    image: andresportainer/pri-fdo-owner:latest
+    image: portainer/pri-fidoiot:owner-master
     expose:
       - "8042"
     ports:
@@ -44,7 +44,7 @@ services:
       catalina_home: ./target/tomcat
       owner_keystore: ./owner_keystore.p12
       owner_to0_scheduling_enabled: "true"
-      owner_to0_scheduling_interval: 300
+      owner_to0_scheduling_interval: 60
       owner_to0_rv_blob: http://localhost:8042?ipaddress=127.0.0.1
       owner_svi_values: ./serviceinfo/sample-values
       owner_svi_string: ./serviceinfo/sample-svi.csv
@@ -67,7 +67,7 @@ services:
     network_mode: host
 
   pri-fdo-manufacturer:
-    image: andresportainer/pri-fdo-manufacturer:latest
+    image: portainer/pri-fidoiot:manufacturer-master
     expose:
       - "8039"
     ports:
