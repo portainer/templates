@@ -33,7 +33,7 @@ services:
       - "8043:8043"
     environment:
       owner_keystore_password: JPmYuPdSYOG8U3a
-      owner_api_password: 05EV9CbHbAQANc1t
+      owner_api_password: ${owner_api_password}
       owner_ssl_keystore-password: Sw2cqdcc1IM
       ssl_truststore_password: Sw2cqdcc1IM
       owner_to2_port: 8042
@@ -48,7 +48,7 @@ services:
       owner_to0_rv_blob: http://localhost:8042?ipaddress=127.0.0.1
       owner_svi_values: ./serviceinfo/sample-values
       owner_svi_string: ./serviceinfo/sample-svi.csv
-      owner_api_user: apiUser
+      owner_api_user: ${owner_api_user}
       ondie_cache: file:///home/fdo/ondie_cache/
       ondie_autoupdate: "false"
       ondie_zip_artifact: https://tsci.intel.com/content/csme.zip
