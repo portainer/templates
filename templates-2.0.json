@@ -1038,6 +1038,27 @@
 			"description":"CockroachDB cluster",
 			"note":"Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
 			"stackfile":"https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
+		},
+		{
+			"type":3,
+			"title":"FDO",
+			"description":"FDO",
+			"platform":"linux",
+			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+			"repository":{
+				"url":"https://github.com/portainer/templates",
+				"stackfile":"stacks/fdo/docker-stack.yml"
+			},
+			"env":[
+				{
+					"name": "owner_api_user",
+					"label": "API Username"
+				},
+				{
+					"name": "owner_api_password",
+					"label": "API Password"
+				}
+			]
 		}
 	]
 }
