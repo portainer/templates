@@ -111,7 +111,7 @@
 				},
 				{
 					"name":"owner_database_password",
-					"default":"",
+					"default":"test",
 					"preset":true
 				},
 				{
