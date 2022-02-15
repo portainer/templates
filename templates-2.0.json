@@ -12,8 +12,8 @@
 			"platform":"linux",
 			"image":"portainer/pri-fidoiot:owner-master",
 			"ports":[
-				"8042/tcp",
-				"8043/tcp"
+				"8042:8042/tcp",
+				"8043:8043/tcp"
 			],
 			"volumes":[
 				{
