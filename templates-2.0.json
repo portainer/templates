@@ -20,7 +20,7 @@
 					"container":"/home/fdo/target"
 				}
 			],
-			"note":"Owner server public URL must use the format http://URL:PORT?ipaddress=127.0.0.1",
+			"note":"Owner server public URL must use the format http://IP|URL:PORT?ipaddress=IP, e.g. http://owner.portainer.io?ipaddress=183.187.112.47 or http://183.187.112.47?ipaddress=183.187.112.47",
 			"env":[
 				{
 					"name":"owner_to0_rv_blob",
