@@ -2,6 +2,84 @@
 	"version":"2",
 	"templates":[
 		{
+			"type": 1,
+			"title": "FDO",
+			"description": "FDO Owner Service",
+			"categories":[
+				"edge"
+			],
+			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
+			"platform":"linux",
+			"image":"portainer/pri-fidoiot:owner-master",
+			"ports":[
+				"8042/tcp",
+				"8043/tcp"
+			],
+			"volumes":[
+				{
+					"container":"/home/fdo/target"
+				}
+			],
+			"note":"Owner server public URL must use the format http://URL:PORT?ipaddress=127.0.0.1",
+			"env":[
+				{
+					"name":"owner_to0_rv_blob",
+					"label": "Owner server public URL",
+				},
+				{
+					"name":"owner_api_user",
+					"label":"API user"
+				},
+				{
+					"name":"owner_api_password",
+					"label":"API password"
+				},
+				{
+					"name":"owner_to0_scheduling_interval",
+					"default":"60s",
+					"preset":true
+				},
+				{
+					"name":"owner_https_port",
+					"default":"8043",
+					"preset":true
+				},				
+				// Am I right to assume that this was generated at build time
+				// Following these instructions ? 
+				// https://github.com/secure-device-onboard/pri-fidoiot/blob/2bac84514d02c89583585d3dfaa305681625c82a/component-samples/demo/owner/README.md#inserting-keys-into-owner-keystore
+				{
+					"name":"owner_keystore",
+					"default":"./owner_keystore.p12",
+					"preset":true
+				},
+				{
+					"name":"owner_keystore_password",
+					"default":"JPmYuPdSYOG8U3a",
+					"preset":true
+				},
+				{
+					"name":"owner_ssl_keystore",
+					"default":"certs/ssl.p12",
+					"preset":true
+				},				
+				{
+					"name":"owner_ssl_keystore-password",
+					"default":"Sw2cqdcc1IM",
+					"preset":true
+				},
+				{
+					"name":"ssl_truststore",
+					"default":"certs/truststore",
+					"preset":true
+				},				
+				{
+					"name":"ssl_truststore_password",
+					"default":"Sw2cqdcc1IM",
+					"preset":true
+				}
+			]
+		},
+		{
 			"type":1,
 			"title":"Registry",
 			"description":"Docker image registry",
