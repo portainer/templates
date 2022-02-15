@@ -24,48 +24,6 @@ services:
       - rv-target:/home/fdo/target
     network_mode: host
 
-  pri-fdo-owner:
-    image: portainer/pri-fidoiot:owner-master
-    expose:
-      - "8042"
-    ports:
-      - "8042:8042"
-      - "8043:8043"
-    environment:
-      owner_keystore_password: JPmYuPdSYOG8U3a
-      owner_api_password: ${owner_api_password}
-      owner_ssl_keystore-password: Sw2cqdcc1IM
-      ssl_truststore_password: Sw2cqdcc1IM
-      owner_to2_port: 8042
-      owner_database_connection_url: jdbc:h2:tcp://localhost:8051/./target/data/ops
-      owner_database_username: sa
-      owner_database_password: ""
-      owner_database_port: 8051
-      catalina_home: ./target/tomcat
-      owner_keystore: ./owner_keystore.p12
-      owner_to0_scheduling_enabled: "true"
-      owner_to0_scheduling_interval: 60
-      owner_to0_rv_blob: http://localhost:8042?ipaddress=127.0.0.1
-      owner_svi_values: ./serviceinfo/sample-values
-      owner_svi_string: ./serviceinfo/sample-svi.csv
-      owner_api_user: ${owner_api_user}
-      ondie_cache: file:///home/fdo/ondie_cache/
-      ondie_autoupdate: "false"
-      ondie_zip_artifact: https://tsci.intel.com/content/csme.zip
-      ondie_check_revocations: "false"
-      owner_protocol_scheme: https
-      owner_https_port: 8043
-      owner_ssl_keystore: certs/ssl.p12
-      ssl_truststore: certs/truststore
-      ssl_truststore_type: PKCS12
-      fido_ssl_mode: TEST
-      owner_pub_key_path: owner_pub_keys.pem
-      owner2_pub_key_path: owner2_pub_keys.pem
-      log4j_configuration_file: log4j2.xml
-    volumes:
-      - owner-target:/home/fdo/target
-    network_mode: host
-
   pri-fdo-manufacturer:
     image: portainer/pri-fidoiot:manufacturer-master
     expose:
