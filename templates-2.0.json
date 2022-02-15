@@ -40,6 +40,21 @@
 					"preset":true
 				},
 				{
+					"name":"owner_to0_scheduling_enabled",
+					"default":"true",
+					"preset":true
+				},				
+				{
+					"name":"owner_to2_port",
+					"default":"8042",
+					"preset":true
+				},
+				{
+					"name":"owner_protocol_scheme",
+					"default":"https",
+					"preset":true
+				},						
+				{
 					"name":"owner_https_port",
 					"default":"8043",
 					"preset":true
@@ -72,6 +87,46 @@
 				{
 					"name":"ssl_truststore_password",
 					"default":"Sw2cqdcc1IM",
+					"preset":true
+				},
+				{
+					"name":"log4j_configuration_file",
+					"default":"log4j2.xml",
+					"preset":true
+				},
+				{
+					"name":"catalina_home",
+					"default":"./target/tomcat",
+					"preset":true
+				},
+				{
+					"name":"owner_database_connection_url",
+					"default":"jdbc:h2:tcp://localhost:8051/./target/data/ops",
+					"preset":true
+				},
+				{
+					"name":"owner_database_username",
+					"default":"sa",
+					"preset":true
+				},
+				{
+					"name":"owner_database_password",
+					"default":"",
+					"preset":true
+				},
+				{
+					"name":"owner_database_port",
+					"default":"8051",
+					"preset":true
+				},
+				{
+					"name":"owner_svi_string",
+					"default":"./serviceinfo/sample-svi.csv",
+					"preset":true
+				},
+				{
+					"name":"owner_svi_values",
+					"default":"./serviceinfo/sample-values",
 					"preset":true
 				}
 			]
