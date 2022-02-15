@@ -24,7 +24,7 @@
 			"env":[
 				{
 					"name":"owner_to0_rv_blob",
-					"label": "Owner server public URL",
+					"label": "Owner server public URL"
 				},
 				{
 					"name":"owner_api_user",
