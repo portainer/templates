@@ -44,9 +44,6 @@
 					"default":"8043",
 					"preset":true
 				},				
-				// Am I right to assume that this was generated at build time
-				// Following these instructions ? 
-				// https://github.com/secure-device-onboard/pri-fidoiot/blob/2bac84514d02c89583585d3dfaa305681625c82a/component-samples/demo/owner/README.md#inserting-keys-into-owner-keystore
 				{
 					"name":"owner_keystore",
 					"default":"./owner_keystore.p12",
