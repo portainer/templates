@@ -20,7 +20,7 @@
 					"container":"/home/fdo/target"
 				}
 			],
-			"note":"Owner server public URL must use the format http://IP|URL:PORT?ipaddress=IP, e.g. http://owner.portainer.io?ipaddress=183.187.112.47 or http://183.187.112.47?ipaddress=183.187.112.47",
+			"note":"Owner server public URL must use the format http://IP|URL:PORT?ipaddress=IP, e.g. http://owner.portainer.io:8042?ipaddress=183.187.112.47 or http://183.187.112.47:8042?ipaddress=183.187.112.47",
 			"env":[
 				{
 					"name":"owner_to0_rv_blob",
@@ -36,7 +36,7 @@
 				},
 				{
 					"name":"owner_to0_scheduling_interval",
-					"default":"60s",
+					"default":"60",
 					"preset":true
 				},
 				{
