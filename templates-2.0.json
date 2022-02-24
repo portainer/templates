@@ -143,6 +143,21 @@
 					"name":"ondie_cache",
 					"default":"file:///home/fdo/ondie_cache/",
 					"preset":true
+				},
+				{
+					"name":"ondie_autoupdate",
+					"default":"false",
+					"preset":true
+				},
+				{
+					"name":"ondie_zip_artifact",
+					"default":"https://tsci.intel.com/content/csme.zip",
+					"preset":true
+				},
+				{
+					"name":"ondie_check_revocations",
+					"default":"false",
+					"preset":true
 				}
 			]
 		},
