@@ -128,6 +128,21 @@
 					"name":"owner_svi_values",
 					"default":"./serviceinfo/sample-values",
 					"preset":true
+				},
+				{
+					"name":"owner_pub_key_path",
+					"default":"owner_pub_keys.pem",
+					"preset":true
+				},
+				{
+					"name":"owner2_pub_key_path",
+					"default":"owner2_pub_keys.pem",
+					"preset":true
+				},
+				{
+					"name":"ondie_cache",
+					"default":"file:///home/fdo/ondie_cache/",
+					"preset":true
 				}
 			]
 		},
