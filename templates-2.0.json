@@ -51,7 +51,7 @@
 				},
 				{
 					"name":"owner_protocol_scheme",
-					"default":"https",
+					"default":"http",
 					"preset":true
 				},						
 				{
@@ -1211,7 +1211,7 @@
 			"platform":"linux",
 			"logo":"https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/intel.png",
 			"repository":{
-				"url":"https://github.com/portainer/templates",
+				"url":"https://github.com/deviantony/templates",
 				"stackfile":"stacks/fdo/docker-stack.yml"
 			},
 			"env":[

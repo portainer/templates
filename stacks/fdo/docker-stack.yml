@@ -17,7 +17,7 @@ services:
       rv_database_port: 8050
       catalina_home: ./target/tomcat
       rv_https_port: 8041
-      rv_protocol_scheme: https
+      rv_protocol_scheme: http
       rv_ssl_keystore: certs/ssl.p12
       log4j_configuration_file: log4j2.xml
     volumes:
@@ -46,7 +46,7 @@ services:
       ondie_autoupdate: "false"
       ondie_zip_artifact: https://tsci.intel.com/content/csme.zip
       ondie_check_revocations: "false"
-      manufacturer_protocol_scheme: https
+      manufacturer_protocol_scheme: http
       manufacturer_https_port: 8038
       manufacturer_keystore: manufacturer_keystore.p12
       manufacturer_ssl_keystore: certs/ssl.p12
