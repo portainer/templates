@@ -158,6 +158,11 @@
 					"name":"ondie_check_revocations",
 					"default":"false",
 					"preset":true
+				},
+				{
+					"name":"fido_ssl_mode",
+					"default":"TEST",
+					"preset":true
 				}
 			]
 		},
