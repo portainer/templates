@@ -5,14 +5,14 @@ services:
     volumes:
       - redis-cluster_data-0:/bitnami/redis/data
     environment:
-      - "REDIS_PASSWORD=bitnami"
+      - "REDIS_PASSWORD=${REDIS_PASSWD}"
       - "REDIS_NODES=redis-node-0 redis-node-1 redis-node-2"
   redis-node-1:
     image: docker.io/bitnami/redis-cluster:6.2
     volumes:
       - redis-cluster_data-1:/bitnami/redis/data
     environment:
-      - "REDIS_PASSWORD=bitnami"
+      - "REDIS_PASSWORD=${REDIS_PASSWD}"
       - "REDIS_NODES=redis-node-0 redis-node-1 redis-node-2"
   redis-node-2:
     image: docker.io/bitnami/redis-cluster:6.2
