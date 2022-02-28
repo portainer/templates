@@ -397,8 +397,18 @@
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "repository": {
         "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/redis-cluster/docker-stack.yml"
-      }
+        "stackfile": "stacks/redis-cluster/docker-stack.yaml"
+      },
+      "env": [
+        {
+          "name": "REDISCLI_AUTH",
+          "label": "Redis auth"
+        },
+        {
+          "name": "REDIS_PASSWD",
+          "label": "Redis password"
+        }
+      ]
     },
     {
       "type": 1,
