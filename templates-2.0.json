@@ -389,7 +389,7 @@
       ]
     },
     {
-      "type": 3,
+      "type": 2,
       "title": "Redis Cluster",
       "description": "Open-source in-memory data structure store - Cluster mode",
       "categories": ["database"],
