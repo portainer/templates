@@ -401,10 +401,6 @@
       },
       "env": [
         {
-          "name": "REDISCLI_AUTH",
-          "label": "Redis auth"
-        },
-        {
           "name": "REDIS_PASSWD",
           "label": "Redis password"
         }
