@@ -389,6 +389,18 @@
       ]
     },
     {
+      "type": 3,
+      "title": "Redis Cluster",
+      "description": "Open-source in-memory data structure store - Cluster mode",
+      "categories": ["database"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/redis-cluster/docker-stack.yml"
+      }
+    },
+    {
       "type": 1,
       "title": "RabbitMQ",
       "description": "Highly reliable enterprise messaging system",
