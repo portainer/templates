@@ -396,7 +396,7 @@
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
       "repository": {
-        "url": "https://github.com/portainer/templates",
+        "url": "https://github.com/portainer/templates/tree/Add-redis-cluster",
         "stackfile": "stacks/redis-cluster/docker-stack.yml"
       }
     },
