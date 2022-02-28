@@ -407,11 +407,6 @@
         {
           "name": "REDIS_PASSWD",
           "label": "Redis password"
-        },
-        {
-          "name": "REDIS_CLUSTER_REPLICAS",
-          "label": "Redis cluster replicas",
-          "default": "1"
         }
       ]
     },

@@ -24,7 +24,7 @@ services:
     environment:
       - "REDIS_PASSWORD=${REDIS_PASSWD}"
       - "REDISCLI_AUTH=${REDISCLI_AUTH}"
-      - "REDIS_CLUSTER_REPLICAS=${REDIS_CLUSTER_REPLICAS}"
+      - "REDIS_CLUSTER_REPLICAS=1"
       - "REDIS_NODES=redis-node-0 redis-node-1 redis-node-2"
       - "REDIS_CLUSTER_CREATOR=yes"
 volumes:
