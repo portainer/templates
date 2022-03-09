@@ -1,7 +1,7 @@
 # version: '3.3'
 services:
   webui:
-    image: intel/oact-webui:latest
+    image: intel/oact-webui:v2.1.0
     networks:
       - openamtnetwork
     environment:
@@ -9,7 +9,7 @@ services:
       MPS_SERVER: https://${MPS_COMMON_NAME}/mps
       VAULT_SERVER: https://${MPS_COMMON_NAME}/vault
   rps:
-    image: intel/oact-rps:latest
+    image: intel/oact-rps:v2.1.0
     networks:
       - openamtnetwork
     healthcheck:
@@ -30,7 +30,7 @@ services:
       RPS_VAULT_ADDRESS: http://vault:8200
       RPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/rpsdb?sslmode=no-verify
   mps:
-    image: intel/oact-mps:latest
+    image: intel/oact-mps:v2.1.0
     networks:
       - openamtnetwork
     restart: always
@@ -64,7 +64,7 @@ services:
     volumes:
       - private-volume:/mps-microservice/private
   mpsrouter:
-    image: intel/oact-mpsrouter:latest
+    image: intel/oact-mpsrouter:v2.0.0
     environment:
       MPS_CONNECTION_STRING: postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@db:5432/mpsdb?sslmode=disable
       PORT: 8003
