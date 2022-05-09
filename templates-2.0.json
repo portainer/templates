@@ -964,7 +964,7 @@
       },
       "env": [
         {
-          "name": "DOKKU_VERSION",
+          "name": "VERSION",
           "label": "Dokku version",
           "description": "Version of Dokku to use ('latest' if empty)",
           "default": "latest"
@@ -975,14 +975,14 @@
           "description": "Global hostname to be registered by Dokku"
         },
         {
-          "name": "DOKKU_VOLUME_PATH",
-          "label": "Dokku host root",
+          "name": "VOLUME_PATH",
+          "label": "Dokku volume path",
           "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
           "default": "/var/lib/dokku"
         },
         {
           "name": "DOKKU_HOST_ROOT",
-          "label": "Dokku build cache path",
+          "label": "Dokku host root",
           "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
           "default": "/var/lib/dokku/home/dokku"
         },
