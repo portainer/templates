@@ -1,0 +1,14 @@
+# version: '3.2'
+services:
+  agent:
+    image: dokku/dokku:${VERSION}
+    environment:
+      DOKKU_HOSTNAME: ${DOKKU_HOSTNAME}
+      DOKKU_HOST_ROOT: ${DOKKU_HOST_ROOT}
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ${VOLUME_PATH:-/var/lib/dokku}:/mnt/dokku
+    ports:
+      - "${SSH_PORT:-22}:22"
+      - "${HTTP_PORT:-80}:80"
+      - "${HTTPS_PORT:-443}:443"
