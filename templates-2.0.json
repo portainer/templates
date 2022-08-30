@@ -1014,7 +1014,7 @@
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
-        "url": "https://raw.githubusercontent.com/portainer/templates/feat_new_liveswitch_template",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "stacks/liveswitch/docker-stack.yml"
       },
       "env": [
@@ -1032,7 +1032,7 @@
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
       "repository": {
-        "url": "https://raw.githubusercontent.com/portainer/templates/feat_new_liveswitch_template",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "stacks/liveswitch/docker-compose.yml"
       },
       "env": [
