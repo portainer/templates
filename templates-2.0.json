@@ -1005,42 +1005,6 @@
           "default": "443"
         }
       ]
-    },
-    {
-      "type": 2,
-      "title": "LiveSwitch",
-      "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
-      "categories": ["media"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/liveswitch/docker-stack.yml"
-      },
-      "env": [
-        {
-          "name": "POSTGRES_PASSWORD",
-          "label": "Postgres password"
-        }
-      ]
-    },
-    {
-      "type": 3,
-      "title": "LiveSwitch",
-      "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
-      "categories": ["media"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/liveswitch.png",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/liveswitch/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "POSTGRES_PASSWORD",
-          "label": "Postgres password"
-        }
-      ]
     }
   ]
 }
