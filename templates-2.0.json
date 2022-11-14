@@ -1041,6 +1041,24 @@
           "label": "Postgres password"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "TOSIBOX Lock for Container",
+      "description": "Lock for Container brings secure connectivity inside your industrial IoT devices. It is a software-only way of connecting your IPCs, HMIs, PLCs, controllers and other devices to your TOSIBOX® network, serving as the endpoint for secure remote connections. Add TOSIBOX® Virtual Central Lock to your infrastructure and turn it into a controlled IoT network of always-on secure connections for remote maintenance, continuous monitoring, real-time data collection and data logging",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/tosibox/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "LICENSE_KEY",
+          "label": "License key"
+        }
+      ]
     }
   ]
 }
