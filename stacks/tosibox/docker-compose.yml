@@ -10,7 +10,7 @@ services:
       - SYS_TIME
       - SYS_PTRACE
     ports:
-      - 8000:80
+      - 80
     networks:
       - tbnet
     volumes:
