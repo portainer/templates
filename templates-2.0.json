@@ -1045,7 +1045,7 @@
     {
       "type": 3,
       "title": "TOSIBOX Lock for Container",
-      "description": "Lock for Container brings secure connectivity inside your industrial IoT devices. It is a software-only way of connecting your IPCs, HMIs, PLCs, controllers and other devices to your TOSIBOX® network, serving as the endpoint for secure remote connections.",
+      "description": "Lock for Container brings secure connectivity inside your industrial IoT devices.",
       "categories": ["edge"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
