@@ -1,0 +1,9 @@
+version: "3.7"
+services:
+  edgeconnector-modbus:
+    image: softingindustrial/edgeconnector-modbus
+    restart: unless-stopped
+    ports:
+      - 443
+      - 8099
+      - 4897
