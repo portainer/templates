@@ -983,7 +983,7 @@
       "title": "Softing EdgeConnector modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
       "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "stackfile": "https://raw.githubusercontent.com/portainer/templates/softing-edgeconnector/stacks/softing-edgeconnector-modbus/docker-compose.yml"
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/softing-edgeconnector-modbus/docker-compose.yml"
     },
     {
       "type": 3,
