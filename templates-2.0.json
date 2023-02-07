@@ -762,7 +762,7 @@
           "label": "Database root password"
         },
         {
-          "name": "DATABASE ROOT USER",
+          "name": "OR_I_ACCEPT_EULA",
           "label": "Accept EULA",
           "select": [
             {
