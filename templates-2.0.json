@@ -737,6 +737,53 @@
     },
     {
       "type": 1,
+      "title": "OPC Router",
+      "description": "No-code middleware for industrial applications. The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/opc-router.png",
+      "image": "opcrouter/runtime:latest",
+      "ports": ["27017/tcp"],
+      "env": [
+        {
+          "name": "OR_DATABASE_USERNAME",
+          "label": "Database user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_USERNAME",
+          "label": "Database password"
+        },
+        {
+          "name": "OR_DATABASE_PASSWORD",
+          "label": "Database root user"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_PASSWORD",
+          "label": "Database root password"
+        },
+        {
+          "name": "DATABASE ROOT USER",
+          "label": "Accept EULA",
+          "select": [
+            {
+              "text": "Yes, I accept",
+              "value": "true",
+              "default": true
+            }
+          ]
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/data/db"
+        },
+        {
+          "container": "/root/.dotnet/corefx/cryptography/x509stores/"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "Floating License Server",
       "description": "License Server for Softing edgeConnector products",
       "categories": ["edge"],
