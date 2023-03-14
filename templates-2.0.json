@@ -809,6 +809,16 @@
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
+      "type": 1,
+      "title": "EdgeConnector 840d",
+      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/edgeconnector-840d",
+      "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
+    },
+    {
       "type": 2,
       "title": "Portainer Agent",
       "description": "Manage all the resources in your Swarm cluster",
