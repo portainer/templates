@@ -810,7 +810,7 @@
     },
     {
       "type": 1,
-      "title": "EdgeConnector 840d",
+      "title": "EdgeConnector 840D",
       "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
       "categories": ["edge"],
       "platform": "linux",
