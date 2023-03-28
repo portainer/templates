@@ -458,6 +458,28 @@
   },
   {
     "type": "container",
+    "title": "Directus",
+    "description": "A free and open-source headless CMS",
+    "categories": ["CMS"],
+    "platform": "linux",
+    "image": "directus/directus:latest",
+    "ports": [
+      "8055/tcp"
+    ],
+    "volumes": ["/directus"],
+    "env": [
+      {
+        "name": "KEY",
+        "label": "255d861b-5ea1-5996-9aa3-922530ec40b1"
+      },
+      {
+        "name": "SECRET",
+        "label": "6116487b-cda1-52c2-b5b5-c8022c45e263"
+      }
+    ]
+  },
+  {
+    "type": "container",
     "title": "Drupal",
     "description": "Open-source content management framework",
     "categories": ["CMS"],
