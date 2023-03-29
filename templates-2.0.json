@@ -1172,6 +1172,18 @@
           "label": "License key"
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "AnyViz Cloud Adapter",
+      "description": "The cloud adapter connects local devices via OPC-UA, Modbus, Siemens, Beckhoff ADS, EtherNet/IP, M-Bus and BACnet to the AnyViz Cloud",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://cdn.anyviz.io/img/anyviz-cloud-60.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/anyviz/docker-compose.yml"
+      }
     }
   ]
 }
