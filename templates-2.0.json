@@ -410,6 +410,32 @@
         }
       ]
     },
+		{
+			"type": 2,
+			"title": "Swarm monitoring",
+			"description": "Monitor your cluster performances with Prometheus & Grafana",
+			"note": "Requires Docker version 19.03.0+. <b>Make sure to add the <code>monitoring == true</code> one of your Swarm manager node before deploying this stack.</b>",
+			"categories": [
+				"Monitoring"
+			],
+			"platform": "linux",
+			"logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+			"repository": {
+				"url": "https://github.com/portainer/templates",
+				"stackfile": "swarm/monitoring/docker-compose.yml"
+			},
+			"env": [
+				{
+					"name": "GRAFANA_USER",
+					"label": "Grafana admin user",
+					"default": "admin"
+				},
+				{
+					"name": "GRAFANA_PASSWORD",
+					"label": "Grafana admin password"
+				}
+			]
+		},    
     {
       "type": 2,
       "title": "Redis Cluster",
