@@ -1,0 +1,23 @@
+services:
+  opc-router:
+    image: opcrouter/runtime:latest
+    restart: unless-stopped
+    ports:
+      - 27017:27017
+    environment:
+      - OR_DATABASE_USERNAME=root
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - OR_DATABASE_PASSWORD=password
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - OR_I_ACCEPT_EULA=true
+    volumes:
+      - type: volume
+        source: opc-router-data
+        target: /data/db
+      - type: volume
+        source: opc-router-x509-store
+        target: /root/.dotnet/corefx/cryptography/x509stores/
+
+volumes:
+  opc-router-data:
+  opc-router-x509-store:

@@ -1,4 +1,3 @@
-version: "3.7"
 services:
   edgeconnector-modbus:
     image: softingindustrial/edgeconnector-modbus
