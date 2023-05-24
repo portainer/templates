@@ -1,0 +1,8 @@
+services:
+  edgeconnector-840d:
+    image: softingindustrial/edgeconnector-840d
+    restart: unless-stopped
+    ports:
+      - 443
+      - 8099
+      - 4897
