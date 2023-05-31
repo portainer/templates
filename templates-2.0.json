@@ -80,6 +80,29 @@
     },
     {
       "type": 1,
+      "categories": ["Proxy","Tools"],
+      "description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
+      "image": "jc21/nginx-proxy-manager:latest",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/nginx.png",
+      "name": "nginx-proxy-manager",
+      "platform": "linux",
+      "ports": ["80/tcp","81/tcp","443/tcp"],
+      "restart_policy": "unless-stopped",
+      "title": "Nginx Proxy Manager",
+      "type": 1,
+      "volumes": [
+        {
+          "bind": "./config",
+          "container": "/data"
+        },
+        {
+          "bind": "./letsencrypt",
+          "container": "/etc/letsencrypt"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "Httpd",
       "description": "Open-source HTTP server",
       "categories": ["webserver"],
