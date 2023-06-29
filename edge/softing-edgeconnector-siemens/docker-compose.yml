@@ -1,0 +1,8 @@
+services:
+  edgeconnector-siemens:
+    image: softingindustrial/edgeconnector-siemens
+    restart: unless-stopped
+    ports:
+      - 443
+      - 8099
+      - 4897
