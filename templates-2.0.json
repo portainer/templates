@@ -852,7 +852,7 @@
       "categories": ["edge"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
-      "image": "softingindustrial/edgeconnector-840d",
+      "image": "softingindustrial/edgeconnector-siemens",
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
