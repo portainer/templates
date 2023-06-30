@@ -1,0 +1,26 @@
+{
+  "type": 2,
+  "title": "Microsoft OMS Agent",
+  "description": "Microsoft Operations Management Suite Linux agent.",
+  "categories": [
+    "OPS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+  "repository": {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/microsoft-oms/docker-stack.yml"
+  },
+  "env": [
+    {
+      "name": "AZURE_WORKSPACE_ID",
+      "label": "Workspace ID",
+      "description": "Azure Workspace ID"
+    },
+    {
+      "name": "AZURE_PRIMARY_KEY",
+      "label": "Primary key",
+      "description": "Azure primary key"
+    }
+  ]
+}

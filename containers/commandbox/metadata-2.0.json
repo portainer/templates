@@ -1,0 +1,22 @@
+{
+  "type": 1,
+  "title": "CommandBox",
+  "description": "ColdFusion (CFML) CLI",
+  "categories": [
+    "development"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-commandbox.png",
+  "image": "ortussolutions/commandbox:latest",
+  "env": [
+    {
+      "name": "CFENGINE",
+      "default": "lucee@4.5",
+      "preset": true
+    }
+  ],
+  "ports": [
+    "8080/tcp",
+    "8443/tcp"
+  ]
+}

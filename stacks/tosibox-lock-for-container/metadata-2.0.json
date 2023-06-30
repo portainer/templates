@@ -1,0 +1,20 @@
+{
+  "type": 3,
+  "title": "TOSIBOX Lock for Container",
+  "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
+  "categories": [
+    "edge"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
+  "repository": {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/tosibox/docker-compose.yml"
+  },
+  "env": [
+    {
+      "name": "LICENSE_KEY",
+      "label": "License key"
+    }
+  ]
+}

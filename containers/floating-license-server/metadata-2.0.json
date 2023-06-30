@@ -1,0 +1,20 @@
+{
+  "type": 1,
+  "title": "Floating License Server",
+  "description": "License Server for Softing edgeConnector products",
+  "categories": [
+    "edge"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+  "image": "softingindustrial/floating-license-server:latest",
+  "ports": [
+    "6200/tcp"
+  ],
+  "interactive": true,
+  "volumes": [
+    {
+      "container": "/licsrv/licenses"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": 1,
+  "title": "EdgeConnector Modbus",
+  "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
+  "categories": [
+    "edge"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+  "image": "softingindustrial/edgeconnector-modbus:latest",
+  "ports": [
+    "443/tcp",
+    "8099/tcp",
+    "4897/tcp"
+  ]
+}

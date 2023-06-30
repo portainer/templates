@@ -1,0 +1,6 @@
+{
+  "type": 4,
+  "title": "Softing EdgeConnector 840D",
+  "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
+  "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-840d/docker-compose.yml"
+}

@@ -1,0 +1,20 @@
+{
+  "type": 1,
+  "title": "Redmine",
+  "description": "Open-source project management tool",
+  "note": "Default user and password are admin/admin",
+  "categories": [
+    "project-management"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
+  "image": "redmine:latest",
+  "ports": [
+    "3000/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/usr/src/redmine/files"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "type": 4,
+  "title": "OPC Router",
+  "description": "No-code middleware for industrial applications",
+  "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
+  "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/opc-router/docker-compose.yml"
+}

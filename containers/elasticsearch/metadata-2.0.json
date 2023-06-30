@@ -1,0 +1,20 @@
+{
+  "type": 1,
+  "title": "Elasticsearch",
+  "description": "Open-source search and analytics engine",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/elasticsearch.png",
+  "image": "docker.elastic.co/elasticsearch/elasticsearch:7.15.1",
+  "ports": [
+    "9200/tcp",
+    "9300/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/usr/share/elasticsearch/data"
+    }
+  ]
+}
