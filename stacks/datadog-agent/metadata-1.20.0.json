@@ -1,0 +1,20 @@
+{
+  "title": "Datadog agent",
+  "type": 2,
+  "categories": [
+    "Monitoring"
+  ],
+  "description": "Collect events and metrics",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/datadog_agent.png",
+  "platform": "linux",
+  "repository": {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/datadog-agent/docker-stack.yml"
+  },
+  "env": [
+    {
+      "name": "API_KEY",
+      "label": "Datadog API key"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "type": 1,
+  "title": "Solr",
+  "description": "Open-source enterprise search platform",
+  "categories": [
+    "search-engine"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/solr.png",
+  "image": "solr:latest",
+  "ports": [
+    "8983/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/opt/solr/mydata"
+    }
+  ]
+}
