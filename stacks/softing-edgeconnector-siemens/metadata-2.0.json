@@ -1,0 +1,6 @@
+{
+  "type": 4,
+  "title": "Softing EdgeConnector Siemens",
+  "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
+  "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-siemens/docker-compose.yml"
+}

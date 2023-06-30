@@ -1,0 +1,18 @@
+{
+  "type": "container",
+  "title": "IronFunctions API",
+  "description": "Open-source serverless computing platform",
+  "categories": [
+    "serverless"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
+  "image": "iron/functions:latest",
+  "ports": [
+    "8080/tcp"
+  ],
+  "volumes": [
+    "/app/data"
+  ],
+  "privileged": true
+}

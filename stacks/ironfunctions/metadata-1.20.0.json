@@ -1,0 +1,15 @@
+{
+  "type": 2,
+  "title": "IronFunctions",
+  "description": "Open-source serverless computing platform",
+  "note": "Deploys the IronFunctions API and UI.",
+  "categories": [
+    "serverless"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
+  "repository": {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/ironfunctions/docker-stack.yml"
+  }
+}

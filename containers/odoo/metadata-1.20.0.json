@@ -1,0 +1,37 @@
+{
+  "type": 1,
+  "title": "Odoo",
+  "description": "Open-source business apps",
+  "categories": [
+    "project-management"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/odoo.png",
+  "image": "odoo:latest",
+  "env": [
+    {
+      "name": "HOST",
+      "label": "PostgreSQL database host",
+      "type": "container"
+    },
+    {
+      "name": "USER",
+      "label": "Database user"
+    },
+    {
+      "name": "PASSWORD",
+      "label": "Database password"
+    }
+  ],
+  "ports": [
+    "8069/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/var/lib/odoo"
+    },
+    {
+      "container": "/mnt/extra-addons"
+    }
+  ]
+}

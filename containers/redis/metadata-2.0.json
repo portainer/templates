@@ -1,0 +1,19 @@
+{
+  "type": 1,
+  "title": "Redis",
+  "description": "Open-source in-memory data structure store",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redis.png",
+  "image": "redis:latest",
+  "ports": [
+    "6379/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/data"
+    }
+  ]
+}

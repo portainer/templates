@@ -1,0 +1,39 @@
+{
+  "type": 1,
+  "title": "Dokku",
+  "description": "Dokku setup as a container",
+  "categories": [
+    "PaaS"
+  ],
+  "platform": "linux",
+  "logo": "",
+  "image": "dokku/dokku",
+  "ports": [
+    "22/tcp",
+    "80/tcp",
+    "443/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/mnt/dokku",
+      "bind": "/var/lib/dokku"
+    },
+    {
+      "container": "/var/run/docker.sock",
+      "bind": "/var/run/docker.sock"
+    }
+  ],
+  "env": [
+    {
+      "name": "DOKKU_HOSTNAME",
+      "label": "Dokku hostname",
+      "description": "Global hostname to be registered by Dokku"
+    },
+    {
+      "name": "DOKKU_HOST_ROOT",
+      "label": "Dokku host root",
+      "default": "/var/lib/dokku/home/dokku",
+      "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'"
+    }
+  ]
+}

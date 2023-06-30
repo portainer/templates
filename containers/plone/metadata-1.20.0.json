@@ -1,0 +1,19 @@
+{
+  "type": 1,
+  "title": "Plone",
+  "description": "A free and open-source CMS built on top of Zope",
+  "categories": [
+    "CMS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/plone.png",
+  "image": "plone:latest",
+  "ports": [
+    "8080/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/data"
+    }
+  ]
+}

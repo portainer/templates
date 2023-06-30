@@ -1,0 +1,21 @@
+{
+  "type": 1,
+  "title": "CockroachDB",
+  "description": "An open-source, survivable, strongly consistent, scale-out SQL database",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
+  "image": "cockroachdb/cockroach:latest",
+  "ports": [
+    "26257/tcp",
+    "8080/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/cockroach/cockroach-data"
+    }
+  ],
+  "command": "start --insecure"
+}

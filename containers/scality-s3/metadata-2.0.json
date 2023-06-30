@@ -1,0 +1,32 @@
+{
+  "type": 1,
+  "title": "Scality S3",
+  "description": "Standalone AWS S3 protocol server",
+  "categories": [
+    "storage"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/scality-s3.png",
+  "image": "scality/s3server",
+  "ports": [
+    "8000/tcp"
+  ],
+  "env": [
+    {
+      "name": "SCALITY_ACCESS_KEY",
+      "label": "Scality S3 access key"
+    },
+    {
+      "name": "SCALITY_SECRET_KEY",
+      "label": "Scality S3 secret key"
+    }
+  ],
+  "volumes": [
+    {
+      "container": "/usr/src/app/localData"
+    },
+    {
+      "container": "/usr/src/app/localMetadata"
+    }
+  ]
+}

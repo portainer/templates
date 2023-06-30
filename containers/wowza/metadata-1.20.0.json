@@ -1,0 +1,33 @@
+{
+  "type": 1,
+  "title": "Wowza",
+  "description": "Streaming media server",
+  "categories": [
+    "streaming"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/wowza.png",
+  "image": "sameersbn/wowza:4.1.2-8",
+  "env": [
+    {
+      "name": "WOWZA_ACCEPT_LICENSE",
+      "label": "Agree to Wowza EULA",
+      "set": "yes"
+    },
+    {
+      "name": "WOWZA_KEY",
+      "label": "License key"
+    }
+  ],
+  "ports": [
+    "1935/tcp",
+    "8086/tcp",
+    "8087/tcp",
+    "8088/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/var/lib/wowza"
+    }
+  ]
+}

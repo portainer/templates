@@ -1,0 +1,28 @@
+{
+  "type": "container",
+  "title": "Mautic",
+  "description": "Open-source marketing automation platform",
+  "categories": [
+    "marketing"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mautic.png",
+  "image": "mautic/mautic:latest",
+  "env": [
+    {
+      "name": "MAUTIC_DB_HOST",
+      "label": "MySQL database host",
+      "type": "container"
+    },
+    {
+      "name": "MAUTIC_DB_PASSWORD",
+      "label": "Database password"
+    }
+  ],
+  "ports": [
+    "80/tcp"
+  ],
+  "volumes": [
+    "/var/www/html"
+  ]
+}

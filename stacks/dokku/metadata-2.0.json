@@ -1,0 +1,57 @@
+{
+  "type": 3,
+  "title": "Dokku",
+  "description": "Dokku setup as a compose file",
+  "categories": [
+    "PaaS"
+  ],
+  "platform": "linux",
+  "logo": "",
+  "repository": {
+    "url": "https://github.com/portainer/templates",
+    "stackfile": "stacks/dokku/docker-compose.yml"
+  },
+  "env": [
+    {
+      "name": "VERSION",
+      "label": "Dokku version",
+      "description": "Version of Dokku to use ('latest' if empty)",
+      "default": "latest"
+    },
+    {
+      "name": "DOKKU_HOSTNAME",
+      "label": "Dokku hostname",
+      "description": "Global hostname to be registered by Dokku"
+    },
+    {
+      "name": "VOLUME_PATH",
+      "label": "Dokku volume path",
+      "description": "Host path to be bound to /mnt/dokku (`/var/lib/dokku` if empty)",
+      "default": "/var/lib/dokku"
+    },
+    {
+      "name": "DOKKU_HOST_ROOT",
+      "label": "Dokku host root",
+      "description": "Image build cache path. Generally set to <data dir> + '/home/dokku'",
+      "default": "/var/lib/dokku/home/dokku"
+    },
+    {
+      "name": "SSH_PORT",
+      "label": "SSH port",
+      "description": "Host port to expose SSH port of Dokku (22 if empty)",
+      "default": "22"
+    },
+    {
+      "name": "HTTP_PORT",
+      "label": "HTTP port",
+      "description": "Host port to expose HTTP port of Dokku (80 if empty)",
+      "default": "80"
+    },
+    {
+      "name": "HTTPS_PORT",
+      "label": "HTTPS port",
+      "description": "Host port to expose HTTPS port of Dokku (443 if empty)",
+      "default": "443"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "container",
+  "title": "Redmine",
+  "description": "Open-source project management tool",
+  "categories": [
+    "project-management"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/redmine.png",
+  "image": "redmine:latest",
+  "ports": [
+    "3000/tcp"
+  ],
+  "volumes": [
+    "/usr/src/redmine/files"
+  ]
+}

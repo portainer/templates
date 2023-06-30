@@ -1,0 +1,15 @@
+{
+  "type": "stack",
+  "title": "Portainer Agent",
+  "description": "Manage all the resources in your Swarm cluster",
+  "note": "The agent will be deployed globally inside your cluster and available on port 9001.",
+  "categories": [
+    "portainer"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/portainer.png",
+  "repository": {
+    "url": "https://github.com/deviantony/templates",
+    "stackfile": "stacks/portainer-agent/docker-stack.yml"
+  }
+}

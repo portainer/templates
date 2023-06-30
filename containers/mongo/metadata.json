@@ -1,0 +1,17 @@
+{
+  "type": "container",
+  "title": "Mongo",
+  "description": "Open-source document-oriented database",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mongo.png",
+  "image": "mongo:latest",
+  "ports": [
+    "27017/tcp"
+  ],
+  "volumes": [
+    "/data/db"
+  ]
+}

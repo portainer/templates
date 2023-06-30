@@ -1,0 +1,19 @@
+{
+  "type": 1,
+  "title": "Drupal",
+  "description": "Open-source content management framework",
+  "categories": [
+    "CMS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/drupal.png",
+  "image": "drupal:latest",
+  "ports": [
+    "80/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/var/www/html"
+    }
+  ]
+}

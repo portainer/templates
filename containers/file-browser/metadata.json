@@ -1,0 +1,21 @@
+{
+  "type": "container",
+  "title": "File browser",
+  "description": "A web file manager",
+  "note": "Default credentials: admin/admin",
+  "categories": [
+    "filesystem",
+    "storage"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/filebrowser.png",
+  "image": "hacdias/filemanager:latest",
+  "ports": [
+    "80/tcp"
+  ],
+  "volumes": [
+    "/data",
+    "/srv"
+  ],
+  "command": "--port 80 --database /data/database.db --scope /srv"
+}

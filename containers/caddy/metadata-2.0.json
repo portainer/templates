@@ -1,0 +1,19 @@
+{
+  "type": 1,
+  "title": "Caddy",
+  "description": "Open-source web server with automatic HTTPS written in Go",
+  "categories": [
+    "webserver"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/caddy.png",
+  "image": "caddy:latest",
+  "ports": [
+    "80/tcp"
+  ],
+  "volumes": [
+    {
+      "container": "/data"
+    }
+  ]
+}

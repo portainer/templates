@@ -1,0 +1,13 @@
+{
+  "type": 1,
+  "title": "NodeJS",
+  "description": "JavaScript-based platform for server-side and networking applications",
+  "categories": [
+    "development"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/node.png",
+  "image": "node:latest",
+  "interactive": true,
+  "command": "/bin/bash"
+}
