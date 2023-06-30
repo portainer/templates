@@ -1,0 +1,24 @@
+{
+  "type": "container",
+  "title": "IronFunctions UI",
+  "description": "Open-source user interface for IronFunctions",
+  "categories": [
+    "serverless"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ironfunctions.png",
+  "image": "iron/functions-ui:latest",
+  "ports": [
+    "4000/tcp"
+  ],
+  "volumes": [
+    "/app/data"
+  ],
+  "env": [
+    {
+      "name": "API_URL",
+      "label": "API URL"
+    }
+  ],
+  "privileged": true
+}

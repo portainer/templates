@@ -1,0 +1,28 @@
+{
+  "type": "container",
+  "title": "SQL Server Express",
+  "description": "Microsoft SQL Server Express for Windows containers",
+  "categories": [
+    "database"
+  ],
+  "platform": "windows",
+  "note": "Password needs to include at least 8 characters including uppercase, lowercase letters, base-10 digits and/or non-alphanumeric symbols.",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/microsoft.png",
+  "image": "microsoft/mssql-server-windows-express:latest",
+  "ports": [
+    "1433/tcp"
+  ],
+  "env": [
+    {
+      "name": "ACCEPT_EULA",
+      "set": "Y"
+    },
+    {
+      "name": "sa_password",
+      "label": "SA password"
+    }
+  ],
+  "volumes": [
+    "C:/temp/"
+  ]
+}

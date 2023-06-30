@@ -1,0 +1,19 @@
+{
+  "type": "container",
+  "title": "Magento 2",
+  "description": "Open-source e-commerce platform",
+  "categories": [
+    "CMS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/magento.png",
+  "image": "alankent/gsd:latest",
+  "ports": [
+    "80/tcp",
+    "3000/tcp",
+    "3001/tcp"
+  ],
+  "volumes": [
+    "/var/www/html/"
+  ]
+}

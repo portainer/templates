@@ -1,0 +1,23 @@
+{
+  "type": "container",
+  "title": "MariaDB",
+  "description": "Performance beyond MySQL",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/mariadb.png",
+  "image": "mariadb:latest",
+  "env": [
+    {
+      "name": "MYSQL_ROOT_PASSWORD",
+      "label": "Root password"
+    }
+  ],
+  "ports": [
+    "3306/tcp"
+  ],
+  "volumes": [
+    "/var/lib/mysql"
+  ]
+}

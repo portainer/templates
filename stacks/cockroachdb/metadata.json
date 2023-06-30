@@ -1,0 +1,15 @@
+{
+  "type": "stack",
+  "title": "CockroachDB",
+  "description": "CockroachDB cluster",
+  "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cockroachdb.png",
+  "repository": {
+    "url": "https://github.com/deviantony/templates",
+    "stackfile": "stacks/cockroachdb/docker-stack.yml"
+  }
+}

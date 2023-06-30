@@ -1,0 +1,17 @@
+{
+  "type": "container",
+  "title": "Registry",
+  "description": "Docker image registry",
+  "categories": [
+    "docker"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/registry.png",
+  "image": "registry:latest",
+  "ports": [
+    "5000/tcp"
+  ],
+  "volumes": [
+    "/var/lib/registry"
+  ]
+}

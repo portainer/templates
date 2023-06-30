@@ -1,0 +1,30 @@
+{
+  "type": "container",
+  "title": "Sematext Docker Agent",
+  "description": "Collect logs, metrics and docker events",
+  "categories": [
+    "Log Management",
+    "Monitoring"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/sematext_agent.png",
+  "image": "sematext/sematext-agent-docker:latest",
+  "name": "sematext-agent",
+  "privileged": true,
+  "env": [
+    {
+      "name": "LOGSENE_TOKEN",
+      "label": "Logs token"
+    },
+    {
+      "name": "SPM_TOKEN",
+      "label": "SPM monitoring token"
+    }
+  ],
+  "volumes": [
+    {
+      "container": "/var/run/docker.sock",
+      "bind": "/var/run/docker.sock"
+    }
+  ]
+}

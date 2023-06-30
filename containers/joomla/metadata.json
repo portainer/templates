@@ -1,0 +1,28 @@
+{
+  "type": "container",
+  "title": "Joomla",
+  "description": "Another free and open-source CMS",
+  "categories": [
+    "CMS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
+  "image": "joomla:latest",
+  "env": [
+    {
+      "name": "JOOMLA_DB_HOST",
+      "label": "MySQL database host",
+      "type": "container"
+    },
+    {
+      "name": "JOOMLA_DB_PASSWORD",
+      "label": "Database password"
+    }
+  ],
+  "ports": [
+    "80/tcp"
+  ],
+  "volumes": [
+    "/var/www/html"
+  ]
+}

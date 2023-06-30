@@ -1,0 +1,27 @@
+{
+  "type": "container",
+  "title": "PostgreSQL",
+  "description": "The most advanced open-source database",
+  "categories": [
+    "database"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/postgres.png",
+  "image": "postgres:latest",
+  "env": [
+    {
+      "name": "POSTGRES_USER",
+      "label": "Superuser"
+    },
+    {
+      "name": "POSTGRES_PASSWORD",
+      "label": "Superuser password"
+    }
+  ],
+  "ports": [
+    "5432/tcp"
+  ],
+  "volumes": [
+    "/var/lib/postgresql/data"
+  ]
+}

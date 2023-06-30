@@ -1,0 +1,33 @@
+{
+  "type": "container",
+  "title": "ContentBox",
+  "description": "Open-source modular CMS",
+  "categories": [
+    "CMS"
+  ],
+  "platform": "linux",
+  "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/ortussolutions-contentbox.png",
+  "image": "ortussolutions/contentbox:latest",
+  "env": [
+    {
+      "name": "express",
+      "set": "true"
+    },
+    {
+      "name": "install",
+      "set": "true"
+    },
+    {
+      "name": "CFENGINE",
+      "set": "lucee@4.5"
+    }
+  ],
+  "ports": [
+    "8080/tcp",
+    "8443/tcp"
+  ],
+  "volumes": [
+    "/data/contentbox/db",
+    "/app/includes/shared/media"
+  ]
+}
