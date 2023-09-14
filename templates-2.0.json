@@ -770,23 +770,15 @@
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/opc-router.png",
       "image": "opcrouter/runtime:latest",
-      "ports": ["27017/tcp"],
+      "ports": ["49429/tcp", "8080/tcp", "8081/tcp"],
       "env": [
         {
-          "name": "OR_DATABASE_USERNAME",
-          "label": "Remote management user"
+          "name": "INITIAL_USERNAME",
+          "label": "Initial Admin User user"
         },
         {
-          "name": "MONGO_INITDB_ROOT_USERNAME",
-          "label": "Remote management password"
-        },
-        {
-          "name": "OR_DATABASE_PASSWORD",
-          "label": "Database root user"
-        },
-        {
-          "name": "MONGO_INITDB_ROOT_PASSWORD",
-          "label": "Database root password"
+          "name": "INITIAL_PASSWORD",
+          "label": "Inital Admin User Password"
         },
         {
           "name": "OR_I_ACCEPT_EULA",
@@ -802,11 +794,14 @@
       ],
       "volumes": [
         {
-          "container": "/data/db"
+          "container": "/data/database"
         },
         {
-          "container": "/root/.dotnet/corefx/cryptography/x509stores/"
-        }
+          "container": "/inray"
+        },
+	{
+          "container": "/var/log/opcrouter"
+        }      
       ]
     },
     {
