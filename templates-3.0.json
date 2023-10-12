@@ -2,6 +2,7 @@
   "version": "3",
   "templates": [
     {
+      "id": 1,
       "type": 1,
       "title": "Registry",
       "description": "Docker image registry",
@@ -17,6 +18,7 @@
       ]
     },
     {
+      "id": 2,
       "type": 1,
       "title": "Registry (cache)",
       "description": "Docker image registry configured as a DockerHub pull through cache",
@@ -39,6 +41,7 @@
       ]
     },
     {
+      "id": 3,
       "type": 1,
       "title": "Ubuntu",
       "description": "Debian-based Linux operating system",
@@ -50,6 +53,7 @@
       "command": "/bin/bash"
     },
     {
+      "id": 4,
       "type": 1,
       "title": "NodeJS",
       "description": "JavaScript-based platform for server-side and networking applications",
@@ -61,6 +65,7 @@
       "command": "/bin/bash"
     },
     {
+      "id": 5,
       "type": 1,
       "title": "Nginx",
       "description": "High performance web server",
@@ -79,6 +84,7 @@
       ]
     },
     {
+      "id": 6,
       "type": 1,
       "title": "Httpd",
       "description": "Open-source HTTP server",
@@ -94,6 +100,7 @@
       ]
     },
     {
+      "id": 7,
       "type": 1,
       "title": "Caddy",
       "description": "Open-source web server with automatic HTTPS written in Go",
@@ -109,6 +116,7 @@
       ]
     },
     {
+      "id": 8,
       "type": 1,
       "title": "MySQL",
       "description": "The most popular open-source database",
@@ -135,6 +143,7 @@
       ]
     },
     {
+      "id": 9,
       "type": 1,
       "title": "MariaDB",
       "description": "Performance beyond MySQL",
@@ -156,6 +165,7 @@
       ]
     },
     {
+      "id": 10,
       "type": 1,
       "title": "PostgreSQL",
       "description": "The most advanced open-source database",
@@ -181,6 +191,7 @@
       ]
     },
     {
+      "id": 11,
       "type": 1,
       "title": "Mongo",
       "description": "Open-source document-oriented database",
@@ -196,6 +207,7 @@
       ]
     },
     {
+      "id": 12,
       "type": 1,
       "title": "CrateDB",
       "description": "An open-source distributed SQL database",
@@ -211,6 +223,7 @@
       ]
     },
     {
+      "id": 13,
       "type": 1,
       "title": "Elasticsearch",
       "description": "Open-source search and analytics engine",
@@ -226,6 +239,7 @@
       ]
     },
     {
+      "id": 14,
       "type": 1,
       "title": "Gitlab CE",
       "description": "Open-source end-to-end software development platform",
@@ -248,6 +262,7 @@
       ]
     },
     {
+      "id": 15,
       "type": 1,
       "title": "Minio",
       "description": "A distributed object storage server built for cloud applications and devops",
@@ -277,6 +292,7 @@
       "command": "server /data --console-address ':9001'"
     },
     {
+      "id": 16,
       "type": 1,
       "title": "Scality S3",
       "description": "Standalone AWS S3 protocol server",
@@ -305,6 +321,7 @@
       ]
     },
     {
+      "id": 17,
       "type": 1,
       "title": "SQL Server",
       "description": "Microsoft SQL Server on Linux",
@@ -327,6 +344,7 @@
       ]
     },
     {
+      "id": 18,
       "type": 1,
       "title": "SQL Server",
       "description": "Microsoft SQL Server Developer for Windows containers",
@@ -354,6 +372,7 @@
       ]
     },
     {
+      "id": 19,
       "type": 1,
       "title": "SQL Server Express",
       "description": "Microsoft SQL Server Express for Windows containers",
@@ -381,6 +400,7 @@
       ]
     },
     {
+      "id": 20,
       "type": 1,
       "title": "Solr",
       "description": "Open-source enterprise search platform",
@@ -396,6 +416,7 @@
       ]
     },
     {
+      "id": 21,
       "type": 1,
       "title": "Redis",
       "description": "Open-source in-memory data structure store",
@@ -411,6 +432,7 @@
       ]
     },
     {
+      "id": 22,
       "type": 2,
       "title": "Swarm monitoring",
       "description": "Monitor your cluster performances with Prometheus & Grafana",
@@ -435,6 +457,7 @@
       ]
     },
     {
+      "id": 23,
       "type": 2,
       "title": "Redis Cluster",
       "description": "Open-source in-memory data structure store - Cluster mode",
@@ -453,6 +476,7 @@
       ]
     },
     {
+      "id": 24,
       "type": 1,
       "title": "RabbitMQ",
       "description": "Highly reliable enterprise messaging system",
@@ -468,6 +492,7 @@
       ]
     },
     {
+      "id": 25,
       "type": 1,
       "title": "Ghost",
       "description": "Free and open-source blogging platform",
@@ -484,6 +509,7 @@
       ]
     },
     {
+      "id": 26,
       "type": 1,
       "title": "Joomla",
       "description": "Another free and open-source CMS",
@@ -510,6 +536,7 @@
       ]
     },
     {
+      "id": 27,
       "type": 1,
       "title": "Drupal",
       "description": "Open-source content management framework",
@@ -525,6 +552,7 @@
       ]
     },
     {
+      "id": 28,
       "type": 1,
       "title": "Plone",
       "description": "A free and open-source CMS built on top of Zope",
@@ -541,6 +569,7 @@
       ]
     },
     {
+      "id": 29,
       "type": 1,
       "title": "Sematext Docker Agent",
       "description": "Collect logs, metrics and docker events",
@@ -568,6 +597,7 @@
       ]
     },
     {
+      "id": 30,
       "type": 1,
       "title": "Datadog agent",
       "description": "Collect events and metrics",
@@ -600,6 +630,7 @@
       ]
     },
     {
+      "id": 31,
       "type": 1,
       "title": "Mautic",
       "description": "Open-source marketing automation platform",
@@ -626,6 +657,7 @@
       ]
     },
     {
+      "id": 32,
       "type": 1,
       "title": "Jenkins",
       "description": "Open-source continuous integration tool",
@@ -641,6 +673,7 @@
       ]
     },
     {
+      "id": 33,
       "type": 1,
       "title": "Redmine",
       "description": "Open-source project management tool",
@@ -657,6 +690,7 @@
       ]
     },
     {
+      "id": 34,
       "type": 1,
       "title": "File browser",
       "description": "A web file manager",
@@ -677,6 +711,7 @@
       "command": "--port 80 --database /data/database.db --root /srv"
     },
     {
+      "id": 35,
       "type": 1,
       "title": "CommandBox",
       "description": "ColdFusion (CFML) CLI",
@@ -694,6 +729,7 @@
       "ports": ["8080/tcp", "8443/tcp"]
     },
     {
+      "id": 36,
       "type": 1,
       "title": "ContentBox",
       "description": "Open-source modular CMS",
@@ -729,6 +765,7 @@
       ]
     },
     {
+      "id": 37,
       "type": 1,
       "title": "Dokku",
       "description": "Dokku setup as a container",
@@ -762,6 +799,7 @@
       ]
     },
     {
+      "id": 38,
       "type": 1,
       "title": "OPC Router",
       "description": "No-code middleware for industrial applications. The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
@@ -805,6 +843,7 @@
       ]
     },
     {
+      "id": 39,
       "type": 1,
       "title": "Floating License Server",
       "description": "License Server for Softing edgeConnector products",
@@ -821,6 +860,7 @@
       ]
     },
     {
+      "id": 40,
       "type": 1,
       "title": "EdgeConnector Modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
@@ -831,6 +871,7 @@
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
+      "id": 41,
       "type": 1,
       "title": "EdgeConnector 840D",
       "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
@@ -841,6 +882,7 @@
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
+      "id": 42,
       "type": 1,
       "title": "EdgeConnector Siemens",
       "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
@@ -851,6 +893,7 @@
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
+      "id": 43,
       "type": 2,
       "title": "Portainer Agent",
       "description": "Manage all the resources in your Swarm cluster",
@@ -864,6 +907,7 @@
       }
     },
     {
+      "id": 44,
       "type": 2,
       "title": "OpenFaaS",
       "name": "func",
@@ -878,6 +922,7 @@
       }
     },
     {
+      "id": 45,
       "type": 2,
       "title": "IronFunctions",
       "description": "Open-source serverless computing platform",
@@ -891,6 +936,7 @@
       }
     },
     {
+      "id": 46,
       "type": 2,
       "title": "CockroachDB",
       "description": "CockroachDB cluster",
@@ -904,6 +950,7 @@
       }
     },
     {
+      "id": 47,
       "type": 2,
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
@@ -924,6 +971,7 @@
       ]
     },
     {
+      "id": 48,
       "type": 3,
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
@@ -944,6 +992,7 @@
       ]
     },
     {
+      "id": 49,
       "type": 3,
       "title": "OpenAMT",
       "description": "OpenAMT Cloud Toolkit",
@@ -990,6 +1039,7 @@
       ]
     },
     {
+      "id": 50,
       "type": 2,
       "title": "Microsoft OMS Agent",
       "description": "Microsoft Operations Management Suite Linux agent.",
@@ -1014,6 +1064,7 @@
       ]
     },
     {
+      "id": 51,
       "title": "Sematext Docker Agent",
       "type": 2,
       "categories": ["Log Management", "Monitoring"],
@@ -1036,6 +1087,7 @@
       ]
     },
     {
+      "id": 52,
       "title": "Datadog agent",
       "type": 2,
       "categories": ["Monitoring"],
@@ -1054,6 +1106,7 @@
       ]
     },
     {
+      "id": 53,
       "type": 3,
       "title": "FDO",
       "description": "FDO",
@@ -1075,6 +1128,7 @@
       ]
     },
     {
+      "id": 54,
       "type": 3,
       "title": "Dokku",
       "description": "Dokku setup as a compose file",
@@ -1130,6 +1184,7 @@
       ]
     },
     {
+      "id": 55,
       "type": 2,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
@@ -1148,6 +1203,7 @@
       ]
     },
     {
+      "id": 56,
       "type": 3,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
@@ -1166,6 +1222,7 @@
       ]
     },
     {
+      "id": 57,
       "type": 3,
       "title": "TOSIBOX Lock for Container",
       "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
@@ -1184,6 +1241,7 @@
       ]
     },
     {
+      "id": 58,
       "type": 3,
       "categories": ["Edge"],
       "title": "Softing EdgeConnector modbus",
@@ -1192,6 +1250,7 @@
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-modbus/docker-compose.yml"
     },
     {
+      "id": 59,
       "type": 3,
       "categories": ["Edge"],
       "title": "Softing EdgeConnector 840D",
@@ -1199,6 +1258,7 @@
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-840d/docker-compose.yml"
     },
     {
+      "id": 60,
       "type": 3,
       "categories": ["Edge"],
       "title": "Softing EdgeConnector Siemens",
@@ -1206,6 +1266,7 @@
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-siemens/docker-compose.yml"
     },
     {
+      "id": 61,
       "type": 3,
       "categories": ["Edge"],
       "title": "OPC Router",
