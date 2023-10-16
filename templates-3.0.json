@@ -1247,7 +1247,10 @@
       "title": "Softing EdgeConnector modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
       "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-modbus/docker-compose.yml"
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/softing-edgeconnector-modbus/docker-compose.yml"
+      }
     },
     {
       "id": 59,
@@ -1255,7 +1258,10 @@
       "categories": ["Edge"],
       "title": "Softing EdgeConnector 840D",
       "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
-      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-840d/docker-compose.yml"
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/softing-edgeconnector-840d/docker-compose.yml"
+      }
     },
     {
       "id": 60,
@@ -1263,7 +1269,10 @@
       "categories": ["Edge"],
       "title": "Softing EdgeConnector Siemens",
       "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
-      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-siemens/docker-compose.yml"
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/softing-edgeconnector-siemens/docker-compose.yml"
+      }
     },
     {
       "id": 61,
@@ -1272,7 +1281,10 @@
       "title": "OPC Router",
       "description": "No-code middleware for industrial applications",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
-      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/opc-router/docker-compose.yml"
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/opc-router/docker-compose.yml"
+      }
     }
   ]
 }
