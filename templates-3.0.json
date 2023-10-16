@@ -799,55 +799,11 @@
       ]
     },
     {
-      "id": 38,
-      "type": 1,
-      "title": "OPC Router",
-      "description": "No-code middleware for industrial applications. The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
-      "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
-      "categories": ["Edge"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/opc-router.png",
-      "image": "opcrouter/runtime:latest",
-      "ports": ["49429/tcp", "8080/tcp", "8081/tcp"],
-      "env": [
-        {
-          "name": "INITIAL_USERNAME",
-          "label": "Initial Admin User user"
-        },
-        {
-          "name": "INITIAL_PASSWORD",
-          "label": "Inital Admin User Password"
-        },
-        {
-          "name": "OR_I_ACCEPT_EULA",
-          "label": "Accept EULA",
-          "select": [
-            {
-              "text": "Yes, I accept",
-              "value": "true",
-              "default": true
-            }
-          ]
-        }
-      ],
-      "volumes": [
-        {
-          "container": "/data/database"
-        },
-        {
-          "container": "/inray"
-        },
-        {
-          "container": "/var/log/opcrouter"
-        }
-      ]
-    },
-    {
       "id": 39,
       "type": 1,
       "title": "Floating License Server",
       "description": "License Server for Softing edgeConnector products",
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
       "image": "softingindustrial/floating-license-server:latest",
@@ -858,39 +814,6 @@
           "container": "/licsrv/licenses"
         }
       ]
-    },
-    {
-      "id": 40,
-      "type": 1,
-      "title": "EdgeConnector Modbus",
-      "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "categories": ["Edge"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
-      "image": "softingindustrial/edgeconnector-modbus:latest",
-      "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
-    },
-    {
-      "id": 41,
-      "type": 1,
-      "title": "EdgeConnector 840D",
-      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
-      "categories": ["Edge"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
-      "image": "softingindustrial/edgeconnector-840d",
-      "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
-    },
-    {
-      "id": 42,
-      "type": 1,
-      "title": "EdgeConnector Siemens",
-      "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
-      "categories": ["Edge"],
-      "platform": "linux",
-      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
-      "image": "softingindustrial/edgeconnector-siemens",
-      "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
     },
     {
       "id": 43,
@@ -1226,7 +1149,7 @@
       "type": 3,
       "title": "TOSIBOX Lock for Container",
       "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/tosibox.png",
       "repository": {
@@ -1243,7 +1166,7 @@
     {
       "id": 58,
       "type": 3,
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "title": "Softing EdgeConnector modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
       "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
@@ -1255,7 +1178,7 @@
     {
       "id": 59,
       "type": 3,
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "title": "Softing EdgeConnector 840D",
       "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
       "repository": {
@@ -1266,7 +1189,7 @@
     {
       "id": 60,
       "type": 3,
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "title": "Softing EdgeConnector Siemens",
       "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
       "repository": {
@@ -1277,14 +1200,35 @@
     {
       "id": 61,
       "type": 3,
-      "categories": ["Edge"],
+      "categories": ["edge"],
       "title": "OPC Router",
-      "description": "No-code middleware for industrial applications",
+      "description": "No-code middleware for industrial applications The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
       "repository": {
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/opc-router/docker-compose.yml"
-      }
+      },
+      "env": [
+        {
+          "name": "INITIAL_USERNAME",
+          "label": "Initial Admin User user"
+        },
+        {
+          "name": "INITIAL_PASSWORD",
+          "label": "Inital Admin User Password"
+        },
+        {
+          "name": "OR_I_ACCEPT_EULA",
+          "label": "Accept EULA",
+          "select": [
+            {
+              "text": "Yes, I accept",
+              "value": "true",
+              "default": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
