@@ -799,7 +799,7 @@
         {
           "container": "/inray"
         },
-	{
+	      {
           "container": "/var/log/opcrouter"
         }      
       ]
@@ -849,6 +849,54 @@
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
       "image": "softingindustrial/edgeconnector-siemens",
       "ports": ["443/tcp", "8099/tcp", "4897/tcp"]
+    },
+    {
+      "type": 1,
+      "title": "EdgeConnector FANUC CNC",
+      "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/edgeconnector-fanuc-cnc",
+      "ports": ["443/tcp", "8099/tcp", "4897/tcp"],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/config"
+        },
+        {
+          "container": "/mqtt"
+        }     
+      ]
+    },
+    {
+      "type": 1,
+      "title": "EdgeConnector Aggregator",
+      "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "image": "softingindustrial/edgeaggregator",
+      "ports": ["443/tcp", "8099/tcp", "4897/tcp"],
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/config"
+        },
+        {
+          "container": "/mqtt"
+        }     
+      ]
     },
     {
       "type": 2,
@@ -1201,6 +1249,18 @@
       "title": "Softing EdgeConnector Siemens",
       "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-siemens/docker-compose.yml"
+    },
+    {
+      "type": 4,
+      "title": "Softing EdgeConnector FANUC CNC",
+      "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-fanuc-cnc/docker-compose.yml"
+    },
+    {
+      "type": 4,
+      "title": "Softing EdgeConnector Aggregator",
+      "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-aggregator/docker-compose.yml"
     },
     {
       "type": 4,

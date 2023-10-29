@@ -1,0 +1,17 @@
+services:
+  edgeconnector-aggregator:
+    image: softingindustrial/edgeconnector-fanuc-cnc
+    restart: unless-stopped
+    ports:
+      - 443
+      - 8099
+      - 4897
+    environment:
+      - TZ="UTC"
+    volumes:
+      - config_data:/config
+      - mqtt_data:/mqtt
+
+volumes:
+  config_data:
+  mqtt_data:
