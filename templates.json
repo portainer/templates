@@ -1198,6 +1198,36 @@
       }
     },
     {
+      "type": 4,
+      "title": "Softing EdgeConnector FANUC CNC",
+      "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/softing-edgeconnector-fanuc-cnc/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ]
+    },
+    {
+      "type": 4,
+      "title": "Softing EdgeConnector Aggregator",
+      "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/softing-edgeconnector-aggregator/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "TZ",
+          "label": "TZ"
+        }
+      ]
+    },
+    {
       "id": 61,
       "type": 3,
       "categories": ["edge"],
