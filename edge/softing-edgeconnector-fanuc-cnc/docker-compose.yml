@@ -7,7 +7,7 @@ services:
       - 8099
       - 4897
     environment:
-      - TZ="UTC"
+      - TZ=${TZ:-UTC}
     volumes:
       - config_data:/config
       - mqtt_data:/mqtt
