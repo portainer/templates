@@ -1232,10 +1232,32 @@
       ]
     },
     {
+      "type": 3,
+      "title": "Pro Mosquitto with Management Center",
+      "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
+      "note": "Use <b>admin</b> as the default username to connect to the Management Center.",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cedalo.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/cedalo-mosquitto-mc/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "CEDALO_LICENSE_KEY",
+          "label": "License key"
+        },
+        {
+          "name": "CEDALO_MC_BROKER_PASSWORD",
+          "label": "Broker and management center password"
+        }
+      ]
+    },
+    {
       "type": 4,
       "title": "Softing EdgeConnector modbus",
       "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/softing-edgeconnector-modbus/docker-compose.yml"
     },
     {
@@ -1268,6 +1290,13 @@
       "description": "No-code middleware for industrial applications",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
       "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/opc-router/docker-compose.yml"
+    },
+    {
+      "type": 4,
+      "title": "Pro Mosquitto with Management Center",
+      "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
+      "note": "Use <b>admin</b> as the default username to connect to the Management Center.",
+      "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/edge/cedalo-mosquitto-mc/docker-compose.yml"
     }
   ]
 }
