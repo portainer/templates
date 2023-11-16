@@ -6,8 +6,8 @@ services:
       - 8883
       - 8090
     environment:
-      CEDALO_LICENSE_KEY: {{ CEDALO_LICENSE_KEY }}
-      MOSQUITTO_DYNSEC_PASSWORD: {{ CEDALO_MC_BROKER_PASSWORD }}
+      CEDALO_LICENSE_KEY: ${CEDALO_LICENSE_KEY}
+      MOSQUITTO_DYNSEC_PASSWORD: ${CEDALO_MC_BROKER_PASSWORD}
     volumes:
        - mosquitto_data:/mosquitto/data
        - mosquitto_config:/mosquitto/config
@@ -19,7 +19,7 @@ services:
     depends_on:
       - mosquitto
     environment:
-      CEDALO_LICENSE_KEY: {{ CEDALO_LICENSE_KEY }}
+      CEDALO_LICENSE_KEY: ${CEDALO_LICENSE_KEY}
       CEDALO_MC_PROXY_HOST: 0.0.0.0
       CEDALO_MC_USERNAME: cedalo
       CEDALO_MC_PASSWORD: mmcisawesome
@@ -37,7 +37,7 @@ services:
       CEDALO_MC_BROKER_NAME: pro-mosquitto
       CEDALO_MC_BROKER_ID: pro-mosquitto
       CEDALO_MC_BROKER_USERNAME: admin
-      CEDALO_MC_BROKER_PASSWORD: {{ CEDALO_MC_BROKER_PASSWORD }}
+      CEDALO_MC_BROKER_PASSWORD: ${CEDALO_MC_BROKER_PASSWORD}
       CEDALO_MC_DATA_DIRECTORY_PATH: /management-center/config
       CEDALO_MC_MODE: offline
     volumes:
