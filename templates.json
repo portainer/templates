@@ -1229,6 +1229,29 @@
           ]
         }
       ]
+    },
+    {
+      "type": 3,
+      "title": "Pro Mosquitto with Management Center",
+      "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
+      "note": "Use <b>admin</b> as the default username to connect to the Management Center.",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/cedalo.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/cedalo-mosquitto-mc/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "CEDALO_LICENSE_KEY",
+          "label": "License key"
+        },
+        {
+          "name": "CEDALO_MC_BROKER_PASSWORD",
+          "label": "Broker and management center password"
+        }
+      ]
     }
   ]
 }
