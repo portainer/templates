@@ -1,0 +1,49 @@
+services:
+  mosquitto:
+    image: registry.cedalo.com/portainer-trials/mosquitto:2.7.2
+    ports:
+      - 1883
+      - 8883
+      - 8090
+    environment:
+      CEDALO_LICENSE_KEY: ${CEDALO_LICENSE_KEY}
+      MOSQUITTO_DYNSEC_PASSWORD: ${CEDALO_MOSQUITTO_PASSWORD}
+    volumes:
+       - mosquitto_data:/mosquitto/data
+       - mosquitto_config:/mosquitto/config
+
+  management-center:
+    image: registry.cedalo.com/portainer-trials/management-center:2.7
+    ports:
+      - 8088
+    depends_on:
+      - mosquitto
+    environment:
+      CEDALO_LICENSE_KEY: ${CEDALO_LICENSE_KEY}
+      CEDALO_MC_PROXY_HOST: 0.0.0.0
+      CEDALO_MC_USERNAME: ${CEDALO_MC_USER}
+      CEDALO_MC_PASSWORD: ${CEDALO_MC_PASSWORD}
+      CEDALO_MC_PROXY_SRT_BASE: /management-center/config
+      CEDALO_MC_PROXY_CONFIG: /management-center/config/config.json
+      CEDALO_MC_PROXY_CONFIG_CERTS: /management-center/config/certs.db
+      CEDALO_MC_PROXY_CONFIG_TOKENS: /management-center/config/tokens.json
+      CEDALO_MC_PROXY_CONFIG_USERS: /management-center/config/users.json
+      CEDALO_MC_PROXY_CONFIG_AUDIT_TRAIL: /management-center/config/audit.json
+      CEDALO_MC_BROKER_CONNECTION_MQTT_EXISTS_MAPPING: mosquitto:true
+      CEDALO_MC_BROKER_CONNECTION_MQTTS_EXISTS_MAPPING: mosquitto:false
+      CEDALO_MC_BROKER_CONNECTION_WS_EXISTS_MAPPING: mosquitto:false
+      CEDALO_MC_BROKER_CONNECTION_HOST_MAPPING: mosquitto:localhost
+      CEDALO_MC_BROKER_URL: mqtt://mosquitto:1883
+      CEDALO_MC_BROKER_NAME: pro-mosquitto
+      CEDALO_MC_BROKER_ID: pro-mosquitto
+      CEDALO_MC_BROKER_USERNAME: admin
+      CEDALO_MC_BROKER_PASSWORD: ${CEDALO_MOSQUITTO_PASSWORD}
+      CEDALO_MC_DATA_DIRECTORY_PATH: /management-center/config
+      CEDALO_MC_MODE: offline
+    volumes:
+       - mc_data:/management-center/config
+
+volumes:
+    mosquitto_data:
+    mosquitto_config:
+    mc_data:
