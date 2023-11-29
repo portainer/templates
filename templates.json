@@ -1197,7 +1197,8 @@
     },
     {
       "id": 58,
-      "type": 4,
+      "type": 3,
+      "categories": ["edge"],
       "title": "Softing EdgeConnector FANUC CNC",
       "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
       "repository": {
@@ -1213,7 +1214,8 @@
     },
     {
       "id": 59,
-      "type": 4,
+      "type": 3,
+      "categories": ["edge"],
       "title": "Softing EdgeConnector Aggregator",
       "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
       "repository": {

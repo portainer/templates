@@ -14,7 +14,8 @@
             "type": "integer"
           },
           "type": {
-            "type": "integer"
+            "type": "integer",
+            "enum": [1, 2, 3]
           },
           "title": {
             "type": "string"
