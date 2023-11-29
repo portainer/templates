@@ -1,0 +1,18 @@
+name: Validate JSONs
+
+on:
+  pull_request:
+  push:
+    branches:
+      - v3
+
+jobs:
+  verify-json-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Validate JSON
+        uses: docker://orrosenblatt/validate-json-action:latest
+        env:
+          INPUT_SCHEMA: ${GITHUB_WORKSPACE}/schema.json
+          INPUT_JSONS: ${GITHUB_WORKSPACE}/templates.json

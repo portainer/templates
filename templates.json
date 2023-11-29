@@ -2,7 +2,6 @@
   "version": "3",
   "templates": [
     {
-      "id": 1,
       "type": 1,
       "title": "Registry",
       "description": "Docker image registry",
@@ -771,7 +770,6 @@
       "description": "Dokku setup as a container",
       "categories": ["PaaS"],
       "platform": "linux",
-      "logo": "",
       "image": "dokku/dokku",
       "ports": ["22/tcp", "80/tcp", "443/tcp"],
       "volumes": [
@@ -799,7 +797,7 @@
       ]
     },
     {
-      "id": 39,
+      "id": 38,
       "type": 1,
       "title": "Floating License Server",
       "description": "License Server for Softing edgeConnector products",
@@ -816,7 +814,7 @@
       ]
     },
     {
-      "id": 43,
+      "id": 39,
       "type": 2,
       "title": "Portainer Agent",
       "description": "Manage all the resources in your Swarm cluster",
@@ -830,7 +828,7 @@
       }
     },
     {
-      "id": 44,
+      "id": 40,
       "type": 2,
       "title": "OpenFaaS",
       "name": "func",
@@ -845,7 +843,7 @@
       }
     },
     {
-      "id": 45,
+      "id": 41,
       "type": 2,
       "title": "IronFunctions",
       "description": "Open-source serverless computing platform",
@@ -859,7 +857,7 @@
       }
     },
     {
-      "id": 46,
+      "id": 42,
       "type": 2,
       "title": "CockroachDB",
       "description": "CockroachDB cluster",
@@ -873,7 +871,7 @@
       }
     },
     {
-      "id": 47,
+      "id": 43,
       "type": 2,
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
@@ -894,7 +892,7 @@
       ]
     },
     {
-      "id": 48,
+      "id": 44,
       "type": 3,
       "title": "WordPress",
       "description": "WordPress setup with a MySQL database",
@@ -915,7 +913,7 @@
       ]
     },
     {
-      "id": 49,
+      "id": 46,
       "type": 3,
       "title": "OpenAMT",
       "description": "OpenAMT Cloud Toolkit",
@@ -962,7 +960,7 @@
       ]
     },
     {
-      "id": 50,
+      "id": 47,
       "type": 2,
       "title": "Microsoft OMS Agent",
       "description": "Microsoft Operations Management Suite Linux agent.",
@@ -987,7 +985,7 @@
       ]
     },
     {
-      "id": 51,
+      "id": 48,
       "title": "Sematext Docker Agent",
       "type": 2,
       "categories": ["Log Management", "Monitoring"],
@@ -1010,7 +1008,7 @@
       ]
     },
     {
-      "id": 52,
+      "id": 49,
       "title": "Datadog agent",
       "type": 2,
       "categories": ["Monitoring"],
@@ -1029,7 +1027,7 @@
       ]
     },
     {
-      "id": 53,
+      "id": 50,
       "type": 3,
       "title": "FDO",
       "description": "FDO",
@@ -1051,13 +1049,12 @@
       ]
     },
     {
-      "id": 54,
+      "id": 51,
       "type": 3,
       "title": "Dokku",
       "description": "Dokku setup as a compose file",
       "categories": ["PaaS"],
       "platform": "linux",
-      "logo": "",
       "repository": {
         "url": "https://github.com/portainer/templates",
         "stackfile": "stacks/dokku/docker-compose.yml"
@@ -1107,7 +1104,7 @@
       ]
     },
     {
-      "id": 55,
+      "id": 52,
       "type": 2,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch stack with gateway, caching, database and media server",
@@ -1126,7 +1123,7 @@
       ]
     },
     {
-      "id": 56,
+      "id": 53,
       "type": 3,
       "title": "LiveSwitch",
       "description": "A basic LiveSwitch compose with gateway, caching, database and media server",
@@ -1145,7 +1142,7 @@
       ]
     },
     {
-      "id": 57,
+      "id": 54,
       "type": 3,
       "title": "TOSIBOX Lock for Container",
       "description": "Lock for Container brings secure connectivity inside your industrial IoT devices",
@@ -1164,7 +1161,7 @@
       ]
     },
     {
-      "id": 58,
+      "id": 55,
       "type": 3,
       "categories": ["edge"],
       "title": "Softing EdgeConnector modbus",
@@ -1176,7 +1173,7 @@
       }
     },
     {
-      "id": 59,
+      "id": 56,
       "type": 3,
       "categories": ["edge"],
       "title": "Softing EdgeConnector 840D",
@@ -1187,7 +1184,7 @@
       }
     },
     {
-      "id": 60,
+      "id": 57,
       "type": 3,
       "categories": ["edge"],
       "title": "Softing EdgeConnector Siemens",
@@ -1198,6 +1195,7 @@
       }
     },
     {
+      "id": 58,
       "type": 4,
       "title": "Softing EdgeConnector FANUC CNC",
       "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
@@ -1213,6 +1211,7 @@
       ]
     },
     {
+      "id": 59,
       "type": 4,
       "title": "Softing EdgeConnector Aggregator",
       "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
@@ -1228,7 +1227,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": 60,
       "type": 3,
       "categories": ["edge"],
       "title": "OPC Router",
@@ -1261,6 +1260,7 @@
       ]
     },
     {
+      "id": 61,
       "type": 3,
       "title": "Pro Mosquitto with Management Center",
       "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
