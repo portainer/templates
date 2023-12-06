@@ -570,6 +570,19 @@
       ]
     },
     {
+      "type": 3,
+      "title": "Joomla",
+      "description": "Joomla setup with a MariaDB database",
+      "note": "Customize the deployment of a Joomla instance connected to a MariaDB database.",
+      "categories": ["CMS"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/joomla/docker-compose.yml"
+      }
+    },
+    {
       "type": 1,
       "title": "Drupal",
       "description": "Open-source content management framework",
