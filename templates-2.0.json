@@ -488,7 +488,8 @@
     {
       "type": 1,
       "title": "Joomla",
-      "description": "Another free and open-source CMS",
+      "description": "Joomla setup, bring your own database",
+      "note": "Deploys a Joomla instance and connect it to your existing database.",
       "categories": ["CMS"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
