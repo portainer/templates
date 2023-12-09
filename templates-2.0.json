@@ -229,7 +229,7 @@
       "type": 1,
       "title": "Gitlab CE",
       "description": "Open-source end-to-end software development platform",
-      "note": "Default username is <b>root</b>. Check the <a href=\"https://docs.gitlab.com/omnibus/docker/README.html#after-starting-a-container\" target=\"_blank\">Gitlab documentation</a> to get started.",
+      "note": "Default username is <b>root</b>. To retrieve the initial root password use: sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password",
       "categories": ["development", "project-management"],
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/gitlab_ce.png",
