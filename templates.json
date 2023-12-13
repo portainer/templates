@@ -537,6 +537,63 @@
       ]
     },
     {
+      "type": 2,
+      "title": "Joomla",
+      "description": "Joomla setup with a MariaDB database",
+      "note": "Deploys a Joomla instance connected to a MariaDB database.",
+      "categories": ["CMS"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/joomla.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/joomla/docker-stack.yml"
+      },
+      "env": [
+        {
+          "name": "JOOMLA_SITE_NAME",
+          "label": "Joomla Site Name",
+          "description": "Joomla site name, must be longer than 2 characters.",
+          "default": "Joomla"
+        },
+        {
+          "name": "JOOMLA_ADMIN_USER",
+          "label": "Joomla Admin Name",
+          "description": "Admin full name, must be longer than 2 characters.",
+          "default": "Joomla Admin"
+        },
+        {
+          "name": "JOOMLA_ADMIN_USERNAME",
+          "label": "Joomla Admin Username",
+          "description": "Admin username, must contain no spaces and be only alphabetical and longer than 2 characters.",
+          "default": "joomla"
+        },
+        {
+          "name": "JOOMLA_ADMIN_EMAIL",
+          "label": "Joomla Admin Email",
+          "description": "Admin email, must be a valid email address",
+          "default": "joomla@example.com"
+        },
+        {
+          "name": "JOOMLA_ADMIN_PASSWORD",
+          "label": "Joomla Admin Password",
+          "description": "Admin password, must be longer than 12 characters",
+          "default": "joomla@secured"
+        },
+        {
+          "name": "JOOMLA_DB_PASSWORD",
+          "label": "Database user password",
+          "description": "Password used by the MariaDB user.",
+          "default": "joomlaSecure"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "Database root password",
+          "description": "Password used by the MariaDB root user.",
+          "default": "joomlaSecure12345"
+        }
+      ]
+    },
+    {
       "id": 27,
       "type": 1,
       "title": "Drupal",
