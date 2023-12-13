@@ -6,4 +6,4 @@ For more information about the template definition format and how to deploy your
 
 ## Notice
 
-Since version 3 of the templates, we've moved to use `main` branch as the default branch for this repository. If you are using version 2, please use the `master` branch of this repository (or https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json).
+Since version 3 of the templates, we've moved to use `v3` branch as the default branch for this repository. If you are using version 2, please use the `master` branch of this repository (or https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json).
