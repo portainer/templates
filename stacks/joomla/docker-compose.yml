@@ -1,0 +1,35 @@
+version: '2'
+
+services:
+  db:
+    image: mariadb:latest
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: joomlaSecure12345
+      MYSQL_DATABASE: joomla
+      MYSQL_USER: joomla
+      MYSQL_PASSWORD: joomlaSecure
+
+  joomla:
+    image: joomla:latest
+    ports:
+      - 80
+    restart: always
+    environment:
+      JOOMLA_DB_HOST: db:3306
+      JOOMLA_DB_USER: joomla
+      JOOMLA_DB_NAME: joomla
+      JOOMLA_DB_PASSWORD: joomlaSecure
+      JOOMLA_SITE_NAME: Joomla
+      JOOMLA_ADMIN_USER: Joomla Admin
+      JOOMLA_ADMIN_USERNAME: joomla
+      JOOMLA_ADMIN_PASSWORD: joomla@secured
+      JOOMLA_ADMIN_EMAIL: joomla@example.com
+    volumes:
+      - file_data:/var/www/html
+
+volumes:
+  db_data:
+  file_data:
