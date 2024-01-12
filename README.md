@@ -10,3 +10,24 @@ But if you want to use this repo's templates, you'll want to reference the follo
 ```
 https://raw.githubusercontent.com/shmolf/portainer-templates/main/templates-2.0.json
 ```
+
+## Category List
+<!--
+Acquired by pasting the template JSON into browser DevTools, then running:
+```js
+Array.from(new Set(json.templates.flatMap((t) => t.categories))).sort()
+```
+-->
+- backup
+- docker
+- photos
+
+## Application List
+<!--
+Acquired by pasting the template JSON into browser DevTools, then running:
+```js
+Array.from(new Set(json.templates.map((t) => t.title))).sort()
+```
+-->
+- Immich
+- Watchtower
