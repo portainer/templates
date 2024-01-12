@@ -1,0 +1,12 @@
+---
+version: "3.8"
+name: portainer-template-json
+
+services:
+  immich-server:
+    container_name: portainer-template-server
+    image: nginx:stable-alpine
+    volumes:
+      - ./templates-2.0.json:/usr/share/nginx/html/templates.json:ro
+    ports:
+      - 8426:80

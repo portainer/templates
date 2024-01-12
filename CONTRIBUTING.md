@@ -7,10 +7,25 @@ Some basic conventions for contributing to this project.
 Please make sure that there aren't existing pull requests attempting to address the issue mentioned. Likewise, please check for issues related to update, as someone else may be working on the issue in a branch or fork.
 
 * Non-trivial changes should be discussed in an issue first
-* Develop in a topic branch, not master
+* Develop in a topic branch, not `main`
+
+### Testing your template changes
+```sh
+docker compose up -d
+```
+
+You can manually review the JSON in the web browser at http://192.168.1.171:8426/templates.json.
+But the real benefit is pointing your Portainer Template URL to the local address.
+- However, to successfully deploy the stack/container that has a `repository.url` field, you'll need to modify the `url` property in the template to
+  your own repo, and specifically the change will need to be in the `main` branch. Example:
+  - ```
+    "repository": {
+        "stackfile": "stacks/immich/docker-compose.yml",
+        "url": "https://github.com/<your-user-name>/portainer-templates"
+    }
+    ```
 
 ### Commit Message Format
-
 Each commit message should include a **type**, a **scope** and a **subject**:
 
 ```
