@@ -83,6 +83,7 @@
       "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/watchtower-logo.png",
       "image": "containrrr/watchtower",
       "ports": ["9001/tcp"],
+      "restart_policy": "always",
       "volumes": [{
           "container": "/var/run/docker.sock",
           "bind": "/var/run/docker.sock"
