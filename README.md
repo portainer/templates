@@ -4,8 +4,9 @@ This repository hosts the official templates (**'Apps Templates'**) definitions 
 
 For more information about the template definition format and how to deploy your own templates, see the [relevant documentation section](https://documentation.portainer.io/v2.0/templates/deploy_stack/).
 
-## Notice
 
-**This branch (master) is Deprecated.**
-
-Since version 3 of the templates, we've moved to use `main` branch as the default branch for this repository. If you are using version 2, please use the `master` branch of this repository (or https://raw.githubusercontent.com/portainer/templates/master/templates-2.0.json).
+I highly recommend using [Lissy93's templates](https://github.com/Lissy93/portainer-templates).
+But if you want to use this repo's templates, you'll want to reference the following URL in the Portainer template settings:
+```
+https://raw.githubusercontent.com/shmolf/portainer-templates/main/templates-2.0.json
+```
