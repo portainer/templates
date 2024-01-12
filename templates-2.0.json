@@ -47,7 +47,7 @@
           "description": "The default value references a service within the stack"
         },
         {
-          "label": "Database hostname",
+          "label": "File backup location",
           "name": "UPLOAD_LOCATION",
           "default": "/portainer/Files/AppData/Immich/upload",
           "description": "You can leave this path as-is, and the system will auto-create the needed folders. Feel free to change if you desire an alternative location."
