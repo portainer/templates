@@ -2,7 +2,7 @@
   "version": "2",
   "templates": [
     {
-      "categories": ["Photos"],
+      "categories": ["Photos", "Backup"],
       "title": "Immich",
       "name": "immich",
       "type": 3,
@@ -14,21 +14,49 @@
           "name": "PUID"
         },
         {
-          "default": "1000",
           "label": "PGID",
-          "name": "PGID"
+          "name": "PGID",
+          "default": "1000"
+        },
+        {
+          "label": "Immich version",
+          "name": "IMMICH_VERSION",
+          "default": "release",
+          "description": "To want to lock to a specific tag, provide a value such as 'v1.71.0'"
         },
         {
           "label": "Database username",
-          "name": "DB_USERNAME"
+          "name": "DB_USERNAME",
+          "default": "postgres"
         },
         {
           "label": "Database password",
-          "name": "DB_PASSWORD"
+          "name": "DB_PASSWORD",
+          "default": "postgres",
+          "description": "This should be changed to a random secret"
         },
         {
           "label": "Database name",
-          "name": "DB_DATABASE_NAME"
+          "name": "DB_DATABASE_NAME",
+          "default": "immich"
+        },
+        {
+          "label": "Database hostname",
+          "name": "DB_HOSTNAME",
+          "default": "immich_postgres",
+          "description": "The default value references a service within the stack"
+        },
+        {
+          "label": "Database hostname",
+          "name": "UPLOAD_LOCATION",
+          "default": "/portainer/Files/AppData/Immich/upload",
+          "description": "You can leave this path as-is, and the system will auto-create the needed folders. Feel free to change if you desire an alternative location."
+        },
+        {
+          "label": "Redis hostname",
+          "name": "REDIS_HOSTNAME",
+          "default": "immich_redis",
+          "description": "The default value references a service within the stack"
         },
         {
           "default": "2283",

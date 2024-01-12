@@ -12,14 +12,19 @@ version: "3.8"
 services:
   immich-server:
     container_name: immich_server
-    image: ghcr.io/immich-app/immich-server:release
+    image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     command: [ "start.sh", "immich" ]
     volumes:
-      - /portainer/Files/AppData/Immich/upload:/usr/src/app/upload
+      - ${UPLOAD_LOCATION}:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
     environment:
       - PUID=${PUID}
       - PGID=${PGID}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOSTNAME=${DB_HOSTNAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_DATABASE_NAME=${DB_DATABASE_NAME}
+      - REDIS_HOSTNAME=${REDIS_HOSTNAME}
     ports:
       - ${PORT}:3001
     depends_on:
@@ -29,16 +34,22 @@ services:
 
   immich-microservices:
     container_name: immich_microservices
-    image: ghcr.io/immich-app/immich-server:release
+    image: ghcr.io/immich-app/immich-server:${IMMICH_VERSION:-release}
     # extends:
     #   file: hwaccel.yml
     #   service: hwaccel
     command: [ "start.sh", "microservices" ]
     volumes:
-      - /portainer/Files/AppData/Immich/upload:/usr/src/app/upload
+      - ${UPLOAD_LOCATION}:/usr/src/app/upload
       - /etc/localtime:/etc/localtime:ro
-    env_file:
-      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOSTNAME=${DB_HOSTNAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_DATABASE_NAME=${DB_DATABASE_NAME}
+      - REDIS_HOSTNAME=${REDIS_HOSTNAME}
     depends_on:
       - redis
       - database
@@ -46,11 +57,9 @@ services:
 
   immich-machine-learning:
     container_name: immich_machine_learning
-    image: ghcr.io/immich-app/immich-machine-learning:release
+    image: ghcr.io/immich-app/immich-machine-learning:${IMMICH_VERSION:-release}
     volumes:
       - model-cache:/cache
-    env_file:
-      - .env
     restart: always
 
   redis:
@@ -61,8 +70,14 @@ services:
   database:
     container_name: immich_postgres
     image: tensorchord/pgvecto-rs:pg14-v0.1.11@sha256:0335a1a22f8c5dd1b697f14f079934f5152eaaa216c09b61e293be285491f8ee
-    env_file:
-      - .env
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOSTNAME=${DB_HOSTNAME}
+      - DB_USERNAME=${DB_USERNAME}
+      - DB_DATABASE_NAME=${DB_DATABASE_NAME}
+      - REDIS_HOSTNAME=${REDIS_HOSTNAME}
     environment:
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_USER: ${DB_USERNAME}
