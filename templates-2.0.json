@@ -4,7 +4,7 @@
     {
       "categories": ["Photos"],
       "title": "Immich",
-      "name": "Immich",
+      "name": "immich",
       "type": 3,
       "description": "Self-hosted backup solution for photos and videos on mobile device.",
       "env": [
