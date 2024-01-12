@@ -32,7 +32,7 @@
         {
           "label": "Database password",
           "name": "DB_PASSWORD",
-          "default": "postgres",
+          "default": "please-change-this-to-a-random-secret",
           "description": "This should be changed to a random secret"
         },
         {
