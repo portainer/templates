@@ -77,6 +77,7 @@
 			"title": "Watchtower",
       "name": "watchtower",
 			"description": "A container-based solution for automating Docker container base image updates",
+      "note": "<a target='_blank' href='https://containrrr.dev/watchtower/'>Application documentation 🗗</a>",
 			"categories": ["docker"],
 			"platform": "linux",
       "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/watchtower-logo.png",
