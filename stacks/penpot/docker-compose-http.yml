@@ -166,7 +166,7 @@ services:
       ## Consider using traefik and set the 'disable-secure-session-cookies' if you are
       ## not going to serve penpot under HTTPS.
 
-      - PENPOT_PUBLIC_URI=http://192.168.1.171:8624
+      - PENPOT_PUBLIC_URI=${PUBLIC_URI}
 
       ## Database connection parameters. Don't touch them unless you are using custom
       ## postgresql connection parameters.
@@ -200,21 +200,21 @@ services:
       ## based on real scenarios. If you want to help us, please leave it enabled. You can
       ## audit what data we send with the code available on github
 
-      - PENPOT_TELEMETRY_ENABLED=false
+      - PENPOT_TELEMETRY_ENABLED=${TELEMETRY_ENABLED}
 
       ## Example SMTP/Email configuration. By default, emails are sent to the mailcatch
       ## service, but for production usage is recommended to setup a real SMTP
       ## provider. Emails are used to confirm user registrations & invitations. Look below
       ## how mailcatch service is configured.
 
-      - PENPOT_SMTP_DEFAULT_FROM=no-reply@example.com
-      - PENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com
-      - PENPOT_SMTP_HOST=penpot-mailcatch
-      - PENPOT_SMTP_PORT=1025
-      - PENPOT_SMTP_USERNAME=
-      - PENPOT_SMTP_PASSWORD=
-      - PENPOT_SMTP_TLS=false
-      - PENPOT_SMTP_SSL=false
+      # - PENPOT_SMTP_DEFAULT_FROM=no-reply@example.com
+      # - PENPOT_SMTP_DEFAULT_REPLY_TO=no-reply@example.com
+      # - PENPOT_SMTP_HOST=penpot-mailcatch
+      # - PENPOT_SMTP_PORT=1025
+      # - PENPOT_SMTP_USERNAME=
+      # - PENPOT_SMTP_PASSWORD=
+      # - PENPOT_SMTP_TLS=false
+      # - PENPOT_SMTP_SSL=false
 
   penpot-exporter:
     image: "penpotapp/exporter:latest"
