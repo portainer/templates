@@ -94,12 +94,12 @@
         {
           "label": "Frontend Flags",
           "name": "PENPOT_FLAGS_FE",
-          "default": "enable-registration enable-login-with-password disable-secure-session-cookies enable-insecure-register"
+          "default": "enable-registration disable-secure-session-cookies enable-insecure-register enable-login-with-password"
         },
         {
           "label": "Backend Flags",
           "name": "PENPOT_FLAGS_BE",
-          "default": "enable-registration disable-secure-session-cookies enable-insecure-register"
+          "default": "enable-registration disable-secure-session-cookies enable-insecure-register disable-email-verification"
         },
         {
           "label": "Public URI",
