@@ -99,7 +99,7 @@
         {
           "label": "Backend Flags",
           "name": "PENPOT_FLAGS_BE",
-          "default": "enable-registration disable-secure-session-cookies"
+          "default": "enable-registration disable-secure-session-cookies enable-insecure-register"
         },
         {
           "label": "Public URI",

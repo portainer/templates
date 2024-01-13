@@ -257,15 +257,15 @@ services:
   ## port 1080 for read all emails the penpot platform has sent. Should be only used as a
   ## temporal solution meanwhile you don't have a real SMTP provider configured.
 
-  penpot-mailcatch:
-    image: sj26/mailcatcher:latest
-    restart: always
-    expose:
-      - '1025'
-    ports:
-      - "1080:1080"
-    networks:
-      - penpot
+  # penpot-mailcatch:
+  #   image: sj26/mailcatcher:latest
+  #   restart: always
+  #   expose:
+  #     - '1025'
+  #   ports:
+  #     - "1080:1080"
+  #   networks:
+  #     - penpot
 
   ## Example configuration of MiniIO (S3 compatible object storage service); If you don't
   ## have preference, then just use filesystem, this is here just for the completeness.
