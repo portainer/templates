@@ -50,7 +50,7 @@ services:
     networks:
       - penpot
 
-    labels:
+    # labels:
       # - "traefik.enable=true"
 
       ## HTTP: example of labels for the case if you are going to expose penpot to the
