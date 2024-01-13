@@ -2,11 +2,13 @@
   "version": "2",
   "templates": [
     {
-      "categories": ["photos", "backup"],
+      "type": 3,
       "title": "Immich",
       "name": "immich",
-      "type": 3,
+      "categories": ["photos", "backup"],
       "description": "Self-hosted backup solution for photos and videos on mobile device.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
+      "note": "<a target='_blank' href='https://immich.app'>Application documentation 🗗</a>",
       "env": [
         {
           "default": "1000",
@@ -64,8 +66,6 @@
           "name": "PORT"
         }
       ],
-      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
-      "note": "<a target='_blank' href='https://immich.app'>Application documentation 🗗</a>",
       "platform": "linux",
       "repository": {
         "stackfile": "stacks/immich/docker-compose.yml",
@@ -119,11 +119,11 @@
       "type": 1,
       "title": "Watchtower",
       "name": "watchtower",
+      "categories": ["docker"],
       "description": "A container-based solution for automating Docker container base image updates",
       "note": "<a target='_blank' href='https://containrrr.dev/watchtower/'>Application documentation 🗗</a>",
-      "categories": ["docker"],
-      "platform": "linux",
       "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/watchtower-logo.png",
+      "platform": "linux",
       "image": "containrrr/watchtower",
       "ports": ["9001/tcp"],
       "restart_policy": "always",
