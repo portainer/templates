@@ -11,10 +11,10 @@ Please make sure that there aren't existing pull requests attempting to address 
 
 ### Testing your template changes
 ```sh
-docker compose up -d
+docker compose up
 ```
 
-You can manually review the JSON in the web browser at http://192.168.1.171:8426/templates.json.
+You can manually review the JSON in the web browser at http://192.168.1.1:8426/templates.json.
 But the real benefit is pointing your Portainer Template URL to the local address.
 - However, to successfully deploy the stack/container that has a `repository.url` field, you'll need to modify the `url` property in the template to
   your own repo, and specifically the change will need to be in the `main` branch. Example:

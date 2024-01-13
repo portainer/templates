@@ -2,11 +2,13 @@
   "version": "2",
   "templates": [
     {
-      "categories": ["photos", "backup"],
+      "type": 3,
       "title": "Immich",
       "name": "immich",
-      "type": 3,
+      "categories": ["photos", "backup"],
       "description": "Self-hosted backup solution for photos and videos on mobile device.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
+      "note": "<a target='_blank' href='https://immich.app'>Application documentation 🗗</a>",
       "env": [
         {
           "default": "1000",
@@ -64,8 +66,6 @@
           "name": "PORT"
         }
       ],
-      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/immich-logo.svg",
-      "note": "<a target='_blank' href='https://immich.app'>Application documentation 🗗</a>",
       "platform": "linux",
       "repository": {
         "stackfile": "stacks/immich/docker-compose.yml",
@@ -73,14 +73,78 @@
       }
     },
     {
+      "type": 3,
+      "title": "Penpot (http)",
+      "name": "penpot-http",
+      "categories": ["graphic design"],
+      "description": "Penpot is the first Open Source design and prototyping platform meant for cross-domain teams.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/penpot-logo.svg",
+      "note": "<a target='_blank' href='https://community.penpot.app/'>Application documentation 🗗</a>. See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details regarding the flags.",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "default": "1000"
+        },
+        {
+          "label": "Frontend Flags",
+          "name": "PENPOT_FLAGS_FE",
+          "default": "enable-registration enable-login-with-password disable-secure-session-cookies enable-insecure-register"
+        },
+        {
+          "label": "Backend Flags",
+          "name": "PENPOT_FLAGS_BE",
+          "default": "enable-registration disable-secure-session-cookies"
+        },
+        {
+          "label": "Public URI",
+          "name": "PUBLIC_URI",
+          "default": "http://192.168.1.1:8624",
+          "description": "Public URI. If you are going to expose this instance to the internet and use it under different domain than 'localhost', you will need to adjust it to the final domain."
+        },
+        {
+          "label": "Penpot Telemetry Enabled?",
+          "name": "TELEMETRY_ENABLED",
+          "select": [
+            {
+              "text": "Yes, enable telemetry",
+              "value": true,
+              "default": true
+            },
+            {
+              "text": "No, disable telemetry",
+              "value": false
+            }
+          ],
+          "description": "When enabled, a periodical process will send anonymous data about this instance."
+        },
+        {
+          "default": "8624",
+          "label": "Http Port",
+          "name": "PORT",
+          "description": "This should match the port specified in the Public URI, or 80/443 if using standard ports."
+        }
+      ],
+      "platform": "linux",
+      "repository": {
+        "stackfile": "stacks/penpot/docker-compose-http.yml",
+        "url": "https://github.com/shmolf/portainer-templates"
+      }
+    },
+    {
       "type": 1,
       "title": "Watchtower",
       "name": "watchtower",
+      "categories": ["docker"],
       "description": "A container-based solution for automating Docker container base image updates",
       "note": "<a target='_blank' href='https://containrrr.dev/watchtower/'>Application documentation 🗗</a>",
-      "categories": ["docker"],
-      "platform": "linux",
       "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/watchtower-logo.png",
+      "platform": "linux",
       "image": "containrrr/watchtower",
       "ports": ["9001/tcp"],
       "restart_policy": "always",
