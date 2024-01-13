@@ -73,6 +73,49 @@
       }
     },
     {
+      "type": 3,
+      "title": "Penpot (http)",
+      "name": "penpot-http",
+      "categories": ["graphic design"],
+      "description": "Penpot is the first Open Source design and prototyping platform meant for cross-domain teams.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/penpot-logo.svg",
+      "note": "<a target='_blank' href='https://community.penpot.app/'>Application documentation 🗗</a>",
+      "env": [
+        {
+          "default": "1000",
+          "label": "PUID",
+          "name": "PUID"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "default": "1000"
+        },
+        {
+          "label": "Frontend Flags",
+          "name": "PENPOT_FLAGS_FE",
+          "default": "enable-registration enable-login-with-password disable-secure-session-cookies enable-insecure-register",
+          "description": "See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details"
+        },
+        {
+          "label": "Backend Flags",
+          "name": "PENPOT_FLAGS_BE",
+          "default": "enable-registration disable-secure-session-cookies",
+          "description": "See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details"
+        },
+        {
+          "default": "8624",
+          "label": "Http Port",
+          "name": "PORT"
+        }
+      ],
+      "platform": "linux",
+      "repository": {
+        "stackfile": "stacks/penpot/docker-compose-http.yml",
+        "url": "https://github.com/shmolf/portainer-templates"
+      }
+    },
+    {
       "type": 1,
       "title": "Watchtower",
       "name": "watchtower",
