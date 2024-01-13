@@ -79,7 +79,7 @@
       "categories": ["graphic design"],
       "description": "Penpot is the first Open Source design and prototyping platform meant for cross-domain teams.",
       "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/penpot-logo.svg",
-      "note": "<a target='_blank' href='https://community.penpot.app/'>Application documentation 🗗</a>",
+      "note": "<a target='_blank' href='https://community.penpot.app/'>Application documentation 🗗</a>. See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details regarding the flags.",
       "env": [
         {
           "default": "1000",
@@ -94,14 +94,12 @@
         {
           "label": "Frontend Flags",
           "name": "PENPOT_FLAGS_FE",
-          "default": "enable-registration enable-login-with-password disable-secure-session-cookies enable-insecure-register",
-          "description": "See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details"
+          "default": "enable-registration enable-login-with-password disable-secure-session-cookies enable-insecure-register"
         },
         {
           "label": "Backend Flags",
           "name": "PENPOT_FLAGS_BE",
-          "default": "enable-registration disable-secure-session-cookies",
-          "description": "See <a target='_blank' href='https://help.penpot.app/technical-guide/configuration/#advanced-configuration'>documentation 🗗</a> for more details"
+          "default": "enable-registration disable-secure-session-cookies"
         },
         {
           "label": "Public URI",
@@ -112,8 +110,17 @@
         {
           "label": "Penpot Telemetry Enabled?",
           "name": "TELEMETRY_ENABLED",
-          "default": false,
-          "select": [true, false],
+          "select": [
+            {
+              "text": "Yes, enable telemetry",
+              "value": true,
+              "default": true
+            },
+            {
+              "text": "No, disable telemetry",
+              "value": false
+            }
+          ],
           "description": "When enabled, a periodical process will send anonymous data about this instance."
         },
         {
