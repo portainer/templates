@@ -113,12 +113,12 @@
           "select": [
             {
               "text": "Yes, enable telemetry",
-              "value": true,
+              "value": "true",
               "default": true
             },
             {
               "text": "No, disable telemetry",
-              "value": false
+              "value": "false"
             }
           ],
           "description": "When enabled, a periodical process will send anonymous data about this instance."
