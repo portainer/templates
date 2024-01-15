@@ -8,26 +8,31 @@ For more information about the template definition format and how to deploy your
 I highly recommend using [Lissy93's templates](https://github.com/Lissy93/portainer-templates).
 But if you want to use this repo's templates, you'll want to reference the following URL in the Portainer template settings:
 ```
-https://raw.githubusercontent.com/shmolf/portainer-templates/main/templates-2.0.json
+https://raw.githubusercontent.com/shmolf/portainer-templates-wip/main/templates-2.0.json
 ```
 
 ## Category List
 <!--
 Acquired by pasting the template JSON into browser DevTools, then running:
 ```js
-Array.from(new Set(json.templates.flatMap((t) => t.categories))).sort()
+console.log('- ' + Array.from(new Set(json.templates.flatMap((t) => t.categories))).sort().join('\n- '))
 ```
 -->
 - backup
 - docker
+- graphic design
+- pdf
 - photos
+- tools
 
 ## Application List
 <!--
 Acquired by pasting the template JSON into browser DevTools, then running:
 ```js
-Array.from(new Set(json.templates.map((t) => t.title))).sort()
+console.log('- ' + Array.from(new Set(json.templates.map((t) => t.title))).sort().join('\n- '))
 ```
 -->
 - Immich
+- Penpot (http)
+- Stirling PDF
 - Watchtower
