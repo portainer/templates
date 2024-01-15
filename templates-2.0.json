@@ -153,6 +153,57 @@
           "bind": "/var/run/docker.sock"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Stirling PDF",
+      "name": "stirling-pdf",
+      "categories": ["tools", "pdf"],
+      "description": "Your locally hosted one-stop-shop for all your PDF needs.",
+      "note": "To support multiple languages for OCR, per the <a target='_blank' href='https://github.com/Stirling-Tools/Stirling-PDF/blob/main/HowToUseOCR.md'>Official documentation 🗗</a>, download your Tess Data from <a target='_blank' href='https://github.com/tesseract-ocr/tessdata'>from another repo 🗗</a>. <br>Then, place said 'traineddata' files into <code>/portainer/Files/AppData/Libraries/StirlingPDF/tessdata</code> <br>For more information about login, read <a target='_blank' href='https://github.com/Stirling-Tools/Stirling-PDF?tab=readme-ov-file#prerequisites'>the official documentation 🗗</a>.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/stirling-pdf.svg",
+      "platform": "linux",
+      "image": "frooodle/s-pdf:0.18.1",
+      "ports": ["5417:8080/tcp"],
+      "restart_policy": "unless-stopped",
+      "env": [
+        {
+          "label": "PUID",
+          "name": "PUID",
+          "default": "1000"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "default": "1000"
+        },
+        {
+          "label": "Enable Login",
+          "name": "DOCKER_ENABLE_SECURITY",
+          "select": [
+            {
+              "text": "Yes, enable login",
+              "value": "true"
+            },
+            {
+              "text": "No, disable login",
+              "value": "false",
+              "default": true
+            }
+          ],
+          "description": "If you want to enable the login, you'll also need to enable login through the Config's settings.yml"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Config/StirlingPDF",
+          "container": "/configs"
+        },
+        {
+          "bind": "/portainer/Files/AppData/Libraries/StirlingPDF/tessdata",
+          "container": "/usr/share/tesseract-ocr/5/tessdata"
+        }
+      ]
     }
   ]
 }
