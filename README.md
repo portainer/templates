@@ -11,6 +11,8 @@ But if you want to use this repo's templates, you'll want to reference the follo
 https://raw.githubusercontent.com/shmolf/portainer-templates-wip/main/templates-2.0.json
 ```
 
+Any trademarks or logos used in the templates are the property of their respective owners, and are used for identification purposes only.
+
 ## Category List
 <!--
 Acquired by pasting the template JSON into browser DevTools, then running:
@@ -20,6 +22,7 @@ console.log('- ' + Array.from(new Set(json.templates.flatMap((t) => t.categories
 -->
 - backup
 - docker
+- games
 - graphic design
 - pdf
 - photos
@@ -35,4 +38,5 @@ console.log('- ' + Array.from(new Set(json.templates.map((t) => t.title))).sort(
 - Immich
 - Penpot (http)
 - Stirling PDF
+- Terraria Server
 - Watchtower
