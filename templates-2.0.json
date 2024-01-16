@@ -204,6 +204,42 @@
           "container": "/usr/share/tesseract-ocr/5/tessdata"
         }
       ]
+    },
+    {
+      "type": 1,
+      "title": "Terraria Server",
+      "name": "terraria-server",
+      "categories": ["games"],
+      "description": "Docker container for a Terraria dedicated server.",
+      "note": "Link to <a target='_blank' href='https://terraria.fandom.com/wiki/Guide:Setting_up_a_Terraria_server'>Official documentation 🗗</a> for setting up the server.",
+      "logo": "https://raw.githubusercontent.com/shmolf/portainer-templates/main/assets/logos/terraria-server.png",
+      "platform": "linux",
+      "image": "passivelemon/terraria-docker:latest",
+      "ports": ["7777:7777/tcp"],
+      "restart_policy": "unless-stopped",
+      "env": [
+        {
+          "label": "PUID",
+          "name": "PUID",
+          "default": "1000"
+        },
+        {
+          "label": "PGID",
+          "name": "PGID",
+          "default": "1000"
+        },
+        {
+          "label": "World name",
+          "name": "WORLD",
+          "default": "dockerworld"
+        }
+      ],
+      "volumes": [
+        {
+          "bind": "/portainer/Files/AppData/Libraries/StirlingPDF/tessdata",
+          "container": "/usr/share/tesseract-ocr/5/tessdata"
+        }
+      ]
     }
   ]
 }
