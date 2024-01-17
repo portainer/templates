@@ -8,7 +8,7 @@ For more information about the template definition format and how to deploy your
 I highly recommend using [Lissy93's templates](https://github.com/Lissy93/portainer-templates).
 But if you want to use this repo's templates, you'll want to reference the following URL in the Portainer template settings:
 ```
-https://raw.githubusercontent.com/shmolf/portainer-templates-wip/main/templates-2.0.json
+https://raw.githubusercontent.com/shmolf/portainer-templates/main/templates-2.0.json
 ```
 
 Any trademarks or logos used in the templates are the property of their respective owners, and are used for identification purposes only.
@@ -21,6 +21,7 @@ console.log('- ' + Array.from(new Set(json.templates.flatMap((t) => t.categories
 ```
 -->
 - backup
+- cms
 - docker
 - games
 - graphic design
@@ -35,6 +36,7 @@ Acquired by pasting the template JSON into browser DevTools, then running:
 console.log('- ' + Array.from(new Set(json.templates.map((t) => t.title))).sort().join('\n- '))
 ```
 -->
+- Cockpit
 - Immich
 - Penpot (http)
 - Stirling PDF
