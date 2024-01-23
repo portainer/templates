@@ -3,7 +3,7 @@
   "templates": [
     {
       "type": 3,
-      "title": "Immich",
+      "title": "Immich {shmolf}",
       "name": "immich",
       "categories": ["photos", "backup"],
       "description": "Self-hosted backup solution for photos and videos on mobile device.",
@@ -74,7 +74,7 @@
     },
     {
       "type": 3,
-      "title": "Penpot (http)",
+      "title": "Penpot (http) {shmolf}",
       "name": "penpot-http",
       "categories": ["graphic design"],
       "description": "Penpot is the first Open Source design and prototyping platform meant for cross-domain teams.",
@@ -138,7 +138,7 @@
     },
     {
       "type": 1,
-      "title": "Watchtower",
+      "title": "Watchtower {shmolf}",
       "name": "watchtower",
       "categories": ["docker"],
       "description": "A container-based solution for automating Docker container base image updates",
@@ -156,7 +156,7 @@
     },
     {
       "type": 1,
-      "title": "Stirling PDF",
+      "title": "Stirling PDF {shmolf}",
       "name": "stirling-pdf",
       "categories": ["tools", "pdf"],
       "description": "Your locally hosted one-stop-shop for all your PDF needs.",
@@ -207,7 +207,7 @@
     },
     {
       "type": 1,
-      "title": "Terraria Server",
+      "title": "Terraria Server {shmolf}",
       "name": "terraria-server",
       "categories": ["games"],
       "description": "Docker container for a Terraria dedicated server.",
@@ -243,7 +243,7 @@
     },
     {
       "type": 1,
-      "title": "Cockpit",
+      "title": "Cockpit {shmolf}",
       "name": "cockpit-cms",
       "categories": ["cms"],
       "description": "Cockpit is a headless CMS with an API-first approach that puts content first.",
