@@ -1305,7 +1305,7 @@
       "id": 62,
       "type": 3,
       "title": "Node-Red",
-      "description": "Node-Red, Low-code programming for event-driven applications",
+      "description": "Low-code programming for event-driven applications",
       "note": "The TZ must be in Unix Format eg America/New_York - see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones.",
       "categories": ["edge"],
       "platform": "linux",
