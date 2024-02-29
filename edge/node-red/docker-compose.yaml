@@ -4,7 +4,7 @@ services:
   node-red:
     image: nodered/node-red:latest
     environment:
-      - TZ=Europe/Amsterdam
+      - TZ=${TZ}
     ports:
       - "1880:1880"
     networks:
