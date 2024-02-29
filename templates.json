@@ -1236,6 +1236,7 @@
       "title": "OPC Router",
       "description": "No-code middleware for industrial applications The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
+      "logo": "https://store-images.s-microsoft.com/image/apps.45485.5f358ea4-e35f-478a-ab92-e85946891f86.b38fbf34-c2b9-4714-9d8a-1232c004df99.4469177b-aba0-4422-ad40-218ff1d967fb",
       "repository": {
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/opc-router/docker-compose.yml"
