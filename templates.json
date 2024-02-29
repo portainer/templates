@@ -1306,7 +1306,7 @@
       "logo": "https://avatars.githubusercontent.com/u/5375661?s=200&v=4",
       "repository": {
         "url": "https://github.com/ncresswell/portainer_templates",
-        "stackfile": "blob/v3/edge/node-red/docker-compose.yml"
+        "stackfile": "v3/edge/node-red/docker-compose.yml"
       },
       "env": [
         {
