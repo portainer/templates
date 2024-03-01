@@ -1331,7 +1331,7 @@
       "platform": "linux",
       "logo": "https://store-images.s-microsoft.com/image/apps.61965.8c5e9f22-6a18-49a8-b8b9-6632de74e76c.3c45348f-0adf-4238-b024-bb993be0b664.ccdeeb79-9767-4e92-af5a-1b56f274aa99",
       "repository": {
-        "url": "https://github.com/ncresswell/portainer_templates",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "edge/influxdb/docker-compose.yml"
       },
       "env": [
@@ -1362,7 +1362,7 @@
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
       "repository": {
-        "url": "https://github.com/ncresswell/portainer_templates",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "edge/emqx/docker-compose.yml"
       },
       "env": [
