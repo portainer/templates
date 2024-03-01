@@ -7,8 +7,8 @@ services:
     networks:
       - monitoring
     environment:
-      - GF_SECURITY_ADMIN_USER={{grafana_admin}}
-      - GF_SECURITY_ADMIN_PASSWORD={{grafana_password}}  #change the password
+      - GF_SECURITY_ADMIN_USER=${grafana_admin}
+      - GF_SECURITY_ADMIN_PASSWORD=${grafana_password}  #change the password
       - GF_INSTALL_PLUGINS=
     ports:
       - '3000:3000'
