@@ -1320,6 +1320,84 @@
           "label": "Time Zone"
         }
       ]
+    },
+    {
+      "id": 63,
+      "type": 3,
+      "title": "InfluxDB for Edge",
+      "description": "InfluxDB Time Series Data Platformm, Single Server deployment",
+      "note": "Admin Password must be at least 10 characters",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://store-images.s-microsoft.com/image/apps.61965.8c5e9f22-6a18-49a8-b8b9-6632de74e76c.3c45348f-0adf-4238-b024-bb993be0b664.ccdeeb79-9767-4e92-af5a-1b56f274aa99",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/influxdb/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "influxadmin",
+          "label": "Influx Admin Username"
+        },
+        {
+          "name": "influxadminpass",
+          "label": "Influx Admin User Password"
+        },
+        {
+          "name": "influxorg",
+          "label": "Influx Org Name"
+        },
+        {
+          "name": "influxbucket",
+          "label": "Influx Bucket Name"
+        }
+      ]
+    },
+    {
+      "id": 64,
+      "type": 3,
+      "title": "EMQX Open Source MQTT Broker, Single Broker deployment",
+      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles ",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/emqx/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
+          "label": "EMQX Dashboard Username"
+        },
+        {
+          "name": "EMQX_DASHBOARD__DEFAULT_PASSWORD",
+          "label": "EMQX Dashboard Password"
+        }
+      ]
+    },
+    {
+      "id": 65,
+      "type": 3,
+      "title": "Grafana Dashboard",
+      "description": "Multi-platform open-source interactive visualization web application",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/grafana/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "grafana_admin",
+          "label": "Grafana Dashboard Username"
+        },
+        {
+          "name": "grafana_password",
+          "label": "Grafana Dashboard Password"
+        }
+      ]
     }
   ]
 }
