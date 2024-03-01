@@ -8,8 +8,8 @@ services:
       - "8081:8081"
     environment:
       - OR_I_ACCEPT_EULA=true
-      - INITIAL_USERNAME=admin
-      - INITIAL_PASSWORD=admin
+      - INITIAL_USERNAME=${INITIAL_USERNAME}
+      - INITIAL_PASSWORD=${INITIAL_PASSWORD}
     volumes:
       - type: volume
         source: opcrouter-configdb
