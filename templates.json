@@ -1385,7 +1385,7 @@
       "platform": "linux",
       "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
       "repository": {
-        "url": "https://github.com/ncresswell/portainer_templates",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "edge/grafana/docker-compose.yml"
       },
       "env": [
