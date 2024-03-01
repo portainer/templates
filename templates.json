@@ -1352,6 +1352,29 @@
           "label": "Influx Bucket Name"
         }
       ]
+    },
+        {
+      "id": 64,
+      "type": 3,
+      "title": "EMQX Open Source MQTT Broker",
+      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles ",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
+      "repository": {
+        "url": "https://github.com/ncresswell/portainer_templates",
+        "stackfile": "edge/emqx/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
+          "label": "EMQX Dashboard Username"
+        },
+        {
+          "name": "EMQX_DASHBOARD__DEFAULT_PASSWORD",
+          "label": "EMQX Dashboard Password"
+        }
+      ]
     }
   ]
 }
