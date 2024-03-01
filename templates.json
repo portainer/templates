@@ -1324,8 +1324,8 @@
     {
       "id": 63,
       "type": 3,
-      "title": "InfluxDB",
-      "description": "InfluxDB Time Series Data Platform",
+      "title": "InfluxDB for Edge",
+      "description": "InfluxDB Time Series Data Platformm, Single Server deployment",
       "note": "Admin Password must be at least 10 characters",
       "categories": ["edge"],
       "platform": "linux",
@@ -1356,7 +1356,7 @@
         {
       "id": 64,
       "type": 3,
-      "title": "EMQX Open Source MQTT Broker",
+      "title": "EMQX Open Source MQTT Broker, Single Broker deployment",
       "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles ",
       "categories": ["edge"],
       "platform": "linux",
