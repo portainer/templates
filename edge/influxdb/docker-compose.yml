@@ -1,0 +1,31 @@
+version: '3.6'
+services:
+  influxdb:
+    image: influxdb:2.5.1-alpine
+    container_name: influxdb
+    restart: unless-stopped
+    networks:
+      - monitoring
+    ports:
+      - '8086:8086'
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+      - influxdb_config:/etc/influxdb2
+    environment:
+      - DOCKER_INFLUXDB_INIT_MODE=setup
+      - DOCKER_INFLUXDB_INIT_USERNAME=${influxadmin}
+      - DOCKER_INFLUXDB_INIT_PASSWORD=${influxadminpass}
+      - DOCKER_INFLUXDB_INIT_ORG=first-${influxorg}
+      - DOCKER_INFLUXDB_INIT_BUCKET=${influxbucket}
+    healthcheck:
+      test: "curl -f http://localhost:8086/ping"
+      interval: 5s
+      timeout: 10s
+      retries: 5
+      
+networks:
+  monitoring:
+ 
+volumes:
+  influxdb_data:
+  influxdb_config:
