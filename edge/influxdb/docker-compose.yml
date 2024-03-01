@@ -5,7 +5,7 @@ services:
     container_name: influxdb
     restart: unless-stopped
     networks:
-      - influxdb
+      - monitoring
     ports:
       - '8086:8086'
     volumes:
@@ -24,7 +24,7 @@ services:
       retries: 5
       
 networks:
-  influxdb:
+  monitoring:
  
 volumes:
   influxdb_data:
