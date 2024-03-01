@@ -1341,7 +1341,7 @@
         },
         {
           "name": "influxadminpass",
-          "label": "Influx Admin User Password (10 characters or more)"
+          "label": "Influx Admin User Password"
         },
         {
           "name": "influxorg",
