@@ -1351,7 +1351,6 @@
           "name": "influxbucket",
           "label": "Influx Bucket Name"
         }
-
       ]
     }
   ]
