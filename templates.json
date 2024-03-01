@@ -1353,7 +1353,7 @@
         }
       ]
     },
-        {
+    {
       "id": 64,
       "type": 3,
       "title": "EMQX Open Source MQTT Broker, Single Broker deployment",
@@ -1375,6 +1375,29 @@
           "label": "EMQX Dashboard Password"
         }
       ]
-    }
+    },
+    {
+      "id": 65,
+      "type": 3,
+      "title": "Grafana Dashboard",
+      "description": "Multi-platform open-source interactive visualization web application",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/1200px-Grafana_logo.svg.png",
+      "repository": {
+        "url": "https://github.com/ncresswell/portainer_templates",
+        "stackfile": "edge/grafana/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "grafana_admin",
+          "label": "Grafana Dashboard Username"
+        },
+        {
+          "name": "grafana_password",
+          "label": "Grafana Dashboard Password"
+        }
+      ]
+    },
   ]
 }
