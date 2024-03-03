@@ -1325,7 +1325,7 @@
       "id": 63,
       "type": 3,
       "title": "InfluxDB for Edge",
-      "description": "InfluxDB Time Series Data Platformm, Single Server deployment",
+      "description": "InfluxDB Time Series Data Platformm - Single Server deployment",
       "note": "Admin Password must be at least 10 characters",
       "categories": ["edge"],
       "platform": "linux",
