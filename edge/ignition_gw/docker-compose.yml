@@ -1,0 +1,24 @@
+services:
+  # Ignition Gateway
+  gateway:
+    image: inductiveautomation/ignition:8.1.8
+    ports:
+      - 8088:8088
+      - 8043:8043
+    volumes:
+      - gw-data:/usr/local/bin/ignition/data
+    environment:
+      - ACCEPT_IGNITION_EULA=Y
+      - GATEWAY_ADMIN_USERNAME=${adminuser}
+      - GATEWAY_ADMIN_PASSWORD=${adminpass}
+      - IGNITION_EDITION=standard
+      - TZ=${TZ}  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
+    command: >
+      -n ${gwname}
+      -m 1024
+      --
+      wrapper.java.initmemory=512
+      -Dignition.allowunsignedmodules=true
+ 
+volumes:
+  gw-data:
