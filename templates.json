@@ -1404,7 +1404,7 @@
       "type": 3,
       "title": "Inductive Automation - Ignition Gateway",
       "description": "Ignition Gateway is the primary software service that drives everything in Ignition - Single Server Deployment",
-      "note": "For TZ see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List"
+      "note": "For TZ see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List",
       "categories": ["edge"],
       "platform": "linux",
       "logo": "https://pbs.twimg.com/profile_images/859108636504805376/QHpq7wuh_400x400.jpg",
