@@ -15,7 +15,7 @@ services:
       - IGNITION_EDITION=${gwedition}
       - TZ=${TZ}  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
     command: >
-      -n ${gwname}
+      -n ${PORTAINER_EDGE_ID}
       -m 1024
       --
       wrapper.java.initmemory=512
