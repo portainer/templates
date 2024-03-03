@@ -1325,7 +1325,7 @@
       "id": 63,
       "type": 3,
       "title": "InfluxDB for Edge",
-      "description": "InfluxDB Time Series Data Platformm, Single Server deployment",
+      "description": "InfluxDB Time Series Data Platformm - Single Server deployment",
       "note": "Admin Password must be at least 10 characters",
       "categories": ["edge"],
       "platform": "linux",
@@ -1356,8 +1356,8 @@
     {
       "id": 64,
       "type": 3,
-      "title": "EMQX Open Source MQTT Broker, Single Broker deployment",
-      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles ",
+      "title": "EMQX Open Source MQTT Broker",
+      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles - Single Broker deployment",
       "categories": ["edge"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
@@ -1396,6 +1396,64 @@
         {
           "name": "grafana_password",
           "label": "Grafana Dashboard Password"
+        }
+      ]
+    },
+    {
+      "id": 66,
+      "type": 3,
+      "title": "Inductive Automation - Ignition Gateway",
+      "description": "Ignition Gateway is the primary software service that drives everything in Ignition - Single Server Deployment",
+      "note": "For TZ see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://pbs.twimg.com/profile_images/859108636504805376/QHpq7wuh_400x400.jpg",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/ignition_gw/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "EULA",
+          "label": "Accept Igntion EULA",
+          "select": [
+            {
+              "text": "Yes, I accept",
+              "value": "Y",
+              "default": true
+            }
+          ]
+        }, 
+        {
+          "name": "adminuser",
+          "label": "Gateway UI Admin Username"
+        },
+        {
+          "name": "adminpass",
+          "label": "Gateway UI Admin Password"
+        },
+        {
+          "name": "TZ",
+          "label": "Time Zone"
+        },
+        {
+          "name": "gwedition",
+          "label": "Gateway Edition",
+          "select": [
+            {
+              "text": "Standard",
+              "value": "standard",
+              "default": true
+            },
+                        {
+              "text": "Edge",
+              "value": "edge"
+            },
+                        {
+              "text": "Maker",
+              "value": "maker"
+            }
+          ]
         }
       ]
     }
