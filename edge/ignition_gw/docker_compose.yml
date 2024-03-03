@@ -3,8 +3,8 @@ services:
   gateway:
     image: inductiveautomation/ignition:8.1.8
     ports:
-      - 9088:8088
-      - 9043:8043
+      - 8088:8088
+      - 8043:8043
     volumes:
       - gw-data:/usr/local/bin/ignition/data
     environment:
