@@ -9,10 +9,10 @@ services:
     volumes:
       - gw-data:/usr/local/bin/ignition/data
     environment:
-      - ACCEPT_IGNITION_EULA=Y
+      - ACCEPT_IGNITION_EULA=${EULA}
       - GATEWAY_ADMIN_USERNAME=${adminuser}
       - GATEWAY_ADMIN_PASSWORD=${adminpass}
-      - IGNITION_EDITION=standard
+      - IGNITION_EDITION=${edition}
       - TZ=${TZ}  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
     command: >
       -n ${PORTAINER_EDGE_ID}
