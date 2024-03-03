@@ -1439,7 +1439,7 @@
         {
           "name": "gwname",
           "label": "Gateway Name"
-        }
+        },
         {
           "name": "gwedition",
           "label": "Gateway Edition",
