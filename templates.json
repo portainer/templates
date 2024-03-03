@@ -1414,17 +1414,6 @@
       },
       "env": [
         {
-          "name": "EULA",
-          "label": "Accept Igntion EULA",
-          "select": [
-            {
-              "text": "Yes, I accept",
-              "value": "Y",
-              "default": true
-            }
-          ]
-        },
-        {
           "name": "adminuser",
           "label": "Gateway UI Admin Username"
         },
@@ -1435,29 +1424,6 @@
         {
           "name": "TZ",
           "label": "Time Zone"
-        },
-        {
-          "name": "gwname",
-          "label": "Gateway Name"
-        },
-        {
-          "name": "gwedition",
-          "label": "Gateway Edition",
-          "select": [
-            {
-              "text": "Standard",
-              "value": "standard",
-              "default": true
-            },
-                        {
-              "text": "Edge",
-              "value": "edge"
-            },
-                        {
-              "text": "Maker",
-              "value": "maker"
-            }
-          ]
         }
       ]
     }
