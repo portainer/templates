@@ -1410,7 +1410,7 @@
       "logo": "https://pbs.twimg.com/profile_images/859108636504805376/QHpq7wuh_400x400.jpg",
       "repository": {
         "url": "https://github.com/ncresswell/portainer_templates",
-        "stackfile": "edge/ignition_gw/docker-compose.yml"
+        "stackfile": "edge/ignition_gw/docker_compose.yml"
       },
       "env": [
         {
