@@ -1356,8 +1356,8 @@
     {
       "id": 64,
       "type": 3,
-      "title": "EMQX Open Source MQTT Broker, Single Broker deployment",
-      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles ",
+      "title": "EMQX Open Source MQTT Broker",
+      "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles - Single Broker deployment",
       "categories": ["edge"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/docker-library/docs/68aa4264fa058f323993fdaceacd63a8acbbeb48/emqx/logo.svg",
