@@ -1428,6 +1428,25 @@
         {
           "name": "gwname",
           "label": "Gateway Name"
+        },
+        {
+          "name": "gwedition",
+          "label": "Gateway Edition",
+          "select": [
+            {
+              "text": "Standard",
+              "value": "standard",
+              "default": true
+            },
+                        {
+              "text": "Edge",
+              "value": "edge"
+            },
+                        {
+              "text": "Maker",
+              "value": "maker"
+            }
+          ]
         }
       ]
     }
