@@ -12,7 +12,7 @@ services:
       - ACCEPT_IGNITION_EULA=${EULA}
       - GATEWAY_ADMIN_USERNAME=${adminuser}
       - GATEWAY_ADMIN_PASSWORD=${adminpass}
-      - IGNITION_EDITION=${edition}
+      - IGNITION_EDITION=${gwedition}
       - TZ=${TZ}  # see https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
     command: >
       -n ${PORTAINER_EDGE_ID}
