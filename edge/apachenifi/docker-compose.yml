@@ -25,9 +25,9 @@ services:
     restart: unless-stopped
 
 volumes:
- nifi_database_repository:
- nifi_flowfile_repository:
- nifi_content_repository:
- nifi_provenance_repository:
- nifi_state:
- nifi_logs:
+  nifi_database_repository:
+  nifi_flowfile_repository:
+  nifi_content_repository:
+  nifi_provenance_repository:
+  nifi_state:
+  nifi_logs:
