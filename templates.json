@@ -1456,6 +1456,25 @@
           ]
         }
       ]
+    },
+    {
+      "id": 67,
+      "type": 3,
+      "title": "Timescale DB",
+      "description": "Open-source time series database developed by Timescale Inc",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://pbs.twimg.com/profile_images/1658849767865167876/hA5OXD9m_400x400.jpg",
+      "repository": {
+        "url": "https://github.com/ncresswell/templates",
+        "stackfile": "edge/timescaledb/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "pgpassword",
+          "label": "Database root password"
+        }
+      ]
     }
   ]
 }
