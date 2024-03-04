@@ -1487,7 +1487,17 @@
       "repository": {
         "url": "https://github.com/ncresswell/templates",
         "stackfile": "edge/apachenifi/docker-compose.yml"
-      }
+      },
+      "env": [
+        {
+          "name": "nifiusername",
+          "label": "Nifi UI admin username"
+        },
+        {
+          "name": "nifipassword",
+          "label": "Nifi UI admin password"
+        }
+      ]
     }
   ]
 }
