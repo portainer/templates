@@ -16,3 +16,6 @@ services:
     volumes:
       - nifi-data:/opt/nifi/nifi-1.22.0/data
     restart: unless-stopped
+
+volumes:
+  nifi-data:
