@@ -22,6 +22,7 @@ services:
       - nifi_provenance_repository:/opt/nifi/nifi-current/provenance_repository
       - nifi_state:/opt/nifi/nifi-current/state
       - nifi_logs:/opt/nifi/nifi-current/logs
+      - nifi_conf:/opt/nifi/nifi-current/conf
     restart: unless-stopped
 
 volumes:
@@ -31,3 +32,4 @@ volumes:
   nifi_provenance_repository:
   nifi_state:
   nifi_logs:
+  nifi_conf:
