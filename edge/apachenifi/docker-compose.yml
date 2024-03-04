@@ -13,6 +13,8 @@ services:
       - NIFI_WEB_HTTP_PORT=8080
       - NIFI_WEB_HTTPS_PORT=8443
       - NIFI_REMOTE_INPUT_HOST=172.0.0.1
+      - SINGLE_USER_CREDENTIALS_USERNAME=${nifiusername}
+      - SINGLE_USER_CREDENTIALS_PASSWORD=${nifipassword}
     volumes:
       - nifi-data:/opt/nifi/nifi-1.22.0/data
     restart: unless-stopped
