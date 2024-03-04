@@ -1475,29 +1475,6 @@
           "label": "Database root password"
         }
       ]
-    },
-    {
-      "id": 68,
-      "type": 3,
-      "title": "Apache NIFI",
-      "description": "Apache NiFi is an easy to use, powerful, and reliable system to process and distribute data - Single Server Deployment",
-      "categories": ["edge"],
-      "platform": "linux",
-      "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRyUilErsgYYtwSYrOY90H723YlVXcUQXuRw&usqp=CAU",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/apachenifi/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "nifiusername",
-          "label": "Nifi UI admin username"
-        },
-        {
-          "name": "nifipassword",
-          "label": "Nifi UI admin password (12+ Characters)"
-        }
-      ]
     }
   ]
 }
