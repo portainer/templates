@@ -1,0 +1,15 @@
+  nifi: 
+    image: apache/nifi:1.22.0
+    container_name: nifi
+    ports:
+      - 8080:8080 # HTTP interface
+      - 8443:8443 # HTTPS interface
+      - 514:514   # Syslog
+      - 2055:2055 # NetFlow
+    environment:
+      - NIFI_WEB_HTTP_PORT=8080
+      - NIFI_WEB_HTTPS_PORT=8443
+      - NIFI_REMOTE_INPUT_HOST=172.0.0.1
+    volumes:
+      - nifi-data:/opt/nifi/nifi-1.22.0/data
+    restart: unless-stopped
