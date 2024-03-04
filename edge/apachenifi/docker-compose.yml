@@ -15,6 +15,7 @@ services:
       - NIFI_REMOTE_INPUT_HOST=172.0.0.1
       - SINGLE_USER_CREDENTIALS_USERNAME=${nifiusername}
       - SINGLE_USER_CREDENTIALS_PASSWORD=${nifipassword}
+      - nifi_security_user_login_identity+provider='single-user-provider'
     volumes:
       - nifi_database_repository:/opt/nifi/nifi-current/database_repository
       - nifi_flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
