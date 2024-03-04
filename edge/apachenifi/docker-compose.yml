@@ -1,0 +1,36 @@
+version: '3'
+
+services:
+  nifi: 
+    image: apache/nifi:1.22.0
+    container_name: nifi
+    ports:
+      - 8080:8080 # HTTP interface
+      - 8443:8443 # HTTPS interface
+      - 514:514   # Syslog
+      - 2055:2055 # NetFlow
+    environment:
+      - NIFI_WEB_HTTP_PORT=8080
+      - NIFI_WEB_HTTPS_PORT=8443
+      - NIFI_REMOTE_INPUT_HOST=172.0.0.1
+      - SINGLE_USER_CREDENTIALS_USERNAME=${nifiusername}
+      - SINGLE_USER_CREDENTIALS_PASSWORD=${nifipassword}
+      - nifi_security_user_login_identity_provider=single-user-provider
+    volumes:
+      - nifi_database_repository:/opt/nifi/nifi-current/database_repository
+      - nifi_flowfile_repository:/opt/nifi/nifi-current/flowfile_repository
+      - nifi_content_repository:/opt/nifi/nifi-current/content_repository
+      - nifi_provenance_repository:/opt/nifi/nifi-current/provenance_repository
+      - nifi_state:/opt/nifi/nifi-current/state
+      - nifi_logs:/opt/nifi/nifi-current/logs
+      - nifi_conf:/opt/nifi/nifi-current/conf
+    restart: unless-stopped
+
+volumes:
+  nifi_database_repository:
+  nifi_flowfile_repository:
+  nifi_content_repository:
+  nifi_provenance_repository:
+  nifi_state:
+  nifi_logs:
+  nifi_conf:
