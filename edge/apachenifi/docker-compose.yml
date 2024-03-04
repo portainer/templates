@@ -16,7 +16,7 @@ services:
       - SINGLE_USER_CREDENTIALS_USERNAME=${nifiusername}
       - SINGLE_USER_CREDENTIALS_PASSWORD=${nifipassword}
     volumes:
-      - nifi-data:/opt/nifi/nifi-1.22.0/data
+      - nifi-data:/opt/nifi
     restart: unless-stopped
 
 volumes:
