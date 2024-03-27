@@ -3,7 +3,7 @@ version: "3.8"
 name: portainer-template-json
 
 services:
-  immich-server:
+  portainer-template-server:
     container_name: portainer-template-server
     image: nginx:stable-alpine
     volumes:
