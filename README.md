@@ -13,6 +13,11 @@ https://raw.githubusercontent.com/shmolf/portainer-templates/main/templates-2.0.
 
 Any trademarks or logos used in the templates are the property of their respective owners, and are used for identification purposes only.
 
+To generate the list of categories and applications, you can use the following command:
+```bash
+docker compose run app-meta
+```
+
 ## Category List
 <!--
 Acquired by pasting the template JSON into browser DevTools, then running:
@@ -36,6 +41,7 @@ Acquired by pasting the template JSON into browser DevTools, then running:
 console.log('- ' + Array.from(new Set(json.templates.map((t) => t.title))).sort().join('\n- '))
 ```
 -->
+- Asciinema
 - Cockpit
 - Immich
 - Penpot (http)

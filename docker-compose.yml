@@ -10,3 +10,10 @@ services:
       - ./templates-2.0.json:/usr/share/nginx/html/templates.json:ro
     ports:
       - 8426:80
+
+  app-meta:
+    image: python:latest
+    volumes:
+      - ./templates-2.0.json:/templates.json:ro
+      - ./app-meta.py:/app-meta.py:ro
+    command: python app-meta.py
