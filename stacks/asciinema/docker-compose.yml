@@ -1,0 +1,35 @@
+services:
+  asciinema:
+    image: ghcr.io/asciinema/asciinema-server:20231217
+    ports:
+      - '${HOST_PORT}:4000'
+    environment:
+      # created with: tr -dc A-Za-z0-9 </dev/urandom | head -c 64; echo
+      - SECRET_KEY_BASE=${SECRET_KEY}
+      - URL_HOST=${HOST_NAME}
+      - URL_PORT=${HOST_PORT}
+      - PUID=${PUID}
+      - PGID=${PGID}
+    volumes:
+      - asciinema_data:/var/opt/asciinema
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: docker.io/library/postgres:14
+    environment:
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres']
+      interval: 2s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  asciinema_data:
+  postgres_data:
