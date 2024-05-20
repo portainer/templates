@@ -1,6 +1,6 @@
 services:
   mosquitto:
-    image: registry.cedalo.com/portainer-trials/mosquitto:2.7.2
+    image: registry.cedalo.com/portainer-trials/mosquitto:2.8
     ports:
       - 1883
       - 8883
@@ -13,7 +13,7 @@ services:
        - mosquitto_config:/mosquitto/config
 
   management-center:
-    image: registry.cedalo.com/portainer-trials/management-center:2.7
+    image: registry.cedalo.com/portainer-trials/management-center:2.8
     ports:
       - 8088
     depends_on:
