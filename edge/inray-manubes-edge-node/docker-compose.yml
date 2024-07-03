@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  manubes-edge-node:
+    image: inray/manubes-edge:preview
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - manubes-data:/data
+    restart: always
+    environment:
+      ACCEPT_EULA: ${ACCEPT_EULA}
+    command: ${MANUBES_SECRET}
+
+volumes:
+  manubes-data:
