@@ -1505,6 +1505,36 @@
           ]
         }
       ]
+    },
+    {
+      "id": 69,
+      "type": 3,
+      "title": "Sideo Omni On-premises",
+      "description": "Omni is a Kubernetes management platform that simplifies the creation and management of Kubernetes clusters on any environment to provide a simple, secure, and resilient platform.",
+      "categories": ["kubernetes-deployment"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/inray-manubes.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/sidero-omni/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "TEST",
+          "label": "test secret"
+        },
+        {
+          "name": "ACCEPT_EULA",
+          "label": "Accept EULA",
+          "select": [
+            {
+              "text": "Yes, I accept",
+              "value": "true",
+              "default": true
+            }
+          ]
+        }
+      ]
     }
   ]
 }
