@@ -1520,19 +1520,72 @@
       },
       "env": [
         {
-          "name": "TEST",
-          "label": "test secret"
+          "name": "OMNI_IMG_TAG",
+          "label": "Omni version"
         },
         {
-          "name": "ACCEPT_EULA",
-          "label": "Accept EULA",
-          "select": [
-            {
-              "text": "Yes, I accept",
-              "value": "true",
-              "default": true
-            }
-          ]
+          "name": "ETCD_VOLUME_PATH",
+          "label": "ETCD Volume Path"
+        },
+        {
+          "name": "ETCD_ENCRYPTION_KEY",
+          "label": "ETCD Encryption Key"
+        },
+        {
+          "name": "TLS_CERT",
+          "label": "TLS Certificate"
+        },
+        {
+          "name": "TLS_KEY",
+          "label": "TLS Key"
+        },
+        {
+          "name": "OMNI_ACCOUNT_UUID",
+          "label": "Omni Account UUID"
+        },
+        {
+          "name": "NAME",
+          "label": "Instance Name"
+        },
+        {
+          "name": "EVENT_SINK_PORT",
+          "label": "Event Sink Port"
+        },
+        {
+          "name": "BIND_ADDR",
+          "label": "Bind Address"
+        },
+        {
+          "name": "MACHINE_API_BIND_ADDR",
+          "label": "Machine API Bind Address"
+        },
+        {
+          "name": "K8S_PROXY_BIND_ADDR",
+          "label": "K8S Proxy Bind Address"
+        },
+        {
+          "name": "ADVERTISED_API_URL",
+          "label": "Advertised API URL"
+        },
+        {
+          "name": "ADVERTISED_K8S_PROXY_URL",
+          "label": "Advertised K8s Proxy URL"
+        },
+        {
+          "name": "SIDEROLINK_ADVERTISED_API_URL",
+          "label": "Siderolink Advertised API URL"
+        },
+        {
+          "name": "SIDEROLINK_WIREGUARD_ADVERTRISED_ADDR",
+          "label": "Siderolink WireGuard Advertised Address"
+        },
+        {
+          "name": "INITIAL_USER_EMAILS",
+          "label": "Initial User Emails"
+        },
+        {
+          "name": "AUTH",
+          "label": "Authentication Configuration"
         }
       ]
     }
