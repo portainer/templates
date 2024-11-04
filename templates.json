@@ -1520,16 +1520,18 @@
       },
       "env": [
         {
-          "name": "OMNI_IMG_TAG",
-          "label": "Omni version"
+          "name": "OMNI_NAME",
+          "label": "Omni Instance Name"
         },
         {
-          "name": "ETCD_VOLUME_PATH",
-          "label": "ETCD Volume Path"
+          "name": "OMNI_IMG_TAG",
+          "label": "Omni version",
+          "default": "latest"
         },
         {
           "name": "ETCD_ENCRYPTION_KEY",
-          "label": "ETCD Encryption Key"
+          "label": "ETCD Encryption Key",
+          "description": "GPG key used for etcd encryption"
         },
         {
           "name": "TLS_CERT",
@@ -1541,51 +1543,7 @@
         },
         {
           "name": "OMNI_ACCOUNT_UUID",
-          "label": "Omni Account UUID"
-        },
-        {
-          "name": "NAME",
-          "label": "Instance Name"
-        },
-        {
-          "name": "EVENT_SINK_PORT",
-          "label": "Event Sink Port"
-        },
-        {
-          "name": "BIND_ADDR",
-          "label": "Bind Address"
-        },
-        {
-          "name": "MACHINE_API_BIND_ADDR",
-          "label": "Machine API Bind Address"
-        },
-        {
-          "name": "K8S_PROXY_BIND_ADDR",
-          "label": "K8S Proxy Bind Address"
-        },
-        {
-          "name": "ADVERTISED_API_URL",
-          "label": "Advertised API URL"
-        },
-        {
-          "name": "ADVERTISED_K8S_PROXY_URL",
-          "label": "Advertised K8s Proxy URL"
-        },
-        {
-          "name": "SIDEROLINK_ADVERTISED_API_URL",
-          "label": "Siderolink Advertised API URL"
-        },
-        {
-          "name": "SIDEROLINK_WIREGUARD_ADVERTRISED_ADDR",
-          "label": "Siderolink WireGuard Advertised Address"
-        },
-        {
-          "name": "INITIAL_USER_EMAILS",
-          "label": "Initial User Emails"
-        },
-        {
-          "name": "AUTH",
-          "label": "Authentication Configuration"
+          "label": "Omni Account ID"
         }
       ]
     }

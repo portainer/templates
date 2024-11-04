@@ -7,28 +7,41 @@ services:
     devices:
       - /dev/net/tun
     volumes:
-      - ${ETCD_VOLUME_PATH}:/_out/etcd
-      - ${ETCD_ENCRYPTION_KEY}:/omni.asc
-      - ${TLS_CERT}:/tls.crt
-      - ${TLS_KEY}:/tls.key
+      - etcd-data:/_out/etcd
+    configs:
+      - source: omni.asc
+        target: /omni.asc
+      - source: tls.crt
+        target: /tls.crt
+      - source: tls.key
+        target: /tls.key
     network_mode: "host"
     cap_add:
       - NET_ADMIN
     command: >
-      --account-id=${OMNI_ACCOUNT_UUID}
-      --name=${NAME}
+      --name=${OMNI_NAME}
+      --account-id=${OMNI_ACCOUNT_ID}
       --cert=/tls.crt
       --key=/tls.key
       --machine-api-cert=/tls.crt
       --machine-api-key=/tls.key
       --private-key-source='file:///omni.asc'
-      --event-sink-port=${EVENT_SINK_PORT}
-      --bind-addr=${BIND_ADDR}
-      --machine-api-bind-addr=${MACHINE_API_BIND_ADDR}
-      --k8s-proxy-bind-addr=${K8S_PROXY_BIND_ADDR}
-      --advertised-api-url=${ADVERTISED_API_URL}
-      --advertised-kubernetes-proxy-url=${ADVERTISED_K8S_PROXY_URL}
-      --siderolink-api-advertised-url=${SIDEROLINK_ADVERTISED_API_URL}
-      --siderolink-wireguard-advertised-addr=${SIDEROLINK_WIREGUARD_ADVERTRISED_ADDR}
-      --initial-users=${INITIAL_USER_EMAILS}
-      ${AUTH}
+      --bind-addr=0.0.0.0:8080
+      --machine-api-bind-addr=0.0.0.0:8090
+      --k8s-proxy-bind-addr=0.0.0.0:8100
+      --advertised-api-url=https://${OMNI_DOMAIN}
+      --advertised-kubernetes-proxy-url=https://kube.${OMNI_DOMAIN}
+      --siderolink-api-advertised-url=https://api.${OMNI_DOMAIN}:443
+volumes:
+  etcd-data:
+
+configs:
+  omni.asc:
+    content: |  
+      ${ETCD_ENCRYPTION_KEY}
+  tls.crt:
+    content: |
+      ${TLS_CERT}
+  tls.key:
+    content: |
+      ${TLS_KEY}
