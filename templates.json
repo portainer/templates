@@ -1515,8 +1515,8 @@
       "platform": "linux",
       "logo": "https://portainer-io-assets.sfo2.cdn.digitaloceanspaces.com/logos/sidero-omni.png",
       "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/sidero-omni/docker-compose.yml"
+        "url": "https://github.com/yajith/test-stack",
+        "stackfile": "sidero-omni/docker-compose.yml"
       },
       "env": [
         {
