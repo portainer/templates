@@ -1516,7 +1516,6 @@
         "url": "https://github.com/ncresswell/templates",
         "stackfile": "edge/anyviz/docker-compose.yml"
       }
-      ]
     }
   ]
 }
