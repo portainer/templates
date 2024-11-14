@@ -1515,7 +1515,7 @@
       "platform": "linux",
       "logo": "https://cdn.anyviz.io/img/anyviz-cloud-60.png",
       "repository": {
-        "url": "https://github.com/ncresswell/templates",
+        "url": "https://github.com/portainer/templates",
         "stackfile": "edge/anyviz/docker-compose.yml"
       }
     }
