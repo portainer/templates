@@ -3,7 +3,7 @@ version: '3'
 services:
   omni:
     container_name: omni
-    image: "ghcr.io/siderolabs/omni:${OMNI_IMG_TAG}"
+    image: "ghcr.io/siderolabs/omni:v${OMNI_VERSION}"
     devices:
       - /dev/net/tun
     volumes:
@@ -16,6 +16,11 @@ services:
       - source: tls.key
         target: /tls.key
     network_mode: "host"
+    ports:
+      - "443:443/tcp"
+      - "8090:8090/tcp"
+      - "8100:8100/tcp"
+      - "50180:50180/udp"
     cap_add:
       - NET_ADMIN
     command: >
@@ -26,15 +31,20 @@ services:
       --machine-api-cert=/tls.crt
       --machine-api-key=/tls.key
       --private-key-source='file:///omni.asc'
-      --bind-addr=0.0.0.0:8080
+      --event-sink-port=8091
+      --bind-addr=0.0.0.0:443
       --machine-api-bind-addr=0.0.0.0:8090
       --k8s-proxy-bind-addr=0.0.0.0:8100
-      --advertised-api-url=https://${OMNI_DOMAIN}
-      --advertised-kubernetes-proxy-url=https://kube.${OMNI_DOMAIN}
-      --siderolink-api-advertised-url=https://api.${OMNI_DOMAIN}:443
+      --advertised-api-url="https://${OMNI_DOMAIN_NAME}"
+      --siderolink-api-advertised-url="https://${OMNI_DOMAIN_NAME}:8090"
+      --advertised-kubernetes-proxy-url="https://${OMNI_DOMAIN_NAME}:8100"
+      --siderolink-wireguard-advertised-addr="${SIDEROLINK_WIREGUARD_ADVERTRISED_ADDR}:50180"
+      --auth-auth0-enabled=true
+      --auth-auth0-domain=${AUTH0_DOMAIN}
+      --auth-auth0-client-id=${AUTH0_CLIENT_ID}
+      --initial-users=${INITIAL_USER_EMAILS}
 volumes:
   etcd-data:
-
 configs:
   omni.asc:
     content: |  

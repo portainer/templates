@@ -1524,7 +1524,7 @@
           "label": "Omni Instance Name"
         },
         {
-          "name": "OMNI_IMG_TAG",
+          "name": "OMNI_VERSION",
           "label": "Omni version",
           "default": "latest"
         },
@@ -1542,8 +1542,28 @@
           "label": "TLS Key"
         },
         {
-          "name": "OMNI_ACCOUNT_UUID",
+          "name": "OMNI_ACCOUNT_ID",
           "label": "Omni Account ID"
+        },
+        {
+          "name": "OMNI_DOMAIN_NAME",
+          "label": "Omni Domain Name"
+        },
+        {
+          "name": "SIDEROLINK_WIREGUARD_ADVERTRISED_ADDRESS",
+          "label": "Wireguard Advertised Address"
+        },
+        {
+          "name": "INITIAL_USER_EMAILS",
+          "label": "Initial User Emails"
+        },
+        {
+          "name": "AUTH0_DOMAIN",
+          "label": "Auth0 Domain"
+        },
+        {
+          "name": "AUTH0_CLIENT_ID",
+          "label": "Auth0 Client ID"
         }
       ]
     }
