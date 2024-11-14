@@ -6,7 +6,6 @@ services:
       - "8888:8888"
     volumes:
       - anyviz_config:/etc/anyviz
-    network_mode: "host"
     cap_add:
       - NET_ADMIN
     devices:
