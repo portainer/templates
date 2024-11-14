@@ -1566,6 +1566,31 @@
           "label": "Auth0 Client ID"
         }
       ]
+    },
+    {
+      "id": 70,
+      "type": 3,
+      "title": "Nginx test",
+      "description": "Nginx test",
+      "categories": ["kubernetes-deployment"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.cdn.digitaloceanspaces.com/logos/sidero-omni.png",
+      "repository": {
+        "url": "https://github.com/yajith/test-stack",
+        "stackfile": "nginx/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "OMNI_IMG_TAG",
+          "label": "Omni version",
+          "default": "latest"
+        },
+        {
+          "name": "ETCD_ENCRYPTION_KEY",
+          "label": "ETCD Encryption Key",
+          "description": "GPG key used for etcd encryption"
+        }
+      ]
     }
   ]
 }

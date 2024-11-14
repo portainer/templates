@@ -15,7 +15,6 @@ services:
         target: /tls.crt
       - source: tls.key
         target: /tls.key
-    network_mode: "host"
     ports:
       - "443:443/tcp"
       - "8090:8090/tcp"
