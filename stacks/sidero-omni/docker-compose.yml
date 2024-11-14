@@ -3,7 +3,7 @@ version: '3'
 services:
   omni:
     container_name: omni
-    image: "ghcr.io/siderolabs/omni:v${OMNI_VERSION}"
+    image: "ghcr.io/siderolabs/omni:${OMNI_IMG_TAG}"
     devices:
       - /dev/net/tun
     volumes:
@@ -35,9 +35,9 @@ services:
       --bind-addr=0.0.0.0:443
       --machine-api-bind-addr=0.0.0.0:8090
       --k8s-proxy-bind-addr=0.0.0.0:8100
-      --advertised-api-url="https://${OMNI_DOMAIN_NAME}"
-      --siderolink-api-advertised-url="https://${OMNI_DOMAIN_NAME}:8090"
-      --advertised-kubernetes-proxy-url="https://${OMNI_DOMAIN_NAME}:8100"
+      --advertised-api-url="https://${OMNI_DOMAIN}"
+      --siderolink-api-advertised-url="https://${OMNI_DOMAIN}:8090"
+      --advertised-kubernetes-proxy-url="https://${OMNI_DOMAIN}:8100"
       --siderolink-wireguard-advertised-addr="${SIDEROLINK_WIREGUARD_ADVERTRISED_ADDR}:50180"
       --auth-auth0-enabled=true
       --auth-auth0-domain=${AUTH0_DOMAIN}

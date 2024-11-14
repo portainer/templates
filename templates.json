@@ -1524,9 +1524,9 @@
           "label": "Omni Instance Name"
         },
         {
-          "name": "OMNI_VERSION",
+          "name": "OMNI_IMG_TAG",
           "label": "Omni version",
-          "default": "latest"
+          "default": "v0.41.0"
         },
         {
           "name": "ETCD_ENCRYPTION_KEY",
@@ -1546,7 +1546,7 @@
           "label": "Omni Account ID"
         },
         {
-          "name": "OMNI_DOMAIN_NAME",
+          "name": "OMNI_DOMAIN",
           "label": "Omni Domain Name"
         },
         {
