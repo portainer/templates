@@ -1,3 +1,4 @@
+version: "2"
 services:
   cloudadapter:
     image: anyviz/cloudadapter
@@ -6,13 +7,10 @@ services:
       - "8888:8888"
     volumes:
       - anyviz_config:/etc/anyviz
-    networks:
-      anyviz_bridge:
+    network_mode: "host"
     cap_add:
       - NET_ADMIN
     devices:
       - /dev/net/tun
-networks:
-  anyviz_bridge:
 volumes:
   anyviz_config:
