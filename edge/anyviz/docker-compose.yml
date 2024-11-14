@@ -6,9 +6,13 @@ services:
       - "8888:8888"
     volumes:
       - anyviz_config:/etc/anyviz
+    networks:
+      anyviz_bridge:
     cap_add:
       - NET_ADMIN
     devices:
       - /dev/net/tun
+networks:
+  anyviz_bridge:
 volumes:
   anyviz_config:
