@@ -1,6 +1,30 @@
 {
   "version": "2",
   "templates": [
+     {
+      "type": 1,
+      "title": "Element Web",
+      "description": "A glossy Matrix collaboration client for the web.",
+      "categories": ["messaging"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/vector-im/element-web/develop/res/vector-icons/150.png",
+      "image": "vectorim/element-web",
+      "env": [
+        {
+          "name": "MATRIX_THEMES",
+          "label": "Matrix theme",
+          "default": "light",
+          "type": "container"
+        },
+        {
+          "name": "CSS_HOT_RELOAD",
+          "label": "enable CSS hot-reload",
+          "default": 1,
+          "type": "container"
+        }
+      ],
+      "ports": ["80/tcp"]
+    },
     {
       "type": 1,
       "title": "Registry",
