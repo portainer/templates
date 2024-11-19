@@ -251,13 +251,25 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "SA_PASSWORD",
         "label": "SA password"
       }
-    ]
+    ],
+    "volumes": [{"container": "/var/opt/mssql/data"}, {"container": "/var/opt/mssql/log"}]
   },
   {
     "type": 1,
@@ -274,7 +286,18 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "sa_password",
@@ -298,7 +321,18 @@
     "env": [
       {
         "name": "ACCEPT_EULA",
-        "set": "Y"
+        "label": "Accept EULA",
+        "select": [
+          {
+            "text": "Yes, I agree",
+            "value": "Y",
+            "default": true
+          },
+          {
+            "text": "No, I disagree",
+            "value": "N"
+          }
+        ]
       },
       {
         "name": "sa_password",
