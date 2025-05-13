@@ -8,11 +8,8 @@ services:
       - "8081:8081"
     volumes:
       - type: volume
-        source: opcrouter-configdb
-        target: /data/database
-      - type: volume
-        source: opcrouter-inray
-        target: /inray
+        source: opcrouter-data
+        target: /data
       - type: volume
         source: opcrouter-logs
         target: /var/log/opcrouter
