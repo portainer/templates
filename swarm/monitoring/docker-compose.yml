@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   grafana:
-    image: portainer/template-swarm-monitoring:grafana-9.5.2
+    image: grafana/grafana:10.4.18+security-01
     ports:
       - target: 3000
         published: 3000
