@@ -1517,8 +1517,9 @@
       "repository": {
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/anyviz/docker-compose.yml"
-      },
-      {
+      }
+    },
+    {
       "id": 70,
       "type": 3,
       "title": "Litmus Edge",
