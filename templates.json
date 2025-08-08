@@ -1518,6 +1518,19 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/anyviz/docker-compose.yml"
       }
+    },
+    {
+      "id": 70,
+      "type": 3,
+      "title": "Litmus Edge",
+      "description": "Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing.",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://www.gravatar.com/avatar/3c545a4e847eb960bfc9bf5bf877c979?s=120&r=g&d=404",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/litmus_edge/docker-compose.yml"
+      }
     }
   ]
 }
