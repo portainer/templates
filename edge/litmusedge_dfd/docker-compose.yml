@@ -1,0 +1,92 @@
+networks:
+  devices:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enabled_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.172.0.0/24
+
+services:
+  le:
+    image: litmusedge.azurecr.io/litmusedge-std-docker:latest
+    container_name: dfd-le
+    networks:
+      devices:
+        ipv4_address: 172.172.0.2
+    ports:
+      - "8443:443"
+      - "8086:8086"
+    restart: unless-stopped
+  simulation_servers:
+    image: litmusedge.azurecr.io/litmus/simulation_servers:latest
+    networks:
+      devices:
+        ipv4_address: 172.172.0.5
+    ports:
+      - "502-505:502-505"
+      - "4840-4843:4840-4843"
+      - "102-105:102-105"
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "50m"
+
+  mssql:
+    image: litmusedge.azurecr.io/litmus/demo_mssql:latest
+    ports:
+      - "1433:1433"
+    networks:
+      devices:
+        ipv4_address: 172.172.0.50
+    labels:
+      - networks=bridge
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+  mysql:
+    image: litmusedge.azurecr.io/litmus/demo_mysql:latest
+    ports:
+      - "3306:3306"
+    networks:
+      devices:
+        ipv4_address: 172.172.0.49
+    environment:
+      MYSQL_ROOT_PASSWORD: Demo1234
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+  grafana:
+    image: litmusedge.azurecr.io/litmus/demo_grafana:latest
+    environment:
+      HOST_IP: 172.172.0.1
+      GF_LOG_LEVEL: warn
+    ports:
+      - "3000:3000"
+    user: 0:0
+    networks:
+      devices:
+        ipv4_address: 172.172.0.51
+    labels:
+      - networks=bridge
+    restart: always
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+  template-applyer:
+    image: litmusedge.azurecr.io/litmus/template_applyer:latest
+    environment:
+      - EDGE_API_TOKEN=init
+      - EDGE_URL=172.172.0.1:8443
+      - ACTION=Apply
+      - DEPLOYMENT_METHOD=docker
+      - MSSQL_URL=172.172.0.1
+    depends_on:
+      - le
