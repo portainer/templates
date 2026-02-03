@@ -1544,6 +1544,74 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/litmusedge_dfd/docker-compose.yml"
       }
+    },
+        {
+      "id": 72,
+      "type": 3,
+      "title": "AudioMuse-AI (Jellyfin)",
+      "description": "Automatic playlist generation for Jellyfin using local sonic analysis.",
+      "note": "Requires a running Jellyfin instance. Performs analysis locally using Librosa and ONNX.",
+      "categories": [
+        "Music",
+        "AI"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI/main/screenshot/audiomuseai.png",
+      "repository": {
+        "url": "https://github.com/NeptuneHub/AudioMuse-AI",
+        "stackfile": "deployment/docker-compose.yaml"
+      }
+    },
+    {
+      "id": 73,
+      "type": 3,
+      "title": "AudioMuse-AI (Navidrome)",
+      "description": "Automatic playlist generation for Navidrome using local sonic analysis.",
+      "note": "Requires a running Navidrome instance.",
+      "categories": [
+        "Music",
+        "AI"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI/main/screenshot/audiomuseai.png",
+      "repository": {
+        "url": "https://github.com/NeptuneHub/AudioMuse-AI",
+        "stackfile": "deployment/docker-compose-navidrome.yaml"
+      }
+    },
+    {
+      "id": 74,
+      "type": 3,
+      "title": "AudioMuse-AI (Lyrion)",
+      "description": "Automatic playlist generation for Lyrion/LMS using local sonic analysis.",
+      "note": "Requires a running Lyrion/LMS instance.",
+      "categories": [
+        "Music",
+        "AI"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI/main/screenshot/audiomuseai.png",
+      "repository": {
+        "url": "https://github.com/NeptuneHub/AudioMuse-AI",
+        "stackfile": "deployment/docker-compose-lyrion.yaml"
+      }
+    },
+    {
+      "id": 75,
+      "type": 3,
+      "title": "AudioMuse-AI (Emby)",
+      "description": "Automatic playlist generation for Emby using local sonic analysis.",
+      "note": "Requires a running Emby instance.",
+      "categories": [
+        "Music",
+        "AI"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/NeptuneHub/AudioMuse-AI/main/screenshot/audiomuseai.png",
+      "repository": {
+        "url": "https://github.com/NeptuneHub/AudioMuse-AI",
+        "stackfile": "deployment/docker-compose-emby.yaml"
+      }
     }
   ]
 }
