@@ -1571,7 +1571,7 @@
       ],
       "platform": "linux",
       "logo": "https://assets.hermitstash.com/img/icons/icon-512.png",
-      "image": "ghcr.io/dotcoocoo/hermitstash:latest",
+      "image": "ghcr.io/dotcoocoo/hermitstash:1",
       "ports": [
         "3000/tcp"
       ],
@@ -1587,6 +1587,28 @@
       ],
       "env": [
         {
+          "name": "PUID",
+          "label": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "Group ID",
+          "default": "1000"
+        },
+        {
+          "name": "UMASK",
+          "label": "File permission mask",
+          "default": "022",
+          "description": "022 = 755 dirs / 644 files"
+        },
+        {
+          "name": "TZ",
+          "label": "Timezone",
+          "default": "Etc/UTC",
+          "description": "IANA timezone name, e.g. America/New_York"
+        },
+        {
           "name": "TRUST_PROXY",
           "label": "Trust Proxy",
           "default": "true",
@@ -1599,7 +1621,7 @@
           "description": "Full URL (e.g. https://files.example.com). Required for passkeys and HSTS."
         }
       ],
-      "note": "Requires --shm-size=256m for the in-memory encrypted database. After starting, visit port 3000 to complete the setup wizard.",
+      "note": "Requires --shm-size=256m for the in-memory encrypted database. Recommended runtime flags (set under Advanced container settings -> Capabilities and Runtime & Resources): cap_drop=ALL with cap_add=CHOWN,SETUID,SETGID,DAC_OVERRIDE; security_opt no-new-privileges:true; init=true. After starting, visit port 3000 to complete the setup wizard.",
       "restart_policy": "unless-stopped"
     }
   ]
