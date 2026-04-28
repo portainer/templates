@@ -1563,7 +1563,7 @@
     {
       "type": 1,
       "title": "HermitStash",
-      "description": "Post-quantum encrypted, self-hosted file uploads with ML-KEM-1024 hybrid encryption and zero plaintext on disk.",
+      "description": "Post-quantum encrypted, self-hosted file uploads. Files are sealed with ML-KEM-1024 + P-384 hybrid KEM, XChaCha20-Poly1305, and Argon2id before touching disk. Includes WebAuthn passkey auth, TOTP 2FA (HMAC-SHA-512), shareable links with expiry/download limits, S3-compatible storage backend support, and an admin panel.",
       "categories": [
         "file-sharing",
         "security",
@@ -1621,7 +1621,7 @@
           "description": "Full URL (e.g. https://files.example.com). Required for passkeys and HSTS."
         }
       ],
-      "note": "Requires --shm-size=256m for the in-memory encrypted database. Recommended runtime flags (set under Advanced container settings -> Capabilities and Runtime & Resources): cap_drop=ALL with cap_add=CHOWN,SETUID,SETGID,DAC_OVERRIDE; security_opt no-new-privileges:true; init=true. After starting, visit port 3000 to complete the setup wizard.",
+      "note": "Requires --shm-size=256m for the in-memory encrypted database. Recommended runtime flags (set under Advanced container settings -> Capabilities and Runtime & Resources): cap_drop=ALL with cap_add=CHOWN,SETUID,SETGID,DAC_OVERRIDE; security_opt no-new-privileges:true; init=true; stop_grace_period=1m. After starting, visit port 3000 to complete the setup wizard. IMPORTANT: back up /app/data/vault.key after first run — losing it makes all encrypted data unrecoverable.",
       "restart_policy": "unless-stopped"
     }
   ]
