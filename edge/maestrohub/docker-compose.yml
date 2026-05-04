@@ -1,0 +1,14 @@
+services:
+  maestrohub:
+    image: us-docker.pkg.dev/maestrohubtests/maestrohub/maestrohub-lite:latest
+    container_name: maestrohub
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+      - "1883:1883"
+      - "8083:8083"
+    volumes:
+      - maestrohub-data:/data
+
+volumes:
+  maestrohub-data:
