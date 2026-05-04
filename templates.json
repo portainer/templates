@@ -1544,6 +1544,20 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/litmusedge_dfd/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 3,
+      "title": "MaestroHub",
+      "description": "Industrial data orchestrator with a Unified Namespace, drag-and-drop pipelines, and 40+ protocol connectors. Built-in MCP server brings AI agents into your operational data stack.",
+      "note": "Welcome to MaestroHub!\n\n• Open http://&lt;host&gt;:8080 to create your admin account\n• MQTT clients can connect to &lt;host&gt;:1883 (TCP) or &lt;host&gt;:8083 (WebSocket)\n• Data persists in the maestrohub-data Docker volume — back it up before destroying the stack\n• Get started guide: https://docs.maestrohub.com/overview/get-started",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://avatars.githubusercontent.com/u/219120420?s=400&u=699c593f7490c79736e08eec580fd9af40278576&v=4",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/maestrohub/docker-compose.yml"
+      }
     }
   ]
 }
