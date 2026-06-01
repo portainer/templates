@@ -1558,6 +1558,26 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/maestrohub/docker-compose.yml"
       }
+    },
+    {
+      "type": 3,
+      "title": "Spokes",
+      "description": "Secure, self-hosted team chat with voice and video.",
+      "note": "Spokes requires a Master Password to encrypt your data.",
+      "categories": ["Communication", "Chat"],
+      "platform": "linux",
+      "logo": "https://spokes.sh/logo.png",
+      "repository": {
+        "url": "https://github.com/PCBeeQC/Spokes-Deploy",
+        "stackfile": "docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "SPOKES_MASTER_PASSWORD",
+          "label": "Master Password",
+          "description": "Create a secure Master Password used to encrypt secure channels escrow."
+        }
+      ]
     }
   ]
 }
