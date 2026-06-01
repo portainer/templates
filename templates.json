@@ -1575,8 +1575,7 @@
         {
           "name": "SPOKES_MASTER_PASSWORD",
           "label": "Master Password",
-          "description": "Create a secure Master Password used to encrypt secure channels escrow.",
-          "default": "YourSecurePassword"
+          "description": "Create a secure Master Password used to encrypt secure channels escrow."
         }
       ]
     }
