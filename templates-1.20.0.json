@@ -888,5 +888,39 @@
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
     "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
+  },
+  {
+    "type": 2,
+    "title": "EMQX Enterprise",
+    "description": "EMQX Enterprise MQTT broker cluster with core and replicant nodes",
+    "note": "Deploys an EMQX Enterprise cluster with 3 core nodes and 3 replicant nodes. Core nodes handle routing and sessions, replicant nodes handle MQTT client connections. Requires a valid EMQX license key.",
+    "categories": ["messaging"],
+    "platform": "linux",
+    "logo": "https://www.emqx.com/favicon.ico",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/emqx-enterprise/docker-compose.yml"
+    },
+    "env": [
+      {
+        "name": "EMQX_LICENSE_KEY",
+        "label": "EMQX License Key",
+        "description": "License key for EMQX Enterprise"
+      },
+      {
+        "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
+        "label": "Dashboard username",
+        "default": "admin"
+      },
+      {
+        "name": "EMQX_DASHBOARD__DEFAULT_PASSWORD",
+        "label": "Dashboard password"
+      },
+      {
+        "name": "EMQX_REPLICANT_NODES",
+        "label": "Number of replicant nodes",
+        "default": "3"
+      }
+    ]
   }
 ]

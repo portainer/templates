@@ -1,0 +1,61 @@
+services:
+  emqx-core:
+    image: emqx/emqx-enterprise:6.1.1
+    deploy:
+      replicas: 3
+      endpoint_mode: dnsrr
+      restart_policy:
+        condition: any
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18083/status"]
+      interval: 5s
+      timeout: 25s
+      retries: 5
+    networks:
+      emqx_bridge:
+    environment:
+      - EMQX_NODE__DB_ROLE=core
+      - EMQX_CLUSTER__DISCOVERY_STRATEGY=dns
+      - EMQX_CLUSTER__DNS__RECORD_TYPE=a
+      - EMQX_CLUSTER__DNS__NAME=emqx-core
+      - EMQX_DASHBOARD__DEFAULT_USERNAME=${EMQX_DASHBOARD__DEFAULT_USERNAME}
+      - EMQX_DASHBOARD__DEFAULT_PASSWORD=${EMQX_DASHBOARD__DEFAULT_PASSWORD}
+      - EMQX_LICENSE__KEY={{EMQX_LICENSE_KEY}}
+    volumes:
+      - emqx_core_data:/opt/emqx/data
+
+  emqx-replicant:
+    image: emqx/emqx-enterprise:6.1.1
+    deploy:
+      replicas: ${EMQX_REPLICANT_NODES:-3}
+      restart_policy:
+        condition: any
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18083/status"]
+      interval: 5s
+      timeout: 25s
+      retries: 5
+    networks:
+      emqx_bridge:
+    environment:
+      - EMQX_NODE__DB_ROLE=replicant
+      - EMQX_CLUSTER__DISCOVERY_STRATEGY=dns
+      - EMQX_CLUSTER__DNS__RECORD_TYPE=a
+      - EMQX_CLUSTER__DNS__NAME=emqx-core
+      - EMQX_LICENSE__KEY={{EMQX_LICENSE_KEY}}
+    ports:
+      - 1883:1883
+      - 8083:8083
+      - 8084:8084
+      - 8883:8883
+      - 18083:18083
+    volumes:
+      - emqx_replicant_data:/opt/emqx/data
+
+networks:
+  emqx_bridge:
+    driver: overlay
+
+volumes:
+  emqx_core_data:
+  emqx_replicant_data:
