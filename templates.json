@@ -1885,7 +1885,7 @@
       "categories": ["database"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
-      "image": "ghcr.io/libredb/libredb-studio:v0.9.27",
+      "image": "ghcr.io/libredb/libredb-studio:0.9.27",
       "ports": ["3000/tcp"],
       "env": [
         {
@@ -1909,6 +1909,18 @@
         {
           "name": "JWT_SECRET",
           "label": "JWT secret (min 32 chars)"
+        },
+        {
+          "name": "STORAGE_PROVIDER",
+          "label": "Storage provider",
+          "default": "sqlite",
+          "preset": true
+        },
+        {
+          "name": "STORAGE_SQLITE_PATH",
+          "label": "SQLite path",
+          "default": "/app/data/libredb-storage.db",
+          "preset": true
         }
       ],
       "volumes": [
