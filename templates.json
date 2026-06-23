@@ -857,7 +857,7 @@
     ],
     "platform": "linux",
     "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
-    "image": "ghcr.io/libredb/libredb-studio:v0.9.13",
+    "image": "ghcr.io/libredb/libredb-studio:v0.9.27",
     "env": [
       {
         "name": "ADMIN_EMAIL",
