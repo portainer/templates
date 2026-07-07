@@ -1881,6 +1881,7 @@
       "type": 1,
       "title": "Cloudflared-web",
       "description": "Cloudflared-web is a docker image that packages both cloudflared cli and a simple Web UI to easily start or stop remotely-managed Cloudflare tunnel.",
+      "categories": ["Tools", "Networking", "Tunnel"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/WisdomSky/Cloudflared-web/refs/heads/main/app/frontend/public/cloudflare.ico",
       "image": "wisdomsky/cloudflared-web:latest",
