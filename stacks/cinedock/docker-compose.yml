@@ -1,0 +1,25 @@
+services:
+  cinedock:
+    image: ghcr.io/cinedock/cinedock:4.1.6
+    restart: unless-stopped
+    environment:
+      CONFIG_DIR: /config
+      PORT: "8945"
+      TMDB_API_KEY: ${TMDB_API_KEY:-}
+    ports:
+      - "${CINEDOCK_PORT:-8945}:8945"
+    volumes:
+      - cinedock-config:/config
+    healthcheck:
+      test:
+        - CMD
+        - python
+        - -c
+        - "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8945/', timeout=5)"
+      interval: 30s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+
+volumes:
+  cinedock-config:

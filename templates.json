@@ -1875,6 +1875,31 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 77,
+      "type": 3,
+      "title": "CineDock",
+      "description": "A cinematic, television-first interface for the Emby, Jellyfin or Plex server you already run.",
+      "note": "After deployment, open http://&lt;host&gt;:&lt;CINEDOCK_PORT&gt; (8945 by default) and follow CineDock's setup wizard to connect your existing media server. CineDock does not scan, copy or change media files. The TMDB API key is optional.",
+      "categories": ["media"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/cinedock/unraid-templates/main/cinedock-icon.png",
+      "env": [
+        {
+          "name": "CINEDOCK_PORT",
+          "label": "Published web port",
+          "default": "8945"
+        },
+        {
+          "name": "TMDB_API_KEY",
+          "label": "TMDB API key (optional)"
+        }
+      ],
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/cinedock/docker-compose.yml"
+      }
     }
   ]
 }
