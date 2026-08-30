@@ -1875,6 +1875,57 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 3,
+      "title": "systemprompt",
+      "description": "Self-owned AI control plane: governance gateway for Claude, OpenAI, and Gemini with policy checks, audit, rate limits, and MCP orchestration. Bundles Postgres.",
+      "note": "Set at least one AI provider key or the gateway will not boot. First boot runs migrations and a publish pipeline; allow several minutes before the healthcheck passes. Optionally set EXTERNAL_URL to the public URL you will serve it on.",
+      "categories": ["AI", "Tools"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/systempromptio/systemprompt-template/main/storage/files/images/icon-256.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/systemprompt/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "Postgres password",
+          "description": "Set before first deploy; the database volume is initialised with it."
+        },
+        {
+          "name": "ANTHROPIC_API_KEY",
+          "label": "Anthropic API key",
+          "description": "At least one provider key is required (leave others blank).",
+          "default": ""
+        },
+        {
+          "name": "OPENAI_API_KEY",
+          "label": "OpenAI API key",
+          "description": "Optional.",
+          "default": ""
+        },
+        {
+          "name": "GEMINI_API_KEY",
+          "label": "Gemini API key",
+          "description": "Optional.",
+          "default": ""
+        },
+        {
+          "name": "EXTERNAL_URL",
+          "label": "External URL",
+          "description": "Public URL of this deployment (e.g. https://gateway.example.com). Optional; used for API URL + CORS.",
+          "default": ""
+        },
+        {
+          "name": "HTTP_PORT",
+          "label": "HTTP port",
+          "description": "Host port to publish the gateway on.",
+          "default": "8080"
+        }
+      ]
     }
   ]
 }
