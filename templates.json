@@ -1165,79 +1165,6 @@
       "id": 55,
       "type": 3,
       "categories": ["edge"],
-      "title": "Softing EdgeConnector modbus",
-      "description": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "note": "Connect Modbus TCP Sensors/PLCs and provide the data via OPC UA and MQTT",
-      "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/softing-edgeconnector-modbus/docker-compose.yml"
-      }
-    },
-    {
-      "id": 56,
-      "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector 840D",
-      "description": "Access Siemens SINUMERIK 840D sl/pl controllers and provide data via OPC UA and MQTT",
-      "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/softing-edgeconnector-840d/docker-compose.yml"
-      }
-    },
-    {
-      "id": 57,
-      "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector Siemens",
-      "description": "Connect Siemens SIMATIC S7-300/400/1200/1500 PLCs and provide the data via OPC UA and MQTT",
-      "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/softing-edgeconnector-siemens/docker-compose.yml"
-      }
-    },
-    {
-      "id": 58,
-      "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector FANUC CNC",
-      "description": "Connect FANUC CNCs and provide the data via OPC UA and MQTT",
-      "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/softing-edgeconnector-fanuc-cnc/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "TZ",
-          "label": "TZ"
-        }
-      ]
-    },
-    {
-      "id": 59,
-      "type": 3,
-      "categories": ["edge"],
-      "title": "Softing EdgeConnector Aggregator",
-      "description": "Offers a powerful OPC UA aggregation service which provides data via OPC UA, as well as MQTT",
-      "logo": "https://www.gravatar.com/avatar/c7d3730588d3f501d6753aa22a731bc0?s=80&r=g&d=404",
-      "repository": {
-        "url": "https://github.com/portainer/templates",
-        "stackfile": "edge/softing-edgeconnector-aggregator/docker-compose.yml"
-      },
-      "env": [
-        {
-          "name": "TZ",
-          "label": "TZ"
-        }
-      ]
-    },
-    {
-      "id": 60,
-      "type": 3,
-      "categories": ["edge"],
       "title": "OPC Router",
       "description": "No-code middleware for industrial applications The OPC Router connects PLCs, PCS, SCADA, MES, SQL databases and servers, label printers, e-mail servers and erp-systems via OPC UA, MQTT, REST, CSV and many others without any programming effort",
       "note": "More information about the <a href=\"https://www.opc-router.com/terms-of-use-and-eula/?utm_source=DockerHub_runtime&utm_medium=click&utm_campaign=TermsOfUseAndEula\" target=\"_blank\">EULA</a>.",
@@ -1269,7 +1196,7 @@
       ]
     },
     {
-      "id": 61,
+      "id": 56,
       "type": 3,
       "title": "Pro Mosquitto with Management Center",
       "description": "Commercial-grade Mosquitto MQTT broker with Management Center",
@@ -1302,7 +1229,7 @@
       ]
     },
     {
-      "id": 62,
+      "id": 57,
       "type": 3,
       "title": "Node-Red",
       "description": "Low-code programming for event-driven applications",
@@ -1322,7 +1249,7 @@
       ]
     },
     {
-      "id": 63,
+      "id": 58,
       "type": 3,
       "title": "InfluxDB for Edge",
       "description": "InfluxDB Time Series Data Platformm - Single Server deployment",
@@ -1354,7 +1281,7 @@
       ]
     },
     {
-      "id": 64,
+      "id": 59,
       "type": 3,
       "title": "EMQX Open Source MQTT Broker",
       "description": "Open-source MQTT broker for IoT, IIoT, and connected vehicles - Single Broker deployment",
@@ -1377,7 +1304,7 @@
       ]
     },
     {
-      "id": 65,
+      "id": 60,
       "type": 3,
       "title": "Grafana Dashboard",
       "description": "Multi-platform open-source interactive visualization web application",
@@ -1400,7 +1327,7 @@
       ]
     },
     {
-      "id": 66,
+      "id": 61,
       "type": 3,
       "title": "Inductive Automation - Ignition Gateway",
       "description": "Ignition Gateway is the primary software service that drives everything in Ignition - Single Server Deployment",
@@ -1458,7 +1385,7 @@
       ]
     },
     {
-      "id": 67,
+      "id": 62,
       "type": 3,
       "title": "Timescale DB",
       "description": "Open-source time series database developed by Timescale Inc",
@@ -1477,7 +1404,7 @@
       ]
     },
     {
-      "id": 68,
+      "id": 63,
       "type": 3,
       "title": "Manubes Edge Node",
       "description": "High-performance cloud platform for industrial production management. Manubes is a no-code solution that is used to structure, monitor and control production data, systems and processes in the cloud.",
@@ -1507,7 +1434,7 @@
       ]
     },
     {
-      "id": 69,
+      "id": 64,
       "type": 3,
       "title": "Anyviz Cloud Adaptor",
       "description": "The cloud adapter connects local devices via OPC-UA, Modbus, Siemens, Beckhoff ADS, EtherNet/IP, M-Bus and BACnet to the AnyViz Cloud.",
@@ -1520,7 +1447,7 @@
       }
     },
     {
-      "id": 70,
+      "id": 65,
       "type": 3,
       "title": "Litmus Edge",
       "description": "Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing.",
@@ -1533,7 +1460,7 @@
       }
     },
     {
-      "id": 71,
+      "id": 66,
       "type": 3,
       "title": "Litmus Edge Digital Factory Demo",
       "description": "Demo System for Litmus Edge. Litmus Edge is an edge data platform that enables industrial AI at scale. It connects, processes, and analyzes real-time OT data at the edge to power smart manufacturing. Note: Requires 5GB Disk Space / 3GB RAM available on the Host for deployment to succeed.",
@@ -1546,7 +1473,7 @@
       }
     },
     {
-      "id": 72,
+      "id": 67,
       "type": 2,
       "title": "Fuuz In-House Trial",
       "description": "Deploy the Fuuz AI-driven Industrial Intelligence Platform. Unify manufacturing operations across MES, WMS, CMMS, and Quality with built-in DataOps integration, rapid application development, and an event-native architecture — or build your own custom manufacturing applications.",
@@ -1765,7 +1692,7 @@
       ]
     },
     {
-      "id": 73,
+      "id": 68,
       "type": 1,
       "title": "Fuuz Device Gateway",
       "description": "A secure gateway that connects on-premise devices, PLCs, and data sources to the Fuuz Cloud for seamless, real-time integration.",
@@ -1850,7 +1777,7 @@
       ]
     },
     {
-      "id": 74,
+      "id": 69,
       "type": 3,
       "title": "MaestroHub",
       "description": "Industrial data orchestrator with a Unified Namespace, drag-and-drop pipelines, and 40+ protocol connectors. Built-in MCP server brings AI agents into your operational data stack.",
@@ -1864,7 +1791,24 @@
       }
     },
     {
-      "id": 75,
+      "id": 70,
+      "type": 3,
+      "title": "Softing SDEX Suite",
+      "description": "Connect PLCs and CNCs from multiple manufacturers and provide their industrial data to IT applications via OPC UA and MQTT.",
+      "note": "Deploys the SDEX Suite container with basic configurations.",
+      "categories": ["edge"],
+      "platform": "linux",
+      "logo": "https://portainer-io-assets.sfo2.digitaloceanspaces.com/logos/softing.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "edge/sdex-suite/docker-compose.yml"
+      },
+      "env": [
+        { "name": "TZ", "label": "Timezone", "description": "TZ with format \"America/New_York\"" }
+      ]
+    },
+    {
+      "id": 71,
       "type": 3,
       "title": "SORBA SDE",
       "description": "The SORBA Smart Data Engine (SDE) is an industrial data collection/gateway device capable of Advanced Edge Analytics & Machine Learning Edge Processing. SORBA-SDE is equipped with multiple communication driver/protocol applicable to the industrial market. The SORBA-SDE is a sensor/hardware agnostic device that serves as your point & click gateway capable of talking to multiple devices in real-time. The SDE provides easy access to equipment for troubleshooting and remote programming support for PLCs & HMIs utilizing a hassle-free easy, set-up approach to your assets.",
