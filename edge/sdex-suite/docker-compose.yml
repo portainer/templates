@@ -1,0 +1,15 @@
+version: "3.8"
+services:
+    sdex_beta:
+        image: softingindustrial/sdex-suite
+        restart: always
+        ports:
+            - 443:443
+            - 4897:4897
+        volumes:
+            - config:/config
+            - mqtt-config:/mqtt
+
+volumes:
+  config: {}
+  mqtt-config: {}
