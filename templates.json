@@ -1875,6 +1875,59 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 1,
+      "title": "LibreDB Studio",
+      "description": "Modern, AI-powered open-source SQL IDE. Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB, Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino, Druid and more directly from your browser.",
+      "note": "On first launch, log in with ADMIN_EMAIL and ADMIN_PASSWORD. Data is stored in a persistent volume at /app/data.",
+      "categories": ["database"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
+      "image": "ghcr.io/libredb/libredb-studio:0.14.0",
+      "ports": ["3000/tcp"],
+      "env": [
+        {
+          "name": "ADMIN_EMAIL",
+          "label": "Admin email",
+          "default": "admin@libredb.org"
+        },
+        {
+          "name": "ADMIN_PASSWORD",
+          "label": "Admin password"
+        },
+        {
+          "name": "USER_EMAIL",
+          "label": "User email",
+          "default": "user@libredb.org"
+        },
+        {
+          "name": "USER_PASSWORD",
+          "label": "User password"
+        },
+        {
+          "name": "JWT_SECRET",
+          "label": "JWT secret (min 32 chars)"
+        },
+        {
+          "name": "STORAGE_PROVIDER",
+          "label": "Storage provider",
+          "default": "sqlite",
+          "preset": true
+        },
+        {
+          "name": "STORAGE_SQLITE_PATH",
+          "label": "SQLite path",
+          "default": "/app/data/libredb-storage.db",
+          "preset": true
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/app/data"
+        }
+      ]
     }
   ]
 }
