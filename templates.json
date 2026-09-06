@@ -1880,12 +1880,12 @@
       "id": 76,
       "type": 1,
       "title": "LibreDB Studio",
-      "description": "Modern, AI-powered open-source SQL IDE. Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB and Redis directly from your browser.",
+      "description": "Modern, AI-powered open-source SQL IDE. Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, MongoDB, Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino, Druid and more directly from your browser.",
       "note": "On first launch, log in with ADMIN_EMAIL and ADMIN_PASSWORD. Data is stored in a persistent volume at /app/data.",
       "categories": ["database"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
-      "image": "ghcr.io/libredb/libredb-studio:0.9.27",
+      "image": "ghcr.io/libredb/libredb-studio:0.14.0",
       "ports": ["3000/tcp"],
       "env": [
         {
