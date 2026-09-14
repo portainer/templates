@@ -1,6 +1,6 @@
 services:
   maestrohub:
-    image: us-docker.pkg.dev/maestrohubtests/maestrohub/maestrohub-lite:latest
+    image: maestrohub/lite:latest
     container_name: maestrohub
     restart: unless-stopped
     ports:

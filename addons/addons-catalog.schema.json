@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://portainer.io/schemas/addons-catalog.schema.json",
+  "title": "Portainer addon catalog",
+  "description": "Catalog of installable Portainer addons. Each entry carries the metadata management views and the app switcher need, plus the path and in-cluster service the /addons reverse-proxy gateway routes to.",
+  "type": "object",
+  "required": ["addons"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "addons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "displayName",
+          "shortDescription",
+          "description",
+          "helmChartRepository",
+          "icon",
+          "path",
+          "serviceUrl",
+          "healthCheckPath"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Stable machine identifier for the addon, e.g. portal-template."
+          },
+          "displayName": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Human-readable name shown to users and used for install."
+          },
+          "shortDescription": {
+            "type": "string",
+            "minLength": 1,
+            "description": "One-line tagline shown in the app switcher, where space is tight. Keep it short; the full description is used in management views."
+          },
+          "description": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Full human-readable summary of what the addon does, shown in management views."
+          },
+          "helmChartRepository": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Helm chart repository the addon is installed from."
+          },
+          "icon": {
+            "type": "string",
+            "minLength": 1,
+            "description": "Icon used in management views and the app switcher."
+          },
+          "path": {
+            "type": "string",
+            "pattern": "^/addons/[^/]+$",
+            "description": "URL path the gateway routes to this addon, e.g. /addons/portal-template."
+          },
+          "serviceUrl": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://",
+            "description": "Base URL of the addon's in-cluster service, addressed as <service>.portainer-addon-<id>.svc.cluster.local — the Helm release always installs into the Portainer-owned portainer-addon-<id> namespace."
+          },
+          "healthCheckPath": {
+            "type": "string",
+            "pattern": "^/",
+            "description": "Path, appended to serviceUrl, that Portainer probes for the addon's health. Must be a dedicated readiness endpoint returning 2xx only when the addon is ready to serve (convention: /readyz), never a UI/catch-all route."
+          }
+        }
+      }
+    }
+  }
+}

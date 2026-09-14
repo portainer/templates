@@ -1,0 +1,27 @@
+{
+  "$schema": "./addons-catalog.schema.json",
+  "addons": [
+    {
+      "id": "portal-template",
+      "displayName": "Portal Template",
+      "description": "An example portal showcasing the Portainer add-on integration.",
+      "shortDescription": "Example Portainer add-on portal",
+      "helmChartRepository": "oci://ghcr.io/portainer/charts/portal-template",
+      "icon": "/assets/addons/portal-template.png",
+      "path": "/addons/portal-template",
+      "serviceUrl": "http://portal-template.portainer-addon-portal-template.svc.cluster.local",
+      "healthCheckPath": "/readyz"
+    },
+    {
+      "id": "portainer-run",
+      "displayName": "Portainer-Run",
+      "description": "A governed, self-service deployment portal for Kubernetes, backed by Portainer Business Edition. Portainer-Run sits between the people who build applications with AI coding tools and the Kubernetes infrastructure those applications need to run on.",
+      "shortDescription": "Drag'n'drop deployment for Apps",
+      "helmChartRepository": "oci://ghcr.io/portainer/charts/portainer-run",
+      "icon": "/assets/addons/portainer-run.svg",
+      "path": "/addons/portainer-run",
+      "serviceUrl": "http://portainer-run.portainer-addon-portainer-run.svc.cluster.local",
+      "healthCheckPath": "/healthz"
+    }
+  ]
+}
