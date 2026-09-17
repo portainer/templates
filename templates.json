@@ -1885,7 +1885,7 @@
       "categories": ["database"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
-      "image": "ghcr.io/libredb/libredb-studio:0.15.0",
+      "image": "ghcr.io/libredb/libredb-studio:0.16.0",
       "ports": ["3000/tcp"],
       "env": [
         {
