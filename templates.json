@@ -1881,11 +1881,11 @@
       "type": 1,
       "title": "LibreDB Studio",
       "description": "Open-source SQL IDE in the browser. Query PostgreSQL, MySQL, Oracle, SQL Server, SQLite, libSQL, DuckDB, MongoDB, Redis, Couchbase, ClickHouse, Elasticsearch, OpenSearch, Cassandra, Trino and Druid without installing a client on every machine.",
-      "note": "Leave the admin password blank and the container log prints a generated one on first start. Set it yourself to choose your own. The volume at /app/data holds the database file and the generated credentials, so keep it when you recreate the container.",
+      "note": "Leave the admin password and the JWT secret blank. The container generates both on first start and prints the admin password once to its log. A JWT secret shorter than 32 characters makes the container exit at boot, so blank is safer than a short value. The JWT secret also encrypts saved connection passwords, so do not reuse one from anywhere else. The volume at /app/data holds the database file and the generated credentials, so keep it when you recreate the container.",
       "categories": ["database"],
       "platform": "linux",
       "logo": "https://raw.githubusercontent.com/libredb/libredb-studio/main/public/logo.svg",
-      "image": "ghcr.io/libredb/libredb-studio:0.16.0",
+      "image": "ghcr.io/libredb/libredb-studio:0.16.1",
       "ports": ["3000/tcp"],
       "env": [
         {
@@ -1920,6 +1920,12 @@
           "name": "STORAGE_SQLITE_PATH",
           "label": "SQLite path",
           "default": "/app/data/libredb-storage.db",
+          "preset": true
+        },
+        {
+          "name": "AUTH_COOKIE_SECURE",
+          "label": "Send the auth cookie over plain HTTP",
+          "default": "false",
           "preset": true
         }
       ],
