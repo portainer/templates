@@ -1875,6 +1875,67 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 1,
+      "title": "SeerrNG",
+      "description": "Self-hosted media requests and discovery across movies, TV, music, ebooks, and audiobooks.",
+      "note": "Open http://{IP}:5055 after startup and complete the first-run setup. Persist /app/config.",
+      "categories": ["media"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/snapetech/seerrng/main/public/android-chrome-512x512.png",
+      "image": "docker.io/snapetech/seerrng:v3.27.1",
+      "ports": ["5055:5055/tcp", "5056:5056/tcp"],
+      "env": [
+        {"name": "LOG_LEVEL", "default": "info", "preset": true},
+        {"name": "PORT", "default": "5055", "preset": true}
+      ],
+      "volumes": [{"container": "/app/config"}]
+    },
+    {
+      "id": 77,
+      "type": 1,
+      "title": "BookshelfNG",
+      "description": "Ebook and audiobook collection manager with Readarr-compatible automation and Hardcover metadata.",
+      "note": "Open http://{IP}:8787 after startup. Persist /config and mount /books and /downloads for library automation.",
+      "categories": ["media", "books"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/snapetech/bookshelfng/main/Logo/512.png",
+      "image": "docker.io/snapetech/bookshelfng:hardcover-v0.4.21.37",
+      "ports": ["8787:8787/tcp"],
+      "volumes": [
+        {"container": "/config"},
+        {"container": "/books"},
+        {"container": "/downloads"}
+      ]
+    },
+    {
+      "id": 78,
+      "type": 1,
+      "title": "slskdN",
+      "description": "AGPL-3.0 Soulseek client with discovery, downloads, library sharing, DHT, and optional mesh networking.",
+      "note": "Open http://{IP}:5030 after startup. Forward TCP 50300 for incoming Soulseek traffic; UDP 50300 is optional for DHT or mesh.",
+      "categories": ["media", "music", "p2p"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/snapetech/slskdn/main/src/web/public/logo512.png",
+      "image": "docker.io/snapetech/slskdn:2026092517-slskdn.325",
+      "ports": ["5030:5030/tcp", "50300:50300/tcp", "50300:50300/udp"],
+      "env": [
+        {"name": "SLSKD_HTTP_ADDRESS", "default": "0.0.0.0", "preset": true},
+        {"name": "SLSKD_HTTP_PORT", "default": "5030", "preset": true},
+        {"name": "SLSKD_SLSK_LISTEN_PORT", "default": "50300", "preset": true},
+        {"name": "SLSKD_APP_DIR", "default": "/app", "preset": true},
+        {"name": "SLSKD_DOWNLOADS_DIR", "default": "/downloads", "preset": true},
+        {"name": "SLSKD_SHARED_DIR", "default": "/music", "preset": true},
+        {"name": "SLSKD_SLSK_USERNAME", "label": "Soulseek username"},
+        {"name": "SLSKD_SLSK_PASSWORD", "label": "Soulseek password"}
+      ],
+      "volumes": [
+        {"container": "/app"},
+        {"container": "/downloads"},
+        {"container": "/music"}
+      ]
     }
   ]
 }
