@@ -1,0 +1,76 @@
+# DarkMoon (open source CLI) — Portainer stack
+# ---------------------------------------------------------------------------
+# This is the GPL-3.0 OPEN SOURCE DarkMoon: a terminal-driven (TUI) autonomous
+# AI pentest toolbox. It is NOT the DarkMoon Pro web dashboard and it does NOT
+# expose a browser GUI. You drive it from the `opencode` container's console
+# ("Console" / "Exec" in Portainer, or `docker attach opencode`).
+#
+# HONEST PRIVILEGE NOTICE — this stack needs high host privileges to do its job
+# (scan networks and orchestrate tools). Only deploy it on a host you control:
+#   * /var/run/docker.sock is mounted into both containers  -> root-equivalent
+#     control of the Docker host.
+#   * the `darkmoon` service runs with network_mode: host   -> full host network
+#     access (needed for LAN scanning); port 9222 (Chrome DevTools, used by the
+#     browser tool) is therefore reachable directly on the host.
+#   * cap_add NET_RAW / NET_ADMIN                            -> raw sockets for
+#     nmap-style scanning.
+#   * containers run as root (user "0:0").
+#
+# LLM PROVIDER — DarkMoon needs a model. This stack is preset for a CLOUD
+# provider (Portainer prompts for provider / model / API key). To use a LOCAL
+# model (Ollama, llama.cpp) or an on-prem Anthropic-compatible endpoint instead,
+# edit this stack's environment after deploy — see docs/portainer.md.
+# ---------------------------------------------------------------------------
+
+name: darkmoon-stack
+
+volumes:
+  darkmoon_settings:
+  darkmoon_reports:
+  darkmoon_sessions:
+  darkmoon_workflows:
+
+services:
+
+  darkmoon:
+    image: ascit/darkmoon:latest
+    pull_policy: always
+    container_name: darkmoon
+    user: "0:0"
+    network_mode: "host"
+
+    environment:
+      - DM_MODE=default
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+
+    cap_add:
+      - NET_RAW
+      - NET_ADMIN
+
+    restart: unless-stopped
+
+  opencode:
+    image: ascit/opencode-darkmoon:latest
+    pull_policy: always
+    container_name: opencode
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+    environment:
+      - TERM=xterm-256color
+      - LANG=C.UTF-8
+      # Cloud LLM provider (mode [1] of install.sh). Set via Portainer prompts.
+      - OPENROUTER_PROVIDER=${OPENROUTER_PROVIDER:-anthropic}
+      - OPENCODE_MODEL=${OPENCODE_MODEL:-claude-opus-4-6}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY:-}
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - darkmoon_settings:/root/.config/opencode/
+      - darkmoon_settings:/root/.local/share/opencode/
+      - darkmoon_reports:/root/.local/share/opencode/reports/
+      - darkmoon_sessions:/root/.local/share/opencode/sessions/
+      - darkmoon_workflows:/opt/darkmoon/mcp/server/src/tools/workflows/
