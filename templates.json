@@ -1875,6 +1875,41 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 3,
+      "title": "DarkMoon (open source CLI)",
+      "description": "Open source (GPL-3.0) autonomous AI penetration testing toolbox. An LLM orchestrates specialist agents and offensive tools over MCP, can run on a local model, and proves each finding with a real exploit. This is the terminal-driven (TUI) open source engine, not the DarkMoon Pro web dashboard: after deploy, open the console of the 'opencode' container to drive it.",
+      "note": "PRIVILEGED STACK - deploy only on a host you control. It mounts /var/run/docker.sock into both containers (root-equivalent host control), runs the scanner with network_mode host and NET_RAW/NET_ADMIN capabilities (for LAN scanning; Chrome DevTools port 9222 is exposed on the host), and runs as root. It needs an LLM: this template is preset for a cloud provider (fill provider, model and API key below); for a local model (Ollama, llama.cpp) or an on-prem Anthropic-compatible endpoint, edit the stack environment after deploy. OSS/Pro note: the web dashboard and the remediation-to-PR agent are DarkMoon Pro and are NOT part of this open source stack. Docs: https://github.com/ASCIT31/darkmoon-cloud-deploy/blob/master/docs/portainer.md",
+      "categories": [
+        "Security"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/ASCIT31/Dark-Moon/master/docs/pics/logo_blue.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/darkmoon/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "OPENROUTER_PROVIDER",
+          "label": "LLM provider",
+          "description": "Cloud provider name, e.g. anthropic, openai or openrouter.",
+          "default": "anthropic"
+        },
+        {
+          "name": "OPENCODE_MODEL",
+          "label": "Model name",
+          "description": "Model to use, e.g. claude-opus-4-6, gpt-4o, or any OpenRouter model id.",
+          "default": "claude-opus-4-6"
+        },
+        {
+          "name": "OPENROUTER_API_KEY",
+          "label": "API key",
+          "description": "API key for the chosen provider."
+        }
+      ]
     }
   ]
 }
