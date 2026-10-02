@@ -11,6 +11,39 @@
       "path": "/addons/portainer-run",
       "serviceUrl": "http://portainer-run.portainer-addon-portainer-run.svc.cluster.local",
       "healthCheckPath": "/healthz"
+    },
+    {
+      "id": "portainer-idp",
+      "displayName": "Portainer-IDP (Pre-release)",
+      "description": "A self-service developer portal for Kubernetes, backed by Portainer Business Edition. Portainer IDP gives application teams a governed path from a Git repository to a running workload - deploy targets, a manifest builder, secrets and per-user Git identities - without handing them direct cluster or edge access.",
+      "shortDescription": "Self-service developer portal",
+      "helmChartRepository": "oci://ghcr.io/portainer/charts/portainer-idp",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iOCIgZmlsbD0iIzJDNkYzOCIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQxLjk4NzEgMTEuNzE5MUgyOC45OTgxTDIwLjEyNTggNi42MDE5MVY1SDE2Ljk5NTJWNi41OTYxN0w4LjExNDM1IDExLjcxNzdINC45MDQ3OVYxMy44Nzk0SDE2Ljk5NTJWNTMuOTkwNEgyMC4xMjU4VjEzLjg4MDlINDEuOTg3MVYxMS43MTkxWk0xNi45OTM4IDExLjcxOTFIMTAuNzAzOEwxNi45OTM4IDguMDkxODdWMTEuNzE5MVpNMjAuMTI1OCAxMS43MTkxVjguMDk2MTdMMjYuNDA3MiAxMS43MTkxSDIwLjEyNThaTTM2Ljk2MTcgMTMuODgwOUgzOC4yMDYyVjE1Ljg1MjJMMzYuOTYxNyAxNS44MDE0VjEzLjg4MDlaIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIzMSIgeT0iMTciIHdpZHRoPSIxMS40IiBoZWlnaHQ9IjM3IiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIyNCIgeT0iNTQiIHdpZHRoPSI5IiBoZWlnaHQ9IjI2IiB0cmFuc2Zvcm09InJvdGF0ZSgtOTAgMjQgNTQpIiBmaWxsPSJ3aGl0ZSIvPgo8cmVjdCB4PSIyNCIgeT0iMjQuOCIgd2lkdGg9IjkiIGhlaWdodD0iMjYiIHRyYW5zZm9ybT0icm90YXRlKC05MCAyNCAyNC44KSIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTM2Ljk1IDE1LjhIMzguMjFWMjYuOEgzNi45NVYxNS44WiIgZmlsbD0iIzJDNkYzOCIvPgo8L3N2Zz4K",
+      "path": "/addons/portainer-idp",
+      "serviceUrl": "http://portainer-idp.portainer-addon-portainer-idp.svc.cluster.local",
+      "healthCheckPath": "/readyz"
+    },
+    {
+      "id": "portainer-command",
+      "displayName": "Portainer-Command (Pre-release)",
+      "description": "A governed platform for AI agents to do work on Kubernetes environments: read-only investigation, changes proposed as pull requests, humans approving, and per-user AI Workspaces running OpenCode in-cluster.",
+      "shortDescription": "Governed AI agents for K8s",
+      "helmChartRepository": "oci://ghcr.io/portainer/charts/portainer-command",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iOCIgZmlsbD0iYmxhY2siLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00Mi4wODIzIDExLjkxNzdIMjkuMDkzM0wyMC4yMjExIDYuODAwNDhWNS4xOTg1NkgxNy4wOTA0VjYuNzk0NzNMOC4yMDk1NyAxMS45MTYzSDVWMTQuMDc4SDE3LjA5MDRWNTQuMTg5SDIwLjIyMTFWMTQuMDc5NEg0Mi4wODIzVjExLjkxNzdaTTE3LjA4OSAxMS45MTc3SDEwLjc5OUwxNy4wODkgOC4yOTA0M1YxMS45MTc3Wk0yMC4yMjExIDExLjkxNzdWOC4yOTQ3M0wyNi41MDI0IDExLjkxNzdIMjAuMjIxMVpNMzcuMDU2OSAxNC4wNzk0SDM4LjMwMTRWMTYuMDUwOEwzNy4wNTY5IDE2VjE0LjA3OTRaIiBmaWxsPSIjRkNGQkZBIi8+CjxwYXRoIGQ9Ik0zNy4wNjY2IDE2LjAwMTNMMzcuMDEzOSAyNC40MTA1QzM2Ljk5MDMgMjQuNDA5OSAzNi45NjY1IDI0LjQwODcgMzYuOTQyNiAyNC40MDg1QzM2LjQwNTYgMjQuNDA1MiAzNS45NzY1IDI0LjQ5NDUgMzUuNjU2NCAyNC42NzcxQzM1LjMzNjUgMjQuODU5NyAzNS4wODMxIDI1LjE3NzQgMzQuODk1NyAyNS42MjkyQzM0LjcyNTEgMjYuMDY0NSAzNC42MDMzIDI2LjY1OTcgMzQuNTMxNCAyNy40MTQ0QzM0LjQ3NjMgMjguMTY5MyAzNC40NDU4IDI5LjExNzggMzQuNDM4NyAzMC4yNTkxTDM0LjM3NjIgNDAuMDc3NUMzNC4zNjkzIDQxLjE2ODIgMzQuMzg5MSA0Mi4wODI5IDM0LjQzNDggNDIuODIxNkMzNC40OTc0IDQzLjU0MzcgMzQuNjExNSA0NC4xMjQ0IDM0Ljc3NjYgNDQuNTYxOUMzNC45NTg0IDQ0Ljk5OSAzNS4yMDgxIDQ1LjMxMDggMzUuNTI1NiA0NS40OTc0QzM1Ljg0MzMgNDUuNjg0IDM2LjI3MDggNDUuNzc5MiAzNi44MDc4IDQ1Ljc4MjZDMzcuNjk3MSA0NS43ODgxIDM4LjMyMDMgNDUuNDY0OSAzOC42NzY5IDQ0LjgxMjhDMzkuMDMzNiA0NC4xNDM3IDM5LjIxNzYgNDMuMDAzMiAzOS4yMjc3IDQxLjM5MTlMMzkuMjQ3MyAzOC4yNDU1TDUwLjA5NzggMzguMzEyOEw1MC4wODEyIDQwLjgzMDRDNTAuMDY2MyA0My4yMTM3IDQ5Ljc3NjcgNDUuMjU5NyA0OS4yMTIxIDQ2Ljk2ODFDNDguNjY0NCA0OC42NTk5IDQ3Ljg0MjEgNTAuMDQ4MSA0Ni43NDQzIDUxLjEzMjJDNDUuNjQ2NyA1Mi4xOTk1IDQ0LjI2NTUgNTIuOTc5OSA0Mi42MDA4IDUzLjQ3M0M0MC45MzYxIDUzLjk2NjEgMzguOTg3MyA1NC4yMDQ4IDM2Ljc1NTEgNTQuMTkwOEMzNC4zMjE2IDU0LjE3NTUgMzIuMjMzNiA1My45MDI3IDMwLjQ5MTQgNTMuMzcxNEMyOC43NDkxIDUyLjg1NyAyNy4zMTk1IDUyLjAxNyAyNi4yMDIzIDUwLjg1MTlDMjUuMDg1MiA0OS42ODY4IDI0LjI2MzggNDguMTcxMyAyMy43Mzg1IDQ2LjMwNUMyMy4yMTMxIDQ0LjQzODcgMjIuOTU4OSA0Mi4xNjIzIDIyLjk3NTggMzkuNDc2OUwyMy4wMzE0IDMwLjUzOTRDMjMuMDQ4NCAyNy44Mzc2IDIzLjM0MDEgMjUuNTY1NSAyMy45MDU1IDIzLjcyM0MyNC40NzEgMjEuODYzNSAyNS4zMTk2IDIwLjM1NzQgMjYuNDUxNCAxOS4yMDY0QzI3LjU5OTkgMTguMDU1NiAyOS4wNDg1IDE3LjIzNDEgMzAuNzk3MSAxNi43NDE1QzMyLjU0NTggMTYuMjMyMiAzNC42MTIxIDE1Ljk4NTQgMzYuOTk1MyAxNi4wMDAzQzM3LjAxOTEgMTYuMDAwNSAzNy4wNDI5IDE2LjAwMTEgMzcuMDY2NiAxNi4wMDEzWk0zOC4yOTIyIDE2LjA0MDRDMzkuOTg5MiAxNi4xMzEyIDQxLjUwMjYgMTYuMzgwNiA0Mi44MzEyIDE2Ljc5MjNDNDQuNDg5NCAxNy4zMDYzIDQ1Ljg2MDYgMTguMTExNyA0Ni45NDQ1IDE5LjIwOTNDNDguMDI4NyAyMC4yOTAzIDQ4LjgzNDEgMjEuNjgwNyA0OS4zNjA1IDIzLjM3OTJDNDkuOTAzNiAyNS4wNzc4IDUwLjE2NzYgMjcuMTI2OSA1MC4xNTI1IDI5LjUyNjdMNTAuMTM2OSAzMi4wNDQzTDM5LjI4NjMgMzEuOTc1OUwzOS4zMDU4IDI4LjgyOTRDMzkuMzE2IDI3LjIxODIgMzkuMTQ3NCAyNi4wODM5IDM4Ljc5OSAyNS40MjcxQzM4LjY1NzEgMjUuMTUyNiAzOC40Njk0IDI0LjkzNDQgMzguMjM3NSAyNC43NzA4TDM4LjI5MjIgMTYuMDQwNFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=",
+      "path": "/addons/portainer-command",
+      "serviceUrl": "http://portainer-command.portainer-addon-portainer-command.svc.cluster.local",
+      "healthCheckPath": "/readyz"
+    },
+    {
+      "id": "portainer-migrate",
+      "displayName": "Portainer-Migrate (Pre-release)",
+      "description": "Migrate existing Docker and Swarm workloads to Kubernetes. Portainer Migrate discovers your containers, Compose stacks, and Swarm services, translates them into Kubernetes manifests, commits them to a git repository, and deploys them as Portainer GitOps stacks — one organized folder per environment.",
+      "shortDescription": "Docker/Swarm to Kubernetes migration",
+      "helmChartRepository": "oci://ghcr.io/portainer/charts/portainer-migrate",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjYwIiBoZWlnaHQ9IjYwIiByeD0iOCIgZmlsbD0iIzIzMUE0RiIvPgo8cGF0aCBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTQxLjk4NzEgMTEuNzE5MUgyOC45OTgxTDIwLjEyNTggNi42MDE5MVY1SDE2Ljk5NTJWNi41OTYxN0w4LjExNDM1IDExLjcxNzdINC45MDQ3OVYxMy44Nzk0SDE2Ljk5NTJWNTMuOTkwNEgyMC4xMjU4VjEzLjg4MDlINDEuOTg3MVYxMS43MTkxWk0xNi45OTM4IDExLjcxOTFIMTAuNzAzOEwxNi45OTM4IDguMDkxODdWMTEuNzE5MVpNMjAuMTI1OCAxMS43MTkxVjguMDk2MTdMMjYuNDA3MiAxMS43MTkxSDIwLjEyNThaTTMwLjk2MTcgMTMuODgwOUgzMi4yMDYyVjE1Ljg1MjJIMzAuOTYxN1YxMy44ODA5WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTIyLjE4NjUgMTUuOEgzNS4wNDMzTDM3LjEwNjcgMjkuNTA4MkgzNy4yOTE5TDM5LjM1NTQgMTUuOEg1Mi4yMTIxVjU0SDQzLjgyNjFWNDUuMTM3OEw0NC40MDgxIDI5LjYzMDVINDQuMjQ5NEw0MC42MDQgNDRIMzMuNzk0N0wzMC4xNDkzIDI5LjYzMDVIMjkuOTkwNUwzMC41NzI1IDQ1LjEzNzhWNTRIMjIuMTg2NVYxNS44WiIgZmlsbD0id2hpdGUiLz4KPHBhdGggZD0iTTMwLjk1IDE1LjhIMzIuMjFWMjYuOEgzMC45NVYxNS44WiIgZmlsbD0iIzIzMUE0RiIvPgo8L3N2Zz4K",
+      "path": "/addons/portainer-migrate",
+      "serviceUrl": "http://portainer-migrate.portainer-addon-portainer-migrate.svc.cluster.local",
+      "healthCheckPath": "/readyz"
     }
   ]
 }
