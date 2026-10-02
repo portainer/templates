@@ -1875,6 +1875,91 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 3,
+      "title": "Ethora Core",
+      "description": "Self-hosted chat and messaging server: API, web chat and admin panel, XMPP server (ejabberd with the Ethora modules), MongoDB, MySQL, Redis, MinIO and Centrifugo behind Caddy with Let's Encrypt. Free edition, no license key. Point api., app., xmpp. and files.<root domain> at the host first, or use <ip-with-dashes>.sslip.io as the root domain.",
+      "note": "After deployment sign in at https://app.<root domain> with the admin e-mail and password you set. Every secret field takes any long random string (for example the output of openssl rand -hex 24). Documentation: https://github.com/dappros/ethora-install/tree/main/deploy/compose. Licence: https://ethora.com/legal/ethora-core-license/",
+      "categories": ["messaging", "development"],
+      "platform": "linux",
+      "logo": "https://ethora.com/wp-content/uploads/2026/09/cropped-ethora-favicon-192x192.png",
+      "repository": {
+        "url": "https://github.com/dappros/ethora-install",
+        "stackfile": "deploy/compose/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "ROOT_DOMAIN",
+          "label": "Root domain (hosts api., app., xmpp., files. derive from it)"
+        },
+        {
+          "name": "ADMIN_EMAIL",
+          "label": "Admin e-mail (also the Let's Encrypt contact)"
+        },
+        {
+          "name": "ADMIN_PASSWORD",
+          "label": "Admin password"
+        },
+        {
+          "name": "COMPOSE_PROFILES",
+          "label": "Profiles (keep 'caddy' unless the platform terminates TLS)",
+          "default": "caddy"
+        },
+        {
+          "name": "MYSQL_ROOT_PASSWORD",
+          "label": "MySQL root password (any long random string)"
+        },
+        {
+          "name": "MINIO_ROOT_USER",
+          "label": "MinIO access key (any random string)"
+        },
+        {
+          "name": "MINIO_ROOT_PASSWORD",
+          "label": "MinIO secret key (any long random string)"
+        },
+        {
+          "name": "XMPP_ADMIN_PASSWORD",
+          "label": "ejabberd admin password (any long random string)"
+        },
+        {
+          "name": "JWT_SECRET",
+          "label": "JWT secret (any long random string)"
+        },
+        {
+          "name": "REFRESH_SECRET",
+          "label": "Refresh token secret (any long random string)"
+        },
+        {
+          "name": "XMPP_SECRET",
+          "label": "XMPP secret (any long random string)"
+        },
+        {
+          "name": "XMPP_JWT_SECRET",
+          "label": "XMPP JWT secret (any long random string)"
+        },
+        {
+          "name": "INTERNAL_REQUESTS_SECRET",
+          "label": "Internal requests secret (any long random string)"
+        },
+        {
+          "name": "CENTRIFUGO_API_KEY",
+          "label": "Centrifugo API key (any long random string)"
+        },
+        {
+          "name": "CENTRIFUGO_HMAC_SECRET",
+          "label": "Centrifugo HMAC secret (any long random string)"
+        },
+        {
+          "name": "CENTRIFUGO_ADMIN_PASSWORD",
+          "label": "Centrifugo admin password (any long random string)"
+        },
+        {
+          "name": "CENTRIFUGO_ADMIN_SECRET",
+          "label": "Centrifugo admin secret (any long random string)"
+        }
+      ]
     }
   ]
 }
