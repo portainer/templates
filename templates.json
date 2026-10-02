@@ -1875,6 +1875,71 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 1,
+      "title": "DockRoute",
+      "description": "External-DNS for plain Docker hosts: watches running containers, reads dockroute.* labels and reconciles the matching DNS records - and Cloudflare Tunnel routes - in a pluggable provider. TXT-based ownership means it never alters records it cannot prove it manages. Docs: https://www.dockroute.dev",
+      "categories": [
+        "docker",
+        "networking",
+        "dns"
+      ],
+      "platform": "linux",
+      "logo": "https://github.com/Dockroute.png",
+      "image": "ghcr.io/dockroute/dockroute:latest",
+      "restart_policy": "unless-stopped",
+      "note": "Socket permissions are handled automatically: the entrypoint grants the app user the Docker socket's group and drops privileges before starting. Start with the default log provider for a zero-credential dry run, then switch to cloudflare. Opt containers in with labels: dockroute.enabled=true and dockroute.hostname=app.example.com.",
+      "env": [
+        {
+          "name": "DOCKROUTE_PROVIDER",
+          "label": "Provider (log = dry run, cloudflare)",
+          "default": "log"
+        },
+        {
+          "name": "DOCKROUTE_OWNER_ID",
+          "label": "Ownership id (lets several instances share a zone)",
+          "default": "default"
+        },
+        {
+          "name": "DOCKROUTE_POLICY",
+          "label": "Sync policy (sync, upsert-only, create-only)",
+          "default": "sync"
+        },
+        {
+          "name": "DOCKROUTE_DEFAULT_TARGET",
+          "label": "Default record target (IP or CNAME)",
+          "default": ""
+        },
+        {
+          "name": "DOCKROUTE_DOMAIN_FILTER",
+          "label": "Comma-separated zone allowlist (empty = all)",
+          "default": ""
+        },
+        {
+          "name": "CLOUDFLARE_API_TOKEN",
+          "label": "Cloudflare API token (required for cloudflare provider)",
+          "default": ""
+        },
+        {
+          "name": "CLOUDFLARE_ACCOUNT_ID",
+          "label": "Cloudflare account id (tunnel publishing only)",
+          "default": ""
+        },
+        {
+          "name": "CLOUDFLARE_TUNNEL_ID",
+          "label": "Cloudflare tunnel id (tunnel publishing only)",
+          "default": ""
+        }
+      ],
+      "volumes": [
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock",
+          "readonly": true
+        }
+      ]
     }
   ]
 }
