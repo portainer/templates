@@ -36,7 +36,7 @@
     },
     {
       "id": "portainer-command",
-      "displayName": "Portainer-Command (Pre-release)",
+      "displayName": "Portainer-Command",
       "description": "A governed platform for AI agents to do work on Kubernetes environments: read-only investigation, changes proposed as pull requests, humans approving, and per-user AI Workspaces running OpenCode in-cluster.",
       "shortDescription": "Governed AI agents for K8s",
       "helmChartRepository": "oci://ghcr.io/portainer/dev-charts/portainer-command",
