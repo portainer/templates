@@ -25,7 +25,7 @@
     },
     {
       "id": "portainer-idp",
-      "displayName": "Portainer-IDP (Beta)",
+      "displayName": "Portainer-IDP (Pre-release)",
       "description": "A self-service developer portal for Kubernetes, backed by Portainer Business Edition. Portainer IDP gives application teams a governed path from a Git repository to a running workload - deploy targets, a manifest builder, secrets and per-user Git identities - without handing them direct cluster or edge access.",
       "shortDescription": "Self-service developer portal",
       "helmChartRepository": "oci://ghcr.io/portainer/dev-charts/portainer-idp",
@@ -36,7 +36,7 @@
     },
     {
       "id": "portainer-command",
-      "displayName": "Portainer-Command (Beta)",
+      "displayName": "Portainer-Command",
       "description": "A governed platform for AI agents to do work on Kubernetes environments: read-only investigation, changes proposed as pull requests, humans approving, and per-user AI Workspaces running OpenCode in-cluster.",
       "shortDescription": "Governed AI agents for K8s",
       "helmChartRepository": "oci://ghcr.io/portainer/dev-charts/portainer-command",
@@ -47,7 +47,7 @@
     },
     {
       "id": "portainer-migrate",
-      "displayName": "Portainer-Migrate (Beta)",
+      "displayName": "Portainer-Migrate (Pre-release)",
       "description": "Migrate existing Docker and Swarm workloads to Kubernetes. Portainer Migrate discovers your containers, Compose stacks, and Swarm services, translates them into Kubernetes manifests, commits them to a git repository, and deploys them as Portainer GitOps stacks — one organized folder per environment.",
       "shortDescription": "Docker/Swarm to Kubernetes migration",
       "helmChartRepository": "oci://ghcr.io/portainer/dev-charts/portainer-migrate",
