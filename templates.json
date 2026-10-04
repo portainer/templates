@@ -1875,6 +1875,32 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 76,
+      "type": 1,
+      "title": "Cloudflared-web",
+      "description": "Cloudflared-web is a docker image that packages both cloudflared cli and a simple Web UI to easily start or stop remotely-managed Cloudflare tunnel.",
+      "categories": ["Tools", "Networking", "Tunnel"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/WisdomSky/Cloudflared-web/refs/heads/main/app/frontend/public/cloudflare.ico",
+      "image": "wisdomsky/cloudflared-web:latest",
+      "env": [
+        {
+          "default": "14333",
+          "label": "WEBUI_PORT",
+          "name": "WEBUI_PORT"
+        }
+      ],
+      "network": "host",
+      "ports": ["14333/tcp"],
+      "restart_policy": "unless-stopped",
+      "name": "cloudflared-web",
+      "volumes": [
+        {
+          "container": "/config"
+        }
+      ]
     }
   ]
 }
