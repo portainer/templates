@@ -55,6 +55,17 @@
       "path": "/addons/portainer-migrate",
       "serviceUrl": "http://portainer-migrate.portainer-addon-portainer-migrate.svc.cluster.local",
       "healthCheckPath": "/healthz"
+    },
+    {
+      "id": "portainer-ops",
+      "displayName": "Portainer-Ops (Pre-release)",
+      "description": "Portainer's modern UI, delivered as an add-on. It runs alongside the current Portainer UI and uses your Portainer session and permissions. This add-on is in Pre-release: it may change in future releases and is not recommended for production use.",
+      "shortDescription": "Portainer's modern UI",
+      "helmChartRepository": "oci://ghcr.io/portainer/dev-charts/portainer-ops",
+      "icon": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTAgOEMwIDMuNTgxNzIgMy41ODE3MiAwIDggMEg1MkM1Ni40MTgzIDAgNjAgMy41ODE3MiA2MCA4VjUyQzYwIDU2LjQxODMgNTYuNDE4MyA2MCA1MiA2MEg4QzMuNTgxNzIgNjAgMCA1Ni40MTgzIDAgNTJWOFoiIGZpbGw9IiNDMDgwRkYiLz4KPHBhdGggZD0iTTM1LjgzOSAxNi40MjEzVjE0LjEyMjFIMzkuNDgzVjEyLjA1MzZIMjYuOTY2NUwxOC40MTg0IDcuMTU3ODJWNS42MjVIMTUuNDAxMVY3LjE1MzE4TDYuODQzNjYgMTIuMDUzNkgzLjc1VjE0LjEyMjFIMTUuMzk5NlY1Mi41SDE4LjQxNjhWMTQuMTIyMUgzNC42Mzk4VjE2LjM4NzNDMzQuNDUyNyAxNi4zODQyIDM0LjI2NDEgMTYuMzgyNiAzNC4wNzIzIDE2LjM4MjZIMjAuNjkzNFY1Mi41SDMxLjE2NDJWNDEuMTE2OEgzNC4wODQ3QzQzLjMxNTggNDEuMTE2OCA0OC43NSAzOC4yODE5IDQ4Ljc1IDI4LjkxVjI4LjU5MUM0OC43NSAxOS44NjE3IDQzLjk5NDEgMTYuNzg4MyAzNS44NDA1IDE2LjQyMTNIMzUuODM5Wk05LjM0MDExIDEyLjA1MzZMMTUuMzk5NiA4LjU4MjI3VjEyLjA1MzZIOS4zNDAxMVpNMTguNDE2OCA4LjU4NjkxTDI0LjQ2ODUgMTIuMDUzNkgxOC40MTY4VjguNTg2OTFaTTM5LjIxMTcgMzIuNzU5MUgzMS4xNDA4VjI0Ljc0NUgzNC42MzgzVjE2LjM4NzNDMzUuMDQ1MyAxNi4zOTE5IDM1LjQ0NiAxNi40MDI4IDM1LjgzNzQgMTYuNDE5OFYyNC43NDM1SDM5LjIxMTdWMzIuNzU3NVYzMi43NTkxWiIgZmlsbD0iYmxhY2siLz4KPC9zdmc+Cg==",
+      "path": "/addons/portainer-ops",
+      "serviceUrl": "http://portainer-ops.portainer-addon-portainer-ops.svc.cluster.local",
+      "healthCheckPath": "/readyz"
     }
   ]
 }
