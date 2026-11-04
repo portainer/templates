@@ -888,5 +888,44 @@
     "description": "CockroachDB cluster",
     "note": "Deploys an insecure CockroachDB cluster, please refer to <a href=\"https://www.cockroachlabs.com/docs/stable/orchestrate-cockroachdb-with-docker-swarm.html\" target=\"_blank\">CockroachDB documentation</a> for production deployments.",
     "stackfile": "https://raw.githubusercontent.com/portainer/templates/master/stacks/cockroachdb/edge/docker-stack.yml"
+  },
+  {
+    "type": 2,
+    "title": "EMQX Enterprise (Swarm)",
+    "description": "EMQX Enterprise MQTT broker cluster for Docker Swarm",
+    "note": "Deploys 3 persistent core nodes and a configurable number of replicants (default: 3). Before deploying, assign each label emqx.core-1=true, emqx.core-2=true, and emqx.core-3=true to exactly one Linux Swarm node, using different nodes for high availability. Core volumes are local to those nodes; replicant storage is ephemeral. Requires a valid EMQX Enterprise license key, a shared cluster cookie, and a dashboard password. See the <a href=\"https://github.com/portainer/templates/tree/master/stacks/emqx-enterprise\" target=\"_blank\">deployment and recovery instructions</a>.",
+    "categories": ["messaging"],
+    "platform": "linux",
+    "logo": "https://www.emqx.com/favicon.ico",
+    "repository": {
+      "url": "https://github.com/portainer/templates",
+      "stackfile": "stacks/emqx-enterprise/docker-stack.yml"
+    },
+    "env": [
+      {
+        "name": "EMQX_NODE__COOKIE",
+        "label": "Cluster cookie",
+        "description": "Shared secret for communication between EMQX nodes"
+      },
+      {
+        "name": "EMQX_LICENSE_KEY",
+        "label": "EMQX License Key",
+        "description": "EMQX Enterprise license key, or evaluation for a trial"
+      },
+      {
+        "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
+        "label": "Dashboard username",
+        "default": "admin"
+      },
+      {
+        "name": "EMQX_DASHBOARD__DEFAULT_PASSWORD",
+        "label": "Dashboard password"
+      },
+      {
+        "name": "EMQX_REPLICANT_NODES",
+        "label": "Number of replicant nodes",
+        "default": "3"
+      }
+    ]
   }
 ]
