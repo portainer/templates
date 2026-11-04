@@ -1,0 +1,133 @@
+version: '3.8'
+
+x-emqx-environment: &emqx-environment
+  EMQX_CLUSTER__DISCOVERY_STRATEGY: static
+  EMQX_CLUSTER__STATIC__SEEDS: '[emqx@emqx-core-1.internal,emqx@emqx-core-2.internal,emqx@emqx-core-3.internal]'
+  EMQX_NODE__COOKIE: ${EMQX_NODE__COOKIE:?Set a shared cluster cookie}
+  EMQX_DASHBOARD__DEFAULT_USERNAME: ${EMQX_DASHBOARD__DEFAULT_USERNAME:-admin}
+  EMQX_DASHBOARD__DEFAULT_PASSWORD: ${EMQX_DASHBOARD__DEFAULT_PASSWORD:?Set a dashboard password}
+  EMQX_LICENSE__KEY: ${EMQX_LICENSE_KEY:?Set an EMQX Enterprise license key}
+
+x-emqx-service: &emqx-service
+  image: emqx/emqx-enterprise:6.3.2
+  healthcheck:
+    test: ["CMD", "curl", "-f", "http://localhost:18083/status"]
+    interval: 10s
+    timeout: 5s
+    retries: 6
+    start_period: 60s
+  stop_grace_period: 60s
+  networks:
+    - emqx_overlay
+
+x-core-deploy: &core-deploy
+  replicas: 1
+  endpoint_mode: dnsrr
+  restart_policy:
+    condition: any
+  update_config:
+    order: stop-first
+  rollback_config:
+    order: stop-first
+
+services:
+  # Each core keeps a stable EMQX node name and its own data volume.
+  # Assign each label to exactly one Swarm node before deploying.
+  emqx-core-1:
+    <<: *emqx-service
+    environment:
+      <<: *emqx-environment
+      EMQX_NODE_NAME: emqx@emqx-core-1.internal
+      EMQX_NODE__DB_ROLE: core
+    networks:
+      emqx_overlay:
+        aliases:
+          - emqx-core-1.internal
+    deploy:
+      <<: *core-deploy
+      placement:
+        constraints:
+          - node.platform.os == linux
+          - node.labels.emqx.core-1 == true
+    volumes:
+      - emqx_core_1_data:/opt/emqx/data
+
+  emqx-core-2:
+    <<: *emqx-service
+    environment:
+      <<: *emqx-environment
+      EMQX_NODE_NAME: emqx@emqx-core-2.internal
+      EMQX_NODE__DB_ROLE: core
+    networks:
+      emqx_overlay:
+        aliases:
+          - emqx-core-2.internal
+    deploy:
+      <<: *core-deploy
+      placement:
+        constraints:
+          - node.platform.os == linux
+          - node.labels.emqx.core-2 == true
+    volumes:
+      - emqx_core_2_data:/opt/emqx/data
+
+  emqx-core-3:
+    <<: *emqx-service
+    environment:
+      <<: *emqx-environment
+      EMQX_NODE_NAME: emqx@emqx-core-3.internal
+      EMQX_NODE__DB_ROLE: core
+    networks:
+      emqx_overlay:
+        aliases:
+          - emqx-core-3.internal
+    deploy:
+      <<: *core-deploy
+      placement:
+        constraints:
+          - node.platform.os == linux
+          - node.labels.emqx.core-3 == true
+    volumes:
+      - emqx_core_3_data:/opt/emqx/data
+
+  emqx-replicant:
+    <<: *emqx-service
+    environment:
+      <<: *emqx-environment
+      # Swarm registers each task name in DNS on the overlay network.
+      EMQX_NODE_NAME: 'emqx@{{.Task.Name}}'
+      EMQX_NODE__DB_ROLE: replicant
+    deploy:
+      replicas: ${EMQX_REPLICANT_NODES:-3}
+      endpoint_mode: vip
+      placement:
+        constraints:
+          - node.platform.os == linux
+      restart_policy:
+        condition: any
+      update_config:
+        parallelism: 1
+        delay: 30s
+        order: stop-first
+      rollback_config:
+        parallelism: 1
+        order: stop-first
+    ports:
+      - "1883:1883"
+      - "8083:8083"
+      - "8084:8084"
+      - "8883:8883"
+      - "18083:18083"
+    # Replicants rebuild their local state from the cores when replaced.
+    # Anonymous volumes prevent replicas from sharing writable data.
+    volumes:
+      - /opt/emqx/data
+
+networks:
+  emqx_overlay:
+    driver: overlay
+
+volumes:
+  emqx_core_1_data:
+  emqx_core_2_data:
+  emqx_core_3_data:

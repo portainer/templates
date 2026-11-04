@@ -1338,21 +1338,26 @@
     },
     {
       "type": 2,
-      "title": "EMQX Enterprise",
-      "description": "EMQX Enterprise MQTT broker cluster with core and replicant nodes",
-      "note": "Deploys an EMQX Enterprise cluster with 3 core nodes and 3 replicant nodes. Core nodes handle routing and sessions, replicant nodes handle MQTT client connections. Requires a valid EMQX license key.",
+      "title": "EMQX Enterprise (Swarm)",
+      "description": "EMQX Enterprise MQTT broker cluster for Docker Swarm",
+      "note": "Deploys 3 persistent core nodes and a configurable number of replicants (default: 3). Before deploying, assign each label emqx.core-1=true, emqx.core-2=true, and emqx.core-3=true to exactly one Linux Swarm node, using different nodes for high availability. Core volumes are local to those nodes; replicant storage is ephemeral. Requires a valid EMQX Enterprise license key, a shared cluster cookie, and a dashboard password. See the <a href=\"https://github.com/portainer/templates/tree/master/stacks/emqx-enterprise\" target=\"_blank\">deployment and recovery instructions</a>.",
       "categories": ["messaging"],
       "platform": "linux",
       "logo": "https://www.emqx.com/favicon.ico",
       "repository": {
         "url": "https://github.com/portainer/templates",
-        "stackfile": "stacks/emqx-enterprise/docker-compose.yml"
+        "stackfile": "stacks/emqx-enterprise/docker-stack.yml"
       },
       "env": [
         {
+          "name": "EMQX_NODE__COOKIE",
+          "label": "Cluster cookie",
+          "description": "Shared secret for communication between EMQX nodes"
+        },
+        {
           "name": "EMQX_LICENSE_KEY",
           "label": "EMQX License Key",
-          "description": "License key for EMQX Enterprise"
+          "description": "EMQX Enterprise license key, or evaluation for a trial"
         },
         {
           "name": "EMQX_DASHBOARD__DEFAULT_USERNAME",
