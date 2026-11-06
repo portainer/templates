@@ -1819,6 +1819,98 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 1,
+      "title": "AI Marketplace Monitor",
+      "name": "ai-marketplace-monitor",
+      "description": "Watch Facebook Marketplace for the items you want, rate each new listing with AI, and get notified of good deals. Source: https://github.com/BoPeng/ai-marketplace-monitor",
+      "note": "Open the web UI on port 8467 and sign in with the Facebook username and password you entered here. If Facebook asks for a CAPTCHA or a security code, click <b>Open browser</b> in the web UI. The default configuration needs a <a href=\"https://unitysvc.com\" target=\"_blank\">UnitySVC</a> API key. Config, cache and logs live in the named volume mounted at <code>/data</code>. See the <a href=\"https://github.com/BoPeng/ai-marketplace-monitor/blob/main/docs/docker-installation.md\" target=\"_blank\">Docker installation guide</a>.",
+      "categories": [
+        "Productivity",
+        "Tools",
+        "AI"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/BoPeng/ai-marketplace-monitor/main/docs/icon.png",
+      "image": "ghcr.io/bopeng/ai-marketplace-monitor:latest",
+      "restart_policy": "unless-stopped",
+      "ports": [
+        "8467:8467/tcp"
+      ],
+      "volumes": [
+        {
+          "container": "/data"
+        }
+      ],
+      "env": [
+        {
+          "name": "FACEBOOK_USERNAME",
+          "label": "Facebook username (required)",
+          "description": "The Facebook account aimm logs in with. Also signs you in to the web UI."
+        },
+        {
+          "name": "FACEBOOK_PASSWORD",
+          "label": "Facebook password (required)",
+          "description": "Password of that Facebook account. Also signs you in to the web UI."
+        },
+        {
+          "name": "UNITYSVC_API_KEY",
+          "label": "UnitySVC API key",
+          "description": "For the default configuration: the AI that rates listings, and email and phone notifications. Replace the placeholder with your key; with the placeholder, aimm searches but cannot rate listings or send notifications until you set a key here or other AI and notification services in the web UI.",
+          "default": "svcpass_XXXXX"
+        },
+        {
+          "name": "TZ",
+          "label": "Time zone",
+          "description": "For the daily digest, e.g. America/Chicago.",
+          "default": "UTC"
+        },
+        {
+          "name": "AIMM_WEBUI_AUTH",
+          "label": "Web UI sign-in",
+          "description": "Who signs you in to the web UI. local needs the web UI password below. Behind a reverse proxy that signs users in, see the Docker installation guide for the variables each mode needs.",
+          "select": [
+            {
+              "text": "aimm, with the Facebook username and password",
+              "value": "facebook",
+              "default": true
+            },
+            {
+              "text": "aimm, with the web UI username and password below",
+              "value": "local"
+            },
+            {
+              "text": "Authelia (Remote-User header)",
+              "value": "authelia"
+            },
+            {
+              "text": "Authentik (signed token)",
+              "value": "authentik"
+            },
+            {
+              "text": "Cloudflare Access (signed token)",
+              "value": "cloudflare"
+            },
+            {
+              "text": "Any reverse proxy (no check)",
+              "value": "proxy"
+            }
+          ]
+        },
+        {
+          "name": "AIMM_WEBUI_USERNAME",
+          "label": "Web UI username",
+          "description": "With local sign-in: the username of the web UI.",
+          "default": "admin"
+        },
+        {
+          "name": "AIMM_WEBUI_PASSWORD",
+          "label": "Web UI password",
+          "description": "With local sign-in (required): the password of the web UI, unrelated to the Facebook password."
+        }
+      ]
     }
   ]
 }
