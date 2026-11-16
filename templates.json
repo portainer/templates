@@ -1819,6 +1819,27 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 1,
+      "title": "OpenFamily",
+      "description": "Self-hosted family organizer with a shared calendar, tasks, shopping lists, meals, pantry and budget.",
+      "note": "<p>Open http://&lt;Docker-host&gt;:8480 and create your first account to start a family. No secrets need to be prepared: they are generated on first start.</p><p>Keep and back up the volume mounted at <code>/data</code>; it contains the database, uploads and generated secrets. After setting up your accounts, set <code>REGISTRATION_ENABLED=false</code> to close public sign-ups; invited family members can still register.</p><p><a href=\"https://github.com/NexaFlowFrance/OpenFamily/blob/main/INSTALLATION.md\" target=\"_blank\">Installation guide</a></p>",
+      "categories": ["productivity"],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/NexaFlowFrance/OpenFamily/9c718937b06cbf2370db4554458c4d6da64d3c73/client/public/icon-512.png",
+      "image": "ghcr.io/nexaflowfrance/openfamily:2.2.0",
+      "ports": ["8480:3000/tcp"],
+      "volumes": [{ "container": "/data" }],
+      "env": [
+        {
+          "name": "REGISTRATION_ENABLED",
+          "label": "Enable public registration",
+          "default": "true"
+        }
+      ],
+      "restart_policy": "unless-stopped"
     }
   ]
 }
