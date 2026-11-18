@@ -1819,6 +1819,48 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 3,
+      "title": "PhValheim Server",
+      "description": "Manages multiple Valheim worlds and synchronized client mods.",
+      "categories": [
+        "Games"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/brianmiller/phvalheim-server/master/container/nginx/www/images/phvalheim_unraid_icon.svg",
+      "repository": {
+        "url": "https://github.com/brianmiller/phvalheim-server",
+        "stackfile": "portainer/docker-compose.yml"
+      },
+      "note": "<p>Requires Linux x86-64 and Docker Standalone. Deploys stable version 2.62. The admin port stays bound to host loopback; access it through an SSH tunnel (defaults: <code>ssh -N -L 8081:127.0.0.1:8081 user@docker-host</code>, then open <code>http://localhost:8081</code>). Adjust the tunnel destination if you change the admin port.</p><p>The default UDP range 25000-25019 provides ten world port pairs. Choose an even start and an odd end; the same range is published on the host and container. Use the setup wizard to configure your Steam API key and DNS. Retain both the stack's named data and backup volumes when updating to preserve worlds, settings, and backups. See the <a href=\"https://brianmiller.github.io/phvalheim-server/start/install/\">installation guide</a>.</p>",
+      "env": [
+        {
+          "name": "PHV_PUBLIC_PORT",
+          "label": "Public web port",
+          "description": "Host TCP port for the public player portal.",
+          "default": "8080"
+        },
+        {
+          "name": "PHV_ADMIN_PORT",
+          "label": "Private admin port",
+          "description": "Host TCP port bound to 127.0.0.1; access through an SSH tunnel.",
+          "default": "8081"
+        },
+        {
+          "name": "PHV_GAME_PORT_START",
+          "label": "First game UDP port (even)",
+          "description": "Even start of the game port range, identical on the host and container.",
+          "default": "25000"
+        },
+        {
+          "name": "PHV_GAME_PORT_END",
+          "label": "Last game UDP port (odd)",
+          "description": "Odd end of the game port range, identical on the host and container.",
+          "default": "25019"
+        }
+      ]
     }
   ]
 }
