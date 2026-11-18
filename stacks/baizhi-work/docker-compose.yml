@@ -1,0 +1,155 @@
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "20m"
+    max-file: "5"
+
+services:
+  init-permissions:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-backend:v26111301
+    user: "0:0"
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - chown 10001:10001 /runtime /license /import-tmp /rustfs /rustfs-logs && chmod 700 /runtime /license /import-tmp /rustfs /rustfs-logs
+    network_mode: none
+    read_only: true
+    restart: "no"
+    logging: *logging
+    volumes:
+      - runtime:/runtime
+      - license:/license
+      - import-tmp:/import-tmp
+      - rustfs-data:/rustfs
+      - rustfs-logs:/rustfs-logs
+
+  db:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/basic/postgres:18.6
+    restart: unless-stopped
+    logging: *logging
+    environment:
+      POSTGRES_DB: monkeyai
+      POSTGRES_USER: monkeyai
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?请设置数据库密码}
+    volumes:
+      - postgres:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -h 127.0.0.1 -U $$POSTGRES_USER -d $$POSTGRES_DB"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 10s
+
+  migrate:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-migrate:v26111301
+    command:
+      - -path=/migrations
+      - -database
+      - &database-url postgres://monkeyai:${POSTGRES_PASSWORD:?请设置数据库密码}@db:5432/monkeyai?sslmode=disable
+      - up
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: "no"
+    logging: *logging
+
+  rustfs:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/basic/rustfs:v1.0.0-rc.5
+    user: "10001:10001"
+    restart: unless-stopped
+    logging: *logging
+    environment:
+      RUSTFS_ACCESS_KEY: monkeyai
+      RUSTFS_SECRET_KEY: ${RUSTFS_SECRET_KEY:?请设置对象存储密钥}
+      RUSTFS_VOLUMES: /data
+      RUSTFS_OBS_LOG_DIRECTORY: /logs
+      RUSTFS_CONSOLE_ENABLE: "true"
+    volumes:
+      - rustfs-data:/data
+      - rustfs-logs:/logs
+    depends_on:
+      init-permissions:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:9000/health"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 20s
+
+  backend:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-backend:v26111301
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    logging: *logging
+    environment:
+      MONKEYAI_DATABASE_URL: *database-url
+      MONKEYAI_HTTP_ADDR: :8080
+      MONKEYAI_PUBLIC_URL: ${MONKEYAI_PUBLIC_URL:?请设置完整的对外访问地址}
+      MONKEYAI_INITIAL_ADMIN_NAME: admin
+      MONKEYAI_INITIAL_ADMIN_EMAIL: ${MONKEYAI_INITIAL_ADMIN_EMAIL:?请设置管理员邮箱}
+      MONKEYAI_INITIAL_ADMIN_PASSWORD: ${MONKEYAI_INITIAL_ADMIN_PASSWORD:?请设置管理员密码}
+      MONKEYAI_S3_ENDPOINT: http://rustfs:9000
+      MONKEYAI_S3_REGION: us-east-1
+      MONKEYAI_S3_BUCKET: monkeyai-resources
+      MONKEYAI_S3_ACCESS_KEY: monkeyai
+      MONKEYAI_S3_SECRET_KEY: ${RUSTFS_SECRET_KEY:?请设置对象存储密钥}
+      MONKEYAI_S3_FORCE_PATH_STYLE: "true"
+      MONKEYAI_RUNTIME_RELAY: "true"
+      MONKEYAI_RUNTIME_STATE_DIR: /app/runtime
+      MONKEYAI_LOG_LEVEL: warn
+      TMPDIR: /app/import-tmp
+    volumes:
+      - runtime:/app/runtime
+      - license:/app/license
+      - import-tmp:/app/import-tmp
+    depends_on:
+      init-permissions:
+        condition: service_completed_successfully
+      migrate:
+        condition: service_completed_successfully
+      rustfs:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-Y", "off", "-q", "--spider", "http://127.0.0.1:8080/readyz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 90s
+
+  admin:
+    image: chaitin-registry.cn-hangzhou.cr.aliyuncs.com/monkeycode/monkeyai-admin:v26111301
+    restart: unless-stopped
+    init: true
+    read_only: true
+    tmpfs:
+      - /tmp
+    logging: *logging
+    environment:
+      MONKEYAI_PUBLIC_URL: ${MONKEYAI_PUBLIC_URL:?请设置完整的对外访问地址}
+      MONKEYAI_TLS_ENABLED: "false"
+      MONKEYAI_AUTO_TLS_ENABLED: "false"
+    ports:
+      - "${MONKEYAI_BIND_IP:-127.0.0.1}:${MONKEYAI_HTTP_PORT:-8080}:8080"
+    volumes:
+      - acme:/var/lib/nginx/acme
+    depends_on:
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "wget", "-Y", "off", "-q", "--spider", "http://127.0.0.1:8080/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 5s
+
+volumes:
+  postgres:
+  rustfs-data:
+  rustfs-logs:
+  runtime:
+  license:
+  import-tmp:
+  acme:

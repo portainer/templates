@@ -1819,6 +1819,52 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 3,
+      "title": "Baizhi Work (MonkeyAI)",
+      "description": "面向团队的开源 AI 办公工作台，支持自然语言办公、编程、设计与团队资源管理。",
+      "note": "至少需要 1 核 CPU、1 GB 内存，支持 Linux amd64/arm64 和 Docker Standalone。默认仅在 127.0.0.1:8080 提供 HTTP，请配置 HTTPS 反向代理并填写完整对外访问地址。管理员密码、数据库密码及对象存储密钥均需自行设置；后两项请分别使用 openssl rand -hex 32 生成。<a href=\"https://work.baizhi.cloud/\" target=\"_blank\" rel=\"noopener noreferrer\">官网</a> · <a href=\"https://work.docs.baizhi.cloud/\" target=\"_blank\" rel=\"noopener noreferrer\">官方文档</a> · <a href=\"https://github.com/portainer/templates/blob/v3/stacks/baizhi-work/README.md\" target=\"_blank\" rel=\"noopener noreferrer\">模板部署说明</a>",
+      "categories": ["AI", "productivity"],
+      "platform": "linux",
+      "logo": "https://work.baizhi.cloud/monkeyai-logo.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/baizhi-work/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "MONKEYAI_PUBLIC_URL",
+          "label": "完整对外访问地址（生产环境使用 HTTPS）"
+        },
+        {
+          "name": "MONKEYAI_INITIAL_ADMIN_EMAIL",
+          "label": "首次管理员邮箱"
+        },
+        {
+          "name": "MONKEYAI_INITIAL_ADMIN_PASSWORD",
+          "label": "首次管理员强密码"
+        },
+        {
+          "name": "POSTGRES_PASSWORD",
+          "label": "数据库密码（64 位十六进制）"
+        },
+        {
+          "name": "RUSTFS_SECRET_KEY",
+          "label": "对象存储密钥（另一个独立的 64 位十六进制字符串）"
+        },
+        {
+          "name": "MONKEYAI_BIND_IP",
+          "label": "HTTP 监听地址（默认仅限本机）",
+          "default": "127.0.0.1"
+        },
+        {
+          "name": "MONKEYAI_HTTP_PORT",
+          "label": "HTTP 主机端口",
+          "default": "8080"
+        }
+      ]
     }
   ]
 }
