@@ -34,6 +34,7 @@ services:
       - '--log.level=error'
       - '--storage.tsdb.path=/prometheus'
       - '--storage.tsdb.retention.time=7d'
+    user: root # to be able to read docker.sock
     deploy:
       replicas: 1
       restart_policy:
@@ -46,6 +47,7 @@ services:
       - type: volume
         source: prometheus-data
         target: /prometheus
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
     networks:
       - net
 

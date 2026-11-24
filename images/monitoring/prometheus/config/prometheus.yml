@@ -15,8 +15,28 @@ scrape_configs:
       port: 8080
 
   - job_name: 'node-exporter'
-    dns_sd_configs:
-    - names:
-      - 'tasks.node-exporter'
-      type: 'A'
-      port: 9100
+    dockerswarm_sd_configs:
+      - host: "unix:///var/run/docker.sock"
+        refresh_interval: 30s
+        role: tasks
+
+    relabel_configs:
+      # filter node-exporter containers
+      - source_labels: [__meta_dockerswarm_service_name]
+        regex: .*node-exporter.*
+        action: keep
+
+      # only keep active tasks
+      - source_labels: [__meta_dockerswarm_task_state]
+        regex: running
+        action: keep
+
+      # change port 80 to 9100
+      - source_labels: [__address__]
+        regex: '([^:]+):\d+'
+        replacement: '${1}:9100'
+        target_label: '__address__'
+
+      # set physical hostname into instance label
+      - source_labels: [__meta_dockerswarm_node_hostname]
+        target_label: instance
