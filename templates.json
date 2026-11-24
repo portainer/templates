@@ -1819,6 +1819,34 @@
         "url": "https://github.com/portainer/templates",
         "stackfile": "edge/sorba-sde/docker-compose.yml"
       }
+    },
+    {
+      "id": 72,
+      "type": 3,
+      "title": "Bindery",
+      "description": "Ebook and audiobook manager with Usenet and torrent downloads",
+      "note": "Web UI on port 8787. The container runs as the numeric user set by PUID and PGID. A one-shot init service sets ownership of the volumes to that user.",
+      "categories": [
+        "media"
+      ],
+      "platform": "linux",
+      "logo": "https://raw.githubusercontent.com/vavallee/bindery/main/.github/assets/logo.png",
+      "repository": {
+        "url": "https://github.com/portainer/templates",
+        "stackfile": "stacks/bindery/docker-compose.yml"
+      },
+      "env": [
+        {
+          "name": "PUID",
+          "label": "User ID",
+          "default": "1000"
+        },
+        {
+          "name": "PGID",
+          "label": "Group ID",
+          "default": "1000"
+        }
+      ]
     }
   ]
 }

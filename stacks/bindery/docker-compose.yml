@@ -1,0 +1,31 @@
+services:
+  bindery-init:
+    image: busybox:stable
+    user: "0:0"
+    command: chown -R ${PUID:-1000}:${PGID:-1000} /config /books /downloads
+    volumes:
+      - bindery-config:/config
+      - bindery-books:/books
+      - bindery-downloads:/downloads
+
+  bindery:
+    image: ghcr.io/vavallee/bindery:latest
+    user: "${PUID:-1000}:${PGID:-1000}"
+    depends_on:
+      bindery-init:
+        condition: service_completed_successfully
+    ports:
+      - "8787:8787"
+    environment:
+      - BINDERY_PUID=${PUID:-1000}
+      - BINDERY_PGID=${PGID:-1000}
+    volumes:
+      - bindery-config:/config
+      - bindery-books:/books
+      - bindery-downloads:/downloads
+    restart: unless-stopped
+
+volumes:
+  bindery-config:
+  bindery-books:
+  bindery-downloads:
