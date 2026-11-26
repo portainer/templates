@@ -41,6 +41,19 @@
   },
   {
     "type": 1,
+    "title": "Gitea",
+    "description": "A painless self-hosted Git service.",
+    "categories": ["SCM"],
+    "platform": "linux",
+    "logo": "https://secure.gravatar.com/avatar/5603d5a79452bc237ac44f663d39f9aa.jpg?s=120",
+    "image": "gitea/gitea:latest",
+    "ports": [
+      "3000/tcp", "22/tcp"
+    ],
+    "volumes": [{"container": "/data"}]
+  },
+  {
+    "type": 1,
     "title": "Caddy",
     "description": "HTTP/2 web server with automatic HTTPS",
     "categories": ["webserver"],
