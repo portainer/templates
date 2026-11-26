@@ -70,6 +70,12 @@
             "type": "string",
             "pattern": "^/",
             "description": "Path, appended to serviceUrl, that Portainer probes for the addon's health. Must be a dedicated readiness endpoint returning 2xx only when the addon is ready to serve (convention: /readyz), never a UI/catch-all route."
+          },
+          "machineAccess": {
+            "type": "array",
+            "items": { "enum": ["deploy"] },
+            "uniqueItems": true,
+            "description": "What the addon's machine token may reach beyond its own settings and data. \"deploy\": sent on its own, without X-On-Behalf-Of, the token acts as the addon with an Edge Administrator's rights on the routes a reconciled GitOps workflow deployer calls (workflows, their sources, environments, environment groups, policies, and the Kubernetes proxy and Helm under an environment), and nowhere else. Omit it for an addon that acts only for its users."
           }
         }
       }
